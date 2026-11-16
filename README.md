@@ -104,3 +104,55 @@ figure*.py              # Plot generation
 ## Acknowledgements
 
 The training framework is based on ideas and components from [FuxiCTR](https://github.com/reczoo/FuxiCTR).
+
+## A/B update analysis for Musical Instruments
+
+The existing `log/analyze_1000/` A/B measurements use ML1M. The ordinary
+`log/instrument/` logs do not contain these measurements; evaluation metrics
+alone cannot reconstruct them. Run the analysis models with the existing
+`Instrument` experiment (1000 rounds, seed 2024, rank 4):
+
+```bash
+mkdir -p log/instrument_AB
+python main.py --expid Instrument --model Analyze_LoRA --gpu 0 2>&1 | tee log/instrument_AB/LoRA.txt
+python main.py --expid Instrument --model Analyze_LoRA_FixedB --gpu 0 2>&1 | tee log/instrument_AB/LoRA-FixedB.txt
+python main.py --expid Instrument --model Analyze_LoRA_MomA_FixedB --gpu 0 2>&1 | tee log/instrument_AB/MoFiLoRA.txt
+```
+
+First set the `Amazon_instrument_t5` paths in `config/dataset_config.yaml` for
+your machine. The current paths target Google Colab/Drive. These are full
+training runs, and require the prepared Instrument data and model inputs.
+
+Extract measurements and generate figures for all three methods:
+
+```bash
+python analyze_AB.py --logs instrument_AB/LoRA.txt instrument_AB/LoRA-FixedB.txt instrument_AB/MoFiLoRA.txt --output-name instrument_AB
+```
+
+This writes CSVs under `csv/instrument_AB/` and figures under
+`figures/instrument_AB/`, including per-run A/B plots and method
+comparisons. The existing ML1M outputs are preserved byte-for-byte in `csv/ML1M_AB/`
+and `figures/ML1M_AB/`; the original `ab_convergence/` folders are also retained.
+For the compact A-versus-B PDF figures from the LoRA run:
+
+```bash
+python AB_comparison.py --input-csv csv/instrument_AB/instrument_AB__LoRA/ab_convergence_metrics.csv --out-dir figures/instrument_AB/comparison
+```
+
+For each matrix X (A or B), normalized magnitude is
+`||X_t - X_(t-1)||_F / (||X_(t-1)||_F + 1e-12)`; cosine similarity compares
+successive update matrices, not the parameter matrices themselves. The first
+cosine has no previous update. For FixedB models B has zero update magnitude
+and undefined cosine (NaN), so its cosine curve is absent.
+
+The default workflow for the two A/B figures is now:
+
+```bash
+# After training Analyze_LoRA into log/instrument_AB/LoRA.txt:
+python analyze_AB.py
+python AB_comparison.py
+```
+
+Both scripts default to `instrument_AB`, so these commands leave the saved
+ML1M results untouched. `A_comparison.py` continues to use the archived
+ML1M method-comparison table in `csv/ML1M_AB/`.

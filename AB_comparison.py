@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import argparse
 from pathlib import Path
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -22,9 +23,8 @@ plt.rcParams.update({
 # Paths
 # =========================================================
 REPO_ROOT = Path(__file__).resolve().parent
-INPUT_CSV = REPO_ROOT / "csv" / "ab_convergence" / "AB_Comparison.csv"
-OUT_DIR = REPO_ROOT / "figures" / "ab_convergence" / "comparison"
-OUT_DIR.mkdir(parents=True, exist_ok=True)
+INPUT_CSV = REPO_ROOT / "csv" / "instrument_AB" / "instrument_AB__LoRA" / "ab_convergence_metrics.csv"
+OUT_DIR = REPO_ROOT / "figures" / "instrument_AB" / "comparison"
     
 
 def line_plot(df: pd.DataFrame, x: str, ys: list[str], ylabel: str, out_path: Path):
@@ -64,15 +64,24 @@ def line_plot(df: pd.DataFrame, x: str, ys: list[str], ylabel: str, out_path: Pa
 
 
 def main():
-    if not INPUT_CSV.exists():
-        raise FileNotFoundError(f"Input CSV not found: {INPUT_CSV}")
+    parser = argparse.ArgumentParser(description="Plot A/B normalized update magnitude and cosine similarity")
+    parser.add_argument("--input-csv", type=Path, default=INPUT_CSV)
+    parser.add_argument("--out-dir", type=Path, default=OUT_DIR)
+    args = parser.parse_args()
+    input_csv, out_dir = args.input_csv, args.out_dir
+    out_dir.mkdir(parents=True, exist_ok=True)
+    if not input_csv.exists():
+        raise FileNotFoundError(f"Input CSV not found: {input_csv}")
 
-    df = pd.read_csv(INPUT_CSV)
+    df = pd.read_csv(input_csv)
+
+    if "experiment" in df.columns and df["experiment"].nunique() > 1:
+        raise ValueError("Choose a single experiment CSV; this plot compares A and B within one run.")
 
     required_cols = ["turn", "norm_delta_A", "norm_delta_B", "cos_delta_A", "cos_delta_B"]
     missing = [c for c in required_cols if c not in df.columns]
     if missing:
-        raise ValueError(f"Missing columns in {INPUT_CSV}: {missing}")
+        raise ValueError(f"Missing columns in {input_csv}: {missing}")
 
     df["turn"] = pd.to_numeric(df["turn"], errors="coerce")
     for c in ["norm_delta_A", "norm_delta_B", "cos_delta_A", "cos_delta_B"]:
@@ -86,7 +95,7 @@ def main():
         x="turn",
         ys=["norm_delta_A", "norm_delta_B"],
         ylabel="Normalized Magnitude",
-        out_path=OUT_DIR / "AB_norm_magnitude.pdf",
+        out_path=out_dir / "AB_norm_magnitude.pdf",
     )
 
     # Figure 2: A/B cosine similarity
@@ -95,11 +104,11 @@ def main():
         x="turn",
         ys=["cos_delta_A", "cos_delta_B"],
         ylabel="Cosine similarity",
-        out_path=OUT_DIR / "AB_cosine_similarity.pdf",
+        out_path=out_dir / "AB_cosine_similarity.pdf",
     )
 
-    print(f"Saved: {OUT_DIR / 'AB_norm_magnitude.pdf'}")
-    print(f"Saved: {OUT_DIR / 'AB_cosine_similarity.pdf'}")
+    print(f"Saved: {out_dir / 'AB_norm_magnitude.pdf'}")
+    print(f"Saved: {out_dir / 'AB_cosine_similarity.pdf'}")
 
 
 if __name__ == "__main__":

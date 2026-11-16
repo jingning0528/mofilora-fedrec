@@ -22,8 +22,8 @@ plt.rcParams.update({
 # Paths
 # =========================================================
 REPO_ROOT = Path(__file__).resolve().parent
-INPUT_CSV = REPO_ROOT / "csv" / "ab_convergence" / "A_Comparison.csv"
-OUT_DIR = REPO_ROOT / "figures" / "ab_convergence" / "comparison"
+INPUT_CSV = REPO_ROOT / "csv" / "ML1M_AB" / "A_Comparison.csv"
+OUT_DIR = REPO_ROOT / "figures" / "ML1M_AB" / "comparison"
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 
 

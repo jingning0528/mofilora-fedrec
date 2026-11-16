@@ -8,19 +8,20 @@ How to use:
 2. Put your log txt files under LOG_DIR = REPO_ROOT / "log".
 3. Add/uncomment file names in SELECTED_LOG_FILES.
 4. Run:
-       python analyze_ab_convergence_selected_logs.py
+       python analyze_AB.py
 
 Outputs:
-    figures/ab_convergence/<experiment_name>/
-    csv/ab_convergence/<experiment_name>/
-    figures/ab_convergence/comparison/
-    csv/ab_convergence/comparison/
+    figures/instrument_AB/<experiment_name>/
+    csv/instrument_AB/<experiment_name>/
+    figures/instrument_AB/comparison/
+    csv/instrument_AB/comparison/
 
 Expected log lines:
     [AB-Convergence] turn=109 delta_A_F=... delta_B_F=... norm_delta_A=... norm_delta_B=... cos_delta_A=... cos_delta_B=... effective_item_update_F=...
     [Metrics] logloss: ... - MRR: ... - NDCG(5): ... - HR(5): ...
 """
 
+import argparse
 import re
 import math
 from pathlib import Path
@@ -56,11 +57,6 @@ LOG_DIR = REPO_ROOT / "log"
 FIG_DIR = REPO_ROOT / "figures"
 CSV_DIR = REPO_ROOT / "csv"
 
-AB_FIG_DIR = FIG_DIR / "ab_convergence"
-AB_CSV_DIR = CSV_DIR / "ab_convergence"
-
-AB_FIG_DIR.mkdir(parents=True, exist_ok=True)
-AB_CSV_DIR.mkdir(parents=True, exist_ok=True)
 
 
 # =========================================================
@@ -70,12 +66,9 @@ AB_CSV_DIR.mkdir(parents=True, exist_ok=True)
 # =========================================================
 
 SELECTED_LOG_FILES = [
-
-    # ************************************** baseline ********************************
-    "analyze_1000/FedNCF-LoRA.txt",
-    
-    # "analyze_1000/FedNCF-FixedB.txt",
-    # "analyze_1000/MofiLoRA.txt",
+    "instrument_AB/LoRA.txt",
+    # "instrument_AB/LoRA-FixedB.txt",
+    # "instrument_AB/MoFiLoRA.txt",
 ]
 
 
@@ -142,7 +135,10 @@ def parse_ab_row(line: str):
 
 def safe_exp_name(log_relative_path: str) -> str:
     """Create a safe experiment name from a relative log path."""
-    return Path(log_relative_path).with_suffix("").as_posix().replace("/", "__").replace(" ", "_")
+    path = Path(log_relative_path)
+    if path.is_absolute():
+        path = Path(path.name)
+    return path.with_suffix("").as_posix().replace("/", "__").replace(" ", "_")
 
 
 def parse_log(txt_path: Path):
@@ -561,7 +557,17 @@ def make_comparison_figures(all_ab_df: pd.DataFrame, all_merged_df: pd.DataFrame
 # =========================================================
 
 def main():
-    if len(SELECTED_LOG_FILES) == 0:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--logs", nargs="+", help="Log paths relative to --log-dir, or absolute paths")
+    parser.add_argument("--log-dir", type=Path, default=LOG_DIR)
+    parser.add_argument("--output-name", default="instrument_AB",
+                        help="Output folder under csv/ and figures/ (e.g. instrument_AB)")
+    args = parser.parse_args()
+    selected_logs = args.logs if args.logs is not None else SELECTED_LOG_FILES
+    log_dir = args.log_dir
+    ab_fig_dir = FIG_DIR / args.output_name
+    ab_csv_dir = CSV_DIR / args.output_name
+    if len(selected_logs) == 0:
         raise ValueError(
             "SELECTED_LOG_FILES is empty. Please add at least one log file name, "
             "for example: 'baseline_1000/fedncf_lora.txt'."
@@ -569,8 +575,8 @@ def main():
 
     print("=" * 70)
     print("Selected log files:")
-    for f in SELECTED_LOG_FILES:
-        print("-", LOG_DIR / f)
+    for f in selected_logs:
+        print("-", log_dir / f)
     print("=" * 70)
 
     all_ab_list = []
@@ -578,8 +584,8 @@ def main():
     all_merged_list = []
     summary_list = []
 
-    for log_relative in SELECTED_LOG_FILES:
-        log_path = LOG_DIR / log_relative
+    for log_relative in selected_logs:
+        log_path = log_dir / log_relative
         exp_name = safe_exp_name(log_relative)
 
         if not log_path.exists():
@@ -589,8 +595,8 @@ def main():
         print(f"\nProcessing: {log_path}")
         print(f"Experiment name: {exp_name}")
 
-        exp_fig_dir = AB_FIG_DIR / exp_name
-        exp_csv_dir = AB_CSV_DIR / exp_name
+        exp_fig_dir = ab_fig_dir / exp_name
+        exp_csv_dir = ab_csv_dir / exp_name
         exp_fig_dir.mkdir(parents=True, exist_ok=True)
         exp_csv_dir.mkdir(parents=True, exist_ok=True)
 
@@ -636,8 +642,8 @@ def main():
     all_merged_df = pd.concat(all_merged_list, ignore_index=True) if all_merged_list else pd.DataFrame()
     all_summary_df = pd.concat(summary_list, ignore_index=True) if summary_list else pd.DataFrame()
 
-    comparison_csv_dir = AB_CSV_DIR / "comparison"
-    comparison_fig_dir = AB_FIG_DIR / "comparison"
+    comparison_csv_dir = ab_csv_dir / "comparison"
+    comparison_fig_dir = ab_fig_dir / "comparison"
     comparison_csv_dir.mkdir(parents=True, exist_ok=True)
     comparison_fig_dir.mkdir(parents=True, exist_ok=True)
 
