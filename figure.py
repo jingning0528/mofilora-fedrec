@@ -17,10 +17,10 @@ FIG_DIR = REPO_ROOT / "figures"
 SELECTED_LOG_FILES = [
 
     #########################################Instrument########################################
-    "Industrial/Full.txt",
-    "Industrial/LoRA.txt",
-    "Industrial/LoRA-FixedB.txt",
-    "Industrial/MoFiLoRA.txt",
+    "Instrument/Full.txt",
+    "Instrument/LoRA.txt",
+    "Instrument/LoRA-FixedB.txt",
+    "Instrument/MoFiLoRA.txt",
     
     # "instrument/LoRA.txt",
     # "instrument/MoFiLoRA.txt",
