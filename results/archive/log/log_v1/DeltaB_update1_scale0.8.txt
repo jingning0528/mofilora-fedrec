@@ -1,0 +1,543 @@
+/content/drive/MyDrive/FedNCF-LoRA
+2026-05-05 05:03:52,053 P34317 INFO Params: {
+    "clients_num_per_turn": "604",
+    "data_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "dataloader": "MLDataLoaderFL",
+    "dataset_id": "ML1M_t5",
+    "delta_B_lr": "0.001",
+    "delta_B_update_every": "1",
+    "delta_scale": "0.8",
+    "device": "0",
+    "dropout": "0.5",
+    "embedding_dim": "32",
+    "embedding_regularizer": "1e-08",
+    "g_hidden_activations": "ReLU",
+    "g_hidden_units": "[512, 256, 128]",
+    "hidden_activations": "ReLU",
+    "hidden_units": "[64, 128, 64]",
+    "item_num": "3952",
+    "lambda_delta": "0",
+    "latent_dim": "4",
+    "learning_rate": "0.001",
+    "local_epoch": "2",
+    "loss_fn": "bpr_loss",
+    "metrics": "['logloss', 'MRR', 'NDCG(5)', 'HR(5)', 'NDCG(10)', 'HR(10)', 'NDCG(20)', 'HR(20)', 'NDCG(50)', 'HR(50)']",
+    "model": "FedNCF_Lora_DeltaB_V1",
+    "model_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/model/t5/",
+    "model_id": "FedNCF_ml1m_triple_101_deltaB",
+    "net_regularizer": "1e-08",
+    "only_inter": "False",
+    "optimizer": "adam",
+    "output_dim": "1",
+    "path": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "pre_epoch": "3000",
+    "seed": "2024",
+    "sen_embedding_dim": "768",
+    "task": "triple",
+    "train_turn": "500",
+    "user_num": "6040"
+}
+2026-05-05 05:03:54,870 P34317 INFO Model embedding_item.emb.weight size: 0.06030273MB
+2026-05-05 05:03:54,871 P34317 INFO Model embedding_item.linear.weight size: 0.00048828MB
+2026-05-05 05:03:54,871 P34317 INFO Model delta_B.weight size: 0.00048828MB
+2026-05-05 05:03:54,871 P34317 INFO Model embedding_p.weight size: 0.48242188MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.0.weight size: 0.01562500MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.0.bias size: 0.00024414MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.3.weight size: 0.03125000MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.3.bias size: 0.00048828MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.6.weight size: 0.03125000MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.6.bias size: 0.00024414MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.9.weight size: 0.00024414MB
+2026-05-05 05:03:54,871 P34317 INFO Model mlp.mlp.9.bias size: 0.00000381MB
+2026-05-05 05:03:54,872 P34317 INFO Model all size: 0.62305069MB
+2026-05-05 05:03:54,872 P34317 INFO Phase schedule: Phase1(AE warmup)=turns 0-19, Phase2(LoRA+ΔB)=turns 20+
+2026-05-05 05:04:00,496 P34317 INFO ********* Train Turn 0 [phase1_AE] *********
+2026-05-05 05:04:02,628 P34317 INFO Clients average loss: 0.6948460936546326
+2026-05-05 05:04:02,629 P34317 INFO [Time] turn=0 phase=phase1_AE update_delta_B=False local_train_time=1.7624s avg_client_train_time=0.002918s aggregation_time=0.0650s round_time=2.1319s
+2026-05-05 05:04:02,633 P34317 INFO ********* Train Turn 1 [phase1_AE] *********
+2026-05-05 05:04:04,682 P34317 INFO Clients average loss: 0.6944764852523804
+2026-05-05 05:04:04,682 P34317 INFO [Time] turn=1 phase=phase1_AE update_delta_B=False local_train_time=1.6740s avg_client_train_time=0.002771s aggregation_time=0.0652s round_time=2.0485s
+2026-05-05 05:04:04,687 P34317 INFO ********* Train Turn 2 [phase1_AE] *********
+2026-05-05 05:04:06,732 P34317 INFO Clients average loss: 0.6942051649093628
+2026-05-05 05:04:06,732 P34317 INFO [Time] turn=2 phase=phase1_AE update_delta_B=False local_train_time=1.6688s avg_client_train_time=0.002763s aggregation_time=0.0648s round_time=2.0454s
+2026-05-05 05:04:06,737 P34317 INFO ********* Train Turn 3 [phase1_AE] *********
+2026-05-05 05:04:08,778 P34317 INFO Clients average loss: 0.6945143938064575
+2026-05-05 05:04:08,778 P34317 INFO [Time] turn=3 phase=phase1_AE update_delta_B=False local_train_time=1.6677s avg_client_train_time=0.002761s aggregation_time=0.0651s round_time=2.0410s
+2026-05-05 05:04:08,783 P34317 INFO ********* Train Turn 4 [phase1_AE] *********
+2026-05-05 05:04:10,824 P34317 INFO Clients average loss: 0.6942599415779114
+2026-05-05 05:04:10,825 P34317 INFO [Time] turn=4 phase=phase1_AE update_delta_B=False local_train_time=1.6649s avg_client_train_time=0.002756s aggregation_time=0.0656s round_time=2.0419s
+2026-05-05 05:04:10,829 P34317 INFO ********* Train Turn 5 [phase1_AE] *********
+2026-05-05 05:04:12,870 P34317 INFO Clients average loss: 0.6947174668312073
+2026-05-05 05:04:12,870 P34317 INFO [Time] turn=5 phase=phase1_AE update_delta_B=False local_train_time=1.6664s avg_client_train_time=0.002759s aggregation_time=0.0653s round_time=2.0406s
+2026-05-05 05:04:12,875 P34317 INFO ********* Train Turn 6 [phase1_AE] *********
+2026-05-05 05:04:14,918 P34317 INFO Clients average loss: 0.6941902041435242
+2026-05-05 05:04:14,918 P34317 INFO [Time] turn=6 phase=phase1_AE update_delta_B=False local_train_time=1.6693s avg_client_train_time=0.002764s aggregation_time=0.0657s round_time=2.0432s
+2026-05-05 05:04:14,923 P34317 INFO ********* Train Turn 7 [phase1_AE] *********
+2026-05-05 05:04:16,957 P34317 INFO Clients average loss: 0.6945056319236755
+2026-05-05 05:04:16,957 P34317 INFO [Time] turn=7 phase=phase1_AE update_delta_B=False local_train_time=1.6588s avg_client_train_time=0.002746s aggregation_time=0.0653s round_time=2.0343s
+2026-05-05 05:04:16,962 P34317 INFO ********* Train Turn 8 [phase1_AE] *********
+2026-05-05 05:04:18,987 P34317 INFO Clients average loss: 0.6939831376075745
+2026-05-05 05:04:18,987 P34317 INFO [Time] turn=8 phase=phase1_AE update_delta_B=False local_train_time=1.6538s avg_client_train_time=0.002738s aggregation_time=0.0651s round_time=2.0256s
+2026-05-05 05:04:18,992 P34317 INFO ********* Train Turn 9 [phase1_AE] *********
+2026-05-05 05:04:21,018 P34317 INFO Clients average loss: 0.6941844820976257
+2026-05-05 05:04:21,018 P34317 INFO [Time] turn=9 phase=phase1_AE update_delta_B=False local_train_time=1.6516s avg_client_train_time=0.002735s aggregation_time=0.0659s round_time=2.0259s
+2026-05-05 05:04:21,023 P34317 INFO ********* Eval @ Turn 9 *********
+2026-05-05 05:04:23,163 P34317 INFO [Metrics] logloss: 0.098303 - MRR: 0.046152 - NDCG(5): 0.021732 - HR(5): 0.038576 - NDCG(10): 0.036891 - HR(10): 0.086258 - NDCG(20): 0.063708 - HR(20): 0.194371 - NDCG(50): 0.129473 - HR(50): 0.531954
+2026-05-05 05:04:23,163 P34317 INFO ********* Train Turn 10 [phase1_AE] *********
+2026-05-05 05:04:25,235 P34317 INFO Clients average loss: 0.6934556365013123
+2026-05-05 05:04:25,235 P34317 INFO [Time] turn=10 phase=phase1_AE update_delta_B=False local_train_time=1.6844s avg_client_train_time=0.002789s aggregation_time=0.0661s round_time=2.0715s
+2026-05-05 05:04:25,240 P34317 INFO ********* Train Turn 11 [phase1_AE] *********
+2026-05-05 05:04:27,297 P34317 INFO Clients average loss: 0.6939373016357422
+2026-05-05 05:04:27,298 P34317 INFO [Time] turn=11 phase=phase1_AE update_delta_B=False local_train_time=1.6785s avg_client_train_time=0.002779s aggregation_time=0.0656s round_time=2.0578s
+2026-05-05 05:04:27,302 P34317 INFO ********* Train Turn 12 [phase1_AE] *********
+2026-05-05 05:04:29,480 P34317 INFO Clients average loss: 0.6941974759101868
+2026-05-05 05:04:29,480 P34317 INFO [Time] turn=12 phase=phase1_AE update_delta_B=False local_train_time=1.6753s avg_client_train_time=0.002774s aggregation_time=0.0659s round_time=2.1781s
+2026-05-05 05:04:29,485 P34317 INFO ********* Train Turn 13 [phase1_AE] *********
+2026-05-05 05:04:31,529 P34317 INFO Clients average loss: 0.6943651437759399
+2026-05-05 05:04:31,530 P34317 INFO [Time] turn=13 phase=phase1_AE update_delta_B=False local_train_time=1.6688s avg_client_train_time=0.002763s aggregation_time=0.0656s round_time=2.0442s
+2026-05-05 05:04:31,534 P34317 INFO ********* Train Turn 14 [phase1_AE] *********
+2026-05-05 05:04:33,581 P34317 INFO Clients average loss: 0.6939954161643982
+2026-05-05 05:04:33,582 P34317 INFO [Time] turn=14 phase=phase1_AE update_delta_B=False local_train_time=1.6695s avg_client_train_time=0.002764s aggregation_time=0.0661s round_time=2.0473s
+2026-05-05 05:04:33,587 P34317 INFO ********* Train Turn 15 [phase1_AE] *********
+2026-05-05 05:04:35,633 P34317 INFO Clients average loss: 0.6938263177871704
+2026-05-05 05:04:35,633 P34317 INFO [Time] turn=15 phase=phase1_AE update_delta_B=False local_train_time=1.6700s avg_client_train_time=0.002765s aggregation_time=0.0656s round_time=2.0466s
+2026-05-05 05:04:35,638 P34317 INFO ********* Train Turn 16 [phase1_AE] *********
+2026-05-05 05:04:37,692 P34317 INFO Clients average loss: 0.6936690807342529
+2026-05-05 05:04:37,693 P34317 INFO [Time] turn=16 phase=phase1_AE update_delta_B=False local_train_time=1.6782s avg_client_train_time=0.002779s aggregation_time=0.0662s round_time=2.0545s
+2026-05-05 05:04:37,697 P34317 INFO ********* Train Turn 17 [phase1_AE] *********
+2026-05-05 05:04:39,751 P34317 INFO Clients average loss: 0.6938066482543945
+2026-05-05 05:04:39,751 P34317 INFO [Time] turn=17 phase=phase1_AE update_delta_B=False local_train_time=1.6752s avg_client_train_time=0.002773s aggregation_time=0.0665s round_time=2.0534s
+2026-05-05 05:04:39,756 P34317 INFO ********* Train Turn 18 [phase1_AE] *********
+2026-05-05 05:04:41,807 P34317 INFO Clients average loss: 0.6934651136398315
+2026-05-05 05:04:41,807 P34317 INFO [Time] turn=18 phase=phase1_AE update_delta_B=False local_train_time=1.6737s avg_client_train_time=0.002771s aggregation_time=0.0653s round_time=2.0515s
+2026-05-05 05:04:41,812 P34317 INFO ********* Train Turn 19 [phase1_AE] *********
+2026-05-05 05:04:43,863 P34317 INFO Clients average loss: 0.6935208439826965
+2026-05-05 05:04:43,863 P34317 INFO [Time] turn=19 phase=phase1_AE update_delta_B=False local_train_time=1.6730s avg_client_train_time=0.002770s aggregation_time=0.0656s round_time=2.0508s
+2026-05-05 05:04:43,868 P34317 INFO ********* Eval @ Turn 19 *********
+2026-05-05 05:04:46,009 P34317 INFO [Metrics] logloss: 0.093570 - MRR: 0.054601 - NDCG(5): 0.030366 - HR(5): 0.052815 - NDCG(10): 0.047609 - HR(10): 0.106954 - NDCG(20): 0.077028 - HR(20): 0.224503 - NDCG(50): 0.145720 - HR(50): 0.575497
+2026-05-05 05:04:46,009 P34317 INFO *** Phase 2 START: LoRA+ΔB — train A + ΔB, B frozen ***
+2026-05-05 05:04:46,009 P34317 INFO ********* Train Turn 20 [phase2_LoRA+dB] *********
+2026-05-05 05:04:48,765 P34317 INFO ΔB updated at turn 20 (604 clients)
+2026-05-05 05:04:48,826 P34317 INFO Clients average loss: 0.6935054659843445
+2026-05-05 05:04:48,826 P34317 INFO [Time] turn=20 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.4097s avg_client_train_time=0.003990s aggregation_time=0.0722s round_time=2.8163s
+2026-05-05 05:04:48,830 P34317 INFO ********* Train Turn 21 [phase2_LoRA+dB] *********
+2026-05-05 05:04:51,569 P34317 INFO ΔB updated at turn 21 (604 clients)
+2026-05-05 05:04:51,628 P34317 INFO Clients average loss: 0.6942607164382935
+2026-05-05 05:04:51,628 P34317 INFO [Time] turn=21 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3940s avg_client_train_time=0.003964s aggregation_time=0.0718s round_time=2.7978s
+2026-05-05 05:04:51,633 P34317 INFO ********* Train Turn 22 [phase2_LoRA+dB] *********
+2026-05-05 05:04:54,360 P34317 INFO ΔB updated at turn 22 (604 clients)
+2026-05-05 05:04:54,420 P34317 INFO Clients average loss: 0.6935136914253235
+2026-05-05 05:04:54,420 P34317 INFO [Time] turn=22 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3850s avg_client_train_time=0.003949s aggregation_time=0.0712s round_time=2.7868s
+2026-05-05 05:04:54,425 P34317 INFO ********* Train Turn 23 [phase2_LoRA+dB] *********
+2026-05-05 05:04:57,151 P34317 INFO ΔB updated at turn 23 (604 clients)
+2026-05-05 05:04:57,211 P34317 INFO Clients average loss: 0.6936720609664917
+2026-05-05 05:04:57,211 P34317 INFO [Time] turn=23 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3800s avg_client_train_time=0.003940s aggregation_time=0.0718s round_time=2.7864s
+2026-05-05 05:04:57,216 P34317 INFO ********* Train Turn 24 [phase2_LoRA+dB] *********
+2026-05-05 05:04:59,950 P34317 INFO ΔB updated at turn 24 (604 clients)
+2026-05-05 05:05:00,010 P34317 INFO Clients average loss: 0.6936602592468262
+2026-05-05 05:05:00,010 P34317 INFO [Time] turn=24 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3929s avg_client_train_time=0.003962s aggregation_time=0.0710s round_time=2.7937s
+2026-05-05 05:05:00,015 P34317 INFO ********* Train Turn 25 [phase2_LoRA+dB] *********
+2026-05-05 05:05:02,743 P34317 INFO ΔB updated at turn 25 (604 clients)
+2026-05-05 05:05:02,803 P34317 INFO Clients average loss: 0.6935250163078308
+2026-05-05 05:05:02,803 P34317 INFO [Time] turn=25 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3855s avg_client_train_time=0.003950s aggregation_time=0.0715s round_time=2.7883s
+2026-05-05 05:05:02,808 P34317 INFO ********* Train Turn 26 [phase2_LoRA+dB] *********
+2026-05-05 05:05:05,540 P34317 INFO ΔB updated at turn 26 (604 clients)
+2026-05-05 05:05:05,600 P34317 INFO Clients average loss: 0.6936618089675903
+2026-05-05 05:05:05,600 P34317 INFO [Time] turn=26 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3909s avg_client_train_time=0.003959s aggregation_time=0.0710s round_time=2.7919s
+2026-05-05 05:05:05,605 P34317 INFO ********* Train Turn 27 [phase2_LoRA+dB] *********
+2026-05-05 05:05:08,337 P34317 INFO ΔB updated at turn 27 (604 clients)
+2026-05-05 05:05:08,397 P34317 INFO Clients average loss: 0.6928331255912781
+2026-05-05 05:05:08,397 P34317 INFO [Time] turn=27 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3887s avg_client_train_time=0.003955s aggregation_time=0.0721s round_time=2.7923s
+2026-05-05 05:05:08,402 P34317 INFO ********* Train Turn 28 [phase2_LoRA+dB] *********
+2026-05-05 05:05:11,126 P34317 INFO ΔB updated at turn 28 (604 clients)
+2026-05-05 05:05:11,185 P34317 INFO Clients average loss: 0.6928499937057495
+2026-05-05 05:05:11,185 P34317 INFO [Time] turn=28 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3821s avg_client_train_time=0.003944s aggregation_time=0.0710s round_time=2.7835s
+2026-05-05 05:05:11,190 P34317 INFO ********* Train Turn 29 [phase2_LoRA+dB] *********
+2026-05-05 05:05:13,907 P34317 INFO ΔB updated at turn 29 (604 clients)
+2026-05-05 05:05:13,967 P34317 INFO Clients average loss: 0.6932761073112488
+2026-05-05 05:05:13,967 P34317 INFO [Time] turn=29 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3755s avg_client_train_time=0.003933s aggregation_time=0.0712s round_time=2.7766s
+2026-05-05 05:05:13,972 P34317 INFO ********* Eval @ Turn 29 *********
+2026-05-05 05:05:16,258 P34317 INFO [Metrics] logloss: 0.086053 - MRR: 0.075271 - NDCG(5): 0.051448 - HR(5): 0.086589 - NDCG(10): 0.075791 - HR(10): 0.162583 - NDCG(20): 0.112279 - HR(20): 0.309106 - NDCG(50): 0.180246 - HR(50): 0.654801
+2026-05-05 05:05:16,259 P34317 INFO ********* Train Turn 30 [phase2_LoRA+dB] *********
+2026-05-05 05:05:18,996 P34317 INFO ΔB updated at turn 30 (604 clients)
+2026-05-05 05:05:19,055 P34317 INFO Clients average loss: 0.6923412084579468
+2026-05-05 05:05:19,055 P34317 INFO [Time] turn=30 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3860s avg_client_train_time=0.003950s aggregation_time=0.0715s round_time=2.7967s
+2026-05-05 05:05:19,060 P34317 INFO ********* Train Turn 31 [phase2_LoRA+dB] *********
+2026-05-05 05:05:21,792 P34317 INFO ΔB updated at turn 31 (604 clients)
+2026-05-05 05:05:21,852 P34317 INFO Clients average loss: 0.6928308010101318
+2026-05-05 05:05:21,852 P34317 INFO [Time] turn=31 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3841s avg_client_train_time=0.003947s aggregation_time=0.0710s round_time=2.7916s
+2026-05-05 05:05:21,856 P34317 INFO ********* Train Turn 32 [phase2_LoRA+dB] *********
+2026-05-05 05:05:24,577 P34317 INFO ΔB updated at turn 32 (604 clients)
+2026-05-05 05:05:24,636 P34317 INFO Clients average loss: 0.6919319033622742
+2026-05-05 05:05:24,636 P34317 INFO [Time] turn=32 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3770s avg_client_train_time=0.003935s aggregation_time=0.0710s round_time=2.7799s
+2026-05-05 05:05:24,641 P34317 INFO ********* Train Turn 33 [phase2_LoRA+dB] *********
+2026-05-05 05:05:27,364 P34317 INFO ΔB updated at turn 33 (604 clients)
+2026-05-05 05:05:27,424 P34317 INFO Clients average loss: 0.6919655799865723
+2026-05-05 05:05:27,425 P34317 INFO [Time] turn=33 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3809s avg_client_train_time=0.003942s aggregation_time=0.0721s round_time=2.7833s
+2026-05-05 05:05:27,429 P34317 INFO ********* Train Turn 34 [phase2_LoRA+dB] *********
+2026-05-05 05:05:30,146 P34317 INFO ΔB updated at turn 34 (604 clients)
+2026-05-05 05:05:30,206 P34317 INFO Clients average loss: 0.6918309926986694
+2026-05-05 05:05:30,206 P34317 INFO [Time] turn=34 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3690s avg_client_train_time=0.003922s aggregation_time=0.0715s round_time=2.7766s
+2026-05-05 05:05:30,211 P34317 INFO ********* Train Turn 35 [phase2_LoRA+dB] *********
+2026-05-05 05:05:32,933 P34317 INFO ΔB updated at turn 35 (604 clients)
+2026-05-05 05:05:32,992 P34317 INFO Clients average loss: 0.6917863488197327
+2026-05-05 05:05:32,993 P34317 INFO [Time] turn=35 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3770s avg_client_train_time=0.003935s aggregation_time=0.0710s round_time=2.7817s
+2026-05-05 05:05:32,997 P34317 INFO ********* Train Turn 36 [phase2_LoRA+dB] *********
+2026-05-05 05:05:35,705 P34317 INFO ΔB updated at turn 36 (604 clients)
+2026-05-05 05:05:35,764 P34317 INFO Clients average loss: 0.6917711496353149
+2026-05-05 05:05:35,764 P34317 INFO [Time] turn=36 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3628s avg_client_train_time=0.003912s aggregation_time=0.0710s round_time=2.7670s
+2026-05-05 05:05:35,769 P34317 INFO ********* Train Turn 37 [phase2_LoRA+dB] *********
+2026-05-05 05:05:38,478 P34317 INFO ΔB updated at turn 37 (604 clients)
+2026-05-05 05:05:38,537 P34317 INFO Clients average loss: 0.6919484734535217
+2026-05-05 05:05:38,537 P34317 INFO [Time] turn=37 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3685s avg_client_train_time=0.003921s aggregation_time=0.0711s round_time=2.7684s
+2026-05-05 05:05:38,542 P34317 INFO ********* Train Turn 38 [phase2_LoRA+dB] *********
+2026-05-05 05:05:41,259 P34317 INFO ΔB updated at turn 38 (604 clients)
+2026-05-05 05:05:41,319 P34317 INFO Clients average loss: 0.6905956864356995
+2026-05-05 05:05:41,319 P34317 INFO [Time] turn=38 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3750s avg_client_train_time=0.003932s aggregation_time=0.0717s round_time=2.7770s
+2026-05-05 05:05:41,324 P34317 INFO ********* Train Turn 39 [phase2_LoRA+dB] *********
+2026-05-05 05:05:44,047 P34317 INFO ΔB updated at turn 39 (604 clients)
+2026-05-05 05:05:44,107 P34317 INFO Clients average loss: 0.6909429430961609
+2026-05-05 05:05:44,107 P34317 INFO [Time] turn=39 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3762s avg_client_train_time=0.003934s aggregation_time=0.0709s round_time=2.7827s
+2026-05-05 05:05:44,112 P34317 INFO ********* Eval @ Turn 39 *********
+2026-05-05 05:05:46,241 P34317 INFO [Metrics] logloss: 0.077329 - MRR: 0.110760 - NDCG(5): 0.089978 - HR(5): 0.146689 - NDCG(10): 0.125017 - HR(10): 0.256126 - NDCG(20): 0.166809 - HR(20): 0.422682 - NDCG(50): 0.229134 - HR(50): 0.737748
+2026-05-05 05:05:46,242 P34317 INFO ********* Train Turn 40 [phase2_LoRA+dB] *********
+2026-05-05 05:05:48,977 P34317 INFO ΔB updated at turn 40 (604 clients)
+2026-05-05 05:05:49,037 P34317 INFO Clients average loss: 0.6909775733947754
+2026-05-05 05:05:49,037 P34317 INFO [Time] turn=40 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3839s avg_client_train_time=0.003947s aggregation_time=0.0717s round_time=2.7957s
+2026-05-05 05:05:49,042 P34317 INFO ********* Train Turn 41 [phase2_LoRA+dB] *********
+2026-05-05 05:05:51,762 P34317 INFO ΔB updated at turn 41 (604 clients)
+2026-05-05 05:05:51,822 P34317 INFO Clients average loss: 0.6901316046714783
+2026-05-05 05:05:51,822 P34317 INFO [Time] turn=41 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3734s avg_client_train_time=0.003929s aggregation_time=0.0718s round_time=2.7797s
+2026-05-05 05:05:51,827 P34317 INFO ********* Train Turn 42 [phase2_LoRA+dB] *********
+2026-05-05 05:05:54,563 P34317 INFO ΔB updated at turn 42 (604 clients)
+2026-05-05 05:05:54,623 P34317 INFO Clients average loss: 0.690506100654602
+2026-05-05 05:05:54,623 P34317 INFO [Time] turn=42 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3922s avg_client_train_time=0.003961s aggregation_time=0.0718s round_time=2.7959s
+2026-05-05 05:05:54,627 P34317 INFO ********* Train Turn 43 [phase2_LoRA+dB] *********
+2026-05-05 05:05:57,343 P34317 INFO ΔB updated at turn 43 (604 clients)
+2026-05-05 05:05:57,403 P34317 INFO Clients average loss: 0.6897645592689514
+2026-05-05 05:05:57,403 P34317 INFO [Time] turn=43 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3740s avg_client_train_time=0.003931s aggregation_time=0.0721s round_time=2.7754s
+2026-05-05 05:05:57,408 P34317 INFO ********* Train Turn 44 [phase2_LoRA+dB] *********
+2026-05-05 05:06:00,121 P34317 INFO ΔB updated at turn 44 (604 clients)
+2026-05-05 05:06:00,180 P34317 INFO Clients average loss: 0.68935227394104
+2026-05-05 05:06:00,181 P34317 INFO [Time] turn=44 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3733s avg_client_train_time=0.003929s aggregation_time=0.0708s round_time=2.7728s
+2026-05-05 05:06:00,185 P34317 INFO ********* Train Turn 45 [phase2_LoRA+dB] *********
+2026-05-05 05:06:02,899 P34317 INFO ΔB updated at turn 45 (604 clients)
+2026-05-05 05:06:02,958 P34317 INFO Clients average loss: 0.6888120770454407
+2026-05-05 05:06:02,958 P34317 INFO [Time] turn=45 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3681s avg_client_train_time=0.003921s aggregation_time=0.0708s round_time=2.7727s
+2026-05-05 05:06:02,963 P34317 INFO ********* Train Turn 46 [phase2_LoRA+dB] *********
+2026-05-05 05:06:05,682 P34317 INFO ΔB updated at turn 46 (604 clients)
+2026-05-05 05:06:05,741 P34317 INFO Clients average loss: 0.6887211203575134
+2026-05-05 05:06:05,741 P34317 INFO [Time] turn=46 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3726s avg_client_train_time=0.003928s aggregation_time=0.0709s round_time=2.7782s
+2026-05-05 05:06:05,746 P34317 INFO ********* Train Turn 47 [phase2_LoRA+dB] *********
+2026-05-05 05:06:08,458 P34317 INFO ΔB updated at turn 47 (604 clients)
+2026-05-05 05:06:08,517 P34317 INFO Clients average loss: 0.6889554262161255
+2026-05-05 05:06:08,517 P34317 INFO [Time] turn=47 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3680s avg_client_train_time=0.003921s aggregation_time=0.0708s round_time=2.7710s
+2026-05-05 05:06:08,522 P34317 INFO ********* Train Turn 48 [phase2_LoRA+dB] *********
+2026-05-05 05:06:11,232 P34317 INFO ΔB updated at turn 48 (604 clients)
+2026-05-05 05:06:11,291 P34317 INFO Clients average loss: 0.6880789995193481
+2026-05-05 05:06:11,291 P34317 INFO [Time] turn=48 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3705s avg_client_train_time=0.003925s aggregation_time=0.0711s round_time=2.7696s
+2026-05-05 05:06:11,296 P34317 INFO ********* Train Turn 49 [phase2_LoRA+dB] *********
+2026-05-05 05:06:14,010 P34317 INFO ΔB updated at turn 49 (604 clients)
+2026-05-05 05:06:14,069 P34317 INFO Clients average loss: 0.6870940923690796
+2026-05-05 05:06:14,069 P34317 INFO [Time] turn=49 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3679s avg_client_train_time=0.003920s aggregation_time=0.0713s round_time=2.7731s
+2026-05-05 05:06:14,074 P34317 INFO ********* Eval @ Turn 49 *********
+2026-05-05 05:06:16,347 P34317 INFO [Metrics] logloss: 0.072401 - MRR: 0.160622 - NDCG(5): 0.148043 - HR(5): 0.240066 - NDCG(10): 0.196211 - HR(10): 0.389735 - NDCG(20): 0.240911 - HR(20): 0.566887 - NDCG(50): 0.290333 - HR(50): 0.815232
+2026-05-05 05:06:16,348 P34317 INFO ********* Train Turn 50 [phase2_LoRA+dB] *********
+2026-05-05 05:06:19,084 P34317 INFO ΔB updated at turn 50 (604 clients)
+2026-05-05 05:06:19,143 P34317 INFO Clients average loss: 0.686808705329895
+2026-05-05 05:06:19,143 P34317 INFO [Time] turn=50 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3849s avg_client_train_time=0.003949s aggregation_time=0.0706s round_time=2.7954s
+2026-05-05 05:06:19,148 P34317 INFO ********* Train Turn 51 [phase2_LoRA+dB] *********
+2026-05-05 05:06:21,861 P34317 INFO ΔB updated at turn 51 (604 clients)
+2026-05-05 05:06:21,920 P34317 INFO Clients average loss: 0.6863501071929932
+2026-05-05 05:06:21,920 P34317 INFO [Time] turn=51 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3730s avg_client_train_time=0.003929s aggregation_time=0.0707s round_time=2.7721s
+2026-05-05 05:06:21,924 P34317 INFO ********* Train Turn 52 [phase2_LoRA+dB] *********
+2026-05-05 05:06:24,639 P34317 INFO ΔB updated at turn 52 (604 clients)
+2026-05-05 05:06:24,698 P34317 INFO Clients average loss: 0.6857263445854187
+2026-05-05 05:06:24,698 P34317 INFO [Time] turn=52 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3737s avg_client_train_time=0.003930s aggregation_time=0.0703s round_time=2.7736s
+2026-05-05 05:06:24,703 P34317 INFO ********* Train Turn 53 [phase2_LoRA+dB] *********
+2026-05-05 05:06:27,427 P34317 INFO ΔB updated at turn 53 (604 clients)
+2026-05-05 05:06:27,487 P34317 INFO Clients average loss: 0.6845197081565857
+2026-05-05 05:06:27,487 P34317 INFO [Time] turn=53 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3836s avg_client_train_time=0.003946s aggregation_time=0.0714s round_time=2.7838s
+2026-05-05 05:06:27,491 P34317 INFO ********* Train Turn 54 [phase2_LoRA+dB] *********
+2026-05-05 05:06:30,196 P34317 INFO ΔB updated at turn 54 (604 clients)
+2026-05-05 05:06:30,255 P34317 INFO Clients average loss: 0.6847016215324402
+2026-05-05 05:06:30,255 P34317 INFO [Time] turn=54 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3590s avg_client_train_time=0.003906s aggregation_time=0.0708s round_time=2.7638s
+2026-05-05 05:06:30,260 P34317 INFO ********* Train Turn 55 [phase2_LoRA+dB] *********
+2026-05-05 05:06:32,967 P34317 INFO ΔB updated at turn 55 (604 clients)
+2026-05-05 05:06:33,027 P34317 INFO Clients average loss: 0.6834458112716675
+2026-05-05 05:06:33,027 P34317 INFO [Time] turn=55 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3612s avg_client_train_time=0.003909s aggregation_time=0.0711s round_time=2.7666s
+2026-05-05 05:06:33,031 P34317 INFO ********* Train Turn 56 [phase2_LoRA+dB] *********
+2026-05-05 05:06:35,733 P34317 INFO ΔB updated at turn 56 (604 clients)
+2026-05-05 05:06:35,792 P34317 INFO Clients average loss: 0.6827477216720581
+2026-05-05 05:06:35,792 P34317 INFO [Time] turn=56 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3623s avg_client_train_time=0.003911s aggregation_time=0.0702s round_time=2.7606s
+2026-05-05 05:06:35,797 P34317 INFO ********* Train Turn 57 [phase2_LoRA+dB] *********
+2026-05-05 05:06:38,504 P34317 INFO ΔB updated at turn 57 (604 clients)
+2026-05-05 05:06:38,563 P34317 INFO Clients average loss: 0.6811364889144897
+2026-05-05 05:06:38,563 P34317 INFO [Time] turn=57 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3683s avg_client_train_time=0.003921s aggregation_time=0.0707s round_time=2.7658s
+2026-05-05 05:06:38,567 P34317 INFO ********* Train Turn 58 [phase2_LoRA+dB] *********
+2026-05-05 05:06:41,261 P34317 INFO ΔB updated at turn 58 (604 clients)
+2026-05-05 05:06:41,320 P34317 INFO Clients average loss: 0.6799303889274597
+2026-05-05 05:06:41,320 P34317 INFO [Time] turn=58 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3542s avg_client_train_time=0.003898s aggregation_time=0.0701s round_time=2.7521s
+2026-05-05 05:06:41,324 P34317 INFO ********* Train Turn 59 [phase2_LoRA+dB] *********
+2026-05-05 05:06:44,019 P34317 INFO ΔB updated at turn 59 (604 clients)
+2026-05-05 05:06:44,078 P34317 INFO Clients average loss: 0.6793595552444458
+2026-05-05 05:06:44,078 P34317 INFO [Time] turn=59 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3554s avg_client_train_time=0.003900s aggregation_time=0.0706s round_time=2.7534s
+2026-05-05 05:06:44,082 P34317 INFO ********* Eval @ Turn 59 *********
+2026-05-05 05:06:46,213 P34317 INFO [Metrics] logloss: 0.089223 - MRR: 0.211570 - NDCG(5): 0.208916 - HR(5): 0.333940 - NDCG(10): 0.266020 - HR(10): 0.510762 - NDCG(20): 0.309460 - HR(20): 0.681788 - NDCG(50): 0.346678 - HR(50): 0.868543
+2026-05-05 05:06:46,214 P34317 INFO ********* Train Turn 60 [phase2_LoRA+dB] *********
+2026-05-05 05:06:48,943 P34317 INFO ΔB updated at turn 60 (604 clients)
+2026-05-05 05:06:49,003 P34317 INFO Clients average loss: 0.6769489645957947
+2026-05-05 05:06:49,003 P34317 INFO [Time] turn=60 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3786s avg_client_train_time=0.003938s aggregation_time=0.0710s round_time=2.7890s
+2026-05-05 05:06:49,008 P34317 INFO ********* Train Turn 61 [phase2_LoRA+dB] *********
+2026-05-05 05:06:51,720 P34317 INFO ΔB updated at turn 61 (604 clients)
+2026-05-05 05:06:51,779 P34317 INFO Clients average loss: 0.6751696467399597
+2026-05-05 05:06:51,779 P34317 INFO [Time] turn=61 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3706s avg_client_train_time=0.003925s aggregation_time=0.0711s round_time=2.7716s
+2026-05-05 05:06:51,784 P34317 INFO ********* Train Turn 62 [phase2_LoRA+dB] *********
+2026-05-05 05:06:54,486 P34317 INFO ΔB updated at turn 62 (604 clients)
+2026-05-05 05:06:54,545 P34317 INFO Clients average loss: 0.6738881468772888
+2026-05-05 05:06:54,545 P34317 INFO [Time] turn=62 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3569s avg_client_train_time=0.003902s aggregation_time=0.0708s round_time=2.7610s
+2026-05-05 05:06:54,550 P34317 INFO ********* Train Turn 63 [phase2_LoRA+dB] *********
+2026-05-05 05:06:57,254 P34317 INFO ΔB updated at turn 63 (604 clients)
+2026-05-05 05:06:57,313 P34317 INFO Clients average loss: 0.6721646189689636
+2026-05-05 05:06:57,313 P34317 INFO [Time] turn=63 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3634s avg_client_train_time=0.003913s aggregation_time=0.0708s round_time=2.7636s
+2026-05-05 05:06:57,318 P34317 INFO ********* Train Turn 64 [phase2_LoRA+dB] *********
+2026-05-05 05:07:00,027 P34317 INFO ΔB updated at turn 64 (604 clients)
+2026-05-05 05:07:00,087 P34317 INFO Clients average loss: 0.6692817211151123
+2026-05-05 05:07:00,087 P34317 INFO [Time] turn=64 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3647s avg_client_train_time=0.003915s aggregation_time=0.0710s round_time=2.7684s
+2026-05-05 05:07:00,091 P34317 INFO ********* Train Turn 65 [phase2_LoRA+dB] *********
+2026-05-05 05:07:02,807 P34317 INFO ΔB updated at turn 65 (604 clients)
+2026-05-05 05:07:02,866 P34317 INFO Clients average loss: 0.6670625805854797
+2026-05-05 05:07:02,866 P34317 INFO [Time] turn=65 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3729s avg_client_train_time=0.003929s aggregation_time=0.0715s round_time=2.7749s
+2026-05-05 05:07:02,871 P34317 INFO ********* Train Turn 66 [phase2_LoRA+dB] *********
+2026-05-05 05:07:05,579 P34317 INFO ΔB updated at turn 66 (604 clients)
+2026-05-05 05:07:05,639 P34317 INFO Clients average loss: 0.6650004982948303
+2026-05-05 05:07:05,639 P34317 INFO [Time] turn=66 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3630s avg_client_train_time=0.003912s aggregation_time=0.0707s round_time=2.7677s
+2026-05-05 05:07:05,644 P34317 INFO ********* Train Turn 67 [phase2_LoRA+dB] *********
+2026-05-05 05:07:08,355 P34317 INFO ΔB updated at turn 67 (604 clients)
+2026-05-05 05:07:08,415 P34317 INFO Clients average loss: 0.6618165373802185
+2026-05-05 05:07:08,415 P34317 INFO [Time] turn=67 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3708s avg_client_train_time=0.003925s aggregation_time=0.0707s round_time=2.7711s
+2026-05-05 05:07:08,419 P34317 INFO ********* Train Turn 68 [phase2_LoRA+dB] *********
+2026-05-05 05:07:11,143 P34317 INFO ΔB updated at turn 68 (604 clients)
+2026-05-05 05:07:11,202 P34317 INFO Clients average loss: 0.6594440937042236
+2026-05-05 05:07:11,203 P34317 INFO [Time] turn=68 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3840s avg_client_train_time=0.003947s aggregation_time=0.0712s round_time=2.7831s
+2026-05-05 05:07:11,207 P34317 INFO ********* Train Turn 69 [phase2_LoRA+dB] *********
+2026-05-05 05:07:14,050 P34317 INFO ΔB updated at turn 69 (604 clients)
+2026-05-05 05:07:14,110 P34317 INFO Clients average loss: 0.6550648808479309
+2026-05-05 05:07:14,110 P34317 INFO [Time] turn=69 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3712s avg_client_train_time=0.003926s aggregation_time=0.0717s round_time=2.9030s
+2026-05-05 05:07:14,115 P34317 INFO ********* Eval @ Turn 69 *********
+2026-05-05 05:07:16,255 P34317 INFO [Metrics] logloss: 0.146493 - MRR: 0.241016 - NDCG(5): 0.239116 - HR(5): 0.372517 - NDCG(10): 0.304396 - HR(10): 0.574503 - NDCG(20): 0.346980 - HR(20): 0.740894 - NDCG(50): 0.379959 - HR(50): 0.906457
+2026-05-05 05:07:16,255 P34317 INFO ********* Train Turn 70 [phase2_LoRA+dB] *********
+2026-05-05 05:07:18,982 P34317 INFO ΔB updated at turn 70 (604 clients)
+2026-05-05 05:07:19,043 P34317 INFO Clients average loss: 0.6500610709190369
+2026-05-05 05:07:19,044 P34317 INFO [Time] turn=70 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3760s avg_client_train_time=0.003934s aggregation_time=0.0733s round_time=2.7888s
+2026-05-05 05:07:19,048 P34317 INFO ********* Train Turn 71 [phase2_LoRA+dB] *********
+2026-05-05 05:07:21,763 P34317 INFO ΔB updated at turn 71 (604 clients)
+2026-05-05 05:07:21,822 P34317 INFO Clients average loss: 0.646350085735321
+2026-05-05 05:07:21,822 P34317 INFO [Time] turn=71 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3688s avg_client_train_time=0.003922s aggregation_time=0.0707s round_time=2.7736s
+2026-05-05 05:07:21,827 P34317 INFO ********* Train Turn 72 [phase2_LoRA+dB] *********
+2026-05-05 05:07:24,529 P34317 INFO ΔB updated at turn 72 (604 clients)
+2026-05-05 05:07:24,588 P34317 INFO Clients average loss: 0.6419041156768799
+2026-05-05 05:07:24,588 P34317 INFO [Time] turn=72 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3589s avg_client_train_time=0.003905s aggregation_time=0.0706s round_time=2.7611s
+2026-05-05 05:07:24,593 P34317 INFO ********* Train Turn 73 [phase2_LoRA+dB] *********
+2026-05-05 05:07:27,294 P34317 INFO ΔB updated at turn 73 (604 clients)
+2026-05-05 05:07:27,353 P34317 INFO Clients average loss: 0.636760413646698
+2026-05-05 05:07:27,353 P34317 INFO [Time] turn=73 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3578s avg_client_train_time=0.003904s aggregation_time=0.0706s round_time=2.7601s
+2026-05-05 05:07:27,357 P34317 INFO ********* Train Turn 74 [phase2_LoRA+dB] *********
+2026-05-05 05:07:30,064 P34317 INFO ΔB updated at turn 74 (604 clients)
+2026-05-05 05:07:30,123 P34317 INFO Clients average loss: 0.6318143606185913
+2026-05-05 05:07:30,123 P34317 INFO [Time] turn=74 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3667s avg_client_train_time=0.003918s aggregation_time=0.0712s round_time=2.7653s
+2026-05-05 05:07:30,128 P34317 INFO ********* Train Turn 75 [phase2_LoRA+dB] *********
+2026-05-05 05:07:32,834 P34317 INFO ΔB updated at turn 75 (604 clients)
+2026-05-05 05:07:32,893 P34317 INFO Clients average loss: 0.6230775713920593
+2026-05-05 05:07:32,893 P34317 INFO [Time] turn=75 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3677s avg_client_train_time=0.003920s aggregation_time=0.0703s round_time=2.7655s
+2026-05-05 05:07:32,898 P34317 INFO ********* Train Turn 76 [phase2_LoRA+dB] *********
+2026-05-05 05:07:35,590 P34317 INFO ΔB updated at turn 76 (604 clients)
+2026-05-05 05:07:35,648 P34317 INFO Clients average loss: 0.6204351782798767
+2026-05-05 05:07:35,649 P34317 INFO [Time] turn=76 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3545s avg_client_train_time=0.003898s aggregation_time=0.0698s round_time=2.7507s
+2026-05-05 05:07:35,653 P34317 INFO ********* Train Turn 77 [phase2_LoRA+dB] *********
+2026-05-05 05:07:38,346 P34317 INFO ΔB updated at turn 77 (604 clients)
+2026-05-05 05:07:38,405 P34317 INFO Clients average loss: 0.6134340167045593
+2026-05-05 05:07:38,405 P34317 INFO [Time] turn=77 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3549s avg_client_train_time=0.003899s aggregation_time=0.0705s round_time=2.7519s
+2026-05-05 05:07:38,410 P34317 INFO ********* Train Turn 78 [phase2_LoRA+dB] *********
+2026-05-05 05:07:41,095 P34317 INFO ΔB updated at turn 78 (604 clients)
+2026-05-05 05:07:41,154 P34317 INFO Clients average loss: 0.6037788391113281
+2026-05-05 05:07:41,154 P34317 INFO [Time] turn=78 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3446s avg_client_train_time=0.003882s aggregation_time=0.0703s round_time=2.7438s
+2026-05-05 05:07:41,159 P34317 INFO ********* Train Turn 79 [phase2_LoRA+dB] *********
+2026-05-05 05:07:43,860 P34317 INFO ΔB updated at turn 79 (604 clients)
+2026-05-05 05:07:43,919 P34317 INFO Clients average loss: 0.5960928201675415
+2026-05-05 05:07:43,919 P34317 INFO [Time] turn=79 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3639s avg_client_train_time=0.003914s aggregation_time=0.0705s round_time=2.7602s
+2026-05-05 05:07:43,924 P34317 INFO ********* Eval @ Turn 79 *********
+2026-05-05 05:07:46,037 P34317 INFO [Metrics] logloss: 0.262409 - MRR: 0.249411 - NDCG(5): 0.243776 - HR(5): 0.372848 - NDCG(10): 0.315150 - HR(10): 0.595199 - NDCG(20): 0.358072 - HR(20): 0.762417 - NDCG(50): 0.392396 - HR(50): 0.933278
+2026-05-05 05:07:46,038 P34317 INFO ********* Train Turn 80 [phase2_LoRA+dB] *********
+2026-05-05 05:07:48,750 P34317 INFO ΔB updated at turn 80 (604 clients)
+2026-05-05 05:07:48,808 P34317 INFO Clients average loss: 0.5884581804275513
+2026-05-05 05:07:48,809 P34317 INFO [Time] turn=80 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3567s avg_client_train_time=0.003902s aggregation_time=0.0712s round_time=2.7709s
+2026-05-05 05:07:48,813 P34317 INFO ********* Train Turn 81 [phase2_LoRA+dB] *********
+2026-05-05 05:07:51,512 P34317 INFO ΔB updated at turn 81 (604 clients)
+2026-05-05 05:07:51,570 P34317 INFO Clients average loss: 0.5771958231925964
+2026-05-05 05:07:51,571 P34317 INFO [Time] turn=81 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3585s avg_client_train_time=0.003905s aggregation_time=0.0703s round_time=2.7572s
+2026-05-05 05:07:51,575 P34317 INFO ********* Train Turn 82 [phase2_LoRA+dB] *********
+2026-05-05 05:07:54,299 P34317 INFO ΔB updated at turn 82 (604 clients)
+2026-05-05 05:07:54,358 P34317 INFO Clients average loss: 0.5735512375831604
+2026-05-05 05:07:54,359 P34317 INFO [Time] turn=82 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3766s avg_client_train_time=0.003935s aggregation_time=0.0711s round_time=2.7832s
+2026-05-05 05:07:54,363 P34317 INFO ********* Train Turn 83 [phase2_LoRA+dB] *********
+2026-05-05 05:07:57,077 P34317 INFO ΔB updated at turn 83 (604 clients)
+2026-05-05 05:07:57,137 P34317 INFO Clients average loss: 0.5637099742889404
+2026-05-05 05:07:57,137 P34317 INFO [Time] turn=83 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3722s avg_client_train_time=0.003927s aggregation_time=0.0713s round_time=2.7735s
+2026-05-05 05:07:57,142 P34317 INFO ********* Train Turn 84 [phase2_LoRA+dB] *********
+2026-05-05 05:07:59,850 P34317 INFO ΔB updated at turn 84 (604 clients)
+2026-05-05 05:07:59,909 P34317 INFO Clients average loss: 0.553221583366394
+2026-05-05 05:07:59,910 P34317 INFO [Time] turn=84 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3634s avg_client_train_time=0.003913s aggregation_time=0.0707s round_time=2.7679s
+2026-05-05 05:07:59,914 P34317 INFO ********* Train Turn 85 [phase2_LoRA+dB] *********
+2026-05-05 05:08:02,625 P34317 INFO ΔB updated at turn 85 (604 clients)
+2026-05-05 05:08:02,685 P34317 INFO Clients average loss: 0.542361855506897
+2026-05-05 05:08:02,685 P34317 INFO [Time] turn=85 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3705s avg_client_train_time=0.003925s aggregation_time=0.0717s round_time=2.7709s
+2026-05-05 05:08:02,690 P34317 INFO ********* Train Turn 86 [phase2_LoRA+dB] *********
+2026-05-05 05:08:05,412 P34317 INFO ΔB updated at turn 86 (604 clients)
+2026-05-05 05:08:05,471 P34317 INFO Clients average loss: 0.5361790657043457
+2026-05-05 05:08:05,471 P34317 INFO [Time] turn=86 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3802s avg_client_train_time=0.003941s aggregation_time=0.0714s round_time=2.7810s
+2026-05-05 05:08:05,476 P34317 INFO ********* Train Turn 87 [phase2_LoRA+dB] *********
+2026-05-05 05:08:08,321 P34317 INFO ΔB updated at turn 87 (604 clients)
+2026-05-05 05:08:08,380 P34317 INFO Clients average loss: 0.5209832191467285
+2026-05-05 05:08:08,380 P34317 INFO [Time] turn=87 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3666s avg_client_train_time=0.003918s aggregation_time=0.0712s round_time=2.9045s
+2026-05-05 05:08:08,385 P34317 INFO ********* Train Turn 88 [phase2_LoRA+dB] *********
+2026-05-05 05:08:11,096 P34317 INFO ΔB updated at turn 88 (604 clients)
+2026-05-05 05:08:11,155 P34317 INFO Clients average loss: 0.5134311318397522
+2026-05-05 05:08:11,155 P34317 INFO [Time] turn=88 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3634s avg_client_train_time=0.003913s aggregation_time=0.0712s round_time=2.7700s
+2026-05-05 05:08:11,160 P34317 INFO ********* Train Turn 89 [phase2_LoRA+dB] *********
+2026-05-05 05:08:13,870 P34317 INFO ΔB updated at turn 89 (604 clients)
+2026-05-05 05:08:13,929 P34317 INFO Clients average loss: 0.5019627213478088
+2026-05-05 05:08:13,929 P34317 INFO [Time] turn=89 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3640s avg_client_train_time=0.003914s aggregation_time=0.0708s round_time=2.7690s
+2026-05-05 05:08:13,934 P34317 INFO ********* Eval @ Turn 89 *********
+2026-05-05 05:08:16,067 P34317 INFO [Metrics] logloss: 1.149972 - MRR: 0.245152 - NDCG(5): 0.234543 - HR(5): 0.355795 - NDCG(10): 0.308279 - HR(10): 0.585927 - NDCG(20): 0.357170 - HR(20): 0.776159 - NDCG(50): 0.391152 - HR(50): 0.944536
+2026-05-05 05:08:16,068 P34317 INFO ********* Train Turn 90 [phase2_LoRA+dB] *********
+2026-05-05 05:08:19,056 P34317 INFO ΔB updated at turn 90 (604 clients)
+2026-05-05 05:08:19,116 P34317 INFO Clients average loss: 0.49447429180145264
+2026-05-05 05:08:19,116 P34317 INFO [Time] turn=90 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6292s avg_client_train_time=0.004353s aggregation_time=0.0716s round_time=3.0482s
+2026-05-05 05:08:19,121 P34317 INFO ********* Train Turn 91 [phase2_LoRA+dB] *********
+2026-05-05 05:08:22,098 P34317 INFO ΔB updated at turn 91 (604 clients)
+2026-05-05 05:08:22,157 P34317 INFO Clients average loss: 0.4791789650917053
+2026-05-05 05:08:22,158 P34317 INFO [Time] turn=91 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6250s avg_client_train_time=0.004346s aggregation_time=0.0714s round_time=3.0369s
+2026-05-05 05:08:22,162 P34317 INFO ********* Train Turn 92 [phase2_LoRA+dB] *********
+2026-05-05 05:08:25,022 P34317 INFO ΔB updated at turn 92 (604 clients)
+2026-05-05 05:08:25,081 P34317 INFO Clients average loss: 0.4705302119255066
+2026-05-05 05:08:25,081 P34317 INFO [Time] turn=92 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.5100s avg_client_train_time=0.004156s aggregation_time=0.0711s round_time=2.9190s
+2026-05-05 05:08:25,086 P34317 INFO ********* Train Turn 93 [phase2_LoRA+dB] *********
+2026-05-05 05:08:27,806 P34317 INFO ΔB updated at turn 93 (604 clients)
+2026-05-05 05:08:27,866 P34317 INFO Clients average loss: 0.46445611119270325
+2026-05-05 05:08:27,866 P34317 INFO [Time] turn=93 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3783s avg_client_train_time=0.003938s aggregation_time=0.0711s round_time=2.7796s
+2026-05-05 05:08:27,870 P34317 INFO ********* Train Turn 94 [phase2_LoRA+dB] *********
+2026-05-05 05:08:30,578 P34317 INFO ΔB updated at turn 94 (604 clients)
+2026-05-05 05:08:30,637 P34317 INFO Clients average loss: 0.4547085165977478
+2026-05-05 05:08:30,638 P34317 INFO [Time] turn=94 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3689s avg_client_train_time=0.003922s aggregation_time=0.0710s round_time=2.7670s
+2026-05-05 05:08:30,642 P34317 INFO ********* Train Turn 95 [phase2_LoRA+dB] *********
+2026-05-05 05:08:33,362 P34317 INFO ΔB updated at turn 95 (604 clients)
+2026-05-05 05:08:33,422 P34317 INFO Clients average loss: 0.4481021761894226
+2026-05-05 05:08:33,422 P34317 INFO [Time] turn=95 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3787s avg_client_train_time=0.003938s aggregation_time=0.0716s round_time=2.7795s
+2026-05-05 05:08:33,427 P34317 INFO ********* Train Turn 96 [phase2_LoRA+dB] *********
+2026-05-05 05:08:36,150 P34317 INFO ΔB updated at turn 96 (604 clients)
+2026-05-05 05:08:36,209 P34317 INFO Clients average loss: 0.4348098635673523
+2026-05-05 05:08:36,209 P34317 INFO [Time] turn=96 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3810s avg_client_train_time=0.003942s aggregation_time=0.0703s round_time=2.7822s
+2026-05-05 05:08:36,214 P34317 INFO ********* Train Turn 97 [phase2_LoRA+dB] *********
+2026-05-05 05:08:38,942 P34317 INFO ΔB updated at turn 97 (604 clients)
+2026-05-05 05:08:39,001 P34317 INFO Clients average loss: 0.43028804659843445
+2026-05-05 05:08:39,001 P34317 INFO [Time] turn=97 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3819s avg_client_train_time=0.003943s aggregation_time=0.0706s round_time=2.7872s
+2026-05-05 05:08:39,006 P34317 INFO ********* Train Turn 98 [phase2_LoRA+dB] *********
+2026-05-05 05:08:41,725 P34317 INFO ΔB updated at turn 98 (604 clients)
+2026-05-05 05:08:41,785 P34317 INFO Clients average loss: 0.42738649249076843
+2026-05-05 05:08:41,785 P34317 INFO [Time] turn=98 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3774s avg_client_train_time=0.003936s aggregation_time=0.0718s round_time=2.7797s
+2026-05-05 05:08:41,790 P34317 INFO ********* Train Turn 99 [phase2_LoRA+dB] *********
+2026-05-05 05:08:44,511 P34317 INFO ΔB updated at turn 99 (604 clients)
+2026-05-05 05:08:44,570 P34317 INFO Clients average loss: 0.4193844497203827
+2026-05-05 05:08:44,570 P34317 INFO [Time] turn=99 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3748s avg_client_train_time=0.003932s aggregation_time=0.0710s round_time=2.7801s
+2026-05-05 05:08:44,575 P34317 INFO ********* Eval @ Turn 99 *********
+2026-05-05 05:08:46,708 P34317 INFO [Metrics] logloss: 2.269427 - MRR: 0.241857 - NDCG(5): 0.227835 - HR(5): 0.342053 - NDCG(10): 0.301554 - HR(10): 0.572848 - NDCG(20): 0.355946 - HR(20): 0.784934 - NDCG(50): 0.388200 - HR(50): 0.944536
+2026-05-05 05:08:46,708 P34317 INFO ********* Train Turn 100 [phase2_LoRA+dB] *********
+2026-05-05 05:08:49,554 P34317 INFO ΔB updated at turn 100 (604 clients)
+2026-05-05 05:08:49,613 P34317 INFO Clients average loss: 0.41249027848243713
+2026-05-05 05:08:49,614 P34317 INFO [Time] turn=100 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.4911s avg_client_train_time=0.004124s aggregation_time=0.0711s round_time=2.9052s
+2026-05-05 05:08:49,618 P34317 INFO ********* Train Turn 101 [phase2_LoRA+dB] *********
+2026-05-05 05:08:52,713 P34317 INFO ΔB updated at turn 101 (604 clients)
+2026-05-05 05:08:52,774 P34317 INFO Clients average loss: 0.3997352421283722
+2026-05-05 05:08:52,774 P34317 INFO [Time] turn=101 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6118s avg_client_train_time=0.004324s aggregation_time=0.2042s round_time=3.1554s
+2026-05-05 05:08:52,779 P34317 INFO ********* Train Turn 102 [phase2_LoRA+dB] *********
+2026-05-05 05:08:55,746 P34317 INFO ΔB updated at turn 102 (604 clients)
+2026-05-05 05:08:55,805 P34317 INFO Clients average loss: 0.4014532268047333
+2026-05-05 05:08:55,805 P34317 INFO [Time] turn=102 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6185s avg_client_train_time=0.004335s aggregation_time=0.0707s round_time=3.0262s
+2026-05-05 05:08:55,810 P34317 INFO ********* Train Turn 103 [phase2_LoRA+dB] *********
+2026-05-05 05:08:58,774 P34317 INFO ΔB updated at turn 103 (604 clients)
+2026-05-05 05:08:58,833 P34317 INFO Clients average loss: 0.3912288248538971
+2026-05-05 05:08:58,833 P34317 INFO [Time] turn=103 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6114s avg_client_train_time=0.004323s aggregation_time=0.0708s round_time=3.0235s
+2026-05-05 05:08:58,838 P34317 INFO ********* Train Turn 104 [phase2_LoRA+dB] *********
+2026-05-05 05:09:01,801 P34317 INFO ΔB updated at turn 104 (604 clients)
+2026-05-05 05:09:01,861 P34317 INFO Clients average loss: 0.3880563974380493
+2026-05-05 05:09:01,861 P34317 INFO [Time] turn=104 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6172s avg_client_train_time=0.004333s aggregation_time=0.0710s round_time=3.0223s
+2026-05-05 05:09:01,865 P34317 INFO ********* Train Turn 105 [phase2_LoRA+dB] *********
+2026-05-05 05:09:04,825 P34317 INFO ΔB updated at turn 105 (604 clients)
+2026-05-05 05:09:04,884 P34317 INFO Clients average loss: 0.3857438266277313
+2026-05-05 05:09:04,884 P34317 INFO [Time] turn=105 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6141s avg_client_train_time=0.004328s aggregation_time=0.0706s round_time=3.0183s
+2026-05-05 05:09:04,888 P34317 INFO ********* Train Turn 106 [phase2_LoRA+dB] *********
+2026-05-05 05:09:07,850 P34317 INFO ΔB updated at turn 106 (604 clients)
+2026-05-05 05:09:07,909 P34317 INFO Clients average loss: 0.3864116668701172
+2026-05-05 05:09:07,909 P34317 INFO [Time] turn=106 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6101s avg_client_train_time=0.004321s aggregation_time=0.0704s round_time=3.0206s
+2026-05-05 05:09:07,914 P34317 INFO ********* Train Turn 107 [phase2_LoRA+dB] *********
+2026-05-05 05:09:10,879 P34317 INFO ΔB updated at turn 107 (604 clients)
+2026-05-05 05:09:10,940 P34317 INFO Clients average loss: 0.3811044991016388
+2026-05-05 05:09:10,940 P34317 INFO [Time] turn=107 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6174s avg_client_train_time=0.004333s aggregation_time=0.0720s round_time=3.0259s
+2026-05-05 05:09:10,945 P34317 INFO ********* Train Turn 108 [phase2_LoRA+dB] *********
+2026-05-05 05:09:13,915 P34317 INFO ΔB updated at turn 108 (604 clients)
+2026-05-05 05:09:13,979 P34317 INFO Clients average loss: 0.3738243579864502
+2026-05-05 05:09:13,979 P34317 INFO [Time] turn=108 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.6173s avg_client_train_time=0.004333s aggregation_time=0.0749s round_time=3.0340s
+2026-05-05 05:09:13,984 P34317 INFO ********* Train Turn 109 [phase2_LoRA+dB] *********
+2026-05-05 05:09:16,793 P34317 INFO ΔB updated at turn 109 (604 clients)
+2026-05-05 05:09:16,852 P34317 INFO Clients average loss: 0.3732733726501465
+2026-05-05 05:09:16,853 P34317 INFO [Time] turn=109 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.4609s avg_client_train_time=0.004074s aggregation_time=0.0712s round_time=2.8689s
+2026-05-05 05:09:16,857 P34317 INFO ********* Eval @ Turn 109 *********
+2026-05-05 05:09:18,979 P34317 INFO [Metrics] logloss: 2.796558 - MRR: 0.242516 - NDCG(5): 0.229371 - HR(5): 0.344536 - NDCG(10): 0.300545 - HR(10): 0.567053 - NDCG(20): 0.356963 - HR(20): 0.787252 - NDCG(50): 0.388863 - HR(50): 0.945530
+2026-05-05 05:09:18,979 P34317 INFO ********* Train Turn 110 [phase2_LoRA+dB] *********
+2026-05-05 05:09:21,882 P34317 INFO ΔB updated at turn 110 (604 clients)
+2026-05-05 05:09:21,943 P34317 INFO Clients average loss: 0.3692658841609955
+2026-05-05 05:09:21,943 P34317 INFO [Time] turn=110 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.5456s avg_client_train_time=0.004215s aggregation_time=0.0724s round_time=2.9635s
+2026-05-05 05:09:21,947 P34317 INFO ********* Train Turn 111 [phase2_LoRA+dB] *********
+2026-05-05 05:09:24,671 P34317 INFO ΔB updated at turn 111 (604 clients)
+2026-05-05 05:09:24,731 P34317 INFO Clients average loss: 0.3612779974937439
+2026-05-05 05:09:24,731 P34317 INFO [Time] turn=111 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3784s avg_client_train_time=0.003938s aggregation_time=0.0711s round_time=2.7833s
+2026-05-05 05:09:24,736 P34317 INFO ********* Train Turn 112 [phase2_LoRA+dB] *********
+2026-05-05 05:09:27,454 P34317 INFO ΔB updated at turn 112 (604 clients)
+2026-05-05 05:09:27,513 P34317 INFO Clients average loss: 0.36768659949302673
+2026-05-05 05:09:27,513 P34317 INFO [Time] turn=112 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3693s avg_client_train_time=0.003923s aggregation_time=0.0715s round_time=2.7777s
+2026-05-05 05:09:27,518 P34317 INFO ********* Train Turn 113 [phase2_LoRA+dB] *********
+2026-05-05 05:09:30,239 P34317 INFO ΔB updated at turn 113 (604 clients)
+2026-05-05 05:09:30,298 P34317 INFO Clients average loss: 0.3531823456287384
+2026-05-05 05:09:30,299 P34317 INFO [Time] turn=113 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3719s avg_client_train_time=0.003927s aggregation_time=0.0717s round_time=2.7802s
+2026-05-05 05:09:30,303 P34317 INFO ********* Train Turn 114 [phase2_LoRA+dB] *********
+2026-05-05 05:09:33,039 P34317 INFO ΔB updated at turn 114 (604 clients)
+2026-05-05 05:09:33,099 P34317 INFO Clients average loss: 0.36544790863990784
+2026-05-05 05:09:33,099 P34317 INFO [Time] turn=114 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3916s avg_client_train_time=0.003960s aggregation_time=0.0718s round_time=2.7959s
+2026-05-05 05:09:33,104 P34317 INFO ********* Train Turn 115 [phase2_LoRA+dB] *********
+2026-05-05 05:09:35,835 P34317 INFO ΔB updated at turn 115 (604 clients)
+2026-05-05 05:09:35,895 P34317 INFO Clients average loss: 0.35909736156463623
+2026-05-05 05:09:35,895 P34317 INFO [Time] turn=115 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3872s avg_client_train_time=0.003952s aggregation_time=0.0714s round_time=2.7909s
+2026-05-05 05:09:35,900 P34317 INFO ********* Train Turn 116 [phase2_LoRA+dB] *********
+2026-05-05 05:09:38,624 P34317 INFO ΔB updated at turn 116 (604 clients)
+2026-05-05 05:09:38,684 P34317 INFO Clients average loss: 0.3608487546443939
+2026-05-05 05:09:38,684 P34317 INFO [Time] turn=116 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3755s avg_client_train_time=0.003933s aggregation_time=0.0712s round_time=2.7838s
+2026-05-05 05:09:38,689 P34317 INFO ********* Train Turn 117 [phase2_LoRA+dB] *********
+2026-05-05 05:09:41,406 P34317 INFO ΔB updated at turn 117 (604 clients)
+2026-05-05 05:09:41,466 P34317 INFO Clients average loss: 0.35167405009269714
+2026-05-05 05:09:41,466 P34317 INFO [Time] turn=117 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3738s avg_client_train_time=0.003930s aggregation_time=0.0717s round_time=2.7772s
+2026-05-05 05:09:41,471 P34317 INFO ********* Train Turn 118 [phase2_LoRA+dB] *********
+2026-05-05 05:09:44,197 P34317 INFO ΔB updated at turn 118 (604 clients)
+2026-05-05 05:09:44,256 P34317 INFO Clients average loss: 0.35799017548561096
+2026-05-05 05:09:44,256 P34317 INFO [Time] turn=118 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3788s avg_client_train_time=0.003938s aggregation_time=0.0710s round_time=2.7855s
+2026-05-05 05:09:44,261 P34317 INFO ********* Train Turn 119 [phase2_LoRA+dB] *********
+2026-05-05 05:09:47,112 P34317 INFO ΔB updated at turn 119 (604 clients)
+2026-05-05 05:09:47,172 P34317 INFO Clients average loss: 0.3564442992210388
+2026-05-05 05:09:47,172 P34317 INFO [Time] turn=119 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3723s avg_client_train_time=0.003928s aggregation_time=0.0717s round_time=2.9110s
+2026-05-05 05:09:47,177 P34317 INFO ********* Eval @ Turn 119 *********
+2026-05-05 05:09:49,342 P34317 INFO [Metrics] logloss: 3.091607 - MRR: 0.246208 - NDCG(5): 0.234432 - HR(5): 0.351325 - NDCG(10): 0.304119 - HR(10): 0.569205 - NDCG(20): 0.360286 - HR(20): 0.788742 - NDCG(50): 0.391677 - HR(50): 0.944371
+2026-05-05 05:09:49,342 P34317 INFO ********* Train Turn 120 [phase2_LoRA+dB] *********
+2026-05-05 05:09:52,072 P34317 INFO ΔB updated at turn 120 (604 clients)
+2026-05-05 05:09:52,131 P34317 INFO Clients average loss: 0.3517621159553528
+2026-05-05 05:09:52,132 P34317 INFO [Time] turn=120 phase=phase2_LoRA+dB update_delta_B=True local_train_time=2.3727s avg_client_train_time=0.003928s aggregation_time=0.0717s round_time=2.7895s
+2026-05-05 05:09:52,136 P34317 INFO ********* Train Turn 121 [phase2_LoRA+dB] *********

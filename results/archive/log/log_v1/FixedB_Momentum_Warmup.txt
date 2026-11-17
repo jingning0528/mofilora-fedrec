@@ -1,0 +1,1059 @@
+/content/drive/MyDrive/FedNCF-LoRA
+2026-04-29 19:32:39,273 P22775 INFO Params: {
+    "beta": "0.9",
+    "clients_num_per_turn": "604",
+    "data_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "dataloader": "MLDataLoaderFL",
+    "dataset_id": "ML1M_t5",
+    "device": "0",
+    "dropout": "0.5",
+    "embedding_dim": "32",
+    "embedding_regularizer": "1e-08",
+    "eta_s": "1.0",
+    "g_hidden_activations": "ReLU",
+    "g_hidden_units": "[512, 256, 128]",
+    "hidden_activations": "ReLU",
+    "hidden_units": "[64, 128, 64]",
+    "item_num": "3952",
+    "latent_dim": "4",
+    "learning_rate": "0.001",
+    "local_epoch": "2",
+    "loss_fn": "bpr_loss",
+    "metrics": "['logloss', 'MRR', 'NDCG(5)', 'HR(5)', 'NDCG(10)', 'HR(10)', 'NDCG(20)', 'HR(20)', 'NDCG(50)', 'HR(50)']",
+    "model": "FedNCF_Lora_Momentum_2",
+    "model_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/model/t5/",
+    "model_id": "FedNCF_ml1m_triple_101_momentum_2",
+    "net_regularizer": "1e-08",
+    "only_inter": "False",
+    "optimizer": "adam",
+    "output_dim": "1",
+    "path": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "pre_epoch": "3000",
+    "seed": "2024",
+    "sen_embedding_dim": "768",
+    "task": "triple",
+    "train_turn": "500",
+    "user_num": "6040",
+    "warmup_B_turns": "20"
+}
+2026-04-29 19:32:42,722 P22775 INFO Model embedding_item.emb.weight size: 0.06030273MB
+2026-04-29 19:32:42,722 P22775 INFO Model embedding_item.linear.weight size: 0.00048828MB
+2026-04-29 19:32:42,722 P22775 INFO Model embedding_p.weight size: 0.48242188MB
+2026-04-29 19:32:42,722 P22775 INFO Model mlp.mlp.0.weight size: 0.01562500MB
+2026-04-29 19:32:42,722 P22775 INFO Model mlp.mlp.0.bias size: 0.00024414MB
+2026-04-29 19:32:42,722 P22775 INFO Model mlp.mlp.3.weight size: 0.03125000MB
+2026-04-29 19:32:42,723 P22775 INFO Model mlp.mlp.3.bias size: 0.00048828MB
+2026-04-29 19:32:42,723 P22775 INFO Model mlp.mlp.6.weight size: 0.03125000MB
+2026-04-29 19:32:42,723 P22775 INFO Model mlp.mlp.6.bias size: 0.00024414MB
+2026-04-29 19:32:42,723 P22775 INFO Model mlp.mlp.9.weight size: 0.00024414MB
+2026-04-29 19:32:42,723 P22775 INFO Model mlp.mlp.9.bias size: 0.00000381MB
+2026-04-29 19:32:42,724 P22775 INFO Model all size: 0.62256241MB
+2026-04-29 19:32:42,724 P22775 INFO Phase schedule: Phase1(AE warmup)=turns 0-19, Phase2(B warmup)=turns 20-39, Phase3(freeze B)=turns 40+
+2026-04-29 19:32:51,992 P22775 INFO ********* Train Turn 0 [phase1_AE] *********
+/content/drive/MyDrive/FedNCF-LoRA/zoo/fedncf_lora_momentum_2.py:330: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  logging.info("Clients average loss: {}".format(torch.mean(torch.tensor(loss_list))))
+2026-04-29 19:32:55,311 P22775 INFO Clients average loss: 0.6949779391288757
+2026-04-29 19:32:55,317 P22775 INFO ********* Train Turn 1 [phase1_AE] *********
+2026-04-29 19:32:58,594 P22775 INFO Clients average loss: 0.6949658393859863
+2026-04-29 19:32:58,599 P22775 INFO ********* Train Turn 2 [phase1_AE] *********
+2026-04-29 19:33:01,778 P22775 INFO Clients average loss: 0.6953572630882263
+2026-04-29 19:33:01,784 P22775 INFO ********* Train Turn 3 [phase1_AE] *********
+2026-04-29 19:33:04,991 P22775 INFO Clients average loss: 0.6954020261764526
+2026-04-29 19:33:04,997 P22775 INFO ********* Train Turn 4 [phase1_AE] *********
+2026-04-29 19:33:08,287 P22775 INFO Clients average loss: 0.6947665810585022
+2026-04-29 19:33:08,292 P22775 INFO ********* Train Turn 5 [phase1_AE] *********
+2026-04-29 19:33:11,501 P22775 INFO Clients average loss: 0.6944477558135986
+2026-04-29 19:33:11,507 P22775 INFO ********* Train Turn 6 [phase1_AE] *********
+2026-04-29 19:33:14,683 P22775 INFO Clients average loss: 0.6946613788604736
+2026-04-29 19:33:14,689 P22775 INFO ********* Train Turn 7 [phase1_AE] *********
+2026-04-29 19:33:17,904 P22775 INFO Clients average loss: 0.6944226622581482
+2026-04-29 19:33:17,910 P22775 INFO ********* Train Turn 8 [phase1_AE] *********
+2026-04-29 19:33:21,192 P22775 INFO Clients average loss: 0.694617509841919
+2026-04-29 19:33:21,198 P22775 INFO ********* Train Turn 9 [phase1_AE] *********
+2026-04-29 19:33:24,392 P22775 INFO Clients average loss: 0.6948087811470032
+2026-04-29 19:33:24,398 P22775 INFO ********* Train Turn 10 [phase1_AE] *********
+2026-04-29 19:33:27,600 P22775 INFO Clients average loss: 0.6947000026702881
+2026-04-29 19:33:27,605 P22775 INFO ********* Train Turn 11 [phase1_AE] *********
+2026-04-29 19:33:30,839 P22775 INFO Clients average loss: 0.6947769522666931
+2026-04-29 19:33:30,844 P22775 INFO ********* Train Turn 12 [phase1_AE] *********
+2026-04-29 19:33:34,036 P22775 INFO Clients average loss: 0.6939570903778076
+2026-04-29 19:33:34,041 P22775 INFO ********* Train Turn 13 [phase1_AE] *********
+2026-04-29 19:33:37,218 P22775 INFO Clients average loss: 0.6941722631454468
+2026-04-29 19:33:37,224 P22775 INFO ********* Train Turn 14 [phase1_AE] *********
+2026-04-29 19:33:40,536 P22775 INFO Clients average loss: 0.6942402124404907
+2026-04-29 19:33:40,542 P22775 INFO ********* Train Turn 15 [phase1_AE] *********
+2026-04-29 19:33:43,781 P22775 INFO Clients average loss: 0.6935063004493713
+2026-04-29 19:33:43,787 P22775 INFO ********* Train Turn 16 [phase1_AE] *********
+2026-04-29 19:33:46,960 P22775 INFO Clients average loss: 0.6935056447982788
+2026-04-29 19:33:46,965 P22775 INFO ********* Train Turn 17 [phase1_AE] *********
+2026-04-29 19:33:50,150 P22775 INFO Clients average loss: 0.6939244270324707
+2026-04-29 19:33:50,156 P22775 INFO ********* Train Turn 18 [phase1_AE] *********
+2026-04-29 19:33:53,404 P22775 INFO Clients average loss: 0.6935755014419556
+2026-04-29 19:33:53,409 P22775 INFO ********* Train Turn 19 [phase1_AE] *********
+2026-04-29 19:33:56,580 P22775 INFO Clients average loss: 0.6935207843780518
+2026-04-29 19:33:56,586 P22775 INFO *** Phase 2 START: B warmup (train A + B) ***
+2026-04-29 19:33:56,586 P22775 INFO ********* Train Turn 20 [phase2_B_warmup] *********
+2026-04-29 19:34:00,266 P22775 INFO Clients average loss: 0.6940284371376038
+2026-04-29 19:34:00,272 P22775 INFO ********* Train Turn 21 [phase2_B_warmup] *********
+2026-04-29 19:34:04,005 P22775 INFO Clients average loss: 0.6938359141349792
+2026-04-29 19:34:04,010 P22775 INFO ********* Train Turn 22 [phase2_B_warmup] *********
+2026-04-29 19:34:07,708 P22775 INFO Clients average loss: 0.6935051679611206
+2026-04-29 19:34:07,713 P22775 INFO ********* Train Turn 23 [phase2_B_warmup] *********
+2026-04-29 19:34:11,320 P22775 INFO Clients average loss: 0.6938900351524353
+2026-04-29 19:34:11,326 P22775 INFO ********* Train Turn 24 [phase2_B_warmup] *********
+2026-04-29 19:34:15,018 P22775 INFO Clients average loss: 0.6938818097114563
+2026-04-29 19:34:15,024 P22775 INFO ********* Train Turn 25 [phase2_B_warmup] *********
+2026-04-29 19:34:18,702 P22775 INFO Clients average loss: 0.6935712695121765
+2026-04-29 19:34:18,708 P22775 INFO ********* Train Turn 26 [phase2_B_warmup] *********
+2026-04-29 19:34:22,363 P22775 INFO Clients average loss: 0.6934384107589722
+2026-04-29 19:34:22,368 P22775 INFO ********* Train Turn 27 [phase2_B_warmup] *********
+2026-04-29 19:34:26,027 P22775 INFO Clients average loss: 0.6928789615631104
+2026-04-29 19:34:26,033 P22775 INFO ********* Train Turn 28 [phase2_B_warmup] *********
+2026-04-29 19:34:29,701 P22775 INFO Clients average loss: 0.6929892301559448
+2026-04-29 19:34:29,707 P22775 INFO ********* Train Turn 29 [phase2_B_warmup] *********
+2026-04-29 19:34:33,303 P22775 INFO Clients average loss: 0.6933283805847168
+2026-04-29 19:34:33,309 P22775 INFO ********* Train Turn 30 [phase2_B_warmup] *********
+2026-04-29 19:34:36,969 P22775 INFO Clients average loss: 0.6924513578414917
+2026-04-29 19:34:36,975 P22775 INFO ********* Train Turn 31 [phase2_B_warmup] *********
+2026-04-29 19:34:40,678 P22775 INFO Clients average loss: 0.6926379799842834
+2026-04-29 19:34:40,684 P22775 INFO ********* Train Turn 32 [phase2_B_warmup] *********
+2026-04-29 19:34:44,345 P22775 INFO Clients average loss: 0.6923900246620178
+2026-04-29 19:34:44,350 P22775 INFO ********* Train Turn 33 [phase2_B_warmup] *********
+2026-04-29 19:34:48,119 P22775 INFO Clients average loss: 0.692314624786377
+2026-04-29 19:34:48,124 P22775 INFO ********* Train Turn 34 [phase2_B_warmup] *********
+2026-04-29 19:34:51,841 P22775 INFO Clients average loss: 0.6924213767051697
+2026-04-29 19:34:51,847 P22775 INFO ********* Train Turn 35 [phase2_B_warmup] *********
+2026-04-29 19:34:55,585 P22775 INFO Clients average loss: 0.6920127868652344
+2026-04-29 19:34:55,591 P22775 INFO ********* Train Turn 36 [phase2_B_warmup] *********
+2026-04-29 19:34:59,312 P22775 INFO Clients average loss: 0.6915132403373718
+2026-04-29 19:34:59,318 P22775 INFO ********* Train Turn 37 [phase2_B_warmup] *********
+2026-04-29 19:35:03,147 P22775 INFO Clients average loss: 0.6915473341941833
+2026-04-29 19:35:03,153 P22775 INFO ********* Train Turn 38 [phase2_B_warmup] *********
+2026-04-29 19:35:06,836 P22775 INFO Clients average loss: 0.6913531422615051
+2026-04-29 19:35:06,842 P22775 INFO ********* Train Turn 39 [phase2_B_warmup] *********
+2026-04-29 19:35:10,527 P22775 INFO Clients average loss: 0.6910733580589294
+2026-04-29 19:35:10,533 P22775 INFO *** Phase 3 START: Freeze B, train A only — resetting v_A ***
+2026-04-29 19:35:10,533 P22775 INFO ********* Train Turn 40 [phase3_freeze_B] *********
+2026-04-29 19:35:14,085 P22775 INFO Clients average loss: 0.6903021931648254
+2026-04-29 19:35:14,091 P22775 INFO ********* Train Turn 41 [phase3_freeze_B] *********
+2026-04-29 19:35:17,563 P22775 INFO Clients average loss: 0.6901536583900452
+2026-04-29 19:35:17,569 P22775 INFO ********* Train Turn 42 [phase3_freeze_B] *********
+2026-04-29 19:35:21,075 P22775 INFO Clients average loss: 0.6902633309364319
+2026-04-29 19:35:21,081 P22775 INFO ********* Train Turn 43 [phase3_freeze_B] *********
+2026-04-29 19:35:24,632 P22775 INFO Clients average loss: 0.6895673274993896
+2026-04-29 19:35:24,638 P22775 INFO ********* Train Turn 44 [phase3_freeze_B] *********
+2026-04-29 19:35:28,089 P22775 INFO Clients average loss: 0.6896848082542419
+2026-04-29 19:35:28,095 P22775 INFO ********* Train Turn 45 [phase3_freeze_B] *********
+2026-04-29 19:35:31,583 P22775 INFO Clients average loss: 0.6895374655723572
+2026-04-29 19:35:31,589 P22775 INFO ********* Train Turn 46 [phase3_freeze_B] *********
+2026-04-29 19:35:35,138 P22775 INFO Clients average loss: 0.6892107129096985
+2026-04-29 19:35:35,143 P22775 INFO ********* Train Turn 47 [phase3_freeze_B] *********
+2026-04-29 19:35:38,634 P22775 INFO Clients average loss: 0.6885433197021484
+2026-04-29 19:35:38,639 P22775 INFO ********* Train Turn 48 [phase3_freeze_B] *********
+2026-04-29 19:35:42,136 P22775 INFO Clients average loss: 0.6880918145179749
+2026-04-29 19:35:42,142 P22775 INFO ********* Train Turn 49 [phase3_freeze_B] *********
+2026-04-29 19:35:45,693 P22775 INFO Clients average loss: 0.686082124710083
+2026-04-29 19:35:45,699 P22775 INFO ********* Train Turn 50 [phase3_freeze_B] *********
+2026-04-29 19:35:49,169 P22775 INFO Clients average loss: 0.6861995458602905
+2026-04-29 19:35:49,174 P22775 INFO ********* Train Turn 51 [phase3_freeze_B] *********
+2026-04-29 19:35:52,632 P22775 INFO Clients average loss: 0.6841843724250793
+2026-04-29 19:35:52,637 P22775 INFO ********* Train Turn 52 [phase3_freeze_B] *********
+2026-04-29 19:35:56,157 P22775 INFO Clients average loss: 0.6840198636054993
+2026-04-29 19:35:56,163 P22775 INFO ********* Train Turn 53 [phase3_freeze_B] *********
+2026-04-29 19:35:59,633 P22775 INFO Clients average loss: 0.6833043098449707
+2026-04-29 19:35:59,638 P22775 INFO ********* Train Turn 54 [phase3_freeze_B] *********
+2026-04-29 19:36:03,093 P22775 INFO Clients average loss: 0.6823076605796814
+2026-04-29 19:36:03,098 P22775 INFO ********* Train Turn 55 [phase3_freeze_B] *********
+2026-04-29 19:36:06,739 P22775 INFO Clients average loss: 0.6808496713638306
+2026-04-29 19:36:06,745 P22775 INFO ********* Train Turn 56 [phase3_freeze_B] *********
+2026-04-29 19:36:10,271 P22775 INFO Clients average loss: 0.6795952916145325
+2026-04-29 19:36:10,277 P22775 INFO ********* Train Turn 57 [phase3_freeze_B] *********
+2026-04-29 19:36:13,827 P22775 INFO Clients average loss: 0.6768407821655273
+2026-04-29 19:36:13,833 P22775 INFO ********* Train Turn 58 [phase3_freeze_B] *********
+2026-04-29 19:36:17,414 P22775 INFO Clients average loss: 0.6745187044143677
+2026-04-29 19:36:17,420 P22775 INFO ********* Train Turn 59 [phase3_freeze_B] *********
+2026-04-29 19:36:21,025 P22775 INFO Clients average loss: 0.6723459362983704
+2026-04-29 19:36:21,031 P22775 INFO ********* Train Turn 60 [phase3_freeze_B] *********
+2026-04-29 19:36:24,499 P22775 INFO Clients average loss: 0.6692667603492737
+2026-04-29 19:36:24,504 P22775 INFO ********* Train Turn 61 [phase3_freeze_B] *********
+2026-04-29 19:36:27,996 P22775 INFO Clients average loss: 0.6658632159233093
+2026-04-29 19:36:28,002 P22775 INFO ********* Train Turn 62 [phase3_freeze_B] *********
+2026-04-29 19:36:31,598 P22775 INFO Clients average loss: 0.6615797281265259
+2026-04-29 19:36:31,604 P22775 INFO ********* Train Turn 63 [phase3_freeze_B] *********
+2026-04-29 19:36:35,111 P22775 INFO Clients average loss: 0.6574646830558777
+2026-04-29 19:36:35,116 P22775 INFO ********* Train Turn 64 [phase3_freeze_B] *********
+2026-04-29 19:36:38,647 P22775 INFO Clients average loss: 0.6529322266578674
+2026-04-29 19:36:38,653 P22775 INFO ********* Train Turn 65 [phase3_freeze_B] *********
+2026-04-29 19:36:42,241 P22775 INFO Clients average loss: 0.648215651512146
+2026-04-29 19:36:42,247 P22775 INFO ********* Train Turn 66 [phase3_freeze_B] *********
+2026-04-29 19:36:45,791 P22775 INFO Clients average loss: 0.6420721411705017
+2026-04-29 19:36:45,796 P22775 INFO ********* Train Turn 67 [phase3_freeze_B] *********
+2026-04-29 19:36:49,341 P22775 INFO Clients average loss: 0.6346627473831177
+2026-04-29 19:36:49,347 P22775 INFO ********* Train Turn 68 [phase3_freeze_B] *********
+2026-04-29 19:36:52,911 P22775 INFO Clients average loss: 0.6269856691360474
+2026-04-29 19:36:52,917 P22775 INFO ********* Train Turn 69 [phase3_freeze_B] *********
+2026-04-29 19:36:56,493 P22775 INFO Clients average loss: 0.6211816668510437
+2026-04-29 19:36:56,499 P22775 INFO ********* Train Turn 70 [phase3_freeze_B] *********
+2026-04-29 19:37:00,057 P22775 INFO Clients average loss: 0.6100972294807434
+2026-04-29 19:37:00,063 P22775 INFO ********* Train Turn 71 [phase3_freeze_B] *********
+2026-04-29 19:37:03,621 P22775 INFO Clients average loss: 0.6017392873764038
+2026-04-29 19:37:03,626 P22775 INFO ********* Train Turn 72 [phase3_freeze_B] *********
+2026-04-29 19:37:07,248 P22775 INFO Clients average loss: 0.5901138782501221
+2026-04-29 19:37:07,254 P22775 INFO ********* Train Turn 73 [phase3_freeze_B] *********
+2026-04-29 19:37:10,787 P22775 INFO Clients average loss: 0.5819215774536133
+2026-04-29 19:37:10,793 P22775 INFO ********* Train Turn 74 [phase3_freeze_B] *********
+2026-04-29 19:37:14,278 P22775 INFO Clients average loss: 0.5731998682022095
+2026-04-29 19:37:14,284 P22775 INFO ********* Train Turn 75 [phase3_freeze_B] *********
+2026-04-29 19:37:17,812 P22775 INFO Clients average loss: 0.5594640970230103
+2026-04-29 19:37:17,818 P22775 INFO ********* Train Turn 76 [phase3_freeze_B] *********
+2026-04-29 19:37:21,336 P22775 INFO Clients average loss: 0.5526028871536255
+2026-04-29 19:37:21,342 P22775 INFO ********* Train Turn 77 [phase3_freeze_B] *********
+2026-04-29 19:37:24,980 P22775 INFO Clients average loss: 0.5424060225486755
+2026-04-29 19:37:24,986 P22775 INFO ********* Train Turn 78 [phase3_freeze_B] *********
+2026-04-29 19:37:28,507 P22775 INFO Clients average loss: 0.532087504863739
+2026-04-29 19:37:28,513 P22775 INFO ********* Train Turn 79 [phase3_freeze_B] *********
+2026-04-29 19:37:31,972 P22775 INFO Clients average loss: 0.5170708298683167
+2026-04-29 19:37:31,978 P22775 INFO ********* Train Turn 80 [phase3_freeze_B] *********
+2026-04-29 19:37:35,467 P22775 INFO Clients average loss: 0.5070555806159973
+2026-04-29 19:37:35,472 P22775 INFO ********* Train Turn 81 [phase3_freeze_B] *********
+2026-04-29 19:37:39,005 P22775 INFO Clients average loss: 0.498614639043808
+2026-04-29 19:37:39,011 P22775 INFO ********* Train Turn 82 [phase3_freeze_B] *********
+2026-04-29 19:37:42,460 P22775 INFO Clients average loss: 0.48956096172332764
+2026-04-29 19:37:42,466 P22775 INFO ********* Train Turn 83 [phase3_freeze_B] *********
+2026-04-29 19:37:45,973 P22775 INFO Clients average loss: 0.49011120200157166
+2026-04-29 19:37:45,979 P22775 INFO ********* Train Turn 84 [phase3_freeze_B] *********
+2026-04-29 19:37:49,581 P22775 INFO Clients average loss: 0.48089003562927246
+2026-04-29 19:37:49,587 P22775 INFO ********* Train Turn 85 [phase3_freeze_B] *********
+2026-04-29 19:37:53,119 P22775 INFO Clients average loss: 0.4738476574420929
+2026-04-29 19:37:53,124 P22775 INFO ********* Train Turn 86 [phase3_freeze_B] *********
+2026-04-29 19:37:56,609 P22775 INFO Clients average loss: 0.472740113735199
+2026-04-29 19:37:56,614 P22775 INFO ********* Train Turn 87 [phase3_freeze_B] *********
+2026-04-29 19:38:00,167 P22775 INFO Clients average loss: 0.4531082212924957
+2026-04-29 19:38:00,173 P22775 INFO ********* Train Turn 88 [phase3_freeze_B] *********
+2026-04-29 19:38:03,670 P22775 INFO Clients average loss: 0.45494499802589417
+2026-04-29 19:38:03,675 P22775 INFO ********* Train Turn 89 [phase3_freeze_B] *********
+2026-04-29 19:38:07,171 P22775 INFO Clients average loss: 0.446250319480896
+2026-04-29 19:38:07,176 P22775 INFO ********* Train Turn 90 [phase3_freeze_B] *********
+2026-04-29 19:38:10,711 P22775 INFO Clients average loss: 0.4427078366279602
+2026-04-29 19:38:10,716 P22775 INFO ********* Train Turn 91 [phase3_freeze_B] *********
+2026-04-29 19:38:14,276 P22775 INFO Clients average loss: 0.42930546402931213
+2026-04-29 19:38:14,282 P22775 INFO ********* Train Turn 92 [phase3_freeze_B] *********
+2026-04-29 19:38:17,804 P22775 INFO Clients average loss: 0.4314371645450592
+2026-04-29 19:38:17,810 P22775 INFO ********* Train Turn 93 [phase3_freeze_B] *********
+2026-04-29 19:38:21,407 P22775 INFO Clients average loss: 0.42592161893844604
+2026-04-29 19:38:21,413 P22775 INFO ********* Train Turn 94 [phase3_freeze_B] *********
+2026-04-29 19:38:24,995 P22775 INFO Clients average loss: 0.42356666922569275
+2026-04-29 19:38:25,001 P22775 INFO ********* Train Turn 95 [phase3_freeze_B] *********
+2026-04-29 19:38:28,504 P22775 INFO Clients average loss: 0.4182743430137634
+2026-04-29 19:38:28,510 P22775 INFO ********* Train Turn 96 [phase3_freeze_B] *********
+2026-04-29 19:38:32,022 P22775 INFO Clients average loss: 0.4117596447467804
+2026-04-29 19:38:32,028 P22775 INFO ********* Train Turn 97 [phase3_freeze_B] *********
+2026-04-29 19:38:35,585 P22775 INFO Clients average loss: 0.40948644280433655
+2026-04-29 19:38:35,591 P22775 INFO ********* Train Turn 98 [phase3_freeze_B] *********
+2026-04-29 19:38:39,083 P22775 INFO Clients average loss: 0.40981635451316833
+2026-04-29 19:38:39,088 P22775 INFO ********* Train Turn 99 [phase3_freeze_B] *********
+2026-04-29 19:38:42,588 P22775 INFO Clients average loss: 0.4056567847728729
+2026-04-29 19:38:42,594 P22775 INFO ********* Train Turn 100 [phase3_freeze_B] *********
+2026-04-29 19:38:46,261 P22775 INFO Clients average loss: 0.3983938694000244
+2026-04-29 19:38:46,267 P22775 INFO ********* Train Turn 101 [phase3_freeze_B] *********
+2026-04-29 19:38:49,819 P22775 INFO Clients average loss: 0.38471314311027527
+2026-04-29 19:38:49,825 P22775 INFO ********* Train Turn 102 [phase3_freeze_B] *********
+2026-04-29 19:38:53,358 P22775 INFO Clients average loss: 0.3903845548629761
+2026-04-29 19:38:53,363 P22775 INFO ********* Train Turn 103 [phase3_freeze_B] *********
+2026-04-29 19:38:56,972 P22775 INFO Clients average loss: 0.38731709122657776
+2026-04-29 19:38:56,977 P22775 INFO ********* Train Turn 104 [phase3_freeze_B] *********
+2026-04-29 19:39:00,543 P22775 INFO Clients average loss: 0.38279250264167786
+2026-04-29 19:39:00,548 P22775 INFO ********* Train Turn 105 [phase3_freeze_B] *********
+2026-04-29 19:39:04,074 P22775 INFO Clients average loss: 0.3842421770095825
+2026-04-29 19:39:04,080 P22775 INFO ********* Train Turn 106 [phase3_freeze_B] *********
+2026-04-29 19:39:07,601 P22775 INFO Clients average loss: 0.3816513419151306
+2026-04-29 19:39:07,606 P22775 INFO ********* Train Turn 107 [phase3_freeze_B] *********
+2026-04-29 19:39:11,165 P22775 INFO Clients average loss: 0.38308534026145935
+2026-04-29 19:39:11,171 P22775 INFO ********* Train Turn 108 [phase3_freeze_B] *********
+2026-04-29 19:39:14,709 P22775 INFO Clients average loss: 0.37183812260627747
+2026-04-29 19:39:14,714 P22775 INFO ********* Train Turn 109 [phase3_freeze_B] *********
+2026-04-29 19:39:18,281 P22775 INFO Clients average loss: 0.3729390501976013
+2026-04-29 19:39:18,286 P22775 INFO ********* Train Turn 110 [phase3_freeze_B] *********
+2026-04-29 19:39:21,828 P22775 INFO Clients average loss: 0.3698244094848633
+2026-04-29 19:39:21,834 P22775 INFO ********* Train Turn 111 [phase3_freeze_B] *********
+2026-04-29 19:39:25,373 P22775 INFO Clients average loss: 0.3615707457065582
+2026-04-29 19:39:25,379 P22775 INFO ********* Train Turn 112 [phase3_freeze_B] *********
+2026-04-29 19:39:28,954 P22775 INFO Clients average loss: 0.3681236505508423
+2026-04-29 19:39:28,960 P22775 INFO ********* Train Turn 113 [phase3_freeze_B] *********
+2026-04-29 19:39:32,560 P22775 INFO Clients average loss: 0.35082828998565674
+2026-04-29 19:39:32,566 P22775 INFO ********* Train Turn 114 [phase3_freeze_B] *********
+2026-04-29 19:39:36,065 P22775 INFO Clients average loss: 0.3656488358974457
+2026-04-29 19:39:36,071 P22775 INFO ********* Train Turn 115 [phase3_freeze_B] *********
+2026-04-29 19:39:39,600 P22775 INFO Clients average loss: 0.3606427311897278
+2026-04-29 19:39:39,606 P22775 INFO ********* Train Turn 116 [phase3_freeze_B] *********
+2026-04-29 19:39:43,192 P22775 INFO Clients average loss: 0.3589877188205719
+2026-04-29 19:39:43,198 P22775 INFO ********* Train Turn 117 [phase3_freeze_B] *********
+2026-04-29 19:39:46,740 P22775 INFO Clients average loss: 0.35240790247917175
+2026-04-29 19:39:46,745 P22775 INFO ********* Train Turn 118 [phase3_freeze_B] *********
+2026-04-29 19:39:50,322 P22775 INFO Clients average loss: 0.3599817156791687
+2026-04-29 19:39:50,328 P22775 INFO ********* Train Turn 119 [phase3_freeze_B] *********
+2026-04-29 19:39:53,881 P22775 INFO Clients average loss: 0.3590986728668213
+2026-04-29 19:39:53,887 P22775 INFO ********* Train Turn 120 [phase3_freeze_B] *********
+2026-04-29 19:39:57,412 P22775 INFO Clients average loss: 0.3560754060745239
+2026-04-29 19:39:57,418 P22775 INFO ********* Train Turn 121 [phase3_freeze_B] *********
+2026-04-29 19:40:00,927 P22775 INFO Clients average loss: 0.3497154414653778
+2026-04-29 19:40:00,933 P22775 INFO ********* Train Turn 122 [phase3_freeze_B] *********
+2026-04-29 19:40:04,538 P22775 INFO Clients average loss: 0.35445937514305115
+2026-04-29 19:40:04,544 P22775 INFO ********* Train Turn 123 [phase3_freeze_B] *********
+2026-04-29 19:40:08,221 P22775 INFO Clients average loss: 0.348196804523468
+2026-04-29 19:40:08,226 P22775 INFO ********* Train Turn 124 [phase3_freeze_B] *********
+2026-04-29 19:40:11,932 P22775 INFO Clients average loss: 0.34431570768356323
+2026-04-29 19:40:11,938 P22775 INFO ********* Train Turn 125 [phase3_freeze_B] *********
+2026-04-29 19:40:15,570 P22775 INFO Clients average loss: 0.3476312756538391
+2026-04-29 19:40:15,575 P22775 INFO ********* Train Turn 126 [phase3_freeze_B] *********
+2026-04-29 19:40:19,135 P22775 INFO Clients average loss: 0.3465130627155304
+2026-04-29 19:40:19,141 P22775 INFO ********* Train Turn 127 [phase3_freeze_B] *********
+2026-04-29 19:40:22,672 P22775 INFO Clients average loss: 0.33750373125076294
+2026-04-29 19:40:22,677 P22775 INFO ********* Train Turn 128 [phase3_freeze_B] *********
+2026-04-29 19:40:26,234 P22775 INFO Clients average loss: 0.34485283493995667
+2026-04-29 19:40:26,239 P22775 INFO ********* Train Turn 129 [phase3_freeze_B] *********
+2026-04-29 19:40:29,811 P22775 INFO Clients average loss: 0.33076539635658264
+2026-04-29 19:40:29,816 P22775 INFO ********* Train Turn 130 [phase3_freeze_B] *********
+2026-04-29 19:40:33,317 P22775 INFO Clients average loss: 0.3341989815235138
+2026-04-29 19:40:33,323 P22775 INFO ********* Train Turn 131 [phase3_freeze_B] *********
+2026-04-29 19:40:36,848 P22775 INFO Clients average loss: 0.33395612239837646
+2026-04-29 19:40:36,853 P22775 INFO ********* Train Turn 132 [phase3_freeze_B] *********
+2026-04-29 19:40:40,409 P22775 INFO Clients average loss: 0.3307960033416748
+2026-04-29 19:40:40,415 P22775 INFO ********* Train Turn 133 [phase3_freeze_B] *********
+2026-04-29 19:40:43,933 P22775 INFO Clients average loss: 0.33016079664230347
+2026-04-29 19:40:43,939 P22775 INFO ********* Train Turn 134 [phase3_freeze_B] *********
+2026-04-29 19:40:47,519 P22775 INFO Clients average loss: 0.33392953872680664
+2026-04-29 19:40:47,524 P22775 INFO ********* Train Turn 135 [phase3_freeze_B] *********
+2026-04-29 19:40:51,125 P22775 INFO Clients average loss: 0.33933401107788086
+2026-04-29 19:40:51,131 P22775 INFO ********* Train Turn 136 [phase3_freeze_B] *********
+2026-04-29 19:40:54,689 P22775 INFO Clients average loss: 0.33244073390960693
+2026-04-29 19:40:54,695 P22775 INFO ********* Train Turn 137 [phase3_freeze_B] *********
+2026-04-29 19:40:58,243 P22775 INFO Clients average loss: 0.3235449492931366
+2026-04-29 19:40:58,249 P22775 INFO ********* Train Turn 138 [phase3_freeze_B] *********
+2026-04-29 19:41:01,838 P22775 INFO Clients average loss: 0.3256482481956482
+2026-04-29 19:41:01,844 P22775 INFO ********* Train Turn 139 [phase3_freeze_B] *********
+2026-04-29 19:41:05,427 P22775 INFO Clients average loss: 0.32443344593048096
+2026-04-29 19:41:05,432 P22775 INFO ********* Train Turn 140 [phase3_freeze_B] *********
+2026-04-29 19:41:08,978 P22775 INFO Clients average loss: 0.3252147138118744
+2026-04-29 19:41:08,985 P22775 INFO ********* Train Turn 141 [phase3_freeze_B] *********
+2026-04-29 19:41:12,560 P22775 INFO Clients average loss: 0.3163474500179291
+2026-04-29 19:41:12,566 P22775 INFO ********* Train Turn 142 [phase3_freeze_B] *********
+2026-04-29 19:41:16,122 P22775 INFO Clients average loss: 0.3223775625228882
+2026-04-29 19:41:16,128 P22775 INFO ********* Train Turn 143 [phase3_freeze_B] *********
+2026-04-29 19:41:19,787 P22775 INFO Clients average loss: 0.32820239663124084
+2026-04-29 19:41:19,792 P22775 INFO ********* Train Turn 144 [phase3_freeze_B] *********
+2026-04-29 19:41:23,350 P22775 INFO Clients average loss: 0.320943146944046
+2026-04-29 19:41:23,356 P22775 INFO ********* Train Turn 145 [phase3_freeze_B] *********
+2026-04-29 19:41:26,941 P22775 INFO Clients average loss: 0.3238446116447449
+2026-04-29 19:41:26,946 P22775 INFO ********* Train Turn 146 [phase3_freeze_B] *********
+2026-04-29 19:41:30,449 P22775 INFO Clients average loss: 0.3246804177761078
+2026-04-29 19:41:30,454 P22775 INFO ********* Train Turn 147 [phase3_freeze_B] *********
+2026-04-29 19:41:34,015 P22775 INFO Clients average loss: 0.3157888948917389
+2026-04-29 19:41:34,020 P22775 INFO ********* Train Turn 148 [phase3_freeze_B] *********
+2026-04-29 19:41:37,589 P22775 INFO Clients average loss: 0.3214370310306549
+2026-04-29 19:41:37,594 P22775 INFO ********* Train Turn 149 [phase3_freeze_B] *********
+2026-04-29 19:41:41,051 P22775 INFO Clients average loss: 0.3195624351501465
+2026-04-29 19:41:41,057 P22775 INFO ********* Train Turn 150 [phase3_freeze_B] *********
+2026-04-29 19:41:44,720 P22775 INFO Clients average loss: 0.3137635290622711
+2026-04-29 19:41:44,725 P22775 INFO ********* Train Turn 151 [phase3_freeze_B] *********
+2026-04-29 19:41:48,267 P22775 INFO Clients average loss: 0.31058475375175476
+2026-04-29 19:41:48,273 P22775 INFO ********* Train Turn 152 [phase3_freeze_B] *********
+2026-04-29 19:41:51,797 P22775 INFO Clients average loss: 0.30951347947120667
+2026-04-29 19:41:51,803 P22775 INFO ********* Train Turn 153 [phase3_freeze_B] *********
+2026-04-29 19:41:55,366 P22775 INFO Clients average loss: 0.3183574676513672
+2026-04-29 19:41:55,372 P22775 INFO ********* Train Turn 154 [phase3_freeze_B] *********
+2026-04-29 19:41:58,923 P22775 INFO Clients average loss: 0.31415387988090515
+2026-04-29 19:41:58,928 P22775 INFO ********* Train Turn 155 [phase3_freeze_B] *********
+2026-04-29 19:42:02,504 P22775 INFO Clients average loss: 0.31411752104759216
+2026-04-29 19:42:02,509 P22775 INFO ********* Train Turn 156 [phase3_freeze_B] *********
+2026-04-29 19:42:06,119 P22775 INFO Clients average loss: 0.31252238154411316
+2026-04-29 19:42:06,125 P22775 INFO ********* Train Turn 157 [phase3_freeze_B] *********
+2026-04-29 19:42:09,735 P22775 INFO Clients average loss: 0.31600573658943176
+2026-04-29 19:42:09,741 P22775 INFO ********* Train Turn 158 [phase3_freeze_B] *********
+2026-04-29 19:42:13,498 P22775 INFO Clients average loss: 0.3046996593475342
+2026-04-29 19:42:13,503 P22775 INFO ********* Train Turn 159 [phase3_freeze_B] *********
+2026-04-29 19:42:17,249 P22775 INFO Clients average loss: 0.3072122037410736
+2026-04-29 19:42:17,254 P22775 INFO ********* Train Turn 160 [phase3_freeze_B] *********
+2026-04-29 19:42:21,009 P22775 INFO Clients average loss: 0.306699275970459
+2026-04-29 19:42:21,015 P22775 INFO ********* Train Turn 161 [phase3_freeze_B] *********
+2026-04-29 19:42:24,764 P22775 INFO Clients average loss: 0.31172826886177063
+2026-04-29 19:42:24,770 P22775 INFO ********* Train Turn 162 [phase3_freeze_B] *********
+2026-04-29 19:42:28,511 P22775 INFO Clients average loss: 0.3060759902000427
+2026-04-29 19:42:28,517 P22775 INFO ********* Train Turn 163 [phase3_freeze_B] *********
+2026-04-29 19:42:32,247 P22775 INFO Clients average loss: 0.30369800329208374
+2026-04-29 19:42:32,253 P22775 INFO ********* Train Turn 164 [phase3_freeze_B] *********
+2026-04-29 19:42:35,801 P22775 INFO Clients average loss: 0.2892831563949585
+2026-04-29 19:42:35,807 P22775 INFO ********* Train Turn 165 [phase3_freeze_B] *********
+2026-04-29 19:42:39,512 P22775 INFO Clients average loss: 0.29712867736816406
+2026-04-29 19:42:39,517 P22775 INFO ********* Train Turn 166 [phase3_freeze_B] *********
+2026-04-29 19:42:43,065 P22775 INFO Clients average loss: 0.30007418990135193
+2026-04-29 19:42:43,071 P22775 INFO ********* Train Turn 167 [phase3_freeze_B] *********
+2026-04-29 19:42:46,639 P22775 INFO Clients average loss: 0.3047141134738922
+2026-04-29 19:42:46,645 P22775 INFO ********* Train Turn 168 [phase3_freeze_B] *********
+2026-04-29 19:42:50,243 P22775 INFO Clients average loss: 0.30330830812454224
+2026-04-29 19:42:50,249 P22775 INFO ********* Train Turn 169 [phase3_freeze_B] *********
+2026-04-29 19:42:53,803 P22775 INFO Clients average loss: 0.29824361205101013
+2026-04-29 19:42:53,808 P22775 INFO ********* Train Turn 170 [phase3_freeze_B] *********
+2026-04-29 19:42:57,390 P22775 INFO Clients average loss: 0.3033476769924164
+2026-04-29 19:42:57,396 P22775 INFO ********* Train Turn 171 [phase3_freeze_B] *********
+2026-04-29 19:43:00,953 P22775 INFO Clients average loss: 0.30273428559303284
+2026-04-29 19:43:00,959 P22775 INFO ********* Train Turn 172 [phase3_freeze_B] *********
+2026-04-29 19:43:04,552 P22775 INFO Clients average loss: 0.3050873577594757
+2026-04-29 19:43:04,557 P22775 INFO ********* Train Turn 173 [phase3_freeze_B] *********
+2026-04-29 19:43:08,110 P22775 INFO Clients average loss: 0.3030666410923004
+2026-04-29 19:43:08,115 P22775 INFO ********* Train Turn 174 [phase3_freeze_B] *********
+2026-04-29 19:43:11,669 P22775 INFO Clients average loss: 0.3094668984413147
+2026-04-29 19:43:11,674 P22775 INFO ********* Train Turn 175 [phase3_freeze_B] *********
+2026-04-29 19:43:15,257 P22775 INFO Clients average loss: 0.3031756281852722
+2026-04-29 19:43:15,262 P22775 INFO ********* Train Turn 176 [phase3_freeze_B] *********
+2026-04-29 19:43:18,827 P22775 INFO Clients average loss: 0.30659058690071106
+2026-04-29 19:43:18,833 P22775 INFO ********* Train Turn 177 [phase3_freeze_B] *********
+2026-04-29 19:43:22,334 P22775 INFO Clients average loss: 0.2982249855995178
+2026-04-29 19:43:22,339 P22775 INFO ********* Train Turn 178 [phase3_freeze_B] *********
+2026-04-29 19:43:25,903 P22775 INFO Clients average loss: 0.29635706543922424
+2026-04-29 19:43:25,908 P22775 INFO ********* Train Turn 179 [phase3_freeze_B] *********
+2026-04-29 19:43:29,437 P22775 INFO Clients average loss: 0.2994464039802551
+2026-04-29 19:43:29,443 P22775 INFO ********* Train Turn 180 [phase3_freeze_B] *********
+2026-04-29 19:43:32,993 P22775 INFO Clients average loss: 0.30006924271583557
+2026-04-29 19:43:32,999 P22775 INFO ********* Train Turn 181 [phase3_freeze_B] *********
+2026-04-29 19:43:36,560 P22775 INFO Clients average loss: 0.2984645366668701
+2026-04-29 19:43:36,565 P22775 INFO ********* Train Turn 182 [phase3_freeze_B] *********
+2026-04-29 19:43:40,058 P22775 INFO Clients average loss: 0.2974790334701538
+2026-04-29 19:43:40,064 P22775 INFO ********* Train Turn 183 [phase3_freeze_B] *********
+2026-04-29 19:43:43,663 P22775 INFO Clients average loss: 0.30264246463775635
+2026-04-29 19:43:43,669 P22775 INFO ********* Train Turn 184 [phase3_freeze_B] *********
+2026-04-29 19:43:47,236 P22775 INFO Clients average loss: 0.29490771889686584
+2026-04-29 19:43:47,241 P22775 INFO ********* Train Turn 185 [phase3_freeze_B] *********
+2026-04-29 19:43:50,827 P22775 INFO Clients average loss: 0.2953525185585022
+2026-04-29 19:43:50,832 P22775 INFO ********* Train Turn 186 [phase3_freeze_B] *********
+2026-04-29 19:43:54,431 P22775 INFO Clients average loss: 0.3041933476924896
+2026-04-29 19:43:54,436 P22775 INFO ********* Train Turn 187 [phase3_freeze_B] *********
+2026-04-29 19:43:58,000 P22775 INFO Clients average loss: 0.2974681854248047
+2026-04-29 19:43:58,005 P22775 INFO ********* Train Turn 188 [phase3_freeze_B] *********
+2026-04-29 19:44:01,613 P22775 INFO Clients average loss: 0.2942996919155121
+2026-04-29 19:44:01,618 P22775 INFO ********* Train Turn 189 [phase3_freeze_B] *********
+2026-04-29 19:44:05,208 P22775 INFO Clients average loss: 0.30474209785461426
+2026-04-29 19:44:05,213 P22775 INFO ********* Train Turn 190 [phase3_freeze_B] *********
+2026-04-29 19:44:08,769 P22775 INFO Clients average loss: 0.2962230443954468
+2026-04-29 19:44:08,775 P22775 INFO ********* Train Turn 191 [phase3_freeze_B] *********
+2026-04-29 19:44:12,243 P22775 INFO Clients average loss: 0.29400354623794556
+2026-04-29 19:44:12,249 P22775 INFO ********* Train Turn 192 [phase3_freeze_B] *********
+2026-04-29 19:44:15,797 P22775 INFO Clients average loss: 0.2942548990249634
+2026-04-29 19:44:15,803 P22775 INFO ********* Train Turn 193 [phase3_freeze_B] *********
+2026-04-29 19:44:19,297 P22775 INFO Clients average loss: 0.29761791229248047
+2026-04-29 19:44:19,303 P22775 INFO ********* Train Turn 194 [phase3_freeze_B] *********
+2026-04-29 19:44:22,808 P22775 INFO Clients average loss: 0.2926042973995209
+2026-04-29 19:44:22,814 P22775 INFO ********* Train Turn 195 [phase3_freeze_B] *********
+2026-04-29 19:44:26,369 P22775 INFO Clients average loss: 0.29521700739860535
+2026-04-29 19:44:26,374 P22775 INFO ********* Train Turn 196 [phase3_freeze_B] *********
+2026-04-29 19:44:29,837 P22775 INFO Clients average loss: 0.28963661193847656
+2026-04-29 19:44:29,843 P22775 INFO ********* Train Turn 197 [phase3_freeze_B] *********
+2026-04-29 19:44:33,384 P22775 INFO Clients average loss: 0.29679790139198303
+2026-04-29 19:44:33,390 P22775 INFO ********* Train Turn 198 [phase3_freeze_B] *********
+2026-04-29 19:44:36,927 P22775 INFO Clients average loss: 0.2882121801376343
+2026-04-29 19:44:36,933 P22775 INFO ********* Train Turn 199 [phase3_freeze_B] *********
+2026-04-29 19:44:40,464 P22775 INFO Clients average loss: 0.29244372248649597
+2026-04-29 19:44:40,470 P22775 INFO ********* Train Turn 200 [phase3_freeze_B] *********
+2026-04-29 19:44:44,022 P22775 INFO Clients average loss: 0.294108122587204
+2026-04-29 19:44:44,027 P22775 INFO ********* Train Turn 201 [phase3_freeze_B] *********
+2026-04-29 19:44:47,535 P22775 INFO Clients average loss: 0.29365596175193787
+2026-04-29 19:44:47,541 P22775 INFO ********* Train Turn 202 [phase3_freeze_B] *********
+2026-04-29 19:44:51,102 P22775 INFO Clients average loss: 0.2855728566646576
+2026-04-29 19:44:51,108 P22775 INFO ********* Train Turn 203 [phase3_freeze_B] *********
+2026-04-29 19:44:54,633 P22775 INFO Clients average loss: 0.2916394770145416
+2026-04-29 19:44:54,639 P22775 INFO ********* Train Turn 204 [phase3_freeze_B] *********
+2026-04-29 19:44:58,212 P22775 INFO Clients average loss: 0.29617610573768616
+2026-04-29 19:44:58,217 P22775 INFO ********* Train Turn 205 [phase3_freeze_B] *********
+2026-04-29 19:45:01,814 P22775 INFO Clients average loss: 0.28800132870674133
+2026-04-29 19:45:01,819 P22775 INFO ********* Train Turn 206 [phase3_freeze_B] *********
+2026-04-29 19:45:05,409 P22775 INFO Clients average loss: 0.28693467378616333
+2026-04-29 19:45:05,414 P22775 INFO ********* Train Turn 207 [phase3_freeze_B] *********
+2026-04-29 19:45:08,980 P22775 INFO Clients average loss: 0.2908708453178406
+2026-04-29 19:45:08,986 P22775 INFO ********* Train Turn 208 [phase3_freeze_B] *********
+2026-04-29 19:45:12,569 P22775 INFO Clients average loss: 0.28955087065696716
+2026-04-29 19:45:12,575 P22775 INFO ********* Train Turn 209 [phase3_freeze_B] *********
+2026-04-29 19:45:16,211 P22775 INFO Clients average loss: 0.29378312826156616
+2026-04-29 19:45:16,217 P22775 INFO ********* Train Turn 210 [phase3_freeze_B] *********
+2026-04-29 19:45:19,894 P22775 INFO Clients average loss: 0.28814682364463806
+2026-04-29 19:45:19,900 P22775 INFO ********* Train Turn 211 [phase3_freeze_B] *********
+2026-04-29 19:45:23,627 P22775 INFO Clients average loss: 0.28814697265625
+2026-04-29 19:45:23,633 P22775 INFO ********* Train Turn 212 [phase3_freeze_B] *********
+2026-04-29 19:45:27,412 P22775 INFO Clients average loss: 0.2948642075061798
+2026-04-29 19:45:27,418 P22775 INFO ********* Train Turn 213 [phase3_freeze_B] *********
+2026-04-29 19:45:30,922 P22775 INFO Clients average loss: 0.2859225869178772
+2026-04-29 19:45:30,928 P22775 INFO ********* Train Turn 214 [phase3_freeze_B] *********
+2026-04-29 19:45:34,533 P22775 INFO Clients average loss: 0.2855874300003052
+2026-04-29 19:45:34,539 P22775 INFO ********* Train Turn 215 [phase3_freeze_B] *********
+2026-04-29 19:45:38,108 P22775 INFO Clients average loss: 0.28716251254081726
+2026-04-29 19:45:38,114 P22775 INFO ********* Train Turn 216 [phase3_freeze_B] *********
+2026-04-29 19:45:41,663 P22775 INFO Clients average loss: 0.2877650558948517
+2026-04-29 19:45:41,668 P22775 INFO ********* Train Turn 217 [phase3_freeze_B] *********
+2026-04-29 19:45:45,199 P22775 INFO Clients average loss: 0.28736966848373413
+2026-04-29 19:45:45,204 P22775 INFO ********* Train Turn 218 [phase3_freeze_B] *********
+2026-04-29 19:45:48,796 P22775 INFO Clients average loss: 0.2817118167877197
+2026-04-29 19:45:48,802 P22775 INFO ********* Train Turn 219 [phase3_freeze_B] *********
+2026-04-29 19:45:52,423 P22775 INFO Clients average loss: 0.290992796421051
+2026-04-29 19:45:52,430 P22775 INFO ********* Train Turn 220 [phase3_freeze_B] *********
+2026-04-29 19:45:55,974 P22775 INFO Clients average loss: 0.28150808811187744
+2026-04-29 19:45:55,981 P22775 INFO ********* Train Turn 221 [phase3_freeze_B] *********
+2026-04-29 19:45:59,585 P22775 INFO Clients average loss: 0.28596246242523193
+2026-04-29 19:45:59,590 P22775 INFO ********* Train Turn 222 [phase3_freeze_B] *********
+2026-04-29 19:46:03,208 P22775 INFO Clients average loss: 0.2857820689678192
+2026-04-29 19:46:03,214 P22775 INFO ********* Train Turn 223 [phase3_freeze_B] *********
+2026-04-29 19:46:06,789 P22775 INFO Clients average loss: 0.28416499495506287
+2026-04-29 19:46:06,794 P22775 INFO ********* Train Turn 224 [phase3_freeze_B] *********
+2026-04-29 19:46:10,437 P22775 INFO Clients average loss: 0.28777068853378296
+2026-04-29 19:46:10,443 P22775 INFO ********* Train Turn 225 [phase3_freeze_B] *********
+2026-04-29 19:46:14,081 P22775 INFO Clients average loss: 0.2868364751338959
+2026-04-29 19:46:14,087 P22775 INFO ********* Train Turn 226 [phase3_freeze_B] *********
+2026-04-29 19:46:17,680 P22775 INFO Clients average loss: 0.28747016191482544
+2026-04-29 19:46:17,686 P22775 INFO ********* Train Turn 227 [phase3_freeze_B] *********
+2026-04-29 19:46:21,326 P22775 INFO Clients average loss: 0.2783728539943695
+2026-04-29 19:46:21,331 P22775 INFO ********* Train Turn 228 [phase3_freeze_B] *********
+2026-04-29 19:46:24,949 P22775 INFO Clients average loss: 0.2852666676044464
+2026-04-29 19:46:24,955 P22775 INFO ********* Train Turn 229 [phase3_freeze_B] *********
+2026-04-29 19:46:28,529 P22775 INFO Clients average loss: 0.28304222226142883
+2026-04-29 19:46:28,535 P22775 INFO ********* Train Turn 230 [phase3_freeze_B] *********
+2026-04-29 19:46:32,183 P22775 INFO Clients average loss: 0.28397923707962036
+2026-04-29 19:46:32,189 P22775 INFO ********* Train Turn 231 [phase3_freeze_B] *********
+2026-04-29 19:46:35,912 P22775 INFO Clients average loss: 0.2864830195903778
+2026-04-29 19:46:35,918 P22775 INFO ********* Train Turn 232 [phase3_freeze_B] *********
+2026-04-29 19:46:39,514 P22775 INFO Clients average loss: 0.28274768590927124
+2026-04-29 19:46:39,520 P22775 INFO ********* Train Turn 233 [phase3_freeze_B] *********
+2026-04-29 19:46:43,117 P22775 INFO Clients average loss: 0.28316688537597656
+2026-04-29 19:46:43,123 P22775 INFO ********* Train Turn 234 [phase3_freeze_B] *********
+2026-04-29 19:46:46,651 P22775 INFO Clients average loss: 0.28820598125457764
+2026-04-29 19:46:46,657 P22775 INFO ********* Train Turn 235 [phase3_freeze_B] *********
+2026-04-29 19:46:50,212 P22775 INFO Clients average loss: 0.280984491109848
+2026-04-29 19:46:50,217 P22775 INFO ********* Train Turn 236 [phase3_freeze_B] *********
+2026-04-29 19:46:53,794 P22775 INFO Clients average loss: 0.2863692343235016
+2026-04-29 19:46:53,800 P22775 INFO ********* Train Turn 237 [phase3_freeze_B] *********
+2026-04-29 19:46:57,355 P22775 INFO Clients average loss: 0.28462833166122437
+2026-04-29 19:46:57,361 P22775 INFO ********* Train Turn 238 [phase3_freeze_B] *********
+2026-04-29 19:47:00,853 P22775 INFO Clients average loss: 0.27606460452079773
+2026-04-29 19:47:00,859 P22775 INFO ********* Train Turn 239 [phase3_freeze_B] *********
+2026-04-29 19:47:04,437 P22775 INFO Clients average loss: 0.2904641926288605
+2026-04-29 19:47:04,442 P22775 INFO ********* Train Turn 240 [phase3_freeze_B] *********
+2026-04-29 19:47:08,022 P22775 INFO Clients average loss: 0.2946610748767853
+2026-04-29 19:47:08,027 P22775 INFO ********* Train Turn 241 [phase3_freeze_B] *********
+2026-04-29 19:47:11,584 P22775 INFO Clients average loss: 0.28521254658699036
+2026-04-29 19:47:11,589 P22775 INFO ********* Train Turn 242 [phase3_freeze_B] *********
+2026-04-29 19:47:15,155 P22775 INFO Clients average loss: 0.2778530716896057
+2026-04-29 19:47:15,161 P22775 INFO ********* Train Turn 243 [phase3_freeze_B] *********
+2026-04-29 19:47:18,741 P22775 INFO Clients average loss: 0.28823697566986084
+2026-04-29 19:47:18,747 P22775 INFO ********* Train Turn 244 [phase3_freeze_B] *********
+2026-04-29 19:47:22,299 P22775 INFO Clients average loss: 0.2875228226184845
+2026-04-29 19:47:22,304 P22775 INFO ********* Train Turn 245 [phase3_freeze_B] *********
+2026-04-29 19:47:25,825 P22775 INFO Clients average loss: 0.2830147445201874
+2026-04-29 19:47:25,831 P22775 INFO ********* Train Turn 246 [phase3_freeze_B] *********
+2026-04-29 19:47:29,416 P22775 INFO Clients average loss: 0.28460535407066345
+2026-04-29 19:47:29,422 P22775 INFO ********* Train Turn 247 [phase3_freeze_B] *********
+2026-04-29 19:47:33,004 P22775 INFO Clients average loss: 0.27866777777671814
+2026-04-29 19:47:33,010 P22775 INFO ********* Train Turn 248 [phase3_freeze_B] *********
+2026-04-29 19:47:36,550 P22775 INFO Clients average loss: 0.2806066572666168
+2026-04-29 19:47:36,556 P22775 INFO ********* Train Turn 249 [phase3_freeze_B] *********
+2026-04-29 19:47:40,175 P22775 INFO Clients average loss: 0.281267374753952
+2026-04-29 19:47:40,181 P22775 INFO ********* Train Turn 250 [phase3_freeze_B] *********
+2026-04-29 19:47:43,777 P22775 INFO Clients average loss: 0.289272278547287
+2026-04-29 19:47:43,783 P22775 INFO ********* Train Turn 251 [phase3_freeze_B] *********
+2026-04-29 19:47:47,321 P22775 INFO Clients average loss: 0.28841203451156616
+2026-04-29 19:47:47,327 P22775 INFO ********* Train Turn 252 [phase3_freeze_B] *********
+2026-04-29 19:47:50,913 P22775 INFO Clients average loss: 0.285460501909256
+2026-04-29 19:47:50,918 P22775 INFO ********* Train Turn 253 [phase3_freeze_B] *********
+2026-04-29 19:47:54,607 P22775 INFO Clients average loss: 0.28145813941955566
+2026-04-29 19:47:54,612 P22775 INFO ********* Train Turn 254 [phase3_freeze_B] *********
+2026-04-29 19:47:58,187 P22775 INFO Clients average loss: 0.2771030366420746
+2026-04-29 19:47:58,193 P22775 INFO ********* Train Turn 255 [phase3_freeze_B] *********
+2026-04-29 19:48:01,747 P22775 INFO Clients average loss: 0.2826603353023529
+2026-04-29 19:48:01,753 P22775 INFO ********* Train Turn 256 [phase3_freeze_B] *********
+2026-04-29 19:48:05,374 P22775 INFO Clients average loss: 0.28378936648368835
+2026-04-29 19:48:05,379 P22775 INFO ********* Train Turn 257 [phase3_freeze_B] *********
+2026-04-29 19:48:08,909 P22775 INFO Clients average loss: 0.2798512578010559
+2026-04-29 19:48:08,915 P22775 INFO ********* Train Turn 258 [phase3_freeze_B] *********
+2026-04-29 19:48:12,456 P22775 INFO Clients average loss: 0.2781338095664978
+2026-04-29 19:48:12,461 P22775 INFO ********* Train Turn 259 [phase3_freeze_B] *********
+2026-04-29 19:48:16,102 P22775 INFO Clients average loss: 0.28195720911026
+2026-04-29 19:48:16,107 P22775 INFO ********* Train Turn 260 [phase3_freeze_B] *********
+2026-04-29 19:48:19,666 P22775 INFO Clients average loss: 0.2797001600265503
+2026-04-29 19:48:19,672 P22775 INFO ********* Train Turn 261 [phase3_freeze_B] *********
+2026-04-29 19:48:23,267 P22775 INFO Clients average loss: 0.2804313898086548
+2026-04-29 19:48:23,273 P22775 INFO ********* Train Turn 262 [phase3_freeze_B] *********
+2026-04-29 19:48:26,923 P22775 INFO Clients average loss: 0.2743091583251953
+2026-04-29 19:48:26,929 P22775 INFO ********* Train Turn 263 [phase3_freeze_B] *********
+2026-04-29 19:48:30,475 P22775 INFO Clients average loss: 0.2775360345840454
+2026-04-29 19:48:30,481 P22775 INFO ********* Train Turn 264 [phase3_freeze_B] *********
+2026-04-29 19:48:34,011 P22775 INFO Clients average loss: 0.2773774564266205
+2026-04-29 19:48:34,016 P22775 INFO ********* Train Turn 265 [phase3_freeze_B] *********
+2026-04-29 19:48:37,633 P22775 INFO Clients average loss: 0.2743063271045685
+2026-04-29 19:48:37,638 P22775 INFO ********* Train Turn 266 [phase3_freeze_B] *********
+2026-04-29 19:48:41,226 P22775 INFO Clients average loss: 0.2761678993701935
+2026-04-29 19:48:41,232 P22775 INFO ********* Train Turn 267 [phase3_freeze_B] *********
+2026-04-29 19:48:44,741 P22775 INFO Clients average loss: 0.2845580577850342
+2026-04-29 19:48:44,746 P22775 INFO ********* Train Turn 268 [phase3_freeze_B] *********
+2026-04-29 19:48:48,317 P22775 INFO Clients average loss: 0.2759886682033539
+2026-04-29 19:48:48,323 P22775 INFO ********* Train Turn 269 [phase3_freeze_B] *********
+2026-04-29 19:48:51,933 P22775 INFO Clients average loss: 0.2776503562927246
+2026-04-29 19:48:51,938 P22775 INFO ********* Train Turn 270 [phase3_freeze_B] *********
+2026-04-29 19:48:55,531 P22775 INFO Clients average loss: 0.27496373653411865
+2026-04-29 19:48:55,537 P22775 INFO ********* Train Turn 271 [phase3_freeze_B] *********
+2026-04-29 19:48:59,075 P22775 INFO Clients average loss: 0.27187827229499817
+2026-04-29 19:48:59,081 P22775 INFO ********* Train Turn 272 [phase3_freeze_B] *********
+2026-04-29 19:49:02,616 P22775 INFO Clients average loss: 0.28304871916770935
+2026-04-29 19:49:02,622 P22775 INFO ********* Train Turn 273 [phase3_freeze_B] *********
+2026-04-29 19:49:06,174 P22775 INFO Clients average loss: 0.28100016713142395
+2026-04-29 19:49:06,179 P22775 INFO ********* Train Turn 274 [phase3_freeze_B] *********
+2026-04-29 19:49:09,741 P22775 INFO Clients average loss: 0.2741367518901825
+2026-04-29 19:49:09,747 P22775 INFO ********* Train Turn 275 [phase3_freeze_B] *********
+2026-04-29 19:49:13,311 P22775 INFO Clients average loss: 0.2778603136539459
+2026-04-29 19:49:13,317 P22775 INFO ********* Train Turn 276 [phase3_freeze_B] *********
+2026-04-29 19:49:16,988 P22775 INFO Clients average loss: 0.2779843807220459
+2026-04-29 19:49:16,994 P22775 INFO ********* Train Turn 277 [phase3_freeze_B] *********
+2026-04-29 19:49:20,554 P22775 INFO Clients average loss: 0.27315765619277954
+2026-04-29 19:49:20,560 P22775 INFO ********* Train Turn 278 [phase3_freeze_B] *********
+2026-04-29 19:49:24,207 P22775 INFO Clients average loss: 0.2766733765602112
+2026-04-29 19:49:24,213 P22775 INFO ********* Train Turn 279 [phase3_freeze_B] *********
+2026-04-29 19:49:27,746 P22775 INFO Clients average loss: 0.2777996063232422
+2026-04-29 19:49:27,751 P22775 INFO ********* Train Turn 280 [phase3_freeze_B] *********
+2026-04-29 19:49:31,317 P22775 INFO Clients average loss: 0.2813047766685486
+2026-04-29 19:49:31,323 P22775 INFO ********* Train Turn 281 [phase3_freeze_B] *********
+2026-04-29 19:49:34,917 P22775 INFO Clients average loss: 0.27660542726516724
+2026-04-29 19:49:34,922 P22775 INFO ********* Train Turn 282 [phase3_freeze_B] *********
+2026-04-29 19:49:38,416 P22775 INFO Clients average loss: 0.2780821621417999
+2026-04-29 19:49:38,422 P22775 INFO ********* Train Turn 283 [phase3_freeze_B] *********
+2026-04-29 19:49:41,949 P22775 INFO Clients average loss: 0.2750125825405121
+2026-04-29 19:49:41,955 P22775 INFO ********* Train Turn 284 [phase3_freeze_B] *********
+2026-04-29 19:49:45,550 P22775 INFO Clients average loss: 0.28367534279823303
+2026-04-29 19:49:45,556 P22775 INFO ********* Train Turn 285 [phase3_freeze_B] *********
+2026-04-29 19:49:49,094 P22775 INFO Clients average loss: 0.27716830372810364
+2026-04-29 19:49:49,100 P22775 INFO ********* Train Turn 286 [phase3_freeze_B] *********
+2026-04-29 19:49:52,670 P22775 INFO Clients average loss: 0.2834533154964447
+2026-04-29 19:49:52,675 P22775 INFO ********* Train Turn 287 [phase3_freeze_B] *********
+2026-04-29 19:49:56,279 P22775 INFO Clients average loss: 0.28007155656814575
+2026-04-29 19:49:56,284 P22775 INFO ********* Train Turn 288 [phase3_freeze_B] *********
+2026-04-29 19:49:59,816 P22775 INFO Clients average loss: 0.274095356464386
+2026-04-29 19:49:59,823 P22775 INFO ********* Train Turn 289 [phase3_freeze_B] *********
+2026-04-29 19:50:03,380 P22775 INFO Clients average loss: 0.2750396132469177
+2026-04-29 19:50:03,385 P22775 INFO ********* Train Turn 290 [phase3_freeze_B] *********
+2026-04-29 19:50:07,017 P22775 INFO Clients average loss: 0.2788569927215576
+2026-04-29 19:50:07,022 P22775 INFO ********* Train Turn 291 [phase3_freeze_B] *********
+2026-04-29 19:50:10,617 P22775 INFO Clients average loss: 0.2783714234828949
+2026-04-29 19:50:10,624 P22775 INFO ********* Train Turn 292 [phase3_freeze_B] *********
+2026-04-29 19:50:14,191 P22775 INFO Clients average loss: 0.27244189381599426
+2026-04-29 19:50:14,197 P22775 INFO ********* Train Turn 293 [phase3_freeze_B] *********
+2026-04-29 19:50:17,843 P22775 INFO Clients average loss: 0.26849570870399475
+2026-04-29 19:50:17,849 P22775 INFO ********* Train Turn 294 [phase3_freeze_B] *********
+2026-04-29 19:50:21,406 P22775 INFO Clients average loss: 0.2782641351222992
+2026-04-29 19:50:21,411 P22775 INFO ********* Train Turn 295 [phase3_freeze_B] *********
+2026-04-29 19:50:24,967 P22775 INFO Clients average loss: 0.2816638648509979
+2026-04-29 19:50:24,973 P22775 INFO ********* Train Turn 296 [phase3_freeze_B] *********
+2026-04-29 19:50:28,616 P22775 INFO Clients average loss: 0.2744305729866028
+2026-04-29 19:50:28,622 P22775 INFO ********* Train Turn 297 [phase3_freeze_B] *********
+2026-04-29 19:50:32,248 P22775 INFO Clients average loss: 0.27563899755477905
+2026-04-29 19:50:32,254 P22775 INFO ********* Train Turn 298 [phase3_freeze_B] *********
+2026-04-29 19:50:35,895 P22775 INFO Clients average loss: 0.2793239951133728
+2026-04-29 19:50:35,901 P22775 INFO ********* Train Turn 299 [phase3_freeze_B] *********
+2026-04-29 19:50:39,502 P22775 INFO Clients average loss: 0.27616819739341736
+2026-04-29 19:50:39,507 P22775 INFO ********* Train Turn 300 [phase3_freeze_B] *********
+2026-04-29 19:50:43,180 P22775 INFO Clients average loss: 0.27703016996383667
+2026-04-29 19:50:43,185 P22775 INFO ********* Train Turn 301 [phase3_freeze_B] *********
+2026-04-29 19:50:46,704 P22775 INFO Clients average loss: 0.2768743634223938
+2026-04-29 19:50:46,709 P22775 INFO ********* Train Turn 302 [phase3_freeze_B] *********
+2026-04-29 19:50:50,232 P22775 INFO Clients average loss: 0.27512937784194946
+2026-04-29 19:50:50,237 P22775 INFO ********* Train Turn 303 [phase3_freeze_B] *********
+2026-04-29 19:50:53,853 P22775 INFO Clients average loss: 0.2649579644203186
+2026-04-29 19:50:53,859 P22775 INFO ********* Train Turn 304 [phase3_freeze_B] *********
+2026-04-29 19:50:57,388 P22775 INFO Clients average loss: 0.27459293603897095
+2026-04-29 19:50:57,393 P22775 INFO ********* Train Turn 305 [phase3_freeze_B] *********
+2026-04-29 19:51:00,873 P22775 INFO Clients average loss: 0.2746247351169586
+2026-04-29 19:51:00,879 P22775 INFO ********* Train Turn 306 [phase3_freeze_B] *********
+2026-04-29 19:51:04,482 P22775 INFO Clients average loss: 0.2729507088661194
+2026-04-29 19:51:04,487 P22775 INFO ********* Train Turn 307 [phase3_freeze_B] *********
+2026-04-29 19:51:08,025 P22775 INFO Clients average loss: 0.2706049084663391
+2026-04-29 19:51:08,031 P22775 INFO ********* Train Turn 308 [phase3_freeze_B] *********
+2026-04-29 19:51:11,538 P22775 INFO Clients average loss: 0.27381783723831177
+2026-04-29 19:51:11,543 P22775 INFO ********* Train Turn 309 [phase3_freeze_B] *********
+2026-04-29 19:51:15,148 P22775 INFO Clients average loss: 0.2741723954677582
+2026-04-29 19:51:15,155 P22775 INFO ********* Train Turn 310 [phase3_freeze_B] *********
+2026-04-29 19:51:18,729 P22775 INFO Clients average loss: 0.27363497018814087
+2026-04-29 19:51:18,735 P22775 INFO ********* Train Turn 311 [phase3_freeze_B] *********
+2026-04-29 19:51:22,287 P22775 INFO Clients average loss: 0.27435043454170227
+2026-04-29 19:51:22,293 P22775 INFO ********* Train Turn 312 [phase3_freeze_B] *********
+2026-04-29 19:51:25,912 P22775 INFO Clients average loss: 0.2654665410518646
+2026-04-29 19:51:25,918 P22775 INFO ********* Train Turn 313 [phase3_freeze_B] *********
+2026-04-29 19:51:29,461 P22775 INFO Clients average loss: 0.27563875913619995
+2026-04-29 19:51:29,466 P22775 INFO ********* Train Turn 314 [phase3_freeze_B] *********
+2026-04-29 19:51:32,939 P22775 INFO Clients average loss: 0.27592310309410095
+2026-04-29 19:51:32,945 P22775 INFO ********* Train Turn 315 [phase3_freeze_B] *********
+2026-04-29 19:51:36,537 P22775 INFO Clients average loss: 0.26485127210617065
+2026-04-29 19:51:36,544 P22775 INFO ********* Train Turn 316 [phase3_freeze_B] *********
+2026-04-29 19:51:40,130 P22775 INFO Clients average loss: 0.27349475026130676
+2026-04-29 19:51:40,136 P22775 INFO ********* Train Turn 317 [phase3_freeze_B] *********
+2026-04-29 19:51:43,648 P22775 INFO Clients average loss: 0.27246129512786865
+2026-04-29 19:51:43,654 P22775 INFO ********* Train Turn 318 [phase3_freeze_B] *********
+2026-04-29 19:51:47,200 P22775 INFO Clients average loss: 0.2781817615032196
+2026-04-29 19:51:47,206 P22775 INFO ********* Train Turn 319 [phase3_freeze_B] *********
+2026-04-29 19:51:50,897 P22775 INFO Clients average loss: 0.27203068137168884
+2026-04-29 19:51:50,903 P22775 INFO ********* Train Turn 320 [phase3_freeze_B] *********
+2026-04-29 19:51:54,453 P22775 INFO Clients average loss: 0.2706753611564636
+2026-04-29 19:51:54,459 P22775 INFO ********* Train Turn 321 [phase3_freeze_B] *********
+2026-04-29 19:51:57,966 P22775 INFO Clients average loss: 0.2664760947227478
+2026-04-29 19:51:57,972 P22775 INFO ********* Train Turn 322 [phase3_freeze_B] *********
+2026-04-29 19:52:01,551 P22775 INFO Clients average loss: 0.27131515741348267
+2026-04-29 19:52:01,557 P22775 INFO ********* Train Turn 323 [phase3_freeze_B] *********
+2026-04-29 19:52:05,131 P22775 INFO Clients average loss: 0.27750301361083984
+2026-04-29 19:52:05,137 P22775 INFO ********* Train Turn 324 [phase3_freeze_B] *********
+2026-04-29 19:52:08,721 P22775 INFO Clients average loss: 0.2799389064311981
+2026-04-29 19:52:08,727 P22775 INFO ********* Train Turn 325 [phase3_freeze_B] *********
+2026-04-29 19:52:12,314 P22775 INFO Clients average loss: 0.26274392008781433
+2026-04-29 19:52:12,320 P22775 INFO ********* Train Turn 326 [phase3_freeze_B] *********
+2026-04-29 19:52:15,844 P22775 INFO Clients average loss: 0.2592993974685669
+2026-04-29 19:52:15,850 P22775 INFO ********* Train Turn 327 [phase3_freeze_B] *********
+2026-04-29 19:52:19,397 P22775 INFO Clients average loss: 0.27350565791130066
+2026-04-29 19:52:19,403 P22775 INFO ********* Train Turn 328 [phase3_freeze_B] *********
+2026-04-29 19:52:23,004 P22775 INFO Clients average loss: 0.2681189477443695
+2026-04-29 19:52:23,009 P22775 INFO ********* Train Turn 329 [phase3_freeze_B] *********
+2026-04-29 19:52:26,525 P22775 INFO Clients average loss: 0.2685072720050812
+2026-04-29 19:52:26,531 P22775 INFO ********* Train Turn 330 [phase3_freeze_B] *********
+2026-04-29 19:52:30,051 P22775 INFO Clients average loss: 0.262262761592865
+2026-04-29 19:52:30,057 P22775 INFO ********* Train Turn 331 [phase3_freeze_B] *********
+2026-04-29 19:52:33,631 P22775 INFO Clients average loss: 0.2694073021411896
+2026-04-29 19:52:33,637 P22775 INFO ********* Train Turn 332 [phase3_freeze_B] *********
+2026-04-29 19:52:37,123 P22775 INFO Clients average loss: 0.2683652341365814
+2026-04-29 19:52:37,128 P22775 INFO ********* Train Turn 333 [phase3_freeze_B] *********
+2026-04-29 19:52:40,670 P22775 INFO Clients average loss: 0.26907557249069214
+2026-04-29 19:52:40,675 P22775 INFO ********* Train Turn 334 [phase3_freeze_B] *********
+2026-04-29 19:52:44,172 P22775 INFO Clients average loss: 0.26984891295433044
+2026-04-29 19:52:44,178 P22775 INFO ********* Train Turn 335 [phase3_freeze_B] *********
+2026-04-29 19:52:47,723 P22775 INFO Clients average loss: 0.27566006779670715
+2026-04-29 19:52:47,729 P22775 INFO ********* Train Turn 336 [phase3_freeze_B] *********
+2026-04-29 19:52:51,245 P22775 INFO Clients average loss: 0.2729809582233429
+2026-04-29 19:52:51,250 P22775 INFO ********* Train Turn 337 [phase3_freeze_B] *********
+2026-04-29 19:52:54,776 P22775 INFO Clients average loss: 0.27621808648109436
+2026-04-29 19:52:54,782 P22775 INFO ********* Train Turn 338 [phase3_freeze_B] *********
+2026-04-29 19:52:58,358 P22775 INFO Clients average loss: 0.2749007046222687
+2026-04-29 19:52:58,364 P22775 INFO ********* Train Turn 339 [phase3_freeze_B] *********
+2026-04-29 19:53:01,863 P22775 INFO Clients average loss: 0.27142995595932007
+2026-04-29 19:53:01,870 P22775 INFO ********* Train Turn 340 [phase3_freeze_B] *********
+2026-04-29 19:53:05,409 P22775 INFO Clients average loss: 0.27436619997024536
+2026-04-29 19:53:05,415 P22775 INFO ********* Train Turn 341 [phase3_freeze_B] *********
+2026-04-29 19:53:09,131 P22775 INFO Clients average loss: 0.27107542753219604
+2026-04-29 19:53:09,137 P22775 INFO ********* Train Turn 342 [phase3_freeze_B] *********
+2026-04-29 19:53:12,687 P22775 INFO Clients average loss: 0.262696236371994
+2026-04-29 19:53:12,693 P22775 INFO ********* Train Turn 343 [phase3_freeze_B] *********
+2026-04-29 19:53:16,237 P22775 INFO Clients average loss: 0.26132360100746155
+2026-04-29 19:53:16,243 P22775 INFO ********* Train Turn 344 [phase3_freeze_B] *********
+2026-04-29 19:53:19,869 P22775 INFO Clients average loss: 0.2697443664073944
+2026-04-29 19:53:19,875 P22775 INFO ********* Train Turn 345 [phase3_freeze_B] *********
+2026-04-29 19:53:23,388 P22775 INFO Clients average loss: 0.27272742986679077
+2026-04-29 19:53:23,393 P22775 INFO ********* Train Turn 346 [phase3_freeze_B] *********
+2026-04-29 19:53:26,906 P22775 INFO Clients average loss: 0.2659706473350525
+2026-04-29 19:53:26,911 P22775 INFO ********* Train Turn 347 [phase3_freeze_B] *********
+2026-04-29 19:53:30,557 P22775 INFO Clients average loss: 0.265954852104187
+2026-04-29 19:53:30,563 P22775 INFO ********* Train Turn 348 [phase3_freeze_B] *********
+2026-04-29 19:53:34,189 P22775 INFO Clients average loss: 0.26549920439720154
+2026-04-29 19:53:34,195 P22775 INFO ********* Train Turn 349 [phase3_freeze_B] *********
+2026-04-29 19:53:37,753 P22775 INFO Clients average loss: 0.27295053005218506
+2026-04-29 19:53:37,758 P22775 INFO ********* Train Turn 350 [phase3_freeze_B] *********
+2026-04-29 19:53:41,432 P22775 INFO Clients average loss: 0.2686848044395447
+2026-04-29 19:53:41,437 P22775 INFO ********* Train Turn 351 [phase3_freeze_B] *********
+2026-04-29 19:53:45,009 P22775 INFO Clients average loss: 0.27160438895225525
+2026-04-29 19:53:45,015 P22775 INFO ********* Train Turn 352 [phase3_freeze_B] *********
+2026-04-29 19:53:48,617 P22775 INFO Clients average loss: 0.2702484428882599
+2026-04-29 19:53:48,623 P22775 INFO ********* Train Turn 353 [phase3_freeze_B] *********
+2026-04-29 19:53:52,276 P22775 INFO Clients average loss: 0.26515406370162964
+2026-04-29 19:53:52,282 P22775 INFO ********* Train Turn 354 [phase3_freeze_B] *********
+2026-04-29 19:53:56,009 P22775 INFO Clients average loss: 0.26516449451446533
+2026-04-29 19:53:56,015 P22775 INFO ********* Train Turn 355 [phase3_freeze_B] *********
+2026-04-29 19:53:59,616 P22775 INFO Clients average loss: 0.2683033347129822
+2026-04-29 19:53:59,622 P22775 INFO ********* Train Turn 356 [phase3_freeze_B] *********
+2026-04-29 19:54:03,254 P22775 INFO Clients average loss: 0.2677884101867676
+2026-04-29 19:54:03,260 P22775 INFO ********* Train Turn 357 [phase3_freeze_B] *********
+2026-04-29 19:54:06,796 P22775 INFO Clients average loss: 0.2712702751159668
+2026-04-29 19:54:06,802 P22775 INFO ********* Train Turn 358 [phase3_freeze_B] *********
+2026-04-29 19:54:10,418 P22775 INFO Clients average loss: 0.2685886025428772
+2026-04-29 19:54:10,423 P22775 INFO ********* Train Turn 359 [phase3_freeze_B] *********
+2026-04-29 19:54:14,072 P22775 INFO Clients average loss: 0.270183265209198
+2026-04-29 19:54:14,078 P22775 INFO ********* Train Turn 360 [phase3_freeze_B] *********
+2026-04-29 19:54:17,906 P22775 INFO Clients average loss: 0.2674677073955536
+2026-04-29 19:54:17,911 P22775 INFO ********* Train Turn 361 [phase3_freeze_B] *********
+2026-04-29 19:54:21,691 P22775 INFO Clients average loss: 0.27790141105651855
+2026-04-29 19:54:21,697 P22775 INFO ********* Train Turn 362 [phase3_freeze_B] *********
+2026-04-29 19:54:25,498 P22775 INFO Clients average loss: 0.2667520046234131
+2026-04-29 19:54:25,504 P22775 INFO ********* Train Turn 363 [phase3_freeze_B] *********
+2026-04-29 19:54:29,207 P22775 INFO Clients average loss: 0.2673587501049042
+2026-04-29 19:54:29,213 P22775 INFO ********* Train Turn 364 [phase3_freeze_B] *********
+2026-04-29 19:54:33,052 P22775 INFO Clients average loss: 0.27238863706588745
+2026-04-29 19:54:33,057 P22775 INFO ********* Train Turn 365 [phase3_freeze_B] *********
+2026-04-29 19:54:36,692 P22775 INFO Clients average loss: 0.27120068669319153
+2026-04-29 19:54:36,698 P22775 INFO ********* Train Turn 366 [phase3_freeze_B] *********
+2026-04-29 19:54:40,369 P22775 INFO Clients average loss: 0.2706770598888397
+2026-04-29 19:54:40,375 P22775 INFO ********* Train Turn 367 [phase3_freeze_B] *********
+2026-04-29 19:54:43,954 P22775 INFO Clients average loss: 0.26158058643341064
+2026-04-29 19:54:43,960 P22775 INFO ********* Train Turn 368 [phase3_freeze_B] *********
+2026-04-29 19:54:47,563 P22775 INFO Clients average loss: 0.2658142149448395
+2026-04-29 19:54:47,569 P22775 INFO ********* Train Turn 369 [phase3_freeze_B] *********
+2026-04-29 19:54:51,205 P22775 INFO Clients average loss: 0.2601627707481384
+2026-04-29 19:54:51,211 P22775 INFO ********* Train Turn 370 [phase3_freeze_B] *********
+2026-04-29 19:54:54,767 P22775 INFO Clients average loss: 0.2646753787994385
+2026-04-29 19:54:54,773 P22775 INFO ********* Train Turn 371 [phase3_freeze_B] *********
+2026-04-29 19:54:58,348 P22775 INFO Clients average loss: 0.2648334503173828
+2026-04-29 19:54:58,353 P22775 INFO ********* Train Turn 372 [phase3_freeze_B] *********
+2026-04-29 19:55:02,053 P22775 INFO Clients average loss: 0.26537880301475525
+2026-04-29 19:55:02,059 P22775 INFO ********* Train Turn 373 [phase3_freeze_B] *********
+2026-04-29 19:55:05,690 P22775 INFO Clients average loss: 0.272206574678421
+2026-04-29 19:55:05,696 P22775 INFO ********* Train Turn 374 [phase3_freeze_B] *********
+2026-04-29 19:55:09,350 P22775 INFO Clients average loss: 0.27110549807548523
+2026-04-29 19:55:09,356 P22775 INFO ********* Train Turn 375 [phase3_freeze_B] *********
+2026-04-29 19:55:13,088 P22775 INFO Clients average loss: 0.2701704502105713
+2026-04-29 19:55:13,094 P22775 INFO ********* Train Turn 376 [phase3_freeze_B] *********
+2026-04-29 19:55:16,679 P22775 INFO Clients average loss: 0.2688208222389221
+2026-04-29 19:55:16,684 P22775 INFO ********* Train Turn 377 [phase3_freeze_B] *********
+2026-04-29 19:55:20,274 P22775 INFO Clients average loss: 0.27180078625679016
+2026-04-29 19:55:20,280 P22775 INFO ********* Train Turn 378 [phase3_freeze_B] *********
+2026-04-29 19:55:24,028 P22775 INFO Clients average loss: 0.27465662360191345
+2026-04-29 19:55:24,033 P22775 INFO ********* Train Turn 379 [phase3_freeze_B] *********
+2026-04-29 19:55:27,786 P22775 INFO Clients average loss: 0.2682291865348816
+2026-04-29 19:55:27,791 P22775 INFO ********* Train Turn 380 [phase3_freeze_B] *********
+2026-04-29 19:55:31,486 P22775 INFO Clients average loss: 0.2637643814086914
+2026-04-29 19:55:31,492 P22775 INFO ********* Train Turn 381 [phase3_freeze_B] *********
+2026-04-29 19:55:35,176 P22775 INFO Clients average loss: 0.2687901556491852
+2026-04-29 19:55:35,182 P22775 INFO ********* Train Turn 382 [phase3_freeze_B] *********
+2026-04-29 19:55:38,789 P22775 INFO Clients average loss: 0.27100464701652527
+2026-04-29 19:55:38,795 P22775 INFO ********* Train Turn 383 [phase3_freeze_B] *********
+2026-04-29 19:55:42,472 P22775 INFO Clients average loss: 0.2655276656150818
+2026-04-29 19:55:42,478 P22775 INFO ********* Train Turn 384 [phase3_freeze_B] *********
+2026-04-29 19:55:46,204 P22775 INFO Clients average loss: 0.2665983736515045
+2026-04-29 19:55:46,209 P22775 INFO ********* Train Turn 385 [phase3_freeze_B] *********
+2026-04-29 19:55:49,802 P22775 INFO Clients average loss: 0.26139020919799805
+2026-04-29 19:55:49,808 P22775 INFO ********* Train Turn 386 [phase3_freeze_B] *********
+2026-04-29 19:55:53,377 P22775 INFO Clients average loss: 0.2707221508026123
+2026-04-29 19:55:53,383 P22775 INFO ********* Train Turn 387 [phase3_freeze_B] *********
+2026-04-29 19:55:57,037 P22775 INFO Clients average loss: 0.2657260000705719
+2026-04-29 19:55:57,043 P22775 INFO ********* Train Turn 388 [phase3_freeze_B] *********
+2026-04-29 19:56:00,708 P22775 INFO Clients average loss: 0.26008641719818115
+2026-04-29 19:56:00,714 P22775 INFO ********* Train Turn 389 [phase3_freeze_B] *********
+2026-04-29 19:56:04,269 P22775 INFO Clients average loss: 0.26779302954673767
+2026-04-29 19:56:04,275 P22775 INFO ********* Train Turn 390 [phase3_freeze_B] *********
+2026-04-29 19:56:07,926 P22775 INFO Clients average loss: 0.26652130484580994
+2026-04-29 19:56:07,932 P22775 INFO ********* Train Turn 391 [phase3_freeze_B] *********
+2026-04-29 19:56:11,523 P22775 INFO Clients average loss: 0.26710978150367737
+2026-04-29 19:56:11,529 P22775 INFO ********* Train Turn 392 [phase3_freeze_B] *********
+2026-04-29 19:56:15,112 P22775 INFO Clients average loss: 0.2707347571849823
+2026-04-29 19:56:15,118 P22775 INFO ********* Train Turn 393 [phase3_freeze_B] *********
+2026-04-29 19:56:18,857 P22775 INFO Clients average loss: 0.2734421491622925
+2026-04-29 19:56:18,863 P22775 INFO ********* Train Turn 394 [phase3_freeze_B] *********
+2026-04-29 19:56:22,472 P22775 INFO Clients average loss: 0.2722165286540985
+2026-04-29 19:56:22,478 P22775 INFO ********* Train Turn 395 [phase3_freeze_B] *********
+2026-04-29 19:56:26,102 P22775 INFO Clients average loss: 0.27317556738853455
+2026-04-29 19:56:26,108 P22775 INFO ********* Train Turn 396 [phase3_freeze_B] *********
+2026-04-29 19:56:29,776 P22775 INFO Clients average loss: 0.26504218578338623
+2026-04-29 19:56:29,782 P22775 INFO ********* Train Turn 397 [phase3_freeze_B] *********
+2026-04-29 19:56:33,464 P22775 INFO Clients average loss: 0.26203057169914246
+2026-04-29 19:56:33,470 P22775 INFO ********* Train Turn 398 [phase3_freeze_B] *********
+2026-04-29 19:56:37,244 P22775 INFO Clients average loss: 0.2655003070831299
+2026-04-29 19:56:37,250 P22775 INFO ********* Train Turn 399 [phase3_freeze_B] *********
+2026-04-29 19:56:41,150 P22775 INFO Clients average loss: 0.26529768109321594
+2026-04-29 19:56:41,156 P22775 INFO ********* Train Turn 400 [phase3_freeze_B] *********
+2026-04-29 19:56:44,884 P22775 INFO Clients average loss: 0.2708891034126282
+2026-04-29 19:56:44,890 P22775 INFO ********* Train Turn 401 [phase3_freeze_B] *********
+2026-04-29 19:56:48,508 P22775 INFO Clients average loss: 0.2714119255542755
+2026-04-29 19:56:48,514 P22775 INFO ********* Train Turn 402 [phase3_freeze_B] *********
+2026-04-29 19:56:52,224 P22775 INFO Clients average loss: 0.2706083357334137
+2026-04-29 19:56:52,230 P22775 INFO ********* Train Turn 403 [phase3_freeze_B] *********
+2026-04-29 19:56:55,950 P22775 INFO Clients average loss: 0.26096948981285095
+2026-04-29 19:56:55,956 P22775 INFO ********* Train Turn 404 [phase3_freeze_B] *********
+2026-04-29 19:56:59,582 P22775 INFO Clients average loss: 0.2687681019306183
+2026-04-29 19:56:59,588 P22775 INFO ********* Train Turn 405 [phase3_freeze_B] *********
+2026-04-29 19:57:03,269 P22775 INFO Clients average loss: 0.26195839047431946
+2026-04-29 19:57:03,274 P22775 INFO ********* Train Turn 406 [phase3_freeze_B] *********
+2026-04-29 19:57:06,959 P22775 INFO Clients average loss: 0.26692673563957214
+2026-04-29 19:57:06,965 P22775 INFO ********* Train Turn 407 [phase3_freeze_B] *********
+2026-04-29 19:57:10,747 P22775 INFO Clients average loss: 0.2677408456802368
+2026-04-29 19:57:10,753 P22775 INFO ********* Train Turn 408 [phase3_freeze_B] *********
+2026-04-29 19:57:14,377 P22775 INFO Clients average loss: 0.26042017340660095
+2026-04-29 19:57:14,383 P22775 INFO ********* Train Turn 409 [phase3_freeze_B] *********
+2026-04-29 19:57:18,149 P22775 INFO Clients average loss: 0.26598507165908813
+2026-04-29 19:57:18,155 P22775 INFO ********* Train Turn 410 [phase3_freeze_B] *********
+2026-04-29 19:57:21,824 P22775 INFO Clients average loss: 0.263759046792984
+2026-04-29 19:57:21,830 P22775 INFO ********* Train Turn 411 [phase3_freeze_B] *********
+2026-04-29 19:57:25,561 P22775 INFO Clients average loss: 0.27466824650764465
+2026-04-29 19:57:25,567 P22775 INFO ********* Train Turn 412 [phase3_freeze_B] *********
+2026-04-29 19:57:29,288 P22775 INFO Clients average loss: 0.2599148154258728
+2026-04-29 19:57:29,294 P22775 INFO ********* Train Turn 413 [phase3_freeze_B] *********
+2026-04-29 19:57:32,979 P22775 INFO Clients average loss: 0.26216813921928406
+2026-04-29 19:57:32,985 P22775 INFO ********* Train Turn 414 [phase3_freeze_B] *********
+2026-04-29 19:57:36,705 P22775 INFO Clients average loss: 0.26968979835510254
+2026-04-29 19:57:36,711 P22775 INFO ********* Train Turn 415 [phase3_freeze_B] *********
+2026-04-29 19:57:40,416 P22775 INFO Clients average loss: 0.2644990384578705
+2026-04-29 19:57:40,422 P22775 INFO ********* Train Turn 416 [phase3_freeze_B] *********
+2026-04-29 19:57:44,078 P22775 INFO Clients average loss: 0.26256439089775085
+2026-04-29 19:57:44,083 P22775 INFO ********* Train Turn 417 [phase3_freeze_B] *********
+2026-04-29 19:57:47,746 P22775 INFO Clients average loss: 0.26611366868019104
+2026-04-29 19:57:47,752 P22775 INFO ********* Train Turn 418 [phase3_freeze_B] *********
+2026-04-29 19:57:51,504 P22775 INFO Clients average loss: 0.268111914396286
+2026-04-29 19:57:51,509 P22775 INFO ********* Train Turn 419 [phase3_freeze_B] *********
+2026-04-29 19:57:55,262 P22775 INFO Clients average loss: 0.2548150420188904
+2026-04-29 19:57:55,268 P22775 INFO ********* Train Turn 420 [phase3_freeze_B] *********
+2026-04-29 19:57:58,988 P22775 INFO Clients average loss: 0.26938918232917786
+2026-04-29 19:57:58,994 P22775 INFO ********* Train Turn 421 [phase3_freeze_B] *********
+2026-04-29 19:58:02,749 P22775 INFO Clients average loss: 0.26297053694725037
+2026-04-29 19:58:02,755 P22775 INFO ********* Train Turn 422 [phase3_freeze_B] *********
+2026-04-29 19:58:06,411 P22775 INFO Clients average loss: 0.2662366032600403
+2026-04-29 19:58:06,417 P22775 INFO ********* Train Turn 423 [phase3_freeze_B] *********
+2026-04-29 19:58:10,123 P22775 INFO Clients average loss: 0.26273906230926514
+2026-04-29 19:58:10,129 P22775 INFO ********* Train Turn 424 [phase3_freeze_B] *********
+2026-04-29 19:58:13,955 P22775 INFO Clients average loss: 0.25943851470947266
+2026-04-29 19:58:13,961 P22775 INFO ********* Train Turn 425 [phase3_freeze_B] *********
+2026-04-29 19:58:17,682 P22775 INFO Clients average loss: 0.26804640889167786
+2026-04-29 19:58:17,688 P22775 INFO ********* Train Turn 426 [phase3_freeze_B] *********
+2026-04-29 19:58:21,409 P22775 INFO Clients average loss: 0.26379847526550293
+2026-04-29 19:58:21,416 P22775 INFO ********* Train Turn 427 [phase3_freeze_B] *********
+2026-04-29 19:58:25,250 P22775 INFO Clients average loss: 0.26166832447052
+2026-04-29 19:58:25,256 P22775 INFO ********* Train Turn 428 [phase3_freeze_B] *********
+2026-04-29 19:58:28,939 P22775 INFO Clients average loss: 0.26727598905563354
+2026-04-29 19:58:28,945 P22775 INFO ********* Train Turn 429 [phase3_freeze_B] *********
+2026-04-29 19:58:32,701 P22775 INFO Clients average loss: 0.265869140625
+2026-04-29 19:58:32,707 P22775 INFO ********* Train Turn 430 [phase3_freeze_B] *********
+2026-04-29 19:58:36,478 P22775 INFO Clients average loss: 0.2609989643096924
+2026-04-29 19:58:36,484 P22775 INFO ********* Train Turn 431 [phase3_freeze_B] *********
+2026-04-29 19:58:40,166 P22775 INFO Clients average loss: 0.26121070981025696
+2026-04-29 19:58:40,172 P22775 INFO ********* Train Turn 432 [phase3_freeze_B] *********
+2026-04-29 19:58:43,866 P22775 INFO Clients average loss: 0.26631757616996765
+2026-04-29 19:58:43,872 P22775 INFO ********* Train Turn 433 [phase3_freeze_B] *********
+2026-04-29 19:58:47,537 P22775 INFO Clients average loss: 0.2635974884033203
+2026-04-29 19:58:47,543 P22775 INFO ********* Train Turn 434 [phase3_freeze_B] *********
+2026-04-29 19:58:51,153 P22775 INFO Clients average loss: 0.25890523195266724
+2026-04-29 19:58:51,159 P22775 INFO ********* Train Turn 435 [phase3_freeze_B] *********
+2026-04-29 19:58:54,773 P22775 INFO Clients average loss: 0.26535025238990784
+2026-04-29 19:58:54,780 P22775 INFO ********* Train Turn 436 [phase3_freeze_B] *********
+2026-04-29 19:58:58,449 P22775 INFO Clients average loss: 0.26392871141433716
+2026-04-29 19:58:58,454 P22775 INFO ********* Train Turn 437 [phase3_freeze_B] *********
+2026-04-29 19:59:02,038 P22775 INFO Clients average loss: 0.2587308883666992
+2026-04-29 19:59:02,044 P22775 INFO ********* Train Turn 438 [phase3_freeze_B] *********
+2026-04-29 19:59:05,641 P22775 INFO Clients average loss: 0.26136496663093567
+2026-04-29 19:59:05,647 P22775 INFO ********* Train Turn 439 [phase3_freeze_B] *********
+2026-04-29 19:59:09,364 P22775 INFO Clients average loss: 0.26083511114120483
+2026-04-29 19:59:09,369 P22775 INFO ********* Train Turn 440 [phase3_freeze_B] *********
+2026-04-29 19:59:13,029 P22775 INFO Clients average loss: 0.2600347101688385
+2026-04-29 19:59:13,036 P22775 INFO ********* Train Turn 441 [phase3_freeze_B] *********
+2026-04-29 19:59:16,658 P22775 INFO Clients average loss: 0.25919899344444275
+2026-04-29 19:59:16,664 P22775 INFO ********* Train Turn 442 [phase3_freeze_B] *********
+2026-04-29 19:59:20,392 P22775 INFO Clients average loss: 0.2636251747608185
+2026-04-29 19:59:20,398 P22775 INFO ********* Train Turn 443 [phase3_freeze_B] *********
+2026-04-29 19:59:24,037 P22775 INFO Clients average loss: 0.26221516728401184
+2026-04-29 19:59:24,043 P22775 INFO ********* Train Turn 444 [phase3_freeze_B] *********
+2026-04-29 19:59:27,616 P22775 INFO Clients average loss: 0.2616737484931946
+2026-04-29 19:59:27,621 P22775 INFO ********* Train Turn 445 [phase3_freeze_B] *********
+2026-04-29 19:59:31,294 P22775 INFO Clients average loss: 0.2614452540874481
+2026-04-29 19:59:31,300 P22775 INFO ********* Train Turn 446 [phase3_freeze_B] *********
+2026-04-29 19:59:34,862 P22775 INFO Clients average loss: 0.26797980070114136
+2026-04-29 19:59:34,868 P22775 INFO ********* Train Turn 447 [phase3_freeze_B] *********
+2026-04-29 19:59:38,506 P22775 INFO Clients average loss: 0.2618906795978546
+2026-04-29 19:59:38,511 P22775 INFO ********* Train Turn 448 [phase3_freeze_B] *********
+2026-04-29 19:59:42,185 P22775 INFO Clients average loss: 0.2628592550754547
+2026-04-29 19:59:42,191 P22775 INFO ********* Train Turn 449 [phase3_freeze_B] *********
+2026-04-29 19:59:45,949 P22775 INFO Clients average loss: 0.26174890995025635
+2026-04-29 19:59:45,954 P22775 INFO ********* Train Turn 450 [phase3_freeze_B] *********
+2026-04-29 19:59:49,753 P22775 INFO Clients average loss: 0.25975891947746277
+2026-04-29 19:59:49,759 P22775 INFO ********* Train Turn 451 [phase3_freeze_B] *********
+2026-04-29 19:59:53,582 P22775 INFO Clients average loss: 0.2696446180343628
+2026-04-29 19:59:53,588 P22775 INFO ********* Train Turn 452 [phase3_freeze_B] *********
+2026-04-29 19:59:57,444 P22775 INFO Clients average loss: 0.2644750773906708
+2026-04-29 19:59:57,450 P22775 INFO ********* Train Turn 453 [phase3_freeze_B] *********
+2026-04-29 20:00:01,219 P22775 INFO Clients average loss: 0.26417863368988037
+2026-04-29 20:00:01,225 P22775 INFO ********* Train Turn 454 [phase3_freeze_B] *********
+2026-04-29 20:00:05,283 P22775 INFO Clients average loss: 0.26651445031166077
+2026-04-29 20:00:05,289 P22775 INFO ********* Train Turn 455 [phase3_freeze_B] *********
+2026-04-29 20:00:09,396 P22775 INFO Clients average loss: 0.26203304529190063
+2026-04-29 20:00:09,403 P22775 INFO ********* Train Turn 456 [phase3_freeze_B] *********
+2026-04-29 20:00:13,490 P22775 INFO Clients average loss: 0.2661433219909668
+2026-04-29 20:00:13,497 P22775 INFO ********* Train Turn 457 [phase3_freeze_B] *********
+2026-04-29 20:00:17,613 P22775 INFO Clients average loss: 0.2597273886203766
+2026-04-29 20:00:17,619 P22775 INFO ********* Train Turn 458 [phase3_freeze_B] *********
+2026-04-29 20:00:21,687 P22775 INFO Clients average loss: 0.2693803310394287
+2026-04-29 20:00:21,694 P22775 INFO ********* Train Turn 459 [phase3_freeze_B] *********
+2026-04-29 20:00:25,763 P22775 INFO Clients average loss: 0.2692098915576935
+2026-04-29 20:00:25,770 P22775 INFO ********* Train Turn 460 [phase3_freeze_B] *********
+2026-04-29 20:00:29,885 P22775 INFO Clients average loss: 0.26367753744125366
+2026-04-29 20:00:29,891 P22775 INFO ********* Train Turn 461 [phase3_freeze_B] *********
+2026-04-29 20:00:33,971 P22775 INFO Clients average loss: 0.25917816162109375
+2026-04-29 20:00:33,978 P22775 INFO ********* Train Turn 462 [phase3_freeze_B] *********
+2026-04-29 20:00:38,045 P22775 INFO Clients average loss: 0.26091817021369934
+2026-04-29 20:00:38,052 P22775 INFO ********* Train Turn 463 [phase3_freeze_B] *********
+2026-04-29 20:00:42,127 P22775 INFO Clients average loss: 0.2694455683231354
+2026-04-29 20:00:42,133 P22775 INFO ********* Train Turn 464 [phase3_freeze_B] *********
+2026-04-29 20:00:46,154 P22775 INFO Clients average loss: 0.26228833198547363
+2026-04-29 20:00:46,161 P22775 INFO ********* Train Turn 465 [phase3_freeze_B] *********
+2026-04-29 20:00:50,322 P22775 INFO Clients average loss: 0.26432743668556213
+2026-04-29 20:00:50,329 P22775 INFO ********* Train Turn 466 [phase3_freeze_B] *********
+2026-04-29 20:00:54,404 P22775 INFO Clients average loss: 0.26518702507019043
+2026-04-29 20:00:54,411 P22775 INFO ********* Train Turn 467 [phase3_freeze_B] *********
+2026-04-29 20:00:58,485 P22775 INFO Clients average loss: 0.26232901215553284
+2026-04-29 20:00:58,491 P22775 INFO ********* Train Turn 468 [phase3_freeze_B] *********
+2026-04-29 20:01:02,593 P22775 INFO Clients average loss: 0.2616707682609558
+2026-04-29 20:01:02,599 P22775 INFO ********* Train Turn 469 [phase3_freeze_B] *********
+2026-04-29 20:01:06,673 P22775 INFO Clients average loss: 0.2593439221382141
+2026-04-29 20:01:06,680 P22775 INFO ********* Train Turn 470 [phase3_freeze_B] *********
+2026-04-29 20:01:10,747 P22775 INFO Clients average loss: 0.2675071358680725
+2026-04-29 20:01:10,754 P22775 INFO ********* Train Turn 471 [phase3_freeze_B] *********
+2026-04-29 20:01:14,900 P22775 INFO Clients average loss: 0.25707218050956726
+2026-04-29 20:01:14,906 P22775 INFO ********* Train Turn 472 [phase3_freeze_B] *********
+2026-04-29 20:01:19,012 P22775 INFO Clients average loss: 0.2632412314414978
+2026-04-29 20:01:19,019 P22775 INFO ********* Train Turn 473 [phase3_freeze_B] *********
+2026-04-29 20:01:23,074 P22775 INFO Clients average loss: 0.26222601532936096
+2026-04-29 20:01:23,081 P22775 INFO ********* Train Turn 474 [phase3_freeze_B] *********
+2026-04-29 20:01:27,173 P22775 INFO Clients average loss: 0.25524744391441345
+2026-04-29 20:01:27,180 P22775 INFO ********* Train Turn 475 [phase3_freeze_B] *********
+2026-04-29 20:01:31,175 P22775 INFO Clients average loss: 0.2655204236507416
+2026-04-29 20:01:31,181 P22775 INFO ********* Train Turn 476 [phase3_freeze_B] *********
+2026-04-29 20:01:35,372 P22775 INFO Clients average loss: 0.2620975077152252
+2026-04-29 20:01:35,379 P22775 INFO ********* Train Turn 477 [phase3_freeze_B] *********
+2026-04-29 20:01:39,603 P22775 INFO Clients average loss: 0.2626378536224365
+2026-04-29 20:01:39,610 P22775 INFO ********* Train Turn 478 [phase3_freeze_B] *********
+2026-04-29 20:01:43,778 P22775 INFO Clients average loss: 0.26574912667274475
+2026-04-29 20:01:43,784 P22775 INFO ********* Train Turn 479 [phase3_freeze_B] *********
+2026-04-29 20:01:47,963 P22775 INFO Clients average loss: 0.2633768320083618
+2026-04-29 20:01:47,969 P22775 INFO ********* Train Turn 480 [phase3_freeze_B] *********
+2026-04-29 20:01:52,172 P22775 INFO Clients average loss: 0.26561346650123596
+2026-04-29 20:01:52,178 P22775 INFO ********* Train Turn 481 [phase3_freeze_B] *********
+2026-04-29 20:01:56,387 P22775 INFO Clients average loss: 0.2624138295650482
+2026-04-29 20:01:56,394 P22775 INFO ********* Train Turn 482 [phase3_freeze_B] *********
+2026-04-29 20:02:00,636 P22775 INFO Clients average loss: 0.26109927892684937
+2026-04-29 20:02:00,642 P22775 INFO ********* Train Turn 483 [phase3_freeze_B] *********
+2026-04-29 20:02:04,799 P22775 INFO Clients average loss: 0.2619113624095917
+2026-04-29 20:02:04,805 P22775 INFO ********* Train Turn 484 [phase3_freeze_B] *********
+2026-04-29 20:02:08,897 P22775 INFO Clients average loss: 0.2589242458343506
+2026-04-29 20:02:08,903 P22775 INFO ********* Train Turn 485 [phase3_freeze_B] *********
+2026-04-29 20:02:13,104 P22775 INFO Clients average loss: 0.26221364736557007
+2026-04-29 20:02:13,111 P22775 INFO ********* Train Turn 486 [phase3_freeze_B] *********
+2026-04-29 20:02:17,230 P22775 INFO Clients average loss: 0.2621119022369385
+2026-04-29 20:02:17,237 P22775 INFO ********* Train Turn 487 [phase3_freeze_B] *********
+2026-04-29 20:02:21,373 P22775 INFO Clients average loss: 0.2632238268852234
+2026-04-29 20:02:21,380 P22775 INFO ********* Train Turn 488 [phase3_freeze_B] *********
+2026-04-29 20:02:25,521 P22775 INFO Clients average loss: 0.26622429490089417
+2026-04-29 20:02:25,528 P22775 INFO ********* Train Turn 489 [phase3_freeze_B] *********
+2026-04-29 20:02:29,621 P22775 INFO Clients average loss: 0.2575531005859375
+2026-04-29 20:02:29,627 P22775 INFO ********* Train Turn 490 [phase3_freeze_B] *********
+2026-04-29 20:02:33,744 P22775 INFO Clients average loss: 0.2593439817428589
+2026-04-29 20:02:33,751 P22775 INFO ********* Train Turn 491 [phase3_freeze_B] *********
+2026-04-29 20:02:37,895 P22775 INFO Clients average loss: 0.2511713206768036
+2026-04-29 20:02:37,902 P22775 INFO ********* Train Turn 492 [phase3_freeze_B] *********
+2026-04-29 20:02:42,005 P22775 INFO Clients average loss: 0.2548331916332245
+2026-04-29 20:02:42,012 P22775 INFO ********* Train Turn 493 [phase3_freeze_B] *********
+2026-04-29 20:02:46,158 P22775 INFO Clients average loss: 0.2600644826889038
+2026-04-29 20:02:46,164 P22775 INFO ********* Train Turn 494 [phase3_freeze_B] *********
+2026-04-29 20:02:50,198 P22775 INFO Clients average loss: 0.26172778010368347
+2026-04-29 20:02:50,205 P22775 INFO ********* Train Turn 495 [phase3_freeze_B] *********
+2026-04-29 20:02:54,446 P22775 INFO Clients average loss: 0.2600914537906647
+2026-04-29 20:02:54,452 P22775 INFO ********* Train Turn 496 [phase3_freeze_B] *********
+2026-04-29 20:02:58,639 P22775 INFO Clients average loss: 0.26625874638557434
+2026-04-29 20:02:58,646 P22775 INFO ********* Train Turn 497 [phase3_freeze_B] *********
+2026-04-29 20:03:02,844 P22775 INFO Clients average loss: 0.26406732201576233
+2026-04-29 20:03:02,851 P22775 INFO ********* Train Turn 498 [phase3_freeze_B] *********
+2026-04-29 20:03:07,050 P22775 INFO Clients average loss: 0.253630667924881
+2026-04-29 20:03:07,057 P22775 INFO ********* Train Turn 499 [phase3_freeze_B] *********
+2026-04-29 20:03:11,219 P22775 INFO Clients average loss: 0.2595895826816559
+2026-04-29 20:03:11,226 P22775 INFO ********* Test *********
+2026-04-29 20:03:14,517 P22775 INFO [Metrics] logloss: 1.480948 - MRR: 0.354459 - NDCG(5): 0.345342 - HR(5): 0.442053 - NDCG(10): 0.400312 - HR(10): 0.613742 - NDCG(20): 0.444172 - HR(20): 0.785762 - NDCG(50): 0.475484 - HR(50): 0.940728
+/content/drive/MyDrive

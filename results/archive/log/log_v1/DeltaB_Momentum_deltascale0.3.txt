@@ -1,0 +1,1207 @@
+/content/drive/MyDrive/FedNCF-LoRA
+2026-04-30 04:01:39,154 P1657 INFO Params: {
+    "beta": "0.9",
+    "clients_num_per_turn": "604",
+    "data_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "dataloader": "MLDataLoaderFL",
+    "dataset_id": "ML1M_t5",
+    "delta_B_lr": "0.0001",
+    "delta_B_update_every": "10",
+    "delta_scale": "0.3",
+    "device": "0",
+    "dropout": "0.5",
+    "embedding_dim": "32",
+    "embedding_regularizer": "1e-08",
+    "eta_s": "1.0",
+    "g_hidden_activations": "ReLU",
+    "g_hidden_units": "[512, 256, 128]",
+    "hidden_activations": "ReLU",
+    "hidden_units": "[64, 128, 64]",
+    "item_num": "3952",
+    "lambda_delta": "0.0001",
+    "latent_dim": "4",
+    "learning_rate": "0.001",
+    "local_epoch": "2",
+    "loss_fn": "bpr_loss",
+    "metrics": "['logloss', 'MRR', 'NDCG(5)', 'HR(5)', 'NDCG(10)', 'HR(10)', 'NDCG(20)', 'HR(20)', 'NDCG(50)', 'HR(50)']",
+    "model": "FedNCF_Lora_Momentum_3",
+    "model_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/model/t5/",
+    "model_id": "FedNCF_ml1m_triple_101_momentum_3",
+    "net_regularizer": "1e-08",
+    "only_inter": "False",
+    "optimizer": "adam",
+    "output_dim": "1",
+    "path": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "pre_epoch": "3000",
+    "seed": "2024",
+    "sen_embedding_dim": "768",
+    "task": "triple",
+    "train_turn": "500",
+    "user_num": "6040"
+}
+2026-04-30 04:01:45,747 P1657 INFO Model embedding_item.emb.weight size: 0.06030273MB
+2026-04-30 04:01:45,747 P1657 INFO Model embedding_item.linear.weight size: 0.00048828MB
+2026-04-30 04:01:45,747 P1657 INFO Model delta_B.weight size: 0.00048828MB
+2026-04-30 04:01:45,747 P1657 INFO Model embedding_p.weight size: 0.48242188MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.0.weight size: 0.01562500MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.0.bias size: 0.00024414MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.3.weight size: 0.03125000MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.3.bias size: 0.00048828MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.6.weight size: 0.03125000MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.6.bias size: 0.00024414MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.9.weight size: 0.00024414MB
+2026-04-30 04:01:45,747 P1657 INFO Model mlp.mlp.9.bias size: 0.00000381MB
+2026-04-30 04:01:45,748 P1657 INFO Model all size: 0.62305069MB
+2026-04-30 04:01:45,749 P1657 INFO Phase schedule: Phase1(AE warmup)=turns 0-19, Phase2(LoRA+ΔB)=turns 20+
+2026-04-30 04:01:56,137 P1657 INFO ********* Train Turn 0 [phase1_AE] *********
+2026-04-30 04:02:00,103 P1657 INFO Clients average loss: 0.6948460340499878
+2026-04-30 04:02:00,109 P1657 INFO ********* Train Turn 1 [phase1_AE] *********
+2026-04-30 04:02:03,736 P1657 INFO Clients average loss: 0.6944765448570251
+2026-04-30 04:02:03,742 P1657 INFO ********* Train Turn 2 [phase1_AE] *********
+2026-04-30 04:02:07,346 P1657 INFO Clients average loss: 0.6942051649093628
+2026-04-30 04:02:07,351 P1657 INFO ********* Train Turn 3 [phase1_AE] *********
+2026-04-30 04:02:11,087 P1657 INFO Clients average loss: 0.6945146918296814
+2026-04-30 04:02:11,093 P1657 INFO ********* Train Turn 4 [phase1_AE] *********
+2026-04-30 04:02:14,805 P1657 INFO Clients average loss: 0.6942599415779114
+2026-04-30 04:02:14,811 P1657 INFO ********* Train Turn 5 [phase1_AE] *********
+2026-04-30 04:02:18,527 P1657 INFO Clients average loss: 0.6947175860404968
+2026-04-30 04:02:18,533 P1657 INFO ********* Train Turn 6 [phase1_AE] *********
+2026-04-30 04:02:22,255 P1657 INFO Clients average loss: 0.6941888928413391
+2026-04-30 04:02:22,261 P1657 INFO ********* Train Turn 7 [phase1_AE] *********
+2026-04-30 04:02:25,952 P1657 INFO Clients average loss: 0.6945046186447144
+2026-04-30 04:02:25,958 P1657 INFO ********* Train Turn 8 [phase1_AE] *********
+2026-04-30 04:02:29,674 P1657 INFO Clients average loss: 0.6939841508865356
+2026-04-30 04:02:29,679 P1657 INFO ********* Train Turn 9 [phase1_AE] *********
+2026-04-30 04:02:33,405 P1657 INFO Clients average loss: 0.6941842436790466
+2026-04-30 04:02:33,410 P1657 INFO ********* Eval @ Turn 9 *********
+2026-04-30 04:02:36,705 P1657 INFO [Metrics] logloss: 0.096496 - MRR: 0.047881 - NDCG(5): 0.022741 - HR(5): 0.041225 - NDCG(10): 0.038141 - HR(10): 0.089570 - NDCG(20): 0.068022 - HR(20): 0.209272 - NDCG(50): 0.137125 - HR(50): 0.562748
+2026-04-30 04:02:36,705 P1657 INFO ********* Train Turn 10 [phase1_AE] *********
+2026-04-30 04:02:40,428 P1657 INFO Clients average loss: 0.6934574842453003
+2026-04-30 04:02:40,434 P1657 INFO ********* Train Turn 11 [phase1_AE] *********
+2026-04-30 04:02:44,280 P1657 INFO Clients average loss: 0.6939377188682556
+2026-04-30 04:02:44,286 P1657 INFO ********* Train Turn 12 [phase1_AE] *********
+2026-04-30 04:02:48,078 P1657 INFO Clients average loss: 0.6941978931427002
+2026-04-30 04:02:48,084 P1657 INFO ********* Train Turn 13 [phase1_AE] *********
+2026-04-30 04:02:51,906 P1657 INFO Clients average loss: 0.6943626999855042
+2026-04-30 04:02:51,911 P1657 INFO ********* Train Turn 14 [phase1_AE] *********
+2026-04-30 04:02:55,723 P1657 INFO Clients average loss: 0.6939943432807922
+2026-04-30 04:02:55,729 P1657 INFO ********* Train Turn 15 [phase1_AE] *********
+2026-04-30 04:02:59,370 P1657 INFO Clients average loss: 0.6938289403915405
+2026-04-30 04:02:59,375 P1657 INFO ********* Train Turn 16 [phase1_AE] *********
+2026-04-30 04:03:03,119 P1657 INFO Clients average loss: 0.6936665177345276
+2026-04-30 04:03:03,125 P1657 INFO ********* Train Turn 17 [phase1_AE] *********
+2026-04-30 04:03:06,835 P1657 INFO Clients average loss: 0.6938060522079468
+2026-04-30 04:03:06,841 P1657 INFO ********* Train Turn 18 [phase1_AE] *********
+2026-04-30 04:03:10,518 P1657 INFO Clients average loss: 0.6934629082679749
+2026-04-30 04:03:10,524 P1657 INFO ********* Train Turn 19 [phase1_AE] *********
+2026-04-30 04:03:14,260 P1657 INFO Clients average loss: 0.6935155391693115
+2026-04-30 04:03:14,266 P1657 INFO ********* Eval @ Turn 19 *********
+2026-04-30 04:03:17,480 P1657 INFO [Metrics] logloss: 0.091496 - MRR: 0.058402 - NDCG(5): 0.031986 - HR(5): 0.057285 - NDCG(10): 0.053678 - HR(10): 0.125331 - NDCG(20): 0.088727 - HR(20): 0.265563 - NDCG(50): 0.159137 - HR(50): 0.623510
+2026-04-30 04:03:17,480 P1657 INFO *** Phase 2 START: LoRA+ΔB — train A + ΔB, B frozen ***
+2026-04-30 04:03:17,481 P1657 INFO ********* Train Turn 20 [phase2_LoRA+dB] *********
+2026-04-30 04:03:22,383 P1657 INFO ΔB updated at turn 20 (604 clients)
+2026-04-30 04:03:22,467 P1657 INFO Clients average loss: 0.693300187587738
+2026-04-30 04:03:22,473 P1657 INFO ********* Train Turn 21 [phase2_LoRA+dB] *********
+2026-04-30 04:03:27,161 P1657 INFO Clients average loss: 0.6941260099411011
+2026-04-30 04:03:27,167 P1657 INFO ********* Train Turn 22 [phase2_LoRA+dB] *********
+2026-04-30 04:03:31,881 P1657 INFO Clients average loss: 0.6933485865592957
+2026-04-30 04:03:31,887 P1657 INFO ********* Train Turn 23 [phase2_LoRA+dB] *********
+2026-04-30 04:03:36,609 P1657 INFO Clients average loss: 0.693515419960022
+2026-04-30 04:03:36,615 P1657 INFO ********* Train Turn 24 [phase2_LoRA+dB] *********
+2026-04-30 04:03:41,332 P1657 INFO Clients average loss: 0.6932840943336487
+2026-04-30 04:03:41,338 P1657 INFO ********* Train Turn 25 [phase2_LoRA+dB] *********
+2026-04-30 04:03:46,000 P1657 INFO Clients average loss: 0.693126916885376
+2026-04-30 04:03:46,007 P1657 INFO ********* Train Turn 26 [phase2_LoRA+dB] *********
+2026-04-30 04:03:50,664 P1657 INFO Clients average loss: 0.6934000849723816
+2026-04-30 04:03:50,670 P1657 INFO ********* Train Turn 27 [phase2_LoRA+dB] *********
+2026-04-30 04:03:55,380 P1657 INFO Clients average loss: 0.6924937963485718
+2026-04-30 04:03:55,385 P1657 INFO ********* Train Turn 28 [phase2_LoRA+dB] *********
+2026-04-30 04:04:00,019 P1657 INFO Clients average loss: 0.6925801634788513
+2026-04-30 04:04:00,025 P1657 INFO ********* Train Turn 29 [phase2_LoRA+dB] *********
+2026-04-30 04:04:04,635 P1657 INFO Clients average loss: 0.6928701996803284
+2026-04-30 04:04:04,641 P1657 INFO ********* Eval @ Turn 29 *********
+2026-04-30 04:04:07,814 P1657 INFO [Metrics] logloss: 0.082940 - MRR: 0.084498 - NDCG(5): 0.059684 - HR(5): 0.102815 - NDCG(10): 0.090687 - HR(10): 0.200000 - NDCG(20): 0.133219 - HR(20): 0.369702 - NDCG(50): 0.199204 - HR(50): 0.703146
+2026-04-30 04:04:07,814 P1657 INFO ********* Train Turn 30 [phase2_LoRA+dB] *********
+2026-04-30 04:04:12,797 P1657 INFO ΔB updated at turn 30 (604 clients)
+2026-04-30 04:04:12,880 P1657 INFO Clients average loss: 0.692013144493103
+2026-04-30 04:04:12,886 P1657 INFO ********* Train Turn 31 [phase2_LoRA+dB] *********
+2026-04-30 04:04:17,601 P1657 INFO Clients average loss: 0.6923835873603821
+2026-04-30 04:04:17,607 P1657 INFO ********* Train Turn 32 [phase2_LoRA+dB] *********
+2026-04-30 04:04:22,291 P1657 INFO Clients average loss: 0.6916210055351257
+2026-04-30 04:04:22,297 P1657 INFO ********* Train Turn 33 [phase2_LoRA+dB] *********
+2026-04-30 04:04:26,965 P1657 INFO Clients average loss: 0.6915488839149475
+2026-04-30 04:04:26,971 P1657 INFO ********* Train Turn 34 [phase2_LoRA+dB] *********
+2026-04-30 04:04:31,658 P1657 INFO Clients average loss: 0.6913346648216248
+2026-04-30 04:04:31,668 P1657 INFO ********* Train Turn 35 [phase2_LoRA+dB] *********
+2026-04-30 04:04:36,337 P1657 INFO Clients average loss: 0.6912794709205627
+2026-04-30 04:04:36,343 P1657 INFO ********* Train Turn 36 [phase2_LoRA+dB] *********
+2026-04-30 04:04:41,041 P1657 INFO Clients average loss: 0.6910670399665833
+2026-04-30 04:04:41,046 P1657 INFO ********* Train Turn 37 [phase2_LoRA+dB] *********
+2026-04-30 04:04:45,748 P1657 INFO Clients average loss: 0.6912813782691956
+2026-04-30 04:04:45,754 P1657 INFO ********* Train Turn 38 [phase2_LoRA+dB] *********
+2026-04-30 04:04:50,477 P1657 INFO Clients average loss: 0.6897273063659668
+2026-04-30 04:04:50,482 P1657 INFO ********* Train Turn 39 [phase2_LoRA+dB] *********
+2026-04-30 04:04:55,173 P1657 INFO Clients average loss: 0.6900404691696167
+2026-04-30 04:04:55,180 P1657 INFO ********* Eval @ Turn 39 *********
+2026-04-30 04:04:58,409 P1657 INFO [Metrics] logloss: 0.073972 - MRR: 0.126453 - NDCG(5): 0.107354 - HR(5): 0.179967 - NDCG(10): 0.151371 - HR(10): 0.317881 - NDCG(20): 0.199041 - HR(20): 0.507450 - NDCG(50): 0.252504 - HR(50): 0.775828
+2026-04-30 04:04:58,409 P1657 INFO ********* Train Turn 40 [phase2_LoRA+dB] *********
+2026-04-30 04:05:03,322 P1657 INFO ΔB updated at turn 40 (604 clients)
+2026-04-30 04:05:03,412 P1657 INFO Clients average loss: 0.6899100542068481
+2026-04-30 04:05:03,417 P1657 INFO ********* Train Turn 41 [phase2_LoRA+dB] *********
+2026-04-30 04:05:08,091 P1657 INFO Clients average loss: 0.6889821290969849
+2026-04-30 04:05:08,097 P1657 INFO ********* Train Turn 42 [phase2_LoRA+dB] *********
+2026-04-30 04:05:12,775 P1657 INFO Clients average loss: 0.6889840960502625
+2026-04-30 04:05:12,782 P1657 INFO ********* Train Turn 43 [phase2_LoRA+dB] *********
+2026-04-30 04:05:17,535 P1657 INFO Clients average loss: 0.6880822777748108
+2026-04-30 04:05:17,542 P1657 INFO ********* Train Turn 44 [phase2_LoRA+dB] *********
+2026-04-30 04:05:22,186 P1657 INFO Clients average loss: 0.6873608827590942
+2026-04-30 04:05:22,192 P1657 INFO ********* Train Turn 45 [phase2_LoRA+dB] *********
+2026-04-30 04:05:26,898 P1657 INFO Clients average loss: 0.6865355968475342
+2026-04-30 04:05:26,904 P1657 INFO ********* Train Turn 46 [phase2_LoRA+dB] *********
+2026-04-30 04:05:31,585 P1657 INFO Clients average loss: 0.6861352324485779
+2026-04-30 04:05:31,591 P1657 INFO ********* Train Turn 47 [phase2_LoRA+dB] *********
+2026-04-30 04:05:36,241 P1657 INFO Clients average loss: 0.6858153939247131
+2026-04-30 04:05:36,247 P1657 INFO ********* Train Turn 48 [phase2_LoRA+dB] *********
+2026-04-30 04:05:40,884 P1657 INFO Clients average loss: 0.6844580769538879
+2026-04-30 04:05:40,890 P1657 INFO ********* Train Turn 49 [phase2_LoRA+dB] *********
+2026-04-30 04:05:45,500 P1657 INFO Clients average loss: 0.68305903673172
+2026-04-30 04:05:45,506 P1657 INFO ********* Eval @ Turn 49 *********
+2026-04-30 04:05:48,736 P1657 INFO [Metrics] logloss: 0.077734 - MRR: 0.173203 - NDCG(5): 0.162361 - HR(5): 0.267053 - NDCG(10): 0.220020 - HR(10): 0.446689 - NDCG(20): 0.263346 - HR(20): 0.617715 - NDCG(50): 0.307086 - HR(50): 0.837914
+2026-04-30 04:05:48,736 P1657 INFO ********* Train Turn 50 [phase2_LoRA+dB] *********
+2026-04-30 04:05:53,690 P1657 INFO ΔB updated at turn 50 (604 clients)
+2026-04-30 04:05:53,776 P1657 INFO Clients average loss: 0.6820782423019409
+2026-04-30 04:05:53,782 P1657 INFO ********* Train Turn 51 [phase2_LoRA+dB] *********
+2026-04-30 04:05:58,453 P1657 INFO Clients average loss: 0.6807872653007507
+2026-04-30 04:05:58,459 P1657 INFO ********* Train Turn 52 [phase2_LoRA+dB] *********
+2026-04-30 04:06:03,108 P1657 INFO Clients average loss: 0.6792457103729248
+2026-04-30 04:06:03,114 P1657 INFO ********* Train Turn 53 [phase2_LoRA+dB] *********
+2026-04-30 04:06:07,755 P1657 INFO Clients average loss: 0.6771034598350525
+2026-04-30 04:06:07,760 P1657 INFO ********* Train Turn 54 [phase2_LoRA+dB] *********
+2026-04-30 04:06:12,452 P1657 INFO Clients average loss: 0.6760887503623962
+2026-04-30 04:06:12,458 P1657 INFO ********* Train Turn 55 [phase2_LoRA+dB] *********
+2026-04-30 04:06:17,217 P1657 INFO Clients average loss: 0.6735767722129822
+2026-04-30 04:06:17,223 P1657 INFO ********* Train Turn 56 [phase2_LoRA+dB] *********
+2026-04-30 04:06:21,944 P1657 INFO Clients average loss: 0.6711373329162598
+2026-04-30 04:06:21,950 P1657 INFO ********* Train Turn 57 [phase2_LoRA+dB] *********
+2026-04-30 04:06:26,697 P1657 INFO Clients average loss: 0.667385458946228
+2026-04-30 04:06:26,703 P1657 INFO ********* Train Turn 58 [phase2_LoRA+dB] *********
+2026-04-30 04:06:31,378 P1657 INFO Clients average loss: 0.6645904183387756
+2026-04-30 04:06:31,383 P1657 INFO ********* Train Turn 59 [phase2_LoRA+dB] *********
+2026-04-30 04:06:36,062 P1657 INFO Clients average loss: 0.6613873243331909
+2026-04-30 04:06:36,068 P1657 INFO ********* Eval @ Turn 59 *********
+2026-04-30 04:06:39,363 P1657 INFO [Metrics] logloss: 0.128230 - MRR: 0.201314 - NDCG(5): 0.194322 - HR(5): 0.314073 - NDCG(10): 0.259074 - HR(10): 0.513742 - NDCG(20): 0.297481 - HR(20): 0.665728 - NDCG(50): 0.339318 - HR(50): 0.876159
+2026-04-30 04:06:39,364 P1657 INFO ********* Train Turn 60 [phase2_LoRA+dB] *********
+2026-04-30 04:06:44,373 P1657 INFO ΔB updated at turn 60 (604 clients)
+2026-04-30 04:06:44,456 P1657 INFO Clients average loss: 0.6557974815368652
+2026-04-30 04:06:44,461 P1657 INFO ********* Train Turn 61 [phase2_LoRA+dB] *********
+2026-04-30 04:06:49,132 P1657 INFO Clients average loss: 0.6499817967414856
+2026-04-30 04:06:49,138 P1657 INFO ********* Train Turn 62 [phase2_LoRA+dB] *********
+2026-04-30 04:06:53,707 P1657 INFO Clients average loss: 0.6457743644714355
+2026-04-30 04:06:53,713 P1657 INFO ********* Train Turn 63 [phase2_LoRA+dB] *********
+2026-04-30 04:06:58,396 P1657 INFO Clients average loss: 0.6400467753410339
+2026-04-30 04:06:58,402 P1657 INFO ********* Train Turn 64 [phase2_LoRA+dB] *********
+2026-04-30 04:07:03,111 P1657 INFO Clients average loss: 0.6323500275611877
+2026-04-30 04:07:03,116 P1657 INFO ********* Train Turn 65 [phase2_LoRA+dB] *********
+2026-04-30 04:07:07,815 P1657 INFO Clients average loss: 0.6253321170806885
+2026-04-30 04:07:07,821 P1657 INFO ********* Train Turn 66 [phase2_LoRA+dB] *********
+2026-04-30 04:07:12,535 P1657 INFO Clients average loss: 0.618155300617218
+2026-04-30 04:07:12,541 P1657 INFO ********* Train Turn 67 [phase2_LoRA+dB] *********
+2026-04-30 04:07:17,158 P1657 INFO Clients average loss: 0.6078164577484131
+2026-04-30 04:07:17,164 P1657 INFO ********* Train Turn 68 [phase2_LoRA+dB] *********
+2026-04-30 04:07:21,845 P1657 INFO Clients average loss: 0.5989217162132263
+2026-04-30 04:07:21,851 P1657 INFO ********* Train Turn 69 [phase2_LoRA+dB] *********
+2026-04-30 04:07:26,536 P1657 INFO Clients average loss: 0.5891364216804504
+2026-04-30 04:07:26,542 P1657 INFO ********* Eval @ Turn 69 *********
+2026-04-30 04:07:29,851 P1657 INFO [Metrics] logloss: 0.346742 - MRR: 0.219698 - NDCG(5): 0.218006 - HR(5): 0.349834 - NDCG(10): 0.279414 - HR(10): 0.539073 - NDCG(20): 0.319596 - HR(20): 0.697682 - NDCG(50): 0.359392 - HR(50): 0.897517
+2026-04-30 04:07:29,852 P1657 INFO ********* Train Turn 70 [phase2_LoRA+dB] *********
+2026-04-30 04:07:34,887 P1657 INFO ΔB updated at turn 70 (604 clients)
+2026-04-30 04:07:34,976 P1657 INFO Clients average loss: 0.5741055011749268
+2026-04-30 04:07:34,982 P1657 INFO ********* Train Turn 71 [phase2_LoRA+dB] *********
+2026-04-30 04:07:39,616 P1657 INFO Clients average loss: 0.5635885000228882
+2026-04-30 04:07:39,622 P1657 INFO ********* Train Turn 72 [phase2_LoRA+dB] *********
+2026-04-30 04:07:44,407 P1657 INFO Clients average loss: 0.5526036024093628
+2026-04-30 04:07:44,413 P1657 INFO ********* Train Turn 73 [phase2_LoRA+dB] *********
+2026-04-30 04:07:49,113 P1657 INFO Clients average loss: 0.5403721332550049
+2026-04-30 04:07:49,119 P1657 INFO ********* Train Turn 74 [phase2_LoRA+dB] *********
+2026-04-30 04:07:53,790 P1657 INFO Clients average loss: 0.5276650786399841
+2026-04-30 04:07:53,796 P1657 INFO ********* Train Turn 75 [phase2_LoRA+dB] *********
+2026-04-30 04:07:58,590 P1657 INFO Clients average loss: 0.5109849572181702
+2026-04-30 04:07:58,596 P1657 INFO ********* Train Turn 76 [phase2_LoRA+dB] *********
+2026-04-30 04:08:03,418 P1657 INFO Clients average loss: 0.5065908432006836
+2026-04-30 04:08:03,424 P1657 INFO ********* Train Turn 77 [phase2_LoRA+dB] *********
+2026-04-30 04:08:08,153 P1657 INFO Clients average loss: 0.4947033226490021
+2026-04-30 04:08:08,159 P1657 INFO ********* Train Turn 78 [phase2_LoRA+dB] *********
+2026-04-30 04:08:12,847 P1657 INFO Clients average loss: 0.48129671812057495
+2026-04-30 04:08:12,853 P1657 INFO ********* Train Turn 79 [phase2_LoRA+dB] *********
+2026-04-30 04:08:17,590 P1657 INFO Clients average loss: 0.4688156843185425
+2026-04-30 04:08:17,596 P1657 INFO ********* Eval @ Turn 79 *********
+2026-04-30 04:08:20,898 P1657 INFO [Metrics] logloss: 2.099209 - MRR: 0.230375 - NDCG(5): 0.226678 - HR(5): 0.357947 - NDCG(10): 0.293944 - HR(10): 0.566722 - NDCG(20): 0.333388 - HR(20): 0.721358 - NDCG(50): 0.374097 - HR(50): 0.925497
+2026-04-30 04:08:20,899 P1657 INFO ********* Train Turn 80 [phase2_LoRA+dB] *********
+2026-04-30 04:08:25,837 P1657 INFO ΔB updated at turn 80 (604 clients)
+2026-04-30 04:08:25,925 P1657 INFO Clients average loss: 0.4586617648601532
+2026-04-30 04:08:25,931 P1657 INFO ********* Train Turn 81 [phase2_LoRA+dB] *********
+2026-04-30 04:08:30,671 P1657 INFO Clients average loss: 0.4481562376022339
+2026-04-30 04:08:30,677 P1657 INFO ********* Train Turn 82 [phase2_LoRA+dB] *********
+2026-04-30 04:08:35,454 P1657 INFO Clients average loss: 0.44559231400489807
+2026-04-30 04:08:35,460 P1657 INFO ********* Train Turn 83 [phase2_LoRA+dB] *********
+2026-04-30 04:08:40,138 P1657 INFO Clients average loss: 0.440295547246933
+2026-04-30 04:08:40,143 P1657 INFO ********* Train Turn 84 [phase2_LoRA+dB] *********
+2026-04-30 04:08:44,852 P1657 INFO Clients average loss: 0.430401474237442
+2026-04-30 04:08:44,858 P1657 INFO ********* Train Turn 85 [phase2_LoRA+dB] *********
+2026-04-30 04:08:49,530 P1657 INFO Clients average loss: 0.4202055037021637
+2026-04-30 04:08:49,537 P1657 INFO ********* Train Turn 86 [phase2_LoRA+dB] *********
+2026-04-30 04:08:54,184 P1657 INFO Clients average loss: 0.4227944016456604
+2026-04-30 04:08:54,190 P1657 INFO ********* Train Turn 87 [phase2_LoRA+dB] *********
+2026-04-30 04:08:58,861 P1657 INFO Clients average loss: 0.40409228205680847
+2026-04-30 04:08:58,867 P1657 INFO ********* Train Turn 88 [phase2_LoRA+dB] *********
+2026-04-30 04:09:03,495 P1657 INFO Clients average loss: 0.40612712502479553
+2026-04-30 04:09:03,501 P1657 INFO ********* Train Turn 89 [phase2_LoRA+dB] *********
+2026-04-30 04:09:08,173 P1657 INFO Clients average loss: 0.3978714644908905
+2026-04-30 04:09:08,179 P1657 INFO ********* Eval @ Turn 89 *********
+2026-04-30 04:09:11,605 P1657 INFO [Metrics] logloss: 2.991004 - MRR: 0.233134 - NDCG(5): 0.223673 - HR(5): 0.348344 - NDCG(10): 0.300497 - HR(10): 0.587748 - NDCG(20): 0.340756 - HR(20): 0.744702 - NDCG(50): 0.380522 - HR(50): 0.943543
+2026-04-30 04:09:11,605 P1657 INFO ********* Train Turn 90 [phase2_LoRA+dB] *********
+2026-04-30 04:09:16,557 P1657 INFO ΔB updated at turn 90 (604 clients)
+2026-04-30 04:09:16,649 P1657 INFO Clients average loss: 0.39786386489868164
+2026-04-30 04:09:16,655 P1657 INFO ********* Train Turn 91 [phase2_LoRA+dB] *********
+2026-04-30 04:09:21,352 P1657 INFO Clients average loss: 0.3860624134540558
+2026-04-30 04:09:21,358 P1657 INFO ********* Train Turn 92 [phase2_LoRA+dB] *********
+2026-04-30 04:09:26,100 P1657 INFO Clients average loss: 0.3835417330265045
+2026-04-30 04:09:26,107 P1657 INFO ********* Train Turn 93 [phase2_LoRA+dB] *********
+2026-04-30 04:09:30,848 P1657 INFO Clients average loss: 0.3814621567726135
+2026-04-30 04:09:30,854 P1657 INFO ********* Train Turn 94 [phase2_LoRA+dB] *********
+2026-04-30 04:09:35,563 P1657 INFO Clients average loss: 0.37895527482032776
+2026-04-30 04:09:35,569 P1657 INFO ********* Train Turn 95 [phase2_LoRA+dB] *********
+2026-04-30 04:09:40,259 P1657 INFO Clients average loss: 0.37641897797584534
+2026-04-30 04:09:40,266 P1657 INFO ********* Train Turn 96 [phase2_LoRA+dB] *********
+2026-04-30 04:09:44,962 P1657 INFO Clients average loss: 0.3655323386192322
+2026-04-30 04:09:44,968 P1657 INFO ********* Train Turn 97 [phase2_LoRA+dB] *********
+2026-04-30 04:09:49,610 P1657 INFO Clients average loss: 0.3669627904891968
+2026-04-30 04:09:49,616 P1657 INFO ********* Train Turn 98 [phase2_LoRA+dB] *********
+2026-04-30 04:09:54,314 P1657 INFO Clients average loss: 0.3708891272544861
+2026-04-30 04:09:54,320 P1657 INFO ********* Train Turn 99 [phase2_LoRA+dB] *********
+2026-04-30 04:09:58,997 P1657 INFO Clients average loss: 0.36532649397850037
+2026-04-30 04:09:59,002 P1657 INFO ********* Eval @ Turn 99 *********
+2026-04-30 04:10:02,350 P1657 INFO [Metrics] logloss: 3.210067 - MRR: 0.234598 - NDCG(5): 0.222933 - HR(5): 0.346689 - NDCG(10): 0.304127 - HR(10): 0.599669 - NDCG(20): 0.346438 - HR(20): 0.764570 - NDCG(50): 0.382982 - HR(50): 0.946523
+2026-04-30 04:10:02,350 P1657 INFO ********* Train Turn 100 [phase2_LoRA+dB] *********
+2026-04-30 04:10:07,290 P1657 INFO ΔB updated at turn 100 (604 clients)
+2026-04-30 04:10:07,381 P1657 INFO Clients average loss: 0.3618558943271637
+2026-04-30 04:10:07,387 P1657 INFO ********* Train Turn 101 [phase2_LoRA+dB] *********
+2026-04-30 04:10:12,093 P1657 INFO Clients average loss: 0.34968292713165283
+2026-04-30 04:10:12,099 P1657 INFO ********* Train Turn 102 [phase2_LoRA+dB] *********
+2026-04-30 04:10:16,782 P1657 INFO Clients average loss: 0.35564371943473816
+2026-04-30 04:10:16,788 P1657 INFO ********* Train Turn 103 [phase2_LoRA+dB] *********
+2026-04-30 04:10:21,480 P1657 INFO Clients average loss: 0.34689489006996155
+2026-04-30 04:10:21,486 P1657 INFO ********* Train Turn 104 [phase2_LoRA+dB] *********
+2026-04-30 04:10:26,203 P1657 INFO Clients average loss: 0.3516269326210022
+2026-04-30 04:10:26,209 P1657 INFO ********* Train Turn 105 [phase2_LoRA+dB] *********
+2026-04-30 04:10:30,969 P1657 INFO Clients average loss: 0.34875908493995667
+2026-04-30 04:10:30,975 P1657 INFO ********* Train Turn 106 [phase2_LoRA+dB] *********
+2026-04-30 04:10:35,750 P1657 INFO Clients average loss: 0.35241299867630005
+2026-04-30 04:10:35,756 P1657 INFO ********* Train Turn 107 [phase2_LoRA+dB] *********
+2026-04-30 04:10:40,477 P1657 INFO Clients average loss: 0.34694209694862366
+2026-04-30 04:10:40,483 P1657 INFO ********* Train Turn 108 [phase2_LoRA+dB] *********
+2026-04-30 04:10:45,238 P1657 INFO Clients average loss: 0.34214821457862854
+2026-04-30 04:10:45,243 P1657 INFO ********* Train Turn 109 [phase2_LoRA+dB] *********
+2026-04-30 04:10:49,971 P1657 INFO Clients average loss: 0.34105658531188965
+2026-04-30 04:10:49,978 P1657 INFO ********* Eval @ Turn 109 *********
+2026-04-30 04:10:53,231 P1657 INFO [Metrics] logloss: 3.261123 - MRR: 0.242148 - NDCG(5): 0.234201 - HR(5): 0.364901 - NDCG(10): 0.311574 - HR(10): 0.605464 - NDCG(20): 0.354482 - HR(20): 0.772185 - NDCG(50): 0.389842 - HR(50): 0.948013
+2026-04-30 04:10:53,231 P1657 INFO ********* Train Turn 110 [phase2_LoRA+dB] *********
+2026-04-30 04:10:58,285 P1657 INFO ΔB updated at turn 110 (604 clients)
+2026-04-30 04:10:58,376 P1657 INFO Clients average loss: 0.33778634667396545
+2026-04-30 04:10:58,382 P1657 INFO ********* Train Turn 111 [phase2_LoRA+dB] *********
+2026-04-30 04:11:03,107 P1657 INFO Clients average loss: 0.33310550451278687
+2026-04-30 04:11:03,113 P1657 INFO ********* Train Turn 112 [phase2_LoRA+dB] *********
+2026-04-30 04:11:07,918 P1657 INFO Clients average loss: 0.3398905098438263
+2026-04-30 04:11:07,924 P1657 INFO ********* Train Turn 113 [phase2_LoRA+dB] *********
+2026-04-30 04:11:12,606 P1657 INFO Clients average loss: 0.3225691020488739
+2026-04-30 04:11:12,612 P1657 INFO ********* Train Turn 114 [phase2_LoRA+dB] *********
+2026-04-30 04:11:17,251 P1657 INFO Clients average loss: 0.3383322060108185
+2026-04-30 04:11:17,257 P1657 INFO ********* Train Turn 115 [phase2_LoRA+dB] *********
+2026-04-30 04:11:21,952 P1657 INFO Clients average loss: 0.33353862166404724
+2026-04-30 04:11:21,958 P1657 INFO ********* Train Turn 116 [phase2_LoRA+dB] *********
+2026-04-30 04:11:26,711 P1657 INFO Clients average loss: 0.33521461486816406
+2026-04-30 04:11:26,717 P1657 INFO ********* Train Turn 117 [phase2_LoRA+dB] *********
+2026-04-30 04:11:31,430 P1657 INFO Clients average loss: 0.32627150416374207
+2026-04-30 04:11:31,436 P1657 INFO ********* Train Turn 118 [phase2_LoRA+dB] *********
+2026-04-30 04:11:36,195 P1657 INFO Clients average loss: 0.33319008350372314
+2026-04-30 04:11:36,201 P1657 INFO ********* Train Turn 119 [phase2_LoRA+dB] *********
+2026-04-30 04:11:40,891 P1657 INFO Clients average loss: 0.3326387107372284
+2026-04-30 04:11:40,897 P1657 INFO ********* Eval @ Turn 119 *********
+2026-04-30 04:11:44,183 P1657 INFO [Metrics] logloss: 3.225721 - MRR: 0.251315 - NDCG(5): 0.247007 - HR(5): 0.382947 - NDCG(10): 0.319991 - HR(10): 0.610099 - NDCG(20): 0.363920 - HR(20): 0.780960 - NDCG(50): 0.397508 - HR(50): 0.947848
+2026-04-30 04:11:44,184 P1657 INFO ********* Train Turn 120 [phase2_LoRA+dB] *********
+2026-04-30 04:11:49,206 P1657 INFO ΔB updated at turn 120 (604 clients)
+2026-04-30 04:11:49,293 P1657 INFO Clients average loss: 0.32605475187301636
+2026-04-30 04:11:49,298 P1657 INFO ********* Train Turn 121 [phase2_LoRA+dB] *********
+2026-04-30 04:11:53,994 P1657 INFO Clients average loss: 0.3287327289581299
+2026-04-30 04:11:53,999 P1657 INFO ********* Train Turn 122 [phase2_LoRA+dB] *********
+2026-04-30 04:11:58,674 P1657 INFO Clients average loss: 0.3289981484413147
+2026-04-30 04:11:58,679 P1657 INFO ********* Train Turn 123 [phase2_LoRA+dB] *********
+2026-04-30 04:12:03,306 P1657 INFO Clients average loss: 0.3232443928718567
+2026-04-30 04:12:03,312 P1657 INFO ********* Train Turn 124 [phase2_LoRA+dB] *********
+2026-04-30 04:12:08,037 P1657 INFO Clients average loss: 0.32306692004203796
+2026-04-30 04:12:08,045 P1657 INFO ********* Train Turn 125 [phase2_LoRA+dB] *********
+2026-04-30 04:12:12,693 P1657 INFO Clients average loss: 0.3257400095462799
+2026-04-30 04:12:12,698 P1657 INFO ********* Train Turn 126 [phase2_LoRA+dB] *********
+2026-04-30 04:12:17,363 P1657 INFO Clients average loss: 0.323323518037796
+2026-04-30 04:12:17,369 P1657 INFO ********* Train Turn 127 [phase2_LoRA+dB] *********
+2026-04-30 04:12:22,069 P1657 INFO Clients average loss: 0.31594425439834595
+2026-04-30 04:12:22,075 P1657 INFO ********* Train Turn 128 [phase2_LoRA+dB] *********
+2026-04-30 04:12:26,830 P1657 INFO Clients average loss: 0.32399964332580566
+2026-04-30 04:12:26,835 P1657 INFO ********* Train Turn 129 [phase2_LoRA+dB] *********
+2026-04-30 04:12:31,597 P1657 INFO Clients average loss: 0.31298038363456726
+2026-04-30 04:12:31,603 P1657 INFO ********* Eval @ Turn 129 *********
+2026-04-30 04:12:35,080 P1657 INFO [Metrics] logloss: 3.105205 - MRR: 0.261049 - NDCG(5): 0.258962 - HR(5): 0.395530 - NDCG(10): 0.326698 - HR(10): 0.606623 - NDCG(20): 0.372174 - HR(20): 0.783940 - NDCG(50): 0.404908 - HR(50): 0.946026
+2026-04-30 04:12:35,080 P1657 INFO ********* Train Turn 130 [phase2_LoRA+dB] *********
+2026-04-30 04:12:40,088 P1657 INFO ΔB updated at turn 130 (604 clients)
+2026-04-30 04:12:40,174 P1657 INFO Clients average loss: 0.31100401282310486
+2026-04-30 04:12:40,180 P1657 INFO ********* Train Turn 131 [phase2_LoRA+dB] *********
+2026-04-30 04:12:44,998 P1657 INFO Clients average loss: 0.3134085536003113
+2026-04-30 04:12:45,004 P1657 INFO ********* Train Turn 132 [phase2_LoRA+dB] *********
+2026-04-30 04:12:49,757 P1657 INFO Clients average loss: 0.3098730742931366
+2026-04-30 04:12:49,763 P1657 INFO ********* Train Turn 133 [phase2_LoRA+dB] *********
+2026-04-30 04:12:54,470 P1657 INFO Clients average loss: 0.3074979782104492
+2026-04-30 04:12:54,476 P1657 INFO ********* Train Turn 134 [phase2_LoRA+dB] *********
+2026-04-30 04:12:59,175 P1657 INFO Clients average loss: 0.3142736852169037
+2026-04-30 04:12:59,181 P1657 INFO ********* Train Turn 135 [phase2_LoRA+dB] *********
+2026-04-30 04:13:03,790 P1657 INFO Clients average loss: 0.3230852484703064
+2026-04-30 04:13:03,796 P1657 INFO ********* Train Turn 136 [phase2_LoRA+dB] *********
+2026-04-30 04:13:08,589 P1657 INFO Clients average loss: 0.309801310300827
+2026-04-30 04:13:08,596 P1657 INFO ********* Train Turn 137 [phase2_LoRA+dB] *********
+2026-04-30 04:13:13,416 P1657 INFO Clients average loss: 0.30385032296180725
+2026-04-30 04:13:13,421 P1657 INFO ********* Train Turn 138 [phase2_LoRA+dB] *********
+2026-04-30 04:13:18,224 P1657 INFO Clients average loss: 0.3064919114112854
+2026-04-30 04:13:18,230 P1657 INFO ********* Train Turn 139 [phase2_LoRA+dB] *********
+2026-04-30 04:13:22,919 P1657 INFO Clients average loss: 0.3057856857776642
+2026-04-30 04:13:22,925 P1657 INFO ********* Eval @ Turn 139 *********
+2026-04-30 04:13:26,171 P1657 INFO [Metrics] logloss: 2.912689 - MRR: 0.271369 - NDCG(5): 0.270595 - HR(5): 0.405795 - NDCG(10): 0.334051 - HR(10): 0.603642 - NDCG(20): 0.381312 - HR(20): 0.788742 - NDCG(50): 0.412475 - HR(50): 0.943046
+2026-04-30 04:13:26,172 P1657 INFO ********* Train Turn 140 [phase2_LoRA+dB] *********
+2026-04-30 04:13:31,220 P1657 INFO ΔB updated at turn 140 (604 clients)
+2026-04-30 04:13:31,307 P1657 INFO Clients average loss: 0.3057333528995514
+2026-04-30 04:13:31,313 P1657 INFO ********* Train Turn 141 [phase2_LoRA+dB] *********
+2026-04-30 04:13:36,058 P1657 INFO Clients average loss: 0.29867836833000183
+2026-04-30 04:13:36,063 P1657 INFO ********* Train Turn 142 [phase2_LoRA+dB] *********
+2026-04-30 04:13:40,843 P1657 INFO Clients average loss: 0.30427512526512146
+2026-04-30 04:13:40,849 P1657 INFO ********* Train Turn 143 [phase2_LoRA+dB] *********
+2026-04-30 04:13:45,611 P1657 INFO Clients average loss: 0.3095169961452484
+2026-04-30 04:13:45,617 P1657 INFO ********* Train Turn 144 [phase2_LoRA+dB] *********
+2026-04-30 04:13:50,264 P1657 INFO Clients average loss: 0.3043707609176636
+2026-04-30 04:13:50,270 P1657 INFO ********* Train Turn 145 [phase2_LoRA+dB] *********
+2026-04-30 04:13:54,921 P1657 INFO Clients average loss: 0.30684036016464233
+2026-04-30 04:13:54,927 P1657 INFO ********* Train Turn 146 [phase2_LoRA+dB] *********
+2026-04-30 04:13:59,595 P1657 INFO Clients average loss: 0.3070540130138397
+2026-04-30 04:13:59,601 P1657 INFO ********* Train Turn 147 [phase2_LoRA+dB] *********
+2026-04-30 04:14:04,270 P1657 INFO Clients average loss: 0.2976005971431732
+2026-04-30 04:14:04,276 P1657 INFO ********* Train Turn 148 [phase2_LoRA+dB] *********
+2026-04-30 04:14:08,997 P1657 INFO Clients average loss: 0.301797479391098
+2026-04-30 04:14:09,002 P1657 INFO ********* Train Turn 149 [phase2_LoRA+dB] *********
+2026-04-30 04:14:13,727 P1657 INFO Clients average loss: 0.30481845140457153
+2026-04-30 04:14:13,734 P1657 INFO ********* Eval @ Turn 149 *********
+2026-04-30 04:14:16,991 P1657 INFO [Metrics] logloss: 2.670820 - MRR: 0.281642 - NDCG(5): 0.279667 - HR(5): 0.408775 - NDCG(10): 0.340459 - HR(10): 0.598013 - NDCG(20): 0.388956 - HR(20): 0.787748 - NDCG(50): 0.420364 - HR(50): 0.943377
+2026-04-30 04:14:16,991 P1657 INFO ********* Train Turn 150 [phase2_LoRA+dB] *********
+2026-04-30 04:14:21,920 P1657 INFO ΔB updated at turn 150 (604 clients)
+2026-04-30 04:14:22,008 P1657 INFO Clients average loss: 0.2948809266090393
+2026-04-30 04:14:22,014 P1657 INFO ********* Train Turn 151 [phase2_LoRA+dB] *********
+2026-04-30 04:14:26,736 P1657 INFO Clients average loss: 0.2929094433784485
+2026-04-30 04:14:26,742 P1657 INFO ********* Train Turn 152 [phase2_LoRA+dB] *********
+2026-04-30 04:14:31,599 P1657 INFO Clients average loss: 0.29181578755378723
+2026-04-30 04:14:31,605 P1657 INFO ********* Train Turn 153 [phase2_LoRA+dB] *********
+2026-04-30 04:14:36,359 P1657 INFO Clients average loss: 0.3014003038406372
+2026-04-30 04:14:36,365 P1657 INFO ********* Train Turn 154 [phase2_LoRA+dB] *********
+2026-04-30 04:14:41,080 P1657 INFO Clients average loss: 0.2999551296234131
+2026-04-30 04:14:41,086 P1657 INFO ********* Train Turn 155 [phase2_LoRA+dB] *********
+2026-04-30 04:14:45,798 P1657 INFO Clients average loss: 0.29966261982917786
+2026-04-30 04:14:45,804 P1657 INFO ********* Train Turn 156 [phase2_LoRA+dB] *********
+2026-04-30 04:14:50,553 P1657 INFO Clients average loss: 0.29630720615386963
+2026-04-30 04:14:50,559 P1657 INFO ********* Train Turn 157 [phase2_LoRA+dB] *********
+2026-04-30 04:14:55,217 P1657 INFO Clients average loss: 0.2976302206516266
+2026-04-30 04:14:55,222 P1657 INFO ********* Train Turn 158 [phase2_LoRA+dB] *********
+2026-04-30 04:14:59,971 P1657 INFO Clients average loss: 0.28918886184692383
+2026-04-30 04:14:59,977 P1657 INFO ********* Train Turn 159 [phase2_LoRA+dB] *********
+2026-04-30 04:15:04,797 P1657 INFO Clients average loss: 0.29505181312561035
+2026-04-30 04:15:04,804 P1657 INFO ********* Eval @ Turn 159 *********
+2026-04-30 04:15:08,202 P1657 INFO [Metrics] logloss: 2.424101 - MRR: 0.289768 - NDCG(5): 0.287314 - HR(5): 0.411258 - NDCG(10): 0.343719 - HR(10): 0.587252 - NDCG(20): 0.395415 - HR(20): 0.789901 - NDCG(50): 0.426174 - HR(50): 0.942384
+2026-04-30 04:15:08,203 P1657 INFO ********* Train Turn 160 [phase2_LoRA+dB] *********
+2026-04-30 04:15:13,415 P1657 INFO ΔB updated at turn 160 (604 clients)
+2026-04-30 04:15:13,509 P1657 INFO Clients average loss: 0.28966203331947327
+2026-04-30 04:15:13,516 P1657 INFO ********* Train Turn 161 [phase2_LoRA+dB] *********
+2026-04-30 04:15:18,429 P1657 INFO Clients average loss: 0.2970995604991913
+2026-04-30 04:15:18,435 P1657 INFO ********* Train Turn 162 [phase2_LoRA+dB] *********
+2026-04-30 04:15:23,302 P1657 INFO Clients average loss: 0.29297852516174316
+2026-04-30 04:15:23,308 P1657 INFO ********* Train Turn 163 [phase2_LoRA+dB] *********
+2026-04-30 04:15:28,283 P1657 INFO Clients average loss: 0.2883896827697754
+2026-04-30 04:15:28,290 P1657 INFO ********* Train Turn 164 [phase2_LoRA+dB] *********
+2026-04-30 04:15:33,325 P1657 INFO Clients average loss: 0.27810177206993103
+2026-04-30 04:15:33,331 P1657 INFO ********* Train Turn 165 [phase2_LoRA+dB] *********
+2026-04-30 04:15:38,377 P1657 INFO Clients average loss: 0.28291428089141846
+2026-04-30 04:15:38,383 P1657 INFO ********* Train Turn 166 [phase2_LoRA+dB] *********
+2026-04-30 04:15:43,364 P1657 INFO Clients average loss: 0.282827764749527
+2026-04-30 04:15:43,370 P1657 INFO ********* Train Turn 167 [phase2_LoRA+dB] *********
+2026-04-30 04:15:48,197 P1657 INFO Clients average loss: 0.29028281569480896
+2026-04-30 04:15:48,202 P1657 INFO ********* Train Turn 168 [phase2_LoRA+dB] *********
+2026-04-30 04:15:52,928 P1657 INFO Clients average loss: 0.2881608009338379
+2026-04-30 04:15:52,934 P1657 INFO ********* Train Turn 169 [phase2_LoRA+dB] *********
+2026-04-30 04:15:57,680 P1657 INFO Clients average loss: 0.2846248745918274
+2026-04-30 04:15:57,686 P1657 INFO ********* Eval @ Turn 169 *********
+2026-04-30 04:16:01,055 P1657 INFO [Metrics] logloss: 2.209499 - MRR: 0.296454 - NDCG(5): 0.292751 - HR(5): 0.411589 - NDCG(10): 0.348208 - HR(10): 0.584934 - NDCG(20): 0.400280 - HR(20): 0.789238 - NDCG(50): 0.430961 - HR(50): 0.941060
+2026-04-30 04:16:01,056 P1657 INFO ********* Train Turn 170 [phase2_LoRA+dB] *********
+2026-04-30 04:16:06,100 P1657 INFO ΔB updated at turn 170 (604 clients)
+2026-04-30 04:16:06,184 P1657 INFO Clients average loss: 0.2887743413448334
+2026-04-30 04:16:06,190 P1657 INFO ********* Train Turn 171 [phase2_LoRA+dB] *********
+2026-04-30 04:16:10,959 P1657 INFO Clients average loss: 0.28946006298065186
+2026-04-30 04:16:10,965 P1657 INFO ********* Train Turn 172 [phase2_LoRA+dB] *********
+2026-04-30 04:16:15,723 P1657 INFO Clients average loss: 0.29039159417152405
+2026-04-30 04:16:15,728 P1657 INFO ********* Train Turn 173 [phase2_LoRA+dB] *********
+2026-04-30 04:16:20,479 P1657 INFO Clients average loss: 0.2871045172214508
+2026-04-30 04:16:20,486 P1657 INFO ********* Train Turn 174 [phase2_LoRA+dB] *********
+2026-04-30 04:16:25,178 P1657 INFO Clients average loss: 0.2929157018661499
+2026-04-30 04:16:25,184 P1657 INFO ********* Train Turn 175 [phase2_LoRA+dB] *********
+2026-04-30 04:16:29,939 P1657 INFO Clients average loss: 0.2860082983970642
+2026-04-30 04:16:29,945 P1657 INFO ********* Train Turn 176 [phase2_LoRA+dB] *********
+2026-04-30 04:16:34,693 P1657 INFO Clients average loss: 0.2911798357963562
+2026-04-30 04:16:34,699 P1657 INFO ********* Train Turn 177 [phase2_LoRA+dB] *********
+2026-04-30 04:16:39,445 P1657 INFO Clients average loss: 0.2820844352245331
+2026-04-30 04:16:39,451 P1657 INFO ********* Train Turn 178 [phase2_LoRA+dB] *********
+2026-04-30 04:16:44,312 P1657 INFO Clients average loss: 0.2838004529476166
+2026-04-30 04:16:44,318 P1657 INFO ********* Train Turn 179 [phase2_LoRA+dB] *********
+2026-04-30 04:16:49,053 P1657 INFO Clients average loss: 0.28535792231559753
+2026-04-30 04:16:49,059 P1657 INFO ********* Eval @ Turn 179 *********
+2026-04-30 04:16:52,400 P1657 INFO [Metrics] logloss: 2.016900 - MRR: 0.303883 - NDCG(5): 0.299245 - HR(5): 0.414238 - NDCG(10): 0.353825 - HR(10): 0.584603 - NDCG(20): 0.405522 - HR(20): 0.787252 - NDCG(50): 0.436493 - HR(50): 0.940232
+2026-04-30 04:16:52,401 P1657 INFO ********* Train Turn 180 [phase2_LoRA+dB] *********
+2026-04-30 04:16:57,365 P1657 INFO ΔB updated at turn 180 (604 clients)
+2026-04-30 04:16:57,452 P1657 INFO Clients average loss: 0.28260156512260437
+2026-04-30 04:16:57,458 P1657 INFO ********* Train Turn 181 [phase2_LoRA+dB] *********
+2026-04-30 04:17:02,130 P1657 INFO Clients average loss: 0.2830433249473572
+2026-04-30 04:17:02,136 P1657 INFO ********* Train Turn 182 [phase2_LoRA+dB] *********
+2026-04-30 04:17:06,888 P1657 INFO Clients average loss: 0.2797023057937622
+2026-04-30 04:17:06,894 P1657 INFO ********* Train Turn 183 [phase2_LoRA+dB] *********
+2026-04-30 04:17:11,666 P1657 INFO Clients average loss: 0.2876608073711395
+2026-04-30 04:17:11,672 P1657 INFO ********* Train Turn 184 [phase2_LoRA+dB] *********
+2026-04-30 04:17:16,447 P1657 INFO Clients average loss: 0.2825866937637329
+2026-04-30 04:17:16,453 P1657 INFO ********* Train Turn 185 [phase2_LoRA+dB] *********
+2026-04-30 04:17:21,204 P1657 INFO Clients average loss: 0.28061550855636597
+2026-04-30 04:17:21,210 P1657 INFO ********* Train Turn 186 [phase2_LoRA+dB] *********
+2026-04-30 04:17:25,982 P1657 INFO Clients average loss: 0.2899141013622284
+2026-04-30 04:17:25,989 P1657 INFO ********* Train Turn 187 [phase2_LoRA+dB] *********
+2026-04-30 04:17:30,782 P1657 INFO Clients average loss: 0.2820490002632141
+2026-04-30 04:17:30,788 P1657 INFO ********* Train Turn 188 [phase2_LoRA+dB] *********
+2026-04-30 04:17:35,546 P1657 INFO Clients average loss: 0.27987828850746155
+2026-04-30 04:17:35,553 P1657 INFO ********* Train Turn 189 [phase2_LoRA+dB] *********
+2026-04-30 04:17:40,325 P1657 INFO Clients average loss: 0.28788521885871887
+2026-04-30 04:17:40,331 P1657 INFO ********* Eval @ Turn 189 *********
+2026-04-30 04:17:43,727 P1657 INFO [Metrics] logloss: 1.873667 - MRR: 0.312575 - NDCG(5): 0.306182 - HR(5): 0.415397 - NDCG(10): 0.360301 - HR(10): 0.584106 - NDCG(20): 0.411931 - HR(20): 0.786589 - NDCG(50): 0.442880 - HR(50): 0.939404
+2026-04-30 04:17:43,728 P1657 INFO ********* Train Turn 190 [phase2_LoRA+dB] *********
+2026-04-30 04:17:48,766 P1657 INFO ΔB updated at turn 190 (604 clients)
+2026-04-30 04:17:48,850 P1657 INFO Clients average loss: 0.2854134142398834
+2026-04-30 04:17:48,856 P1657 INFO ********* Train Turn 191 [phase2_LoRA+dB] *********
+2026-04-30 04:17:53,611 P1657 INFO Clients average loss: 0.27998101711273193
+2026-04-30 04:17:53,617 P1657 INFO ********* Train Turn 192 [phase2_LoRA+dB] *********
+2026-04-30 04:17:58,316 P1657 INFO Clients average loss: 0.28332075476646423
+2026-04-30 04:17:58,322 P1657 INFO ********* Train Turn 193 [phase2_LoRA+dB] *********
+2026-04-30 04:18:03,090 P1657 INFO Clients average loss: 0.2838203012943268
+2026-04-30 04:18:03,096 P1657 INFO ********* Train Turn 194 [phase2_LoRA+dB] *********
+2026-04-30 04:18:07,786 P1657 INFO Clients average loss: 0.280379056930542
+2026-04-30 04:18:07,792 P1657 INFO ********* Train Turn 195 [phase2_LoRA+dB] *********
+2026-04-30 04:18:12,482 P1657 INFO Clients average loss: 0.2788064777851105
+2026-04-30 04:18:12,488 P1657 INFO ********* Train Turn 196 [phase2_LoRA+dB] *********
+2026-04-30 04:18:17,199 P1657 INFO Clients average loss: 0.2752135694026947
+2026-04-30 04:18:17,204 P1657 INFO ********* Train Turn 197 [phase2_LoRA+dB] *********
+2026-04-30 04:18:21,998 P1657 INFO Clients average loss: 0.2797694504261017
+2026-04-30 04:18:22,004 P1657 INFO ********* Train Turn 198 [phase2_LoRA+dB] *********
+2026-04-30 04:18:26,831 P1657 INFO Clients average loss: 0.274135947227478
+2026-04-30 04:18:26,836 P1657 INFO ********* Train Turn 199 [phase2_LoRA+dB] *********
+2026-04-30 04:18:31,583 P1657 INFO Clients average loss: 0.28105786442756653
+2026-04-30 04:18:31,590 P1657 INFO ********* Eval @ Turn 199 *********
+2026-04-30 04:18:34,945 P1657 INFO [Metrics] logloss: 1.757148 - MRR: 0.319802 - NDCG(5): 0.312996 - HR(5): 0.420033 - NDCG(10): 0.367230 - HR(10): 0.589073 - NDCG(20): 0.417677 - HR(20): 0.787086 - NDCG(50): 0.448436 - HR(50): 0.938907
+2026-04-30 04:18:34,945 P1657 INFO ********* Train Turn 200 [phase2_LoRA+dB] *********
+2026-04-30 04:18:39,968 P1657 INFO ΔB updated at turn 200 (604 clients)
+2026-04-30 04:18:40,051 P1657 INFO Clients average loss: 0.2781141698360443
+2026-04-30 04:18:40,056 P1657 INFO ********* Train Turn 201 [phase2_LoRA+dB] *********
+2026-04-30 04:18:44,784 P1657 INFO Clients average loss: 0.2809627652168274
+2026-04-30 04:18:44,790 P1657 INFO ********* Train Turn 202 [phase2_LoRA+dB] *********
+2026-04-30 04:18:49,539 P1657 INFO Clients average loss: 0.2745673954486847
+2026-04-30 04:18:49,545 P1657 INFO ********* Train Turn 203 [phase2_LoRA+dB] *********
+2026-04-30 04:18:54,229 P1657 INFO Clients average loss: 0.2771976888179779
+2026-04-30 04:18:54,235 P1657 INFO ********* Train Turn 204 [phase2_LoRA+dB] *********
+2026-04-30 04:18:58,991 P1657 INFO Clients average loss: 0.2847084701061249
+2026-04-30 04:18:58,997 P1657 INFO ********* Train Turn 205 [phase2_LoRA+dB] *********
+2026-04-30 04:19:03,683 P1657 INFO Clients average loss: 0.2741251587867737
+2026-04-30 04:19:03,689 P1657 INFO ********* Train Turn 206 [phase2_LoRA+dB] *********
+2026-04-30 04:19:08,334 P1657 INFO Clients average loss: 0.27632173895835876
+2026-04-30 04:19:08,340 P1657 INFO ********* Train Turn 207 [phase2_LoRA+dB] *********
+2026-04-30 04:19:13,114 P1657 INFO Clients average loss: 0.2790576219558716
+2026-04-30 04:19:13,120 P1657 INFO ********* Train Turn 208 [phase2_LoRA+dB] *********
+2026-04-30 04:19:17,793 P1657 INFO Clients average loss: 0.27619802951812744
+2026-04-30 04:19:17,799 P1657 INFO ********* Train Turn 209 [phase2_LoRA+dB] *********
+2026-04-30 04:19:22,493 P1657 INFO Clients average loss: 0.28103792667388916
+2026-04-30 04:19:22,499 P1657 INFO ********* Eval @ Turn 209 *********
+2026-04-30 04:19:25,739 P1657 INFO [Metrics] logloss: 1.665597 - MRR: 0.324822 - NDCG(5): 0.317137 - HR(5): 0.421854 - NDCG(10): 0.371724 - HR(10): 0.591887 - NDCG(20): 0.422631 - HR(20): 0.791887 - NDCG(50): 0.452130 - HR(50): 0.937748
+2026-04-30 04:19:25,739 P1657 INFO ********* Train Turn 210 [phase2_LoRA+dB] *********
+2026-04-30 04:19:30,650 P1657 INFO ΔB updated at turn 210 (604 clients)
+2026-04-30 04:19:30,740 P1657 INFO Clients average loss: 0.2745110094547272
+2026-04-30 04:19:30,746 P1657 INFO ********* Train Turn 211 [phase2_LoRA+dB] *********
+2026-04-30 04:19:35,545 P1657 INFO Clients average loss: 0.2757726013660431
+2026-04-30 04:19:35,551 P1657 INFO ********* Train Turn 212 [phase2_LoRA+dB] *********
+2026-04-30 04:19:40,252 P1657 INFO Clients average loss: 0.27954885363578796
+2026-04-30 04:19:40,258 P1657 INFO ********* Train Turn 213 [phase2_LoRA+dB] *********
+2026-04-30 04:19:45,149 P1657 INFO Clients average loss: 0.2720871865749359
+2026-04-30 04:19:45,155 P1657 INFO ********* Train Turn 214 [phase2_LoRA+dB] *********
+2026-04-30 04:19:49,818 P1657 INFO Clients average loss: 0.2724868655204773
+2026-04-30 04:19:49,824 P1657 INFO ********* Train Turn 215 [phase2_LoRA+dB] *********
+2026-04-30 04:19:54,497 P1657 INFO Clients average loss: 0.2743569612503052
+2026-04-30 04:19:54,504 P1657 INFO ********* Train Turn 216 [phase2_LoRA+dB] *********
+2026-04-30 04:19:59,176 P1657 INFO Clients average loss: 0.2715420424938202
+2026-04-30 04:19:59,182 P1657 INFO ********* Train Turn 217 [phase2_LoRA+dB] *********
+2026-04-30 04:20:03,829 P1657 INFO Clients average loss: 0.2727380096912384
+2026-04-30 04:20:03,835 P1657 INFO ********* Train Turn 218 [phase2_LoRA+dB] *********
+2026-04-30 04:20:08,634 P1657 INFO Clients average loss: 0.2675585150718689
+2026-04-30 04:20:08,640 P1657 INFO ********* Train Turn 219 [phase2_LoRA+dB] *********
+2026-04-30 04:20:13,315 P1657 INFO Clients average loss: 0.2787845730781555
+2026-04-30 04:20:13,320 P1657 INFO ********* Eval @ Turn 219 *********
+2026-04-30 04:20:16,580 P1657 INFO [Metrics] logloss: 1.590164 - MRR: 0.328288 - NDCG(5): 0.319845 - HR(5): 0.422020 - NDCG(10): 0.374212 - HR(10): 0.591225 - NDCG(20): 0.425067 - HR(20): 0.791060 - NDCG(50): 0.454429 - HR(50): 0.936424
+2026-04-30 04:20:16,581 P1657 INFO ********* Train Turn 220 [phase2_LoRA+dB] *********
+2026-04-30 04:20:21,614 P1657 INFO ΔB updated at turn 220 (604 clients)
+2026-04-30 04:20:21,706 P1657 INFO Clients average loss: 0.2743038237094879
+2026-04-30 04:20:21,712 P1657 INFO ********* Train Turn 221 [phase2_LoRA+dB] *********
+2026-04-30 04:20:26,413 P1657 INFO Clients average loss: 0.2733927369117737
+2026-04-30 04:20:26,419 P1657 INFO ********* Train Turn 222 [phase2_LoRA+dB] *********
+2026-04-30 04:20:31,139 P1657 INFO Clients average loss: 0.26951277256011963
+2026-04-30 04:20:31,145 P1657 INFO ********* Train Turn 223 [phase2_LoRA+dB] *********
+2026-04-30 04:20:35,803 P1657 INFO Clients average loss: 0.2729075253009796
+2026-04-30 04:20:35,810 P1657 INFO ********* Train Turn 224 [phase2_LoRA+dB] *********
+2026-04-30 04:20:40,481 P1657 INFO Clients average loss: 0.27491262555122375
+2026-04-30 04:20:40,487 P1657 INFO ********* Train Turn 225 [phase2_LoRA+dB] *********
+2026-04-30 04:20:45,244 P1657 INFO Clients average loss: 0.27495628595352173
+2026-04-30 04:20:45,250 P1657 INFO ********* Train Turn 226 [phase2_LoRA+dB] *********
+2026-04-30 04:20:49,969 P1657 INFO Clients average loss: 0.2741250693798065
+2026-04-30 04:20:49,975 P1657 INFO ********* Train Turn 227 [phase2_LoRA+dB] *********
+2026-04-30 04:20:54,717 P1657 INFO Clients average loss: 0.2669672667980194
+2026-04-30 04:20:54,723 P1657 INFO ********* Train Turn 228 [phase2_LoRA+dB] *********
+2026-04-30 04:20:59,371 P1657 INFO Clients average loss: 0.271200567483902
+2026-04-30 04:20:59,377 P1657 INFO ********* Train Turn 229 [phase2_LoRA+dB] *********
+2026-04-30 04:21:04,036 P1657 INFO Clients average loss: 0.2712438106536865
+2026-04-30 04:21:04,043 P1657 INFO ********* Eval @ Turn 229 *********
+2026-04-30 04:21:07,378 P1657 INFO [Metrics] logloss: 1.543831 - MRR: 0.336133 - NDCG(5): 0.326199 - HR(5): 0.423675 - NDCG(10): 0.381261 - HR(10): 0.595364 - NDCG(20): 0.430957 - HR(20): 0.790728 - NDCG(50): 0.460474 - HR(50): 0.936589
+2026-04-30 04:21:07,379 P1657 INFO ********* Train Turn 230 [phase2_LoRA+dB] *********
+2026-04-30 04:21:12,289 P1657 INFO ΔB updated at turn 230 (604 clients)
+2026-04-30 04:21:12,371 P1657 INFO Clients average loss: 0.27100124955177307
+2026-04-30 04:21:12,376 P1657 INFO ********* Train Turn 231 [phase2_LoRA+dB] *********
+2026-04-30 04:21:17,124 P1657 INFO Clients average loss: 0.27238473296165466
+2026-04-30 04:21:17,129 P1657 INFO ********* Train Turn 232 [phase2_LoRA+dB] *********
+2026-04-30 04:21:21,775 P1657 INFO Clients average loss: 0.2685180902481079
+2026-04-30 04:21:21,780 P1657 INFO ********* Train Turn 233 [phase2_LoRA+dB] *********
+2026-04-30 04:21:26,440 P1657 INFO Clients average loss: 0.2707105278968811
+2026-04-30 04:21:26,446 P1657 INFO ********* Train Turn 234 [phase2_LoRA+dB] *********
+2026-04-30 04:21:31,102 P1657 INFO Clients average loss: 0.2752223610877991
+2026-04-30 04:21:31,108 P1657 INFO ********* Train Turn 235 [phase2_LoRA+dB] *********
+2026-04-30 04:21:35,745 P1657 INFO Clients average loss: 0.269903302192688
+2026-04-30 04:21:35,751 P1657 INFO ********* Train Turn 236 [phase2_LoRA+dB] *********
+2026-04-30 04:21:40,525 P1657 INFO Clients average loss: 0.26901665329933167
+2026-04-30 04:21:40,531 P1657 INFO ********* Train Turn 237 [phase2_LoRA+dB] *********
+2026-04-30 04:21:45,213 P1657 INFO Clients average loss: 0.2737645208835602
+2026-04-30 04:21:45,219 P1657 INFO ********* Train Turn 238 [phase2_LoRA+dB] *********
+2026-04-30 04:21:49,922 P1657 INFO Clients average loss: 0.26603299379348755
+2026-04-30 04:21:49,929 P1657 INFO ********* Train Turn 239 [phase2_LoRA+dB] *********
+2026-04-30 04:21:54,575 P1657 INFO Clients average loss: 0.27657848596572876
+2026-04-30 04:21:54,581 P1657 INFO ********* Eval @ Turn 239 *********
+2026-04-30 04:21:57,783 P1657 INFO [Metrics] logloss: 1.487259 - MRR: 0.341951 - NDCG(5): 0.331943 - HR(5): 0.427980 - NDCG(10): 0.386761 - HR(10): 0.599338 - NDCG(20): 0.435161 - HR(20): 0.789404 - NDCG(50): 0.465208 - HR(50): 0.938079
+2026-04-30 04:21:57,783 P1657 INFO ********* Train Turn 240 [phase2_LoRA+dB] *********
+2026-04-30 04:22:02,755 P1657 INFO ΔB updated at turn 240 (604 clients)
+2026-04-30 04:22:02,842 P1657 INFO Clients average loss: 0.2793848514556885
+2026-04-30 04:22:02,847 P1657 INFO ********* Train Turn 241 [phase2_LoRA+dB] *********
+2026-04-30 04:22:07,503 P1657 INFO Clients average loss: 0.2725435793399811
+2026-04-30 04:22:07,509 P1657 INFO ********* Train Turn 242 [phase2_LoRA+dB] *********
+2026-04-30 04:22:12,185 P1657 INFO Clients average loss: 0.2658126950263977
+2026-04-30 04:22:12,191 P1657 INFO ********* Train Turn 243 [phase2_LoRA+dB] *********
+2026-04-30 04:22:16,848 P1657 INFO Clients average loss: 0.27751216292381287
+2026-04-30 04:22:16,854 P1657 INFO ********* Train Turn 244 [phase2_LoRA+dB] *********
+2026-04-30 04:22:21,508 P1657 INFO Clients average loss: 0.2766333818435669
+2026-04-30 04:22:21,514 P1657 INFO ********* Train Turn 245 [phase2_LoRA+dB] *********
+2026-04-30 04:22:26,237 P1657 INFO Clients average loss: 0.2690556049346924
+2026-04-30 04:22:26,243 P1657 INFO ********* Train Turn 246 [phase2_LoRA+dB] *********
+2026-04-30 04:22:30,890 P1657 INFO Clients average loss: 0.2712477445602417
+2026-04-30 04:22:30,895 P1657 INFO ********* Train Turn 247 [phase2_LoRA+dB] *********
+2026-04-30 04:22:35,621 P1657 INFO Clients average loss: 0.2643020451068878
+2026-04-30 04:22:35,627 P1657 INFO ********* Train Turn 248 [phase2_LoRA+dB] *********
+2026-04-30 04:22:40,252 P1657 INFO Clients average loss: 0.2667204737663269
+2026-04-30 04:22:40,258 P1657 INFO ********* Train Turn 249 [phase2_LoRA+dB] *********
+2026-04-30 04:22:44,892 P1657 INFO Clients average loss: 0.2681201696395874
+2026-04-30 04:22:44,898 P1657 INFO ********* Eval @ Turn 249 *********
+2026-04-30 04:22:48,319 P1657 INFO [Metrics] logloss: 1.447448 - MRR: 0.343752 - NDCG(5): 0.333077 - HR(5): 0.428477 - NDCG(10): 0.390148 - HR(10): 0.606788 - NDCG(20): 0.436600 - HR(20): 0.788742 - NDCG(50): 0.466912 - HR(50): 0.939073
+2026-04-30 04:22:48,320 P1657 INFO ********* Train Turn 250 [phase2_LoRA+dB] *********
+2026-04-30 04:22:53,266 P1657 INFO ΔB updated at turn 250 (604 clients)
+2026-04-30 04:22:53,352 P1657 INFO Clients average loss: 0.2762792706489563
+2026-04-30 04:22:53,358 P1657 INFO ********* Train Turn 251 [phase2_LoRA+dB] *********
+2026-04-30 04:22:58,136 P1657 INFO Clients average loss: 0.27708086371421814
+2026-04-30 04:22:58,142 P1657 INFO ********* Train Turn 252 [phase2_LoRA+dB] *********
+2026-04-30 04:23:02,891 P1657 INFO Clients average loss: 0.27317729592323303
+2026-04-30 04:23:02,897 P1657 INFO ********* Train Turn 253 [phase2_LoRA+dB] *********
+2026-04-30 04:23:07,678 P1657 INFO Clients average loss: 0.26459628343582153
+2026-04-30 04:23:07,684 P1657 INFO ********* Train Turn 254 [phase2_LoRA+dB] *********
+2026-04-30 04:23:12,554 P1657 INFO Clients average loss: 0.26416638493537903
+2026-04-30 04:23:12,560 P1657 INFO ********* Train Turn 255 [phase2_LoRA+dB] *********
+2026-04-30 04:23:17,343 P1657 INFO Clients average loss: 0.269641250371933
+2026-04-30 04:23:17,349 P1657 INFO ********* Train Turn 256 [phase2_LoRA+dB] *********
+2026-04-30 04:23:22,236 P1657 INFO Clients average loss: 0.2714606523513794
+2026-04-30 04:23:22,242 P1657 INFO ********* Train Turn 257 [phase2_LoRA+dB] *********
+2026-04-30 04:23:26,990 P1657 INFO Clients average loss: 0.270178884267807
+2026-04-30 04:23:26,996 P1657 INFO ********* Train Turn 258 [phase2_LoRA+dB] *********
+2026-04-30 04:23:31,732 P1657 INFO Clients average loss: 0.2661516070365906
+2026-04-30 04:23:31,738 P1657 INFO ********* Train Turn 259 [phase2_LoRA+dB] *********
+2026-04-30 04:23:36,612 P1657 INFO Clients average loss: 0.268353134393692
+2026-04-30 04:23:36,618 P1657 INFO ********* Eval @ Turn 259 *********
+2026-04-30 04:23:39,923 P1657 INFO [Metrics] logloss: 1.413899 - MRR: 0.345113 - NDCG(5): 0.334253 - HR(5): 0.428642 - NDCG(10): 0.390863 - HR(10): 0.605629 - NDCG(20): 0.437690 - HR(20): 0.789073 - NDCG(50): 0.467750 - HR(50): 0.938245
+2026-04-30 04:23:39,924 P1657 INFO ********* Train Turn 260 [phase2_LoRA+dB] *********
+2026-04-30 04:23:44,940 P1657 INFO ΔB updated at turn 260 (604 clients)
+2026-04-30 04:23:45,029 P1657 INFO Clients average loss: 0.2677888572216034
+2026-04-30 04:23:45,035 P1657 INFO ********* Train Turn 261 [phase2_LoRA+dB] *********
+2026-04-30 04:23:49,748 P1657 INFO Clients average loss: 0.2694413363933563
+2026-04-30 04:23:49,754 P1657 INFO ********* Train Turn 262 [phase2_LoRA+dB] *********
+2026-04-30 04:23:54,438 P1657 INFO Clients average loss: 0.2641258239746094
+2026-04-30 04:23:54,445 P1657 INFO ********* Train Turn 263 [phase2_LoRA+dB] *********
+2026-04-30 04:23:59,144 P1657 INFO Clients average loss: 0.26294606924057007
+2026-04-30 04:23:59,150 P1657 INFO ********* Train Turn 264 [phase2_LoRA+dB] *********
+2026-04-30 04:24:03,795 P1657 INFO Clients average loss: 0.2633722424507141
+2026-04-30 04:24:03,801 P1657 INFO ********* Train Turn 265 [phase2_LoRA+dB] *********
+2026-04-30 04:24:08,626 P1657 INFO Clients average loss: 0.2613360285758972
+2026-04-30 04:24:08,632 P1657 INFO ********* Train Turn 266 [phase2_LoRA+dB] *********
+2026-04-30 04:24:13,287 P1657 INFO Clients average loss: 0.2641494572162628
+2026-04-30 04:24:13,293 P1657 INFO ********* Train Turn 267 [phase2_LoRA+dB] *********
+2026-04-30 04:24:18,041 P1657 INFO Clients average loss: 0.26895174384117126
+2026-04-30 04:24:18,047 P1657 INFO ********* Train Turn 268 [phase2_LoRA+dB] *********
+2026-04-30 04:24:22,700 P1657 INFO Clients average loss: 0.2643391788005829
+2026-04-30 04:24:22,706 P1657 INFO ********* Train Turn 269 [phase2_LoRA+dB] *********
+2026-04-30 04:24:27,316 P1657 INFO Clients average loss: 0.26557713747024536
+2026-04-30 04:24:27,321 P1657 INFO ********* Eval @ Turn 269 *********
+2026-04-30 04:24:30,734 P1657 INFO [Metrics] logloss: 1.395559 - MRR: 0.346203 - NDCG(5): 0.335464 - HR(5): 0.430464 - NDCG(10): 0.392476 - HR(10): 0.608609 - NDCG(20): 0.438842 - HR(20): 0.790232 - NDCG(50): 0.468813 - HR(50): 0.938742
+2026-04-30 04:24:30,734 P1657 INFO ********* Train Turn 270 [phase2_LoRA+dB] *********
+2026-04-30 04:24:35,689 P1657 INFO ΔB updated at turn 270 (604 clients)
+2026-04-30 04:24:35,780 P1657 INFO Clients average loss: 0.2609277367591858
+2026-04-30 04:24:35,785 P1657 INFO ********* Train Turn 271 [phase2_LoRA+dB] *********
+2026-04-30 04:24:40,525 P1657 INFO Clients average loss: 0.2615834176540375
+2026-04-30 04:24:40,532 P1657 INFO ********* Train Turn 272 [phase2_LoRA+dB] *********
+2026-04-30 04:24:45,256 P1657 INFO Clients average loss: 0.27007636427879333
+2026-04-30 04:24:45,262 P1657 INFO ********* Train Turn 273 [phase2_LoRA+dB] *********
+2026-04-30 04:24:49,984 P1657 INFO Clients average loss: 0.27028727531433105
+2026-04-30 04:24:49,990 P1657 INFO ********* Train Turn 274 [phase2_LoRA+dB] *********
+2026-04-30 04:24:54,755 P1657 INFO Clients average loss: 0.26149043440818787
+2026-04-30 04:24:54,761 P1657 INFO ********* Train Turn 275 [phase2_LoRA+dB] *********
+2026-04-30 04:24:59,467 P1657 INFO Clients average loss: 0.2651272118091583
+2026-04-30 04:24:59,473 P1657 INFO ********* Train Turn 276 [phase2_LoRA+dB] *********
+2026-04-30 04:25:04,245 P1657 INFO Clients average loss: 0.26406198740005493
+2026-04-30 04:25:04,251 P1657 INFO ********* Train Turn 277 [phase2_LoRA+dB] *********
+2026-04-30 04:25:08,916 P1657 INFO Clients average loss: 0.2618938982486725
+2026-04-30 04:25:08,922 P1657 INFO ********* Train Turn 278 [phase2_LoRA+dB] *********
+2026-04-30 04:25:13,579 P1657 INFO Clients average loss: 0.2647411823272705
+2026-04-30 04:25:13,585 P1657 INFO ********* Train Turn 279 [phase2_LoRA+dB] *********
+2026-04-30 04:25:18,400 P1657 INFO Clients average loss: 0.26692187786102295
+2026-04-30 04:25:18,406 P1657 INFO ********* Eval @ Turn 279 *********
+2026-04-30 04:25:21,748 P1657 INFO [Metrics] logloss: 1.380722 - MRR: 0.347493 - NDCG(5): 0.338168 - HR(5): 0.436424 - NDCG(10): 0.394906 - HR(10): 0.613576 - NDCG(20): 0.440748 - HR(20): 0.793377 - NDCG(50): 0.469865 - HR(50): 0.937914
+2026-04-30 04:25:21,749 P1657 INFO ********* Train Turn 280 [phase2_LoRA+dB] *********
+2026-04-30 04:25:26,717 P1657 INFO ΔB updated at turn 280 (604 clients)
+2026-04-30 04:25:26,804 P1657 INFO Clients average loss: 0.2657923698425293
+2026-04-30 04:25:26,810 P1657 INFO ********* Train Turn 281 [phase2_LoRA+dB] *********
+2026-04-30 04:25:31,447 P1657 INFO Clients average loss: 0.2658088505268097
+2026-04-30 04:25:31,452 P1657 INFO ********* Train Turn 282 [phase2_LoRA+dB] *********
+2026-04-30 04:25:36,152 P1657 INFO Clients average loss: 0.26888522505760193
+2026-04-30 04:25:36,158 P1657 INFO ********* Train Turn 283 [phase2_LoRA+dB] *********
+2026-04-30 04:25:40,930 P1657 INFO Clients average loss: 0.2626781463623047
+2026-04-30 04:25:40,936 P1657 INFO ********* Train Turn 284 [phase2_LoRA+dB] *********
+2026-04-30 04:25:45,552 P1657 INFO Clients average loss: 0.2703528106212616
+2026-04-30 04:25:45,558 P1657 INFO ********* Train Turn 285 [phase2_LoRA+dB] *********
+2026-04-30 04:25:50,389 P1657 INFO Clients average loss: 0.26423317193984985
+2026-04-30 04:25:50,395 P1657 INFO ********* Train Turn 286 [phase2_LoRA+dB] *********
+2026-04-30 04:25:55,095 P1657 INFO Clients average loss: 0.2709927558898926
+2026-04-30 04:25:55,101 P1657 INFO ********* Train Turn 287 [phase2_LoRA+dB] *********
+2026-04-30 04:25:59,813 P1657 INFO Clients average loss: 0.2673925757408142
+2026-04-30 04:25:59,820 P1657 INFO ********* Train Turn 288 [phase2_LoRA+dB] *********
+2026-04-30 04:26:04,512 P1657 INFO Clients average loss: 0.2624562978744507
+2026-04-30 04:26:04,519 P1657 INFO ********* Train Turn 289 [phase2_LoRA+dB] *********
+2026-04-30 04:26:09,188 P1657 INFO Clients average loss: 0.2637990117073059
+2026-04-30 04:26:09,194 P1657 INFO ********* Eval @ Turn 289 *********
+2026-04-30 04:26:12,577 P1657 INFO [Metrics] logloss: 1.364402 - MRR: 0.349458 - NDCG(5): 0.339840 - HR(5): 0.436589 - NDCG(10): 0.395434 - HR(10): 0.610099 - NDCG(20): 0.441468 - HR(20): 0.790232 - NDCG(50): 0.471490 - HR(50): 0.939238
+2026-04-30 04:26:12,577 P1657 INFO ********* Train Turn 290 [phase2_LoRA+dB] *********
+2026-04-30 04:26:17,608 P1657 INFO ΔB updated at turn 290 (604 clients)
+2026-04-30 04:26:17,695 P1657 INFO Clients average loss: 0.26528164744377136
+2026-04-30 04:26:17,701 P1657 INFO ********* Train Turn 291 [phase2_LoRA+dB] *********
+2026-04-30 04:26:22,474 P1657 INFO Clients average loss: 0.2670910656452179
+2026-04-30 04:26:22,480 P1657 INFO ********* Train Turn 292 [phase2_LoRA+dB] *********
+2026-04-30 04:26:27,287 P1657 INFO Clients average loss: 0.2608906626701355
+2026-04-30 04:26:27,292 P1657 INFO ********* Train Turn 293 [phase2_LoRA+dB] *********
+2026-04-30 04:26:32,062 P1657 INFO Clients average loss: 0.25450268387794495
+2026-04-30 04:26:32,068 P1657 INFO ********* Train Turn 294 [phase2_LoRA+dB] *********
+2026-04-30 04:26:36,855 P1657 INFO Clients average loss: 0.26574790477752686
+2026-04-30 04:26:36,861 P1657 INFO ********* Train Turn 295 [phase2_LoRA+dB] *********
+2026-04-30 04:26:41,570 P1657 INFO Clients average loss: 0.2702834904193878
+2026-04-30 04:26:41,576 P1657 INFO ********* Train Turn 296 [phase2_LoRA+dB] *********
+2026-04-30 04:26:46,356 P1657 INFO Clients average loss: 0.2608570158481598
+2026-04-30 04:26:46,362 P1657 INFO ********* Train Turn 297 [phase2_LoRA+dB] *********
+2026-04-30 04:26:51,076 P1657 INFO Clients average loss: 0.26320287585258484
+2026-04-30 04:26:51,082 P1657 INFO ********* Train Turn 298 [phase2_LoRA+dB] *********
+2026-04-30 04:26:55,777 P1657 INFO Clients average loss: 0.2686871290206909
+2026-04-30 04:26:55,783 P1657 INFO ********* Train Turn 299 [phase2_LoRA+dB] *********
+2026-04-30 04:27:00,507 P1657 INFO Clients average loss: 0.26554426550865173
+2026-04-30 04:27:00,513 P1657 INFO ********* Eval @ Turn 299 *********
+2026-04-30 04:27:03,727 P1657 INFO [Metrics] logloss: 1.356454 - MRR: 0.348235 - NDCG(5): 0.338428 - HR(5): 0.435265 - NDCG(10): 0.394203 - HR(10): 0.609272 - NDCG(20): 0.440737 - HR(20): 0.791556 - NDCG(50): 0.470617 - HR(50): 0.939735
+2026-04-30 04:27:03,727 P1657 INFO ********* Train Turn 300 [phase2_LoRA+dB] *********
+2026-04-30 04:27:08,724 P1657 INFO ΔB updated at turn 300 (604 clients)
+2026-04-30 04:27:08,813 P1657 INFO Clients average loss: 0.2647174000740051
+2026-04-30 04:27:08,819 P1657 INFO ********* Train Turn 301 [phase2_LoRA+dB] *********
+2026-04-30 04:27:13,532 P1657 INFO Clients average loss: 0.26109373569488525
+2026-04-30 04:27:13,538 P1657 INFO ********* Train Turn 302 [phase2_LoRA+dB] *********
+2026-04-30 04:27:18,300 P1657 INFO Clients average loss: 0.26506951451301575
+2026-04-30 04:27:18,306 P1657 INFO ********* Train Turn 303 [phase2_LoRA+dB] *********
+2026-04-30 04:27:23,076 P1657 INFO Clients average loss: 0.2558543086051941
+2026-04-30 04:27:23,082 P1657 INFO ********* Train Turn 304 [phase2_LoRA+dB] *********
+2026-04-30 04:27:27,861 P1657 INFO Clients average loss: 0.26426035165786743
+2026-04-30 04:27:27,866 P1657 INFO ********* Train Turn 305 [phase2_LoRA+dB] *********
+2026-04-30 04:27:32,645 P1657 INFO Clients average loss: 0.26223626732826233
+2026-04-30 04:27:32,651 P1657 INFO ********* Train Turn 306 [phase2_LoRA+dB] *********
+2026-04-30 04:27:37,381 P1657 INFO Clients average loss: 0.2625022232532501
+2026-04-30 04:27:37,386 P1657 INFO ********* Train Turn 307 [phase2_LoRA+dB] *********
+2026-04-30 04:27:42,263 P1657 INFO Clients average loss: 0.25846490263938904
+2026-04-30 04:27:42,269 P1657 INFO ********* Train Turn 308 [phase2_LoRA+dB] *********
+2026-04-30 04:27:47,094 P1657 INFO Clients average loss: 0.26066824793815613
+2026-04-30 04:27:47,099 P1657 INFO ********* Train Turn 309 [phase2_LoRA+dB] *********
+2026-04-30 04:27:51,843 P1657 INFO Clients average loss: 0.26189368963241577
+2026-04-30 04:27:51,848 P1657 INFO ********* Eval @ Turn 309 *********
+2026-04-30 04:27:55,165 P1657 INFO [Metrics] logloss: 1.352456 - MRR: 0.347119 - NDCG(5): 0.337182 - HR(5): 0.433278 - NDCG(10): 0.391856 - HR(10): 0.603642 - NDCG(20): 0.439316 - HR(20): 0.789735 - NDCG(50): 0.469572 - HR(50): 0.939570
+2026-04-30 04:27:55,166 P1657 INFO ********* Train Turn 310 [phase2_LoRA+dB] *********
+2026-04-30 04:28:00,234 P1657 INFO ΔB updated at turn 310 (604 clients)
+2026-04-30 04:28:00,321 P1657 INFO Clients average loss: 0.2622660994529724
+2026-04-30 04:28:00,327 P1657 INFO ********* Train Turn 311 [phase2_LoRA+dB] *********
+2026-04-30 04:28:05,171 P1657 INFO Clients average loss: 0.26224973797798157
+2026-04-30 04:28:05,177 P1657 INFO ********* Train Turn 312 [phase2_LoRA+dB] *********
+2026-04-30 04:28:10,040 P1657 INFO Clients average loss: 0.25367307662963867
+2026-04-30 04:28:10,046 P1657 INFO ********* Train Turn 313 [phase2_LoRA+dB] *********
+2026-04-30 04:28:14,803 P1657 INFO Clients average loss: 0.2625497579574585
+2026-04-30 04:28:14,809 P1657 INFO ********* Train Turn 314 [phase2_LoRA+dB] *********
+2026-04-30 04:28:19,794 P1657 INFO Clients average loss: 0.2620810866355896
+2026-04-30 04:28:19,800 P1657 INFO ********* Train Turn 315 [phase2_LoRA+dB] *********
+2026-04-30 04:28:24,584 P1657 INFO Clients average loss: 0.25339773297309875
+2026-04-30 04:28:24,590 P1657 INFO ********* Train Turn 316 [phase2_LoRA+dB] *********
+2026-04-30 04:28:29,496 P1657 INFO Clients average loss: 0.261046439409256
+2026-04-30 04:28:29,502 P1657 INFO ********* Train Turn 317 [phase2_LoRA+dB] *********
+2026-04-30 04:28:34,355 P1657 INFO Clients average loss: 0.26121336221694946
+2026-04-30 04:28:34,361 P1657 INFO ********* Train Turn 318 [phase2_LoRA+dB] *********
+2026-04-30 04:28:39,186 P1657 INFO Clients average loss: 0.26717087626457214
+2026-04-30 04:28:39,192 P1657 INFO ********* Train Turn 319 [phase2_LoRA+dB] *********
+2026-04-30 04:28:44,209 P1657 INFO Clients average loss: 0.2591908872127533
+2026-04-30 04:28:44,215 P1657 INFO ********* Eval @ Turn 319 *********
+2026-04-30 04:28:47,603 P1657 INFO [Metrics] logloss: 1.339296 - MRR: 0.348124 - NDCG(5): 0.337422 - HR(5): 0.431623 - NDCG(10): 0.391886 - HR(10): 0.601490 - NDCG(20): 0.439839 - HR(20): 0.789238 - NDCG(50): 0.470285 - HR(50): 0.939735
+2026-04-30 04:28:47,603 P1657 INFO ********* Train Turn 320 [phase2_LoRA+dB] *********
+2026-04-30 04:28:52,827 P1657 INFO ΔB updated at turn 320 (604 clients)
+2026-04-30 04:28:52,919 P1657 INFO Clients average loss: 0.261142373085022
+2026-04-30 04:28:52,925 P1657 INFO ********* Train Turn 321 [phase2_LoRA+dB] *********
+2026-04-30 04:28:57,791 P1657 INFO Clients average loss: 0.25463226437568665
+2026-04-30 04:28:57,796 P1657 INFO ********* Train Turn 322 [phase2_LoRA+dB] *********
+2026-04-30 04:29:02,579 P1657 INFO Clients average loss: 0.26117566227912903
+2026-04-30 04:29:02,585 P1657 INFO ********* Train Turn 323 [phase2_LoRA+dB] *********
+2026-04-30 04:29:07,382 P1657 INFO Clients average loss: 0.2643272578716278
+2026-04-30 04:29:07,388 P1657 INFO ********* Train Turn 324 [phase2_LoRA+dB] *********
+2026-04-30 04:29:12,212 P1657 INFO Clients average loss: 0.26616916060447693
+2026-04-30 04:29:12,218 P1657 INFO ********* Train Turn 325 [phase2_LoRA+dB] *********
+2026-04-30 04:29:17,057 P1657 INFO Clients average loss: 0.2517620027065277
+2026-04-30 04:29:17,063 P1657 INFO ********* Train Turn 326 [phase2_LoRA+dB] *********
+2026-04-30 04:29:21,818 P1657 INFO Clients average loss: 0.24970154464244843
+2026-04-30 04:29:21,824 P1657 INFO ********* Train Turn 327 [phase2_LoRA+dB] *********
+2026-04-30 04:29:26,658 P1657 INFO Clients average loss: 0.2619287669658661
+2026-04-30 04:29:26,664 P1657 INFO ********* Train Turn 328 [phase2_LoRA+dB] *********
+2026-04-30 04:29:31,436 P1657 INFO Clients average loss: 0.25441816449165344
+2026-04-30 04:29:31,442 P1657 INFO ********* Train Turn 329 [phase2_LoRA+dB] *********
+2026-04-30 04:29:36,211 P1657 INFO Clients average loss: 0.2585247755050659
+2026-04-30 04:29:36,217 P1657 INFO ********* Eval @ Turn 329 *********
+2026-04-30 04:29:39,742 P1657 INFO [Metrics] logloss: 1.342797 - MRR: 0.349253 - NDCG(5): 0.338283 - HR(5): 0.432781 - NDCG(10): 0.394172 - HR(10): 0.606954 - NDCG(20): 0.441219 - HR(20): 0.791060 - NDCG(50): 0.471264 - HR(50): 0.939238
+2026-04-30 04:29:39,742 P1657 INFO ********* Train Turn 330 [phase2_LoRA+dB] *********
+2026-04-30 04:29:44,746 P1657 INFO ΔB updated at turn 330 (604 clients)
+2026-04-30 04:29:44,835 P1657 INFO Clients average loss: 0.2512846291065216
+2026-04-30 04:29:44,841 P1657 INFO ********* Train Turn 331 [phase2_LoRA+dB] *********
+2026-04-30 04:29:49,737 P1657 INFO Clients average loss: 0.25645914673805237
+2026-04-30 04:29:49,743 P1657 INFO ********* Train Turn 332 [phase2_LoRA+dB] *********
+2026-04-30 04:29:54,563 P1657 INFO Clients average loss: 0.25816020369529724
+2026-04-30 04:29:54,568 P1657 INFO ********* Train Turn 333 [phase2_LoRA+dB] *********
+2026-04-30 04:29:59,408 P1657 INFO Clients average loss: 0.2587220370769501
+2026-04-30 04:29:59,414 P1657 INFO ********* Train Turn 334 [phase2_LoRA+dB] *********
+2026-04-30 04:30:04,258 P1657 INFO Clients average loss: 0.25892671942710876
+2026-04-30 04:30:04,264 P1657 INFO ********* Train Turn 335 [phase2_LoRA+dB] *********
+2026-04-30 04:30:09,054 P1657 INFO Clients average loss: 0.26326677203178406
+2026-04-30 04:30:09,060 P1657 INFO ********* Train Turn 336 [phase2_LoRA+dB] *********
+2026-04-30 04:30:13,848 P1657 INFO Clients average loss: 0.2635663151741028
+2026-04-30 04:30:13,853 P1657 INFO ********* Train Turn 337 [phase2_LoRA+dB] *********
+2026-04-30 04:30:18,232 P1657 INFO Clients average loss: 0.26458364725112915
+2026-04-30 04:30:18,238 P1657 INFO ********* Train Turn 338 [phase2_LoRA+dB] *********
+2026-04-30 04:30:22,670 P1657 INFO Clients average loss: 0.26377081871032715
+2026-04-30 04:30:22,675 P1657 INFO ********* Train Turn 339 [phase2_LoRA+dB] *********
+2026-04-30 04:30:27,235 P1657 INFO Clients average loss: 0.26058849692344666
+2026-04-30 04:30:27,241 P1657 INFO ********* Eval @ Turn 339 *********
+2026-04-30 04:30:30,476 P1657 INFO [Metrics] logloss: 1.332214 - MRR: 0.350238 - NDCG(5): 0.339060 - HR(5): 0.433444 - NDCG(10): 0.396434 - HR(10): 0.612583 - NDCG(20): 0.442499 - HR(20): 0.793046 - NDCG(50): 0.472169 - HR(50): 0.939404
+2026-04-30 04:30:30,476 P1657 INFO ********* Train Turn 340 [phase2_LoRA+dB] *********
+2026-04-30 04:30:35,741 P1657 INFO ΔB updated at turn 340 (604 clients)
+2026-04-30 04:30:35,834 P1657 INFO Clients average loss: 0.26634401082992554
+2026-04-30 04:30:35,840 P1657 INFO ********* Train Turn 341 [phase2_LoRA+dB] *********
+2026-04-30 04:30:40,827 P1657 INFO Clients average loss: 0.25811469554901123
+2026-04-30 04:30:40,833 P1657 INFO ********* Train Turn 342 [phase2_LoRA+dB] *********
+2026-04-30 04:30:45,864 P1657 INFO Clients average loss: 0.2521594762802124
+2026-04-30 04:30:45,870 P1657 INFO ********* Train Turn 343 [phase2_LoRA+dB] *********
+2026-04-30 04:30:50,756 P1657 INFO Clients average loss: 0.2526063621044159
+2026-04-30 04:30:50,762 P1657 INFO ********* Train Turn 344 [phase2_LoRA+dB] *********
+2026-04-30 04:30:55,550 P1657 INFO Clients average loss: 0.2576126754283905
+2026-04-30 04:30:55,555 P1657 INFO ********* Train Turn 345 [phase2_LoRA+dB] *********
+2026-04-30 04:31:00,352 P1657 INFO Clients average loss: 0.2644232213497162
+2026-04-30 04:31:00,358 P1657 INFO ********* Train Turn 346 [phase2_LoRA+dB] *********
+2026-04-30 04:31:05,096 P1657 INFO Clients average loss: 0.25523582100868225
+2026-04-30 04:31:05,102 P1657 INFO ********* Train Turn 347 [phase2_LoRA+dB] *********
+2026-04-30 04:31:10,008 P1657 INFO Clients average loss: 0.2548188865184784
+2026-04-30 04:31:10,014 P1657 INFO ********* Train Turn 348 [phase2_LoRA+dB] *********
+2026-04-30 04:31:14,819 P1657 INFO Clients average loss: 0.252664715051651
+2026-04-30 04:31:14,825 P1657 INFO ********* Train Turn 349 [phase2_LoRA+dB] *********
+2026-04-30 04:31:19,630 P1657 INFO Clients average loss: 0.25956377387046814
+2026-04-30 04:31:19,637 P1657 INFO ********* Eval @ Turn 349 *********
+2026-04-30 04:31:23,089 P1657 INFO [Metrics] logloss: 1.330160 - MRR: 0.351119 - NDCG(5): 0.339535 - HR(5): 0.433444 - NDCG(10): 0.398159 - HR(10): 0.616391 - NDCG(20): 0.443649 - HR(20): 0.794702 - NDCG(50): 0.472993 - HR(50): 0.939735
+2026-04-30 04:31:23,089 P1657 INFO ********* Train Turn 350 [phase2_LoRA+dB] *********
+2026-04-30 04:31:27,949 P1657 INFO ΔB updated at turn 350 (604 clients)
+2026-04-30 04:31:28,033 P1657 INFO Clients average loss: 0.25705263018608093
+2026-04-30 04:31:28,039 P1657 INFO ********* Train Turn 351 [phase2_LoRA+dB] *********
+2026-04-30 04:31:32,791 P1657 INFO Clients average loss: 0.259373277425766
+2026-04-30 04:31:32,797 P1657 INFO ********* Train Turn 352 [phase2_LoRA+dB] *********
+2026-04-30 04:31:37,449 P1657 INFO Clients average loss: 0.2595284581184387
+2026-04-30 04:31:37,455 P1657 INFO ********* Train Turn 353 [phase2_LoRA+dB] *********
+2026-04-30 04:31:42,217 P1657 INFO Clients average loss: 0.25184229016304016
+2026-04-30 04:31:42,223 P1657 INFO ********* Train Turn 354 [phase2_LoRA+dB] *********
+2026-04-30 04:31:46,928 P1657 INFO Clients average loss: 0.2560199797153473
+2026-04-30 04:31:46,934 P1657 INFO ********* Train Turn 355 [phase2_LoRA+dB] *********
+2026-04-30 04:31:51,674 P1657 INFO Clients average loss: 0.25694775581359863
+2026-04-30 04:31:51,680 P1657 INFO ********* Train Turn 356 [phase2_LoRA+dB] *********
+2026-04-30 04:31:56,437 P1657 INFO Clients average loss: 0.2593391239643097
+2026-04-30 04:31:56,442 P1657 INFO ********* Train Turn 357 [phase2_LoRA+dB] *********
+2026-04-30 04:32:01,058 P1657 INFO Clients average loss: 0.2610691785812378
+2026-04-30 04:32:01,064 P1657 INFO ********* Train Turn 358 [phase2_LoRA+dB] *********
+2026-04-30 04:32:05,740 P1657 INFO Clients average loss: 0.25543951988220215
+2026-04-30 04:32:05,746 P1657 INFO ********* Train Turn 359 [phase2_LoRA+dB] *********
+2026-04-30 04:32:10,473 P1657 INFO Clients average loss: 0.26143306493759155
+2026-04-30 04:32:10,479 P1657 INFO ********* Eval @ Turn 359 *********
+2026-04-30 04:32:13,843 P1657 INFO [Metrics] logloss: 1.329577 - MRR: 0.352727 - NDCG(5): 0.340686 - HR(5): 0.432616 - NDCG(10): 0.397799 - HR(10): 0.611093 - NDCG(20): 0.444976 - HR(20): 0.795861 - NDCG(50): 0.474095 - HR(50): 0.939570
+2026-04-30 04:32:13,844 P1657 INFO ********* Train Turn 360 [phase2_LoRA+dB] *********
+2026-04-30 04:32:18,857 P1657 INFO ΔB updated at turn 360 (604 clients)
+2026-04-30 04:32:18,944 P1657 INFO Clients average loss: 0.25538313388824463
+2026-04-30 04:32:18,949 P1657 INFO ********* Train Turn 361 [phase2_LoRA+dB] *********
+2026-04-30 04:32:23,652 P1657 INFO Clients average loss: 0.2649402618408203
+2026-04-30 04:32:23,658 P1657 INFO ********* Train Turn 362 [phase2_LoRA+dB] *********
+2026-04-30 04:32:28,522 P1657 INFO Clients average loss: 0.25673407316207886
+2026-04-30 04:32:28,528 P1657 INFO ********* Train Turn 363 [phase2_LoRA+dB] *********
+2026-04-30 04:32:33,262 P1657 INFO Clients average loss: 0.2547397017478943
+2026-04-30 04:32:33,268 P1657 INFO ********* Train Turn 364 [phase2_LoRA+dB] *********
+2026-04-30 04:32:38,002 P1657 INFO Clients average loss: 0.26224008202552795
+2026-04-30 04:32:38,008 P1657 INFO ********* Train Turn 365 [phase2_LoRA+dB] *********
+2026-04-30 04:32:42,947 P1657 INFO Clients average loss: 0.2595602571964264
+2026-04-30 04:32:42,953 P1657 INFO ********* Train Turn 366 [phase2_LoRA+dB] *********
+2026-04-30 04:32:47,766 P1657 INFO Clients average loss: 0.26051220297813416
+2026-04-30 04:32:47,772 P1657 INFO ********* Train Turn 367 [phase2_LoRA+dB] *********
+2026-04-30 04:32:52,602 P1657 INFO Clients average loss: 0.2528887093067169
+2026-04-30 04:32:52,608 P1657 INFO ********* Train Turn 368 [phase2_LoRA+dB] *********
+2026-04-30 04:32:57,419 P1657 INFO Clients average loss: 0.2542269825935364
+2026-04-30 04:32:57,426 P1657 INFO ********* Train Turn 369 [phase2_LoRA+dB] *********
+2026-04-30 04:33:02,248 P1657 INFO Clients average loss: 0.2511780261993408
+2026-04-30 04:33:02,254 P1657 INFO ********* Eval @ Turn 369 *********
+2026-04-30 04:33:05,492 P1657 INFO [Metrics] logloss: 1.338679 - MRR: 0.353159 - NDCG(5): 0.340823 - HR(5): 0.432119 - NDCG(10): 0.398346 - HR(10): 0.612086 - NDCG(20): 0.445495 - HR(20): 0.796854 - NDCG(50): 0.474499 - HR(50): 0.940232
+2026-04-30 04:33:05,492 P1657 INFO ********* Train Turn 370 [phase2_LoRA+dB] *********
+2026-04-30 04:33:10,562 P1657 INFO ΔB updated at turn 370 (604 clients)
+2026-04-30 04:33:10,650 P1657 INFO Clients average loss: 0.2548651695251465
+2026-04-30 04:33:10,656 P1657 INFO ********* Train Turn 371 [phase2_LoRA+dB] *********
+2026-04-30 04:33:15,712 P1657 INFO Clients average loss: 0.2550872266292572
+2026-04-30 04:33:15,718 P1657 INFO ********* Train Turn 372 [phase2_LoRA+dB] *********
+2026-04-30 04:33:20,558 P1657 INFO Clients average loss: 0.2543765604496002
+2026-04-30 04:33:20,564 P1657 INFO ********* Train Turn 373 [phase2_LoRA+dB] *********
+2026-04-30 04:33:25,482 P1657 INFO Clients average loss: 0.2610250413417816
+2026-04-30 04:33:25,488 P1657 INFO ********* Train Turn 374 [phase2_LoRA+dB] *********
+2026-04-30 04:33:30,218 P1657 INFO Clients average loss: 0.25979292392730713
+2026-04-30 04:33:30,224 P1657 INFO ********* Train Turn 375 [phase2_LoRA+dB] *********
+2026-04-30 04:33:34,919 P1657 INFO Clients average loss: 0.25832194089889526
+2026-04-30 04:33:34,925 P1657 INFO ********* Train Turn 376 [phase2_LoRA+dB] *********
+2026-04-30 04:33:39,710 P1657 INFO Clients average loss: 0.2580473721027374
+2026-04-30 04:33:39,716 P1657 INFO ********* Train Turn 377 [phase2_LoRA+dB] *********
+2026-04-30 04:33:44,480 P1657 INFO Clients average loss: 0.25933927297592163
+2026-04-30 04:33:44,486 P1657 INFO ********* Train Turn 378 [phase2_LoRA+dB] *********
+2026-04-30 04:33:49,318 P1657 INFO Clients average loss: 0.260894775390625
+2026-04-30 04:33:49,324 P1657 INFO ********* Train Turn 379 [phase2_LoRA+dB] *********
+2026-04-30 04:33:54,096 P1657 INFO Clients average loss: 0.25553250312805176
+2026-04-30 04:33:54,102 P1657 INFO ********* Eval @ Turn 379 *********
+2026-04-30 04:33:57,448 P1657 INFO [Metrics] logloss: 1.333681 - MRR: 0.354318 - NDCG(5): 0.342371 - HR(5): 0.433775 - NDCG(10): 0.398521 - HR(10): 0.609437 - NDCG(20): 0.446544 - HR(20): 0.797682 - NDCG(50): 0.475387 - HR(50): 0.940563
+2026-04-30 04:33:57,448 P1657 INFO ********* Train Turn 380 [phase2_LoRA+dB] *********
+2026-04-30 04:34:02,659 P1657 INFO ΔB updated at turn 380 (604 clients)
+2026-04-30 04:34:02,746 P1657 INFO Clients average loss: 0.2534254193305969
+2026-04-30 04:34:02,751 P1657 INFO ********* Train Turn 381 [phase2_LoRA+dB] *********
+2026-04-30 04:34:07,466 P1657 INFO Clients average loss: 0.25826388597488403
+2026-04-30 04:34:07,471 P1657 INFO ********* Train Turn 382 [phase2_LoRA+dB] *********
+2026-04-30 04:34:12,252 P1657 INFO Clients average loss: 0.25962018966674805
+2026-04-30 04:34:12,258 P1657 INFO ********* Train Turn 383 [phase2_LoRA+dB] *********
+2026-04-30 04:34:16,859 P1657 INFO Clients average loss: 0.2540951371192932
+2026-04-30 04:34:16,865 P1657 INFO ********* Train Turn 384 [phase2_LoRA+dB] *********
+2026-04-30 04:34:21,563 P1657 INFO Clients average loss: 0.25588732957839966
+2026-04-30 04:34:21,569 P1657 INFO ********* Train Turn 385 [phase2_LoRA+dB] *********
+2026-04-30 04:34:26,348 P1657 INFO Clients average loss: 0.25246328115463257
+2026-04-30 04:34:26,354 P1657 INFO ********* Train Turn 386 [phase2_LoRA+dB] *********
+2026-04-30 04:34:31,100 P1657 INFO Clients average loss: 0.2600613236427307
+2026-04-30 04:34:31,106 P1657 INFO ********* Train Turn 387 [phase2_LoRA+dB] *********
+2026-04-30 04:34:35,916 P1657 INFO Clients average loss: 0.25401362776756287
+2026-04-30 04:34:35,922 P1657 INFO ********* Train Turn 388 [phase2_LoRA+dB] *********
+2026-04-30 04:34:40,653 P1657 INFO Clients average loss: 0.25319576263427734
+2026-04-30 04:34:40,659 P1657 INFO ********* Train Turn 389 [phase2_LoRA+dB] *********
+2026-04-30 04:34:45,490 P1657 INFO Clients average loss: 0.25767573714256287
+2026-04-30 04:34:45,496 P1657 INFO ********* Eval @ Turn 389 *********
+2026-04-30 04:34:48,960 P1657 INFO [Metrics] logloss: 1.330444 - MRR: 0.356613 - NDCG(5): 0.345056 - HR(5): 0.436755 - NDCG(10): 0.401485 - HR(10): 0.613411 - NDCG(20): 0.447581 - HR(20): 0.794205 - NDCG(50): 0.477307 - HR(50): 0.941225
+2026-04-30 04:34:48,960 P1657 INFO ********* Train Turn 390 [phase2_LoRA+dB] *********
+2026-04-30 04:34:53,855 P1657 INFO ΔB updated at turn 390 (604 clients)
+2026-04-30 04:34:53,948 P1657 INFO Clients average loss: 0.2552184462547302
+2026-04-30 04:34:53,954 P1657 INFO ********* Train Turn 391 [phase2_LoRA+dB] *********
+2026-04-30 04:34:58,874 P1657 INFO Clients average loss: 0.2571397125720978
+2026-04-30 04:34:58,880 P1657 INFO ********* Train Turn 392 [phase2_LoRA+dB] *********
+2026-04-30 04:35:03,649 P1657 INFO Clients average loss: 0.25912681221961975
+2026-04-30 04:35:03,655 P1657 INFO ********* Train Turn 393 [phase2_LoRA+dB] *********
+2026-04-30 04:35:08,520 P1657 INFO Clients average loss: 0.26157471537590027
+2026-04-30 04:35:08,526 P1657 INFO ********* Train Turn 394 [phase2_LoRA+dB] *********
+2026-04-30 04:35:13,353 P1657 INFO Clients average loss: 0.2625993490219116
+2026-04-30 04:35:13,359 P1657 INFO ********* Train Turn 395 [phase2_LoRA+dB] *********
+2026-04-30 04:35:18,217 P1657 INFO Clients average loss: 0.2602686583995819
+2026-04-30 04:35:18,223 P1657 INFO ********* Train Turn 396 [phase2_LoRA+dB] *********
+2026-04-30 04:35:23,128 P1657 INFO Clients average loss: 0.2525847554206848
+2026-04-30 04:35:23,134 P1657 INFO ********* Train Turn 397 [phase2_LoRA+dB] *********
+2026-04-30 04:35:28,004 P1657 INFO Clients average loss: 0.25073254108428955
+2026-04-30 04:35:28,010 P1657 INFO ********* Train Turn 398 [phase2_LoRA+dB] *********
+2026-04-30 04:35:32,917 P1657 INFO Clients average loss: 0.2550727128982544
+2026-04-30 04:35:32,923 P1657 INFO ********* Train Turn 399 [phase2_LoRA+dB] *********
+2026-04-30 04:35:37,749 P1657 INFO Clients average loss: 0.2540040910243988
+2026-04-30 04:35:37,755 P1657 INFO ********* Eval @ Turn 399 *********
+2026-04-30 04:35:41,190 P1657 INFO [Metrics] logloss: 1.340328 - MRR: 0.358459 - NDCG(5): 0.346241 - HR(5): 0.436755 - NDCG(10): 0.404056 - HR(10): 0.617550 - NDCG(20): 0.448292 - HR(20): 0.790728 - NDCG(50): 0.478761 - HR(50): 0.941060
+2026-04-30 04:35:41,190 P1657 INFO ********* Train Turn 400 [phase2_LoRA+dB] *********
+2026-04-30 04:35:46,345 P1657 INFO ΔB updated at turn 400 (604 clients)
+2026-04-30 04:35:46,433 P1657 INFO Clients average loss: 0.26193472743034363
+2026-04-30 04:35:46,439 P1657 INFO ********* Train Turn 401 [phase2_LoRA+dB] *********
+2026-04-30 04:35:51,319 P1657 INFO Clients average loss: 0.2605372667312622
+2026-04-30 04:35:51,325 P1657 INFO ********* Train Turn 402 [phase2_LoRA+dB] *********
+2026-04-30 04:35:56,172 P1657 INFO Clients average loss: 0.259428471326828
+2026-04-30 04:35:56,178 P1657 INFO ********* Train Turn 403 [phase2_LoRA+dB] *********
+2026-04-30 04:36:00,935 P1657 INFO Clients average loss: 0.2482163906097412
+2026-04-30 04:36:00,941 P1657 INFO ********* Train Turn 404 [phase2_LoRA+dB] *********
+2026-04-30 04:36:05,768 P1657 INFO Clients average loss: 0.257949560880661
+2026-04-30 04:36:05,775 P1657 INFO ********* Train Turn 405 [phase2_LoRA+dB] *********
+2026-04-30 04:36:10,561 P1657 INFO Clients average loss: 0.25018468499183655
+2026-04-30 04:36:10,567 P1657 INFO ********* Train Turn 406 [phase2_LoRA+dB] *********
+2026-04-30 04:36:15,327 P1657 INFO Clients average loss: 0.2556833028793335
+2026-04-30 04:36:15,333 P1657 INFO ********* Train Turn 407 [phase2_LoRA+dB] *********
+2026-04-30 04:36:20,163 P1657 INFO Clients average loss: 0.25820499658584595
+2026-04-30 04:36:20,169 P1657 INFO ********* Train Turn 408 [phase2_LoRA+dB] *********
+2026-04-30 04:36:24,968 P1657 INFO Clients average loss: 0.24964305758476257
+2026-04-30 04:36:24,974 P1657 INFO ********* Train Turn 409 [phase2_LoRA+dB] *********
+2026-04-30 04:36:29,830 P1657 INFO Clients average loss: 0.25481605529785156
+2026-04-30 04:36:29,836 P1657 INFO ********* Eval @ Turn 409 *********
+2026-04-30 04:36:33,306 P1657 INFO [Metrics] logloss: 1.332567 - MRR: 0.359670 - NDCG(5): 0.347529 - HR(5): 0.437914 - NDCG(10): 0.404985 - HR(10): 0.617384 - NDCG(20): 0.449446 - HR(20): 0.791556 - NDCG(50): 0.479667 - HR(50): 0.940894
+2026-04-30 04:36:33,306 P1657 INFO ********* Train Turn 410 [phase2_LoRA+dB] *********
+2026-04-30 04:36:38,396 P1657 INFO ΔB updated at turn 410 (604 clients)
+2026-04-30 04:36:38,483 P1657 INFO Clients average loss: 0.2515624463558197
+2026-04-30 04:36:38,490 P1657 INFO ********* Train Turn 411 [phase2_LoRA+dB] *********
+2026-04-30 04:36:43,357 P1657 INFO Clients average loss: 0.2621830403804779
+2026-04-30 04:36:43,363 P1657 INFO ********* Train Turn 412 [phase2_LoRA+dB] *********
+2026-04-30 04:36:48,170 P1657 INFO Clients average loss: 0.24840047955513
+2026-04-30 04:36:48,175 P1657 INFO ********* Train Turn 413 [phase2_LoRA+dB] *********
+2026-04-30 04:36:53,070 P1657 INFO Clients average loss: 0.25248271226882935
+2026-04-30 04:36:53,076 P1657 INFO ********* Train Turn 414 [phase2_LoRA+dB] *********
+2026-04-30 04:36:57,856 P1657 INFO Clients average loss: 0.2578417658805847
+2026-04-30 04:36:57,861 P1657 INFO ********* Train Turn 415 [phase2_LoRA+dB] *********
+2026-04-30 04:37:02,730 P1657 INFO Clients average loss: 0.25555700063705444
+2026-04-30 04:37:02,737 P1657 INFO ********* Train Turn 416 [phase2_LoRA+dB] *********
+2026-04-30 04:37:07,561 P1657 INFO Clients average loss: 0.2503945231437683
+2026-04-30 04:37:07,566 P1657 INFO ********* Train Turn 417 [phase2_LoRA+dB] *********
+2026-04-30 04:37:12,341 P1657 INFO Clients average loss: 0.2557832598686218
+2026-04-30 04:37:12,347 P1657 INFO ********* Train Turn 418 [phase2_LoRA+dB] *********
+2026-04-30 04:37:17,241 P1657 INFO Clients average loss: 0.25818702578544617
+2026-04-30 04:37:17,247 P1657 INFO ********* Train Turn 419 [phase2_LoRA+dB] *********
+2026-04-30 04:37:22,031 P1657 INFO Clients average loss: 0.24241900444030762
+2026-04-30 04:37:22,037 P1657 INFO ********* Eval @ Turn 419 *********
+2026-04-30 04:37:25,429 P1657 INFO [Metrics] logloss: 1.338286 - MRR: 0.359318 - NDCG(5): 0.347227 - HR(5): 0.437583 - NDCG(10): 0.404142 - HR(10): 0.615397 - NDCG(20): 0.449842 - HR(20): 0.794536 - NDCG(50): 0.479471 - HR(50): 0.941225
+2026-04-30 04:37:25,430 P1657 INFO ********* Train Turn 420 [phase2_LoRA+dB] *********
+2026-04-30 04:37:30,529 P1657 INFO ΔB updated at turn 420 (604 clients)
+2026-04-30 04:37:30,618 P1657 INFO Clients average loss: 0.25635093450546265
+2026-04-30 04:37:30,624 P1657 INFO ********* Train Turn 421 [phase2_LoRA+dB] *********
+2026-04-30 04:37:35,478 P1657 INFO Clients average loss: 0.2534914016723633
+2026-04-30 04:37:35,484 P1657 INFO ********* Train Turn 422 [phase2_LoRA+dB] *********
+2026-04-30 04:37:40,368 P1657 INFO Clients average loss: 0.2518715560436249
+2026-04-30 04:37:40,373 P1657 INFO ********* Train Turn 423 [phase2_LoRA+dB] *********
+2026-04-30 04:37:45,253 P1657 INFO Clients average loss: 0.2501813769340515
+2026-04-30 04:37:45,259 P1657 INFO ********* Train Turn 424 [phase2_LoRA+dB] *********
+2026-04-30 04:37:50,229 P1657 INFO Clients average loss: 0.25156569480895996
+2026-04-30 04:37:50,235 P1657 INFO ********* Train Turn 425 [phase2_LoRA+dB] *********
+2026-04-30 04:37:55,112 P1657 INFO Clients average loss: 0.2575904428958893
+2026-04-30 04:37:55,119 P1657 INFO ********* Train Turn 426 [phase2_LoRA+dB] *********
+2026-04-30 04:38:00,007 P1657 INFO Clients average loss: 0.2535524070262909
+2026-04-30 04:38:00,013 P1657 INFO ********* Train Turn 427 [phase2_LoRA+dB] *********
+2026-04-30 04:38:04,968 P1657 INFO Clients average loss: 0.24799342453479767
+2026-04-30 04:38:04,974 P1657 INFO ********* Train Turn 428 [phase2_LoRA+dB] *********
+2026-04-30 04:38:09,833 P1657 INFO Clients average loss: 0.25615808367729187
+2026-04-30 04:38:09,839 P1657 INFO ********* Train Turn 429 [phase2_LoRA+dB] *********
+2026-04-30 04:38:14,817 P1657 INFO Clients average loss: 0.25432515144348145
+2026-04-30 04:38:14,823 P1657 INFO ********* Eval @ Turn 429 *********
+2026-04-30 04:38:18,294 P1657 INFO [Metrics] logloss: 1.336619 - MRR: 0.359428 - NDCG(5): 0.348044 - HR(5): 0.439735 - NDCG(10): 0.404364 - HR(10): 0.615894 - NDCG(20): 0.450462 - HR(20): 0.796689 - NDCG(50): 0.479435 - HR(50): 0.940397
+2026-04-30 04:38:18,294 P1657 INFO ********* Train Turn 430 [phase2_LoRA+dB] *********
+2026-04-30 04:38:23,475 P1657 INFO ΔB updated at turn 430 (604 clients)
+2026-04-30 04:38:23,569 P1657 INFO Clients average loss: 0.2512730062007904
+2026-04-30 04:38:23,575 P1657 INFO ********* Train Turn 431 [phase2_LoRA+dB] *********
+2026-04-30 04:38:28,450 P1657 INFO Clients average loss: 0.25143203139305115
+2026-04-30 04:38:28,456 P1657 INFO ********* Train Turn 432 [phase2_LoRA+dB] *********
+2026-04-30 04:38:33,384 P1657 INFO Clients average loss: 0.2554836869239807
+2026-04-30 04:38:33,390 P1657 INFO ********* Train Turn 433 [phase2_LoRA+dB] *********
+2026-04-30 04:38:38,281 P1657 INFO Clients average loss: 0.253156453371048
+2026-04-30 04:38:38,287 P1657 INFO ********* Train Turn 434 [phase2_LoRA+dB] *********
+2026-04-30 04:38:43,193 P1657 INFO Clients average loss: 0.2485586255788803
+2026-04-30 04:38:43,199 P1657 INFO ********* Train Turn 435 [phase2_LoRA+dB] *********
+2026-04-30 04:38:48,159 P1657 INFO Clients average loss: 0.2542594075202942
+2026-04-30 04:38:48,165 P1657 INFO ********* Train Turn 436 [phase2_LoRA+dB] *********
+2026-04-30 04:38:53,086 P1657 INFO Clients average loss: 0.25473552942276
+2026-04-30 04:38:53,092 P1657 INFO ********* Train Turn 437 [phase2_LoRA+dB] *********
+2026-04-30 04:38:58,009 P1657 INFO Clients average loss: 0.248779758810997
+2026-04-30 04:38:58,016 P1657 INFO ********* Train Turn 438 [phase2_LoRA+dB] *********
+2026-04-30 04:39:02,776 P1657 INFO Clients average loss: 0.24810053408145905
+2026-04-30 04:39:02,783 P1657 INFO ********* Train Turn 439 [phase2_LoRA+dB] *********
+2026-04-30 04:39:07,732 P1657 INFO Clients average loss: 0.2487107515335083
+2026-04-30 04:39:07,738 P1657 INFO ********* Eval @ Turn 439 *********
+2026-04-30 04:39:11,178 P1657 INFO [Metrics] logloss: 1.352386 - MRR: 0.360474 - NDCG(5): 0.349374 - HR(5): 0.441060 - NDCG(10): 0.404314 - HR(10): 0.612914 - NDCG(20): 0.451090 - HR(20): 0.796192 - NDCG(50): 0.480248 - HR(50): 0.940563
+2026-04-30 04:39:11,178 P1657 INFO ********* Train Turn 440 [phase2_LoRA+dB] *********
+2026-04-30 04:39:16,111 P1657 INFO ΔB updated at turn 440 (604 clients)
+2026-04-30 04:39:16,199 P1657 INFO Clients average loss: 0.25075727701187134
+2026-04-30 04:39:16,205 P1657 INFO ********* Train Turn 441 [phase2_LoRA+dB] *********
+2026-04-30 04:39:20,737 P1657 INFO Clients average loss: 0.25003328919410706
+2026-04-30 04:39:20,743 P1657 INFO ********* Train Turn 442 [phase2_LoRA+dB] *********
+2026-04-30 04:39:25,225 P1657 INFO Clients average loss: 0.25278398394584656
+2026-04-30 04:39:25,231 P1657 INFO ********* Train Turn 443 [phase2_LoRA+dB] *********
+2026-04-30 04:39:30,009 P1657 INFO Clients average loss: 0.2532246708869934
+2026-04-30 04:39:30,015 P1657 INFO ********* Train Turn 444 [phase2_LoRA+dB] *********
+2026-04-30 04:39:34,858 P1657 INFO Clients average loss: 0.25022730231285095
+2026-04-30 04:39:34,864 P1657 INFO ********* Train Turn 445 [phase2_LoRA+dB] *********
+2026-04-30 04:39:39,692 P1657 INFO Clients average loss: 0.24990874528884888
+2026-04-30 04:39:39,698 P1657 INFO ********* Train Turn 446 [phase2_LoRA+dB] *********
+2026-04-30 04:39:44,635 P1657 INFO Clients average loss: 0.25790753960609436
+2026-04-30 04:39:44,641 P1657 INFO ********* Train Turn 447 [phase2_LoRA+dB] *********
+2026-04-30 04:39:49,437 P1657 INFO Clients average loss: 0.25244253873825073
+2026-04-30 04:39:49,443 P1657 INFO ********* Train Turn 448 [phase2_LoRA+dB] *********
+2026-04-30 04:39:54,317 P1657 INFO Clients average loss: 0.2543800175189972
+2026-04-30 04:39:54,323 P1657 INFO ********* Train Turn 449 [phase2_LoRA+dB] *********
+2026-04-30 04:39:59,119 P1657 INFO Clients average loss: 0.24993419647216797
+2026-04-30 04:39:59,125 P1657 INFO ********* Eval @ Turn 449 *********
+2026-04-30 04:40:02,477 P1657 INFO [Metrics] logloss: 1.342589 - MRR: 0.361086 - NDCG(5): 0.349165 - HR(5): 0.439073 - NDCG(10): 0.404792 - HR(10): 0.613245 - NDCG(20): 0.451988 - HR(20): 0.798344 - NDCG(50): 0.480744 - HR(50): 0.940728
+2026-04-30 04:40:02,478 P1657 INFO ********* Train Turn 450 [phase2_LoRA+dB] *********
+2026-04-30 04:40:07,693 P1657 INFO ΔB updated at turn 450 (604 clients)
+2026-04-30 04:40:07,781 P1657 INFO Clients average loss: 0.25072914361953735
+2026-04-30 04:40:07,787 P1657 INFO ********* Train Turn 451 [phase2_LoRA+dB] *********
+2026-04-30 04:40:12,667 P1657 INFO Clients average loss: 0.2583502531051636
+2026-04-30 04:40:12,674 P1657 INFO ********* Train Turn 452 [phase2_LoRA+dB] *********
+2026-04-30 04:40:17,578 P1657 INFO Clients average loss: 0.256531685590744
+2026-04-30 04:40:17,584 P1657 INFO ********* Train Turn 453 [phase2_LoRA+dB] *********
+2026-04-30 04:40:22,343 P1657 INFO Clients average loss: 0.25372231006622314
+2026-04-30 04:40:22,349 P1657 INFO ********* Train Turn 454 [phase2_LoRA+dB] *********
+2026-04-30 04:40:27,113 P1657 INFO Clients average loss: 0.25543105602264404
+2026-04-30 04:40:27,119 P1657 INFO ********* Train Turn 455 [phase2_LoRA+dB] *********
+2026-04-30 04:40:31,903 P1657 INFO Clients average loss: 0.250819593667984
+2026-04-30 04:40:31,909 P1657 INFO ********* Train Turn 456 [phase2_LoRA+dB] *********
+2026-04-30 04:40:36,627 P1657 INFO Clients average loss: 0.2561028301715851
+2026-04-30 04:40:36,633 P1657 INFO ********* Train Turn 457 [phase2_LoRA+dB] *********
+2026-04-30 04:40:41,566 P1657 INFO Clients average loss: 0.24993868172168732
+2026-04-30 04:40:41,572 P1657 INFO ********* Train Turn 458 [phase2_LoRA+dB] *********
+2026-04-30 04:40:46,275 P1657 INFO Clients average loss: 0.2582622766494751
+2026-04-30 04:40:46,281 P1657 INFO ********* Train Turn 459 [phase2_LoRA+dB] *********
+2026-04-30 04:40:51,081 P1657 INFO Clients average loss: 0.2568594217300415
+2026-04-30 04:40:51,087 P1657 INFO ********* Eval @ Turn 459 *********
+2026-04-30 04:40:54,441 P1657 INFO [Metrics] logloss: 1.347717 - MRR: 0.361225 - NDCG(5): 0.349500 - HR(5): 0.439735 - NDCG(10): 0.404528 - HR(10): 0.611921 - NDCG(20): 0.452041 - HR(20): 0.798179 - NDCG(50): 0.480886 - HR(50): 0.940894
+2026-04-30 04:40:54,441 P1657 INFO ********* Train Turn 460 [phase2_LoRA+dB] *********
+2026-04-30 04:40:59,474 P1657 INFO ΔB updated at turn 460 (604 clients)
+2026-04-30 04:40:59,565 P1657 INFO Clients average loss: 0.25139278173446655
+2026-04-30 04:40:59,572 P1657 INFO ********* Train Turn 461 [phase2_LoRA+dB] *********
+2026-04-30 04:41:04,412 P1657 INFO Clients average loss: 0.24801762402057648
+2026-04-30 04:41:04,417 P1657 INFO ********* Train Turn 462 [phase2_LoRA+dB] *********
+2026-04-30 04:41:09,143 P1657 INFO Clients average loss: 0.24840401113033295
+2026-04-30 04:41:09,149 P1657 INFO ********* Train Turn 463 [phase2_LoRA+dB] *********
+2026-04-30 04:41:13,960 P1657 INFO Clients average loss: 0.25731486082077026
+2026-04-30 04:41:13,966 P1657 INFO ********* Train Turn 464 [phase2_LoRA+dB] *********
+2026-04-30 04:41:18,684 P1657 INFO Clients average loss: 0.2515641748905182
+2026-04-30 04:41:18,689 P1657 INFO ********* Train Turn 465 [phase2_LoRA+dB] *********
+2026-04-30 04:41:23,438 P1657 INFO Clients average loss: 0.25172632932662964
+2026-04-30 04:41:23,444 P1657 INFO ********* Train Turn 466 [phase2_LoRA+dB] *********
+2026-04-30 04:41:28,213 P1657 INFO Clients average loss: 0.25492793321609497
+2026-04-30 04:41:28,219 P1657 INFO ********* Train Turn 467 [phase2_LoRA+dB] *********
+2026-04-30 04:41:32,899 P1657 INFO Clients average loss: 0.25106072425842285
+2026-04-30 04:41:32,905 P1657 INFO ********* Train Turn 468 [phase2_LoRA+dB] *********
+2026-04-30 04:41:37,584 P1657 INFO Clients average loss: 0.25105342268943787
+2026-04-30 04:41:37,590 P1657 INFO ********* Train Turn 469 [phase2_LoRA+dB] *********
+2026-04-30 04:41:42,140 P1657 INFO Clients average loss: 0.2453363984823227
+2026-04-30 04:41:42,146 P1657 INFO ********* Eval @ Turn 469 *********
+2026-04-30 04:41:45,377 P1657 INFO [Metrics] logloss: 1.348805 - MRR: 0.361555 - NDCG(5): 0.349865 - HR(5): 0.440066 - NDCG(10): 0.404954 - HR(10): 0.612417 - NDCG(20): 0.452433 - HR(20): 0.798675 - NDCG(50): 0.481099 - HR(50): 0.940563
+2026-04-30 04:41:45,377 P1657 INFO ********* Train Turn 470 [phase2_LoRA+dB] *********
+2026-04-30 04:41:50,423 P1657 INFO ΔB updated at turn 470 (604 clients)
+2026-04-30 04:41:50,512 P1657 INFO Clients average loss: 0.25568437576293945
+2026-04-30 04:41:50,518 P1657 INFO ********* Train Turn 471 [phase2_LoRA+dB] *********
+2026-04-30 04:41:55,219 P1657 INFO Clients average loss: 0.24458913505077362
+2026-04-30 04:41:55,226 P1657 INFO ********* Train Turn 472 [phase2_LoRA+dB] *********
+2026-04-30 04:41:59,909 P1657 INFO Clients average loss: 0.2521595060825348
+2026-04-30 04:41:59,915 P1657 INFO ********* Train Turn 473 [phase2_LoRA+dB] *********
+2026-04-30 04:42:04,618 P1657 INFO Clients average loss: 0.25213462114334106
+2026-04-30 04:42:04,624 P1657 INFO ********* Train Turn 474 [phase2_LoRA+dB] *********
+2026-04-30 04:42:09,296 P1657 INFO Clients average loss: 0.24589528143405914
+2026-04-30 04:42:09,302 P1657 INFO ********* Train Turn 475 [phase2_LoRA+dB] *********
+2026-04-30 04:42:13,951 P1657 INFO Clients average loss: 0.25616174936294556
+2026-04-30 04:42:13,957 P1657 INFO ********* Train Turn 476 [phase2_LoRA+dB] *********
+2026-04-30 04:42:18,611 P1657 INFO Clients average loss: 0.2513639032840729
+2026-04-30 04:42:18,616 P1657 INFO ********* Train Turn 477 [phase2_LoRA+dB] *********
+2026-04-30 04:42:23,326 P1657 INFO Clients average loss: 0.2505606710910797
+2026-04-30 04:42:23,332 P1657 INFO ********* Train Turn 478 [phase2_LoRA+dB] *********
+2026-04-30 04:42:27,899 P1657 INFO Clients average loss: 0.2539479732513428
+2026-04-30 04:42:27,905 P1657 INFO ********* Train Turn 479 [phase2_LoRA+dB] *********
+2026-04-30 04:42:32,606 P1657 INFO Clients average loss: 0.25362271070480347
+2026-04-30 04:42:32,612 P1657 INFO ********* Eval @ Turn 479 *********
+2026-04-30 04:42:36,025 P1657 INFO [Metrics] logloss: 1.354836 - MRR: 0.361909 - NDCG(5): 0.349915 - HR(5): 0.439238 - NDCG(10): 0.404219 - HR(10): 0.608940 - NDCG(20): 0.452636 - HR(20): 0.798510 - NDCG(50): 0.481365 - HR(50): 0.940894
+2026-04-30 04:42:36,025 P1657 INFO ********* Train Turn 480 [phase2_LoRA+dB] *********
+2026-04-30 04:42:41,003 P1657 INFO ΔB updated at turn 480 (604 clients)
+2026-04-30 04:42:41,093 P1657 INFO Clients average loss: 0.25390785932540894
+2026-04-30 04:42:41,099 P1657 INFO ********* Train Turn 481 [phase2_LoRA+dB] *********
+2026-04-30 04:42:45,836 P1657 INFO Clients average loss: 0.25058749318122864
+2026-04-30 04:42:45,842 P1657 INFO ********* Train Turn 482 [phase2_LoRA+dB] *********
+2026-04-30 04:42:50,506 P1657 INFO Clients average loss: 0.24669869244098663
+2026-04-30 04:42:50,512 P1657 INFO ********* Train Turn 483 [phase2_LoRA+dB] *********
+2026-04-30 04:42:55,366 P1657 INFO Clients average loss: 0.25193968415260315
+2026-04-30 04:42:55,372 P1657 INFO ********* Train Turn 484 [phase2_LoRA+dB] *********
+2026-04-30 04:43:00,084 P1657 INFO Clients average loss: 0.24931760132312775
+2026-04-30 04:43:00,090 P1657 INFO ********* Train Turn 485 [phase2_LoRA+dB] *********
+2026-04-30 04:43:04,870 P1657 INFO Clients average loss: 0.25394463539123535
+2026-04-30 04:43:04,876 P1657 INFO ********* Train Turn 486 [phase2_LoRA+dB] *********
+2026-04-30 04:43:09,616 P1657 INFO Clients average loss: 0.25244084000587463
+2026-04-30 04:43:09,622 P1657 INFO ********* Train Turn 487 [phase2_LoRA+dB] *********
+2026-04-30 04:43:14,315 P1657 INFO Clients average loss: 0.2547892928123474
+2026-04-30 04:43:14,321 P1657 INFO ********* Train Turn 488 [phase2_LoRA+dB] *********
+2026-04-30 04:43:19,029 P1657 INFO Clients average loss: 0.2565646767616272
+2026-04-30 04:43:19,035 P1657 INFO ********* Train Turn 489 [phase2_LoRA+dB] *********
+2026-04-30 04:43:23,705 P1657 INFO Clients average loss: 0.2493995577096939
+2026-04-30 04:43:23,711 P1657 INFO ********* Eval @ Turn 489 *********
+2026-04-30 04:43:27,080 P1657 INFO [Metrics] logloss: 1.354625 - MRR: 0.361387 - NDCG(5): 0.349983 - HR(5): 0.440066 - NDCG(10): 0.403077 - HR(10): 0.606126 - NDCG(20): 0.451573 - HR(20): 0.795695 - NDCG(50): 0.480852 - HR(50): 0.940563
+2026-04-30 04:43:27,081 P1657 INFO ********* Train Turn 490 [phase2_LoRA+dB] *********
+2026-04-30 04:43:32,164 P1657 INFO ΔB updated at turn 490 (604 clients)
+2026-04-30 04:43:32,250 P1657 INFO Clients average loss: 0.2489752173423767
+2026-04-30 04:43:32,256 P1657 INFO ********* Train Turn 491 [phase2_LoRA+dB] *********
+2026-04-30 04:43:36,964 P1657 INFO Clients average loss: 0.2436804175376892
+2026-04-30 04:43:36,971 P1657 INFO ********* Train Turn 492 [phase2_LoRA+dB] *********
+2026-04-30 04:43:41,733 P1657 INFO Clients average loss: 0.24469652771949768
+2026-04-30 04:43:41,739 P1657 INFO ********* Train Turn 493 [phase2_LoRA+dB] *********
+2026-04-30 04:43:46,570 P1657 INFO Clients average loss: 0.2487657368183136
+2026-04-30 04:43:46,576 P1657 INFO ********* Train Turn 494 [phase2_LoRA+dB] *********
+2026-04-30 04:43:51,400 P1657 INFO Clients average loss: 0.2496226280927658
+2026-04-30 04:43:51,406 P1657 INFO ********* Train Turn 495 [phase2_LoRA+dB] *********
+2026-04-30 04:43:56,223 P1657 INFO Clients average loss: 0.24847033619880676
+2026-04-30 04:43:56,229 P1657 INFO ********* Train Turn 496 [phase2_LoRA+dB] *********
+2026-04-30 04:44:01,006 P1657 INFO Clients average loss: 0.2521835267543793
+2026-04-30 04:44:01,011 P1657 INFO ********* Train Turn 497 [phase2_LoRA+dB] *********
+2026-04-30 04:44:05,807 P1657 INFO Clients average loss: 0.2538178861141205
+2026-04-30 04:44:05,812 P1657 INFO ********* Train Turn 498 [phase2_LoRA+dB] *********
+2026-04-30 04:44:10,551 P1657 INFO Clients average loss: 0.24298763275146484
+2026-04-30 04:44:10,557 P1657 INFO ********* Train Turn 499 [phase2_LoRA+dB] *********
+2026-04-30 04:44:15,343 P1657 INFO Clients average loss: 0.24812792241573334
+2026-04-30 04:44:15,350 P1657 INFO ********* Eval @ Turn 499 *********
+2026-04-30 04:44:18,696 P1657 INFO [Metrics] logloss: 1.369040 - MRR: 0.359724 - NDCG(5): 0.348290 - HR(5): 0.438907 - NDCG(10): 0.402460 - HR(10): 0.608444 - NDCG(20): 0.449895 - HR(20): 0.793874 - NDCG(50): 0.479560 - HR(50): 0.940397
+2026-04-30 04:44:18,696 P1657 INFO ********* Final Test *********
+2026-04-30 04:44:21,987 P1657 INFO [Metrics] logloss: 1.369040 - MRR: 0.359724 - NDCG(5): 0.348290 - HR(5): 0.438907 - NDCG(10): 0.402460 - HR(10): 0.608444 - NDCG(20): 0.449895 - HR(20): 0.793874 - NDCG(50): 0.479560 - HR(50): 0.940397
+/content/drive/MyDrive

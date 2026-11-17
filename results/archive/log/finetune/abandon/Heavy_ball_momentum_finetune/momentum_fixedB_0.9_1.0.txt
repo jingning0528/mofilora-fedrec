@@ -1,0 +1,1708 @@
+/content/drive/MyDrive/FedNCF-LoRA
+2026-05-08 04:19:23,979 P7513 INFO Params: {
+    "beta": "0.9",
+    "clients_num_per_turn": "604",
+    "data_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "dataloader": "MLDataLoaderFL",
+    "dataset_id": "ML1M_t5",
+    "device": "0",
+    "dropout": "0.5",
+    "embedding_dim": "32",
+    "embedding_regularizer": "1e-08",
+    "eta_s": "1.0",
+    "g_hidden_activations": "ReLU",
+    "g_hidden_units": "[512, 256, 128]",
+    "hidden_activations": "ReLU",
+    "hidden_units": "[64, 128, 64]",
+    "item_num": "3952",
+    "latent_dim": "4",
+    "learning_rate": "0.001",
+    "local_epoch": "2",
+    "loss_fn": "bpr_loss",
+    "metrics": "['logloss', 'MRR', 'NDCG(5)', 'HR(5)', 'NDCG(10)', 'HR(10)', 'NDCG(20)', 'HR(20)', 'NDCG(50)', 'HR(50)']",
+    "model": "FedNCF_Lora_Momentum_FixedB",
+    "model_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/model/t5/",
+    "model_id": "FedNCF_ml1m_triple_101_momentum_fixedB",
+    "net_regularizer": "1e-08",
+    "only_inter": "False",
+    "optimizer": "adam",
+    "output_dim": "1",
+    "path": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "pre_epoch": "3000",
+    "seed": "2024",
+    "sen_embedding_dim": "768",
+    "task": "triple",
+    "train_turn": "500",
+    "user_num": "6040"
+}
+2026-05-08 04:19:29,048 P7513 INFO Model embedding_item.emb.weight size: 0.06030273MB
+2026-05-08 04:19:29,048 P7513 INFO Model embedding_item.linear.weight size: 0.00048828MB
+2026-05-08 04:19:29,048 P7513 INFO Model embedding_p.weight size: 0.48242188MB
+2026-05-08 04:19:29,048 P7513 INFO Model mlp.mlp.0.weight size: 0.01562500MB
+2026-05-08 04:19:29,048 P7513 INFO Model mlp.mlp.0.bias size: 0.00024414MB
+2026-05-08 04:19:29,048 P7513 INFO Model mlp.mlp.3.weight size: 0.03125000MB
+2026-05-08 04:19:29,048 P7513 INFO Model mlp.mlp.3.bias size: 0.00048828MB
+2026-05-08 04:19:29,048 P7513 INFO Model mlp.mlp.6.weight size: 0.03125000MB
+2026-05-08 04:19:29,048 P7513 INFO Model mlp.mlp.6.bias size: 0.00024414MB
+2026-05-08 04:19:29,049 P7513 INFO Model mlp.mlp.9.weight size: 0.00024414MB
+2026-05-08 04:19:29,049 P7513 INFO Model mlp.mlp.9.bias size: 0.00000381MB
+2026-05-08 04:19:29,049 P7513 INFO Model all size: 0.62256241MB
+2026-05-08 04:19:34,721 P7513 INFO [Time] pretrain_time=5.6720s
+2026-05-08 04:19:34,721 P7513 INFO ********* Train Turn 0 *********
+/content/drive/MyDrive/FedNCF-LoRA/zoo/fedncf_lora_momentum_fixedB.py:408: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  logging.info("Clients average loss: {}".format(torch.mean(torch.tensor(loss_list))))
+2026-05-08 04:19:36,849 P7513 INFO Clients average loss: 0.6949779391288757
+2026-05-08 04:19:36,854 P7513 INFO [Time] turn=0 local_train_time=1.7698s avg_client_train_time=0.002930s aggregation_time=0.0820s round_time=2.1322s
+2026-05-08 04:19:36,854 P7513 INFO ********* Train Turn 1 *********
+2026-05-08 04:19:38,727 P7513 INFO Clients average loss: 0.6949658989906311
+2026-05-08 04:19:38,732 P7513 INFO [Time] turn=1 local_train_time=1.5151s avg_client_train_time=0.002509s aggregation_time=0.0642s round_time=1.8781s
+2026-05-08 04:19:38,732 P7513 INFO ********* Train Turn 2 *********
+2026-05-08 04:19:40,606 P7513 INFO Clients average loss: 0.6953572034835815
+2026-05-08 04:19:40,611 P7513 INFO [Time] turn=2 local_train_time=1.5202s avg_client_train_time=0.002517s aggregation_time=0.0645s round_time=1.8785s
+2026-05-08 04:19:40,611 P7513 INFO ********* Train Turn 3 *********
+2026-05-08 04:19:42,485 P7513 INFO Clients average loss: 0.695402204990387
+2026-05-08 04:19:42,490 P7513 INFO [Time] turn=3 local_train_time=1.5171s avg_client_train_time=0.002512s aggregation_time=0.0644s round_time=1.8788s
+2026-05-08 04:19:42,490 P7513 INFO ********* Train Turn 4 *********
+2026-05-08 04:19:44,357 P7513 INFO Clients average loss: 0.6947665214538574
+2026-05-08 04:19:44,362 P7513 INFO [Time] turn=4 local_train_time=1.5144s avg_client_train_time=0.002507s aggregation_time=0.0645s round_time=1.8719s
+2026-05-08 04:19:44,362 P7513 INFO ********* Train Turn 5 *********
+2026-05-08 04:19:46,235 P7513 INFO Clients average loss: 0.6944484114646912
+2026-05-08 04:19:46,240 P7513 INFO [Time] turn=5 local_train_time=1.5186s avg_client_train_time=0.002514s aggregation_time=0.0655s round_time=1.8781s
+2026-05-08 04:19:46,240 P7513 INFO ********* Train Turn 6 *********
+2026-05-08 04:19:48,117 P7513 INFO Clients average loss: 0.6946617364883423
+2026-05-08 04:19:48,122 P7513 INFO [Time] turn=6 local_train_time=1.5227s avg_client_train_time=0.002521s aggregation_time=0.0648s round_time=1.8817s
+2026-05-08 04:19:48,122 P7513 INFO ********* Train Turn 7 *********
+2026-05-08 04:19:49,995 P7513 INFO Clients average loss: 0.6944233775138855
+2026-05-08 04:19:49,999 P7513 INFO [Time] turn=7 local_train_time=1.5196s avg_client_train_time=0.002516s aggregation_time=0.0642s round_time=1.8773s
+2026-05-08 04:19:50,000 P7513 INFO ********* Train Turn 8 *********
+2026-05-08 04:19:51,918 P7513 INFO Clients average loss: 0.6946154236793518
+2026-05-08 04:19:51,923 P7513 INFO [Time] turn=8 local_train_time=1.5637s avg_client_train_time=0.002589s aggregation_time=0.0645s round_time=1.9233s
+2026-05-08 04:19:51,923 P7513 INFO ********* Train Turn 9 *********
+2026-05-08 04:19:53,801 P7513 INFO Clients average loss: 0.6948086619377136
+2026-05-08 04:19:53,806 P7513 INFO [Time] turn=9 local_train_time=1.5242s avg_client_train_time=0.002524s aggregation_time=0.0641s round_time=1.8826s
+2026-05-08 04:19:53,806 P7513 INFO ********* Eval @ Turn 9 *********
+2026-05-08 04:19:55,765 P7513 INFO [Metrics] logloss: 0.093032 - MRR: 0.045387 - NDCG(5): 0.022199 - HR(5): 0.033940 - NDCG(10): 0.033342 - HR(10): 0.069536 - NDCG(20): 0.055815 - HR(20): 0.159768 - NDCG(50): 0.118164 - HR(50): 0.481457
+2026-05-08 04:19:55,765 P7513 INFO [Time] eval_time=1.9589s
+2026-05-08 04:19:55,765 P7513 INFO ********* Train Turn 10 *********
+2026-05-08 04:19:57,656 P7513 INFO Clients average loss: 0.6946991086006165
+2026-05-08 04:19:57,661 P7513 INFO [Time] turn=10 local_train_time=1.5281s avg_client_train_time=0.002530s aggregation_time=0.0646s round_time=1.8960s
+2026-05-08 04:19:57,661 P7513 INFO ********* Train Turn 11 *********
+2026-05-08 04:19:59,679 P7513 INFO Clients average loss: 0.6947765350341797
+2026-05-08 04:19:59,683 P7513 INFO [Time] turn=11 local_train_time=1.5344s avg_client_train_time=0.002540s aggregation_time=0.0647s round_time=2.0222s
+2026-05-08 04:19:59,683 P7513 INFO ********* Train Turn 12 *********
+2026-05-08 04:20:01,567 P7513 INFO Clients average loss: 0.6939542889595032
+2026-05-08 04:20:01,571 P7513 INFO [Time] turn=12 local_train_time=1.5275s avg_client_train_time=0.002529s aggregation_time=0.0641s round_time=1.8878s
+2026-05-08 04:20:01,571 P7513 INFO ********* Train Turn 13 *********
+2026-05-08 04:20:03,466 P7513 INFO Clients average loss: 0.6941685676574707
+2026-05-08 04:20:03,470 P7513 INFO [Time] turn=13 local_train_time=1.5385s avg_client_train_time=0.002547s aggregation_time=0.0645s round_time=1.8990s
+2026-05-08 04:20:03,471 P7513 INFO ********* Train Turn 14 *********
+2026-05-08 04:20:05,354 P7513 INFO Clients average loss: 0.6942382454872131
+2026-05-08 04:20:05,358 P7513 INFO [Time] turn=14 local_train_time=1.5269s avg_client_train_time=0.002528s aggregation_time=0.0646s round_time=1.8878s
+2026-05-08 04:20:05,359 P7513 INFO ********* Train Turn 15 *********
+2026-05-08 04:20:07,242 P7513 INFO Clients average loss: 0.6935076117515564
+2026-05-08 04:20:07,247 P7513 INFO [Time] turn=15 local_train_time=1.5274s avg_client_train_time=0.002529s aggregation_time=0.0647s round_time=1.8884s
+2026-05-08 04:20:07,247 P7513 INFO ********* Train Turn 16 *********
+2026-05-08 04:20:09,128 P7513 INFO Clients average loss: 0.6935052871704102
+2026-05-08 04:20:09,133 P7513 INFO [Time] turn=16 local_train_time=1.5263s avg_client_train_time=0.002527s aggregation_time=0.0639s round_time=1.8858s
+2026-05-08 04:20:09,133 P7513 INFO ********* Train Turn 17 *********
+2026-05-08 04:20:11,011 P7513 INFO Clients average loss: 0.6939256191253662
+2026-05-08 04:20:11,016 P7513 INFO [Time] turn=17 local_train_time=1.5231s avg_client_train_time=0.002522s aggregation_time=0.0642s round_time=1.8825s
+2026-05-08 04:20:11,016 P7513 INFO ********* Train Turn 18 *********
+2026-05-08 04:20:12,895 P7513 INFO Clients average loss: 0.6935752034187317
+2026-05-08 04:20:12,899 P7513 INFO [Time] turn=18 local_train_time=1.5242s avg_client_train_time=0.002523s aggregation_time=0.0646s round_time=1.8837s
+2026-05-08 04:20:12,900 P7513 INFO ********* Train Turn 19 *********
+2026-05-08 04:20:14,794 P7513 INFO Clients average loss: 0.6935207843780518
+2026-05-08 04:20:14,799 P7513 INFO [Time] turn=19 local_train_time=1.5370s avg_client_train_time=0.002545s aggregation_time=0.0650s round_time=1.8988s
+2026-05-08 04:20:14,799 P7513 INFO ********* Eval @ Turn 19 *********
+2026-05-08 04:20:16,776 P7513 INFO [Metrics] logloss: 0.090218 - MRR: 0.053961 - NDCG(5): 0.029304 - HR(5): 0.041556 - NDCG(10): 0.041832 - HR(10): 0.080960 - NDCG(20): 0.066377 - HR(20): 0.179801 - NDCG(50): 0.134914 - HR(50): 0.531788
+2026-05-08 04:20:16,776 P7513 INFO [Time] eval_time=1.9772s
+2026-05-08 04:20:16,776 P7513 INFO ********* Train Turn 20 *********
+2026-05-08 04:20:18,871 P7513 INFO Clients average loss: 0.694028913974762
+2026-05-08 04:20:18,876 P7513 INFO [Time] turn=20 local_train_time=1.7298s avg_client_train_time=0.002864s aggregation_time=0.0646s round_time=2.1000s
+2026-05-08 04:20:18,876 P7513 INFO ********* Train Turn 21 *********
+2026-05-08 04:20:20,960 P7513 INFO Clients average loss: 0.693840503692627
+2026-05-08 04:20:20,964 P7513 INFO [Time] turn=21 local_train_time=1.7212s avg_client_train_time=0.002850s aggregation_time=0.0646s round_time=2.0881s
+2026-05-08 04:20:20,964 P7513 INFO ********* Train Turn 22 *********
+2026-05-08 04:20:23,045 P7513 INFO Clients average loss: 0.6935080289840698
+2026-05-08 04:20:23,050 P7513 INFO [Time] turn=22 local_train_time=1.7186s avg_client_train_time=0.002845s aggregation_time=0.0643s round_time=2.0854s
+2026-05-08 04:20:23,050 P7513 INFO ********* Train Turn 23 *********
+2026-05-08 04:20:25,143 P7513 INFO Clients average loss: 0.6938940286636353
+2026-05-08 04:20:25,148 P7513 INFO [Time] turn=23 local_train_time=1.7292s avg_client_train_time=0.002863s aggregation_time=0.0648s round_time=2.0977s
+2026-05-08 04:20:25,148 P7513 INFO ********* Train Turn 24 *********
+2026-05-08 04:20:27,219 P7513 INFO Clients average loss: 0.69389408826828
+2026-05-08 04:20:27,223 P7513 INFO [Time] turn=24 local_train_time=1.7122s avg_client_train_time=0.002835s aggregation_time=0.0646s round_time=2.0756s
+2026-05-08 04:20:27,224 P7513 INFO ********* Train Turn 25 *********
+2026-05-08 04:20:29,290 P7513 INFO Clients average loss: 0.6935817003250122
+2026-05-08 04:20:29,295 P7513 INFO [Time] turn=25 local_train_time=1.7077s avg_client_train_time=0.002827s aggregation_time=0.0647s round_time=2.0710s
+2026-05-08 04:20:29,295 P7513 INFO ********* Train Turn 26 *********
+2026-05-08 04:20:31,363 P7513 INFO Clients average loss: 0.6934471130371094
+2026-05-08 04:20:31,367 P7513 INFO [Time] turn=26 local_train_time=1.7096s avg_client_train_time=0.002830s aggregation_time=0.0638s round_time=2.0724s
+2026-05-08 04:20:31,367 P7513 INFO ********* Train Turn 27 *********
+2026-05-08 04:20:33,434 P7513 INFO Clients average loss: 0.6929031014442444
+2026-05-08 04:20:33,438 P7513 INFO [Time] turn=27 local_train_time=1.7076s avg_client_train_time=0.002827s aggregation_time=0.0644s round_time=2.0708s
+2026-05-08 04:20:33,438 P7513 INFO ********* Train Turn 28 *********
+2026-05-08 04:20:35,498 P7513 INFO Clients average loss: 0.6930212378501892
+2026-05-08 04:20:35,503 P7513 INFO [Time] turn=28 local_train_time=1.7011s avg_client_train_time=0.002816s aggregation_time=0.0653s round_time=2.0643s
+2026-05-08 04:20:35,503 P7513 INFO ********* Train Turn 29 *********
+2026-05-08 04:20:37,560 P7513 INFO Clients average loss: 0.6933532357215881
+2026-05-08 04:20:37,564 P7513 INFO [Time] turn=29 local_train_time=1.6989s avg_client_train_time=0.002813s aggregation_time=0.0643s round_time=2.0616s
+2026-05-08 04:20:37,564 P7513 INFO ********* Eval @ Turn 29 *********
+2026-05-08 04:20:39,669 P7513 INFO [Metrics] logloss: 0.085920 - MRR: 0.058438 - NDCG(5): 0.032871 - HR(5): 0.046358 - NDCG(10): 0.045585 - HR(10): 0.086424 - NDCG(20): 0.073586 - HR(20): 0.198841 - NDCG(50): 0.147057 - HR(50): 0.574834
+2026-05-08 04:20:39,669 P7513 INFO [Time] eval_time=2.1046s
+2026-05-08 04:20:39,669 P7513 INFO ********* Train Turn 30 *********
+2026-05-08 04:20:41,734 P7513 INFO Clients average loss: 0.6924999952316284
+2026-05-08 04:20:41,739 P7513 INFO [Time] turn=30 local_train_time=1.6994s avg_client_train_time=0.002813s aggregation_time=0.0643s round_time=2.0694s
+2026-05-08 04:20:41,739 P7513 INFO ********* Train Turn 31 *********
+2026-05-08 04:20:43,789 P7513 INFO Clients average loss: 0.6926924586296082
+2026-05-08 04:20:43,793 P7513 INFO [Time] turn=31 local_train_time=1.6910s avg_client_train_time=0.002800s aggregation_time=0.0644s round_time=2.0544s
+2026-05-08 04:20:43,793 P7513 INFO ********* Train Turn 32 *********
+2026-05-08 04:20:45,845 P7513 INFO Clients average loss: 0.6924428343772888
+2026-05-08 04:20:45,849 P7513 INFO [Time] turn=32 local_train_time=1.6972s avg_client_train_time=0.002810s aggregation_time=0.0640s round_time=2.0561s
+2026-05-08 04:20:45,850 P7513 INFO ********* Train Turn 33 *********
+2026-05-08 04:20:47,925 P7513 INFO Clients average loss: 0.6923827528953552
+2026-05-08 04:20:47,930 P7513 INFO [Time] turn=33 local_train_time=1.7195s avg_client_train_time=0.002847s aggregation_time=0.0641s round_time=2.0800s
+2026-05-08 04:20:47,930 P7513 INFO ********* Train Turn 34 *********
+2026-05-08 04:20:49,978 P7513 INFO Clients average loss: 0.6925098299980164
+2026-05-08 04:20:49,983 P7513 INFO [Time] turn=34 local_train_time=1.6936s avg_client_train_time=0.002804s aggregation_time=0.0645s round_time=2.0527s
+2026-05-08 04:20:49,983 P7513 INFO ********* Train Turn 35 *********
+2026-05-08 04:20:52,028 P7513 INFO Clients average loss: 0.6921070218086243
+2026-05-08 04:20:52,033 P7513 INFO [Time] turn=35 local_train_time=1.6921s avg_client_train_time=0.002802s aggregation_time=0.0640s round_time=2.0503s
+2026-05-08 04:20:52,033 P7513 INFO ********* Train Turn 36 *********
+2026-05-08 04:20:54,080 P7513 INFO Clients average loss: 0.6916229128837585
+2026-05-08 04:20:54,085 P7513 INFO [Time] turn=36 local_train_time=1.6923s avg_client_train_time=0.002802s aggregation_time=0.0651s round_time=2.0514s
+2026-05-08 04:20:54,085 P7513 INFO ********* Train Turn 37 *********
+2026-05-08 04:20:56,134 P7513 INFO Clients average loss: 0.6916700005531311
+2026-05-08 04:20:56,138 P7513 INFO [Time] turn=37 local_train_time=1.6945s avg_client_train_time=0.002805s aggregation_time=0.0640s round_time=2.0537s
+2026-05-08 04:20:56,139 P7513 INFO ********* Train Turn 38 *********
+2026-05-08 04:20:58,209 P7513 INFO Clients average loss: 0.6915420293807983
+2026-05-08 04:20:58,214 P7513 INFO [Time] turn=38 local_train_time=1.7144s avg_client_train_time=0.002838s aggregation_time=0.0643s round_time=2.0756s
+2026-05-08 04:20:58,214 P7513 INFO ********* Train Turn 39 *********
+2026-05-08 04:21:00,276 P7513 INFO Clients average loss: 0.6912824511528015
+2026-05-08 04:21:00,281 P7513 INFO [Time] turn=39 local_train_time=1.7050s avg_client_train_time=0.002823s aggregation_time=0.0642s round_time=2.0662s
+2026-05-08 04:21:00,281 P7513 INFO ********* Eval @ Turn 39 *********
+2026-05-08 04:21:02,245 P7513 INFO [Metrics] logloss: 0.083078 - MRR: 0.067298 - NDCG(5): 0.038660 - HR(5): 0.053477 - NDCG(10): 0.055539 - HR(10): 0.106623 - NDCG(20): 0.092175 - HR(20): 0.253808 - NDCG(50): 0.167560 - HR(50): 0.638411
+2026-05-08 04:21:02,245 P7513 INFO [Time] eval_time=1.9646s
+2026-05-08 04:21:02,245 P7513 INFO ********* Train Turn 40 *********
+2026-05-08 04:21:04,323 P7513 INFO Clients average loss: 0.6905331015586853
+2026-05-08 04:21:04,327 P7513 INFO [Time] turn=40 local_train_time=1.7116s avg_client_train_time=0.002834s aggregation_time=0.0643s round_time=2.0818s
+2026-05-08 04:21:04,327 P7513 INFO ********* Train Turn 41 *********
+2026-05-08 04:21:06,386 P7513 INFO Clients average loss: 0.6902541518211365
+2026-05-08 04:21:06,390 P7513 INFO [Time] turn=41 local_train_time=1.7022s avg_client_train_time=0.002818s aggregation_time=0.0642s round_time=2.0631s
+2026-05-08 04:21:06,391 P7513 INFO ********* Train Turn 42 *********
+2026-05-08 04:21:08,451 P7513 INFO Clients average loss: 0.6901944875717163
+2026-05-08 04:21:08,456 P7513 INFO [Time] turn=42 local_train_time=1.7017s avg_client_train_time=0.002817s aggregation_time=0.0658s round_time=2.0656s
+2026-05-08 04:21:08,456 P7513 INFO ********* Train Turn 43 *********
+2026-05-08 04:21:10,517 P7513 INFO Clients average loss: 0.6893640756607056
+2026-05-08 04:21:10,521 P7513 INFO [Time] turn=43 local_train_time=1.7012s avg_client_train_time=0.002817s aggregation_time=0.0644s round_time=2.0647s
+2026-05-08 04:21:10,521 P7513 INFO ********* Train Turn 44 *********
+2026-05-08 04:21:12,570 P7513 INFO Clients average loss: 0.6892991662025452
+2026-05-08 04:21:12,574 P7513 INFO [Time] turn=44 local_train_time=1.6929s avg_client_train_time=0.002803s aggregation_time=0.0641s round_time=2.0530s
+2026-05-08 04:21:12,574 P7513 INFO ********* Train Turn 45 *********
+2026-05-08 04:21:14,633 P7513 INFO Clients average loss: 0.6889220476150513
+2026-05-08 04:21:14,638 P7513 INFO [Time] turn=45 local_train_time=1.7031s avg_client_train_time=0.002820s aggregation_time=0.0639s round_time=2.0633s
+2026-05-08 04:21:14,638 P7513 INFO ********* Train Turn 46 *********
+2026-05-08 04:21:16,700 P7513 INFO Clients average loss: 0.6884515881538391
+2026-05-08 04:21:16,704 P7513 INFO [Time] turn=46 local_train_time=1.7047s avg_client_train_time=0.002822s aggregation_time=0.0645s round_time=2.0665s
+2026-05-08 04:21:16,704 P7513 INFO ********* Train Turn 47 *********
+2026-05-08 04:21:18,779 P7513 INFO Clients average loss: 0.6875472068786621
+2026-05-08 04:21:18,783 P7513 INFO [Time] turn=47 local_train_time=1.7151s avg_client_train_time=0.002840s aggregation_time=0.0653s round_time=2.0787s
+2026-05-08 04:21:18,783 P7513 INFO ********* Train Turn 48 *********
+2026-05-08 04:21:20,863 P7513 INFO Clients average loss: 0.6868659257888794
+2026-05-08 04:21:20,868 P7513 INFO [Time] turn=48 local_train_time=1.7214s avg_client_train_time=0.002850s aggregation_time=0.0638s round_time=2.0846s
+2026-05-08 04:21:20,868 P7513 INFO ********* Train Turn 49 *********
+2026-05-08 04:21:22,936 P7513 INFO Clients average loss: 0.6845879554748535
+2026-05-08 04:21:22,941 P7513 INFO [Time] turn=49 local_train_time=1.7068s avg_client_train_time=0.002826s aggregation_time=0.0642s round_time=2.0727s
+2026-05-08 04:21:22,941 P7513 INFO ********* Eval @ Turn 49 *********
+2026-05-08 04:21:24,889 P7513 INFO [Metrics] logloss: 0.085704 - MRR: 0.082035 - NDCG(5): 0.049285 - HR(5): 0.072185 - NDCG(10): 0.078821 - HR(10): 0.165232 - NDCG(20): 0.127429 - HR(20): 0.357947 - NDCG(50): 0.193315 - HR(50): 0.690728
+2026-05-08 04:21:24,889 P7513 INFO [Time] eval_time=1.9477s
+2026-05-08 04:21:24,889 P7513 INFO ********* Train Turn 50 *********
+2026-05-08 04:21:26,975 P7513 INFO Clients average loss: 0.6843929290771484
+2026-05-08 04:21:26,979 P7513 INFO [Time] turn=50 local_train_time=1.7176s avg_client_train_time=0.002844s aggregation_time=0.0642s round_time=2.0901s
+2026-05-08 04:21:26,979 P7513 INFO ********* Train Turn 51 *********
+2026-05-08 04:21:29,188 P7513 INFO Clients average loss: 0.6820167303085327
+2026-05-08 04:21:29,193 P7513 INFO [Time] turn=51 local_train_time=1.7128s avg_client_train_time=0.002836s aggregation_time=0.0641s round_time=2.2135s
+2026-05-08 04:21:29,193 P7513 INFO ********* Train Turn 52 *********
+2026-05-08 04:21:31,272 P7513 INFO Clients average loss: 0.6815128922462463
+2026-05-08 04:21:31,276 P7513 INFO [Time] turn=52 local_train_time=1.7201s avg_client_train_time=0.002848s aggregation_time=0.0645s round_time=2.0834s
+2026-05-08 04:21:31,277 P7513 INFO ********* Train Turn 53 *********
+2026-05-08 04:21:33,355 P7513 INFO Clients average loss: 0.6803805232048035
+2026-05-08 04:21:33,360 P7513 INFO [Time] turn=53 local_train_time=1.7203s avg_client_train_time=0.002848s aggregation_time=0.0643s round_time=2.0832s
+2026-05-08 04:21:33,360 P7513 INFO ********* Train Turn 54 *********
+2026-05-08 04:21:35,437 P7513 INFO Clients average loss: 0.6788868308067322
+2026-05-08 04:21:35,442 P7513 INFO [Time] turn=54 local_train_time=1.7190s avg_client_train_time=0.002846s aggregation_time=0.0647s round_time=2.0820s
+2026-05-08 04:21:35,442 P7513 INFO ********* Train Turn 55 *********
+2026-05-08 04:21:37,502 P7513 INFO Clients average loss: 0.6769573092460632
+2026-05-08 04:21:37,506 P7513 INFO [Time] turn=55 local_train_time=1.7032s avg_client_train_time=0.002820s aggregation_time=0.0646s round_time=2.0643s
+2026-05-08 04:21:37,506 P7513 INFO ********* Train Turn 56 *********
+2026-05-08 04:21:39,555 P7513 INFO Clients average loss: 0.6751278638839722
+2026-05-08 04:21:39,559 P7513 INFO [Time] turn=56 local_train_time=1.6930s avg_client_train_time=0.002803s aggregation_time=0.0645s round_time=2.0529s
+2026-05-08 04:21:39,560 P7513 INFO ********* Train Turn 57 *********
+2026-05-08 04:21:41,621 P7513 INFO Clients average loss: 0.6714978218078613
+2026-05-08 04:21:41,626 P7513 INFO [Time] turn=57 local_train_time=1.7043s avg_client_train_time=0.002822s aggregation_time=0.0649s round_time=2.0663s
+2026-05-08 04:21:41,626 P7513 INFO ********* Train Turn 58 *********
+2026-05-08 04:21:43,680 P7513 INFO Clients average loss: 0.668336808681488
+2026-05-08 04:21:43,685 P7513 INFO [Time] turn=58 local_train_time=1.6987s avg_client_train_time=0.002812s aggregation_time=0.0644s round_time=2.0585s
+2026-05-08 04:21:43,685 P7513 INFO ********* Train Turn 59 *********
+2026-05-08 04:21:45,736 P7513 INFO Clients average loss: 0.6653751134872437
+2026-05-08 04:21:45,741 P7513 INFO [Time] turn=59 local_train_time=1.6961s avg_client_train_time=0.002808s aggregation_time=0.0651s round_time=2.0559s
+2026-05-08 04:21:45,741 P7513 INFO ********* Eval @ Turn 59 *********
+2026-05-08 04:21:47,712 P7513 INFO [Metrics] logloss: 0.118035 - MRR: 0.115195 - NDCG(5): 0.093812 - HR(5): 0.160265 - NDCG(10): 0.142570 - HR(10): 0.310927 - NDCG(20): 0.177407 - HR(20): 0.449172 - NDCG(50): 0.231926 - HR(50): 0.722185
+2026-05-08 04:21:47,713 P7513 INFO [Time] eval_time=1.9719s
+2026-05-08 04:21:47,713 P7513 INFO ********* Train Turn 60 *********
+2026-05-08 04:21:49,782 P7513 INFO Clients average loss: 0.6611365675926208
+2026-05-08 04:21:49,786 P7513 INFO [Time] turn=60 local_train_time=1.7040s avg_client_train_time=0.002821s aggregation_time=0.0645s round_time=2.0734s
+2026-05-08 04:21:49,786 P7513 INFO ********* Train Turn 61 *********
+2026-05-08 04:21:51,841 P7513 INFO Clients average loss: 0.6565646529197693
+2026-05-08 04:21:51,846 P7513 INFO [Time] turn=61 local_train_time=1.6988s avg_client_train_time=0.002813s aggregation_time=0.0646s round_time=2.0596s
+2026-05-08 04:21:51,846 P7513 INFO ********* Train Turn 62 *********
+2026-05-08 04:21:53,915 P7513 INFO Clients average loss: 0.6510326266288757
+2026-05-08 04:21:53,919 P7513 INFO [Time] turn=62 local_train_time=1.7120s avg_client_train_time=0.002834s aggregation_time=0.0642s round_time=2.0731s
+2026-05-08 04:21:53,919 P7513 INFO ********* Train Turn 63 *********
+2026-05-08 04:21:55,971 P7513 INFO Clients average loss: 0.6456811428070068
+2026-05-08 04:21:55,976 P7513 INFO [Time] turn=63 local_train_time=1.6966s avg_client_train_time=0.002809s aggregation_time=0.0642s round_time=2.0564s
+2026-05-08 04:21:55,976 P7513 INFO ********* Train Turn 64 *********
+2026-05-08 04:21:58,027 P7513 INFO Clients average loss: 0.6396088004112244
+2026-05-08 04:21:58,032 P7513 INFO [Time] turn=64 local_train_time=1.6951s avg_client_train_time=0.002807s aggregation_time=0.0642s round_time=2.0558s
+2026-05-08 04:21:58,032 P7513 INFO ********* Train Turn 65 *********
+2026-05-08 04:22:00,101 P7513 INFO Clients average loss: 0.6334295868873596
+2026-05-08 04:22:00,106 P7513 INFO [Time] turn=65 local_train_time=1.7111s avg_client_train_time=0.002833s aggregation_time=0.0657s round_time=2.0742s
+2026-05-08 04:22:00,106 P7513 INFO ********* Train Turn 66 *********
+2026-05-08 04:22:02,187 P7513 INFO Clients average loss: 0.6256906390190125
+2026-05-08 04:22:02,191 P7513 INFO [Time] turn=66 local_train_time=1.7209s avg_client_train_time=0.002849s aggregation_time=0.0644s round_time=2.0852s
+2026-05-08 04:22:02,191 P7513 INFO ********* Train Turn 67 *********
+2026-05-08 04:22:04,267 P7513 INFO Clients average loss: 0.6164666414260864
+2026-05-08 04:22:04,272 P7513 INFO [Time] turn=67 local_train_time=1.7183s avg_client_train_time=0.002845s aggregation_time=0.0637s round_time=2.0803s
+2026-05-08 04:22:04,272 P7513 INFO ********* Train Turn 68 *********
+2026-05-08 04:22:06,324 P7513 INFO Clients average loss: 0.6070837378501892
+2026-05-08 04:22:06,329 P7513 INFO [Time] turn=68 local_train_time=1.6949s avg_client_train_time=0.002806s aggregation_time=0.0655s round_time=2.0568s
+2026-05-08 04:22:06,329 P7513 INFO ********* Train Turn 69 *********
+2026-05-08 04:22:08,407 P7513 INFO Clients average loss: 0.6004015803337097
+2026-05-08 04:22:08,412 P7513 INFO [Time] turn=69 local_train_time=1.7181s avg_client_train_time=0.002845s aggregation_time=0.0645s round_time=2.0830s
+2026-05-08 04:22:08,412 P7513 INFO ********* Eval @ Turn 69 *********
+2026-05-08 04:22:10,562 P7513 INFO [Metrics] logloss: 0.290850 - MRR: 0.162280 - NDCG(5): 0.158796 - HR(5): 0.260099 - NDCG(10): 0.193796 - HR(10): 0.368543 - NDCG(20): 0.234638 - HR(20): 0.532285 - NDCG(50): 0.283545 - HR(50): 0.777815
+2026-05-08 04:22:10,562 P7513 INFO [Time] eval_time=2.1500s
+2026-05-08 04:22:10,562 P7513 INFO ********* Train Turn 70 *********
+2026-05-08 04:22:12,644 P7513 INFO Clients average loss: 0.5871619582176208
+2026-05-08 04:22:12,649 P7513 INFO [Time] turn=70 local_train_time=1.7136s avg_client_train_time=0.002837s aggregation_time=0.0648s round_time=2.0862s
+2026-05-08 04:22:12,649 P7513 INFO ********* Train Turn 71 *********
+2026-05-08 04:22:14,871 P7513 INFO Clients average loss: 0.5778285264968872
+2026-05-08 04:22:14,876 P7513 INFO [Time] turn=71 local_train_time=1.8602s avg_client_train_time=0.003080s aggregation_time=0.0651s round_time=2.2274s
+2026-05-08 04:22:14,876 P7513 INFO ********* Train Turn 72 *********
+2026-05-08 04:22:17,192 P7513 INFO Clients average loss: 0.5651538968086243
+2026-05-08 04:22:17,197 P7513 INFO [Time] turn=72 local_train_time=1.9465s avg_client_train_time=0.003223s aggregation_time=0.0697s round_time=2.3204s
+2026-05-08 04:22:17,197 P7513 INFO ********* Train Turn 73 *********
+2026-05-08 04:22:19,509 P7513 INFO Clients average loss: 0.5563003420829773
+2026-05-08 04:22:19,514 P7513 INFO [Time] turn=73 local_train_time=1.9471s avg_client_train_time=0.003224s aggregation_time=0.0646s round_time=2.3167s
+2026-05-08 04:22:19,514 P7513 INFO ********* Train Turn 74 *********
+2026-05-08 04:22:21,803 P7513 INFO Clients average loss: 0.5474410057067871
+2026-05-08 04:22:21,808 P7513 INFO [Time] turn=74 local_train_time=1.9262s avg_client_train_time=0.003189s aggregation_time=0.0649s round_time=2.2939s
+2026-05-08 04:22:21,808 P7513 INFO ********* Train Turn 75 *********
+2026-05-08 04:22:23,877 P7513 INFO Clients average loss: 0.5330796241760254
+2026-05-08 04:22:23,881 P7513 INFO [Time] turn=75 local_train_time=1.7107s avg_client_train_time=0.002832s aggregation_time=0.0657s round_time=2.0737s
+2026-05-08 04:22:23,882 P7513 INFO ********* Train Turn 76 *********
+2026-05-08 04:22:26,061 P7513 INFO Clients average loss: 0.5272184014320374
+2026-05-08 04:22:26,066 P7513 INFO [Time] turn=76 local_train_time=1.8181s avg_client_train_time=0.003010s aggregation_time=0.0648s round_time=2.1841s
+2026-05-08 04:22:26,066 P7513 INFO ********* Train Turn 77 *********
+2026-05-08 04:22:28,116 P7513 INFO Clients average loss: 0.5175425410270691
+2026-05-08 04:22:28,121 P7513 INFO [Time] turn=77 local_train_time=1.6956s avg_client_train_time=0.002807s aggregation_time=0.0639s round_time=2.0548s
+2026-05-08 04:22:28,121 P7513 INFO ********* Train Turn 78 *********
+2026-05-08 04:22:30,172 P7513 INFO Clients average loss: 0.5080279111862183
+2026-05-08 04:22:30,176 P7513 INFO [Time] turn=78 local_train_time=1.6969s avg_client_train_time=0.002809s aggregation_time=0.0640s round_time=2.0556s
+2026-05-08 04:22:30,177 P7513 INFO ********* Train Turn 79 *********
+2026-05-08 04:22:32,227 P7513 INFO Clients average loss: 0.4932568371295929
+2026-05-08 04:22:32,232 P7513 INFO [Time] turn=79 local_train_time=1.6955s avg_client_train_time=0.002807s aggregation_time=0.0640s round_time=2.0553s
+2026-05-08 04:22:32,232 P7513 INFO ********* Eval @ Turn 79 *********
+2026-05-08 04:22:34,214 P7513 INFO [Metrics] logloss: 1.715129 - MRR: 0.194158 - NDCG(5): 0.190564 - HR(5): 0.295695 - NDCG(10): 0.228861 - HR(10): 0.415894 - NDCG(20): 0.276094 - HR(20): 0.603146 - NDCG(50): 0.324939 - HR(50): 0.852483
+2026-05-08 04:22:34,214 P7513 INFO [Time] eval_time=1.9820s
+2026-05-08 04:22:34,214 P7513 INFO ********* Train Turn 80 *********
+2026-05-08 04:22:36,332 P7513 INFO Clients average loss: 0.4841359257698059
+2026-05-08 04:22:36,337 P7513 INFO [Time] turn=80 local_train_time=1.7483s avg_client_train_time=0.002895s aggregation_time=0.0655s round_time=2.1227s
+2026-05-08 04:22:36,337 P7513 INFO ********* Train Turn 81 *********
+2026-05-08 04:22:38,644 P7513 INFO Clients average loss: 0.4769390821456909
+2026-05-08 04:22:38,649 P7513 INFO [Time] turn=81 local_train_time=1.9423s avg_client_train_time=0.003216s aggregation_time=0.0647s round_time=2.3119s
+2026-05-08 04:22:38,649 P7513 INFO ********* Train Turn 82 *********
+2026-05-08 04:22:40,956 P7513 INFO Clients average loss: 0.46900612115859985
+2026-05-08 04:22:40,961 P7513 INFO [Time] turn=82 local_train_time=1.9415s avg_client_train_time=0.003214s aggregation_time=0.0652s round_time=2.3115s
+2026-05-08 04:22:40,961 P7513 INFO ********* Train Turn 83 *********
+2026-05-08 04:22:43,271 P7513 INFO Clients average loss: 0.47172293066978455
+2026-05-08 04:22:43,276 P7513 INFO [Time] turn=83 local_train_time=1.9453s avg_client_train_time=0.003221s aggregation_time=0.0649s round_time=2.3152s
+2026-05-08 04:22:43,276 P7513 INFO ********* Train Turn 84 *********
+2026-05-08 04:22:45,585 P7513 INFO Clients average loss: 0.46307408809661865
+2026-05-08 04:22:45,589 P7513 INFO [Time] turn=84 local_train_time=1.9449s avg_client_train_time=0.003220s aggregation_time=0.0649s round_time=2.3132s
+2026-05-08 04:22:45,590 P7513 INFO ********* Train Turn 85 *********
+2026-05-08 04:22:47,898 P7513 INFO Clients average loss: 0.4565986096858978
+2026-05-08 04:22:47,902 P7513 INFO [Time] turn=85 local_train_time=1.9415s avg_client_train_time=0.003214s aggregation_time=0.0659s round_time=2.3128s
+2026-05-08 04:22:47,902 P7513 INFO ********* Train Turn 86 *********
+2026-05-08 04:22:50,215 P7513 INFO Clients average loss: 0.457261860370636
+2026-05-08 04:22:50,220 P7513 INFO [Time] turn=86 local_train_time=1.9452s avg_client_train_time=0.003221s aggregation_time=0.0660s round_time=2.3175s
+2026-05-08 04:22:50,220 P7513 INFO ********* Train Turn 87 *********
+2026-05-08 04:22:52,527 P7513 INFO Clients average loss: 0.43762287497520447
+2026-05-08 04:22:52,531 P7513 INFO [Time] turn=87 local_train_time=1.9414s avg_client_train_time=0.003214s aggregation_time=0.0642s round_time=2.3112s
+2026-05-08 04:22:52,532 P7513 INFO ********* Train Turn 88 *********
+2026-05-08 04:22:54,841 P7513 INFO Clients average loss: 0.44078370928764343
+2026-05-08 04:22:54,845 P7513 INFO [Time] turn=88 local_train_time=1.9439s avg_client_train_time=0.003218s aggregation_time=0.0644s round_time=2.3139s
+2026-05-08 04:22:54,846 P7513 INFO ********* Train Turn 89 *********
+2026-05-08 04:22:57,153 P7513 INFO Clients average loss: 0.43278807401657104
+2026-05-08 04:22:57,158 P7513 INFO [Time] turn=89 local_train_time=1.9419s avg_client_train_time=0.003215s aggregation_time=0.0654s round_time=2.3121s
+2026-05-08 04:22:57,158 P7513 INFO ********* Eval @ Turn 89 *********
+2026-05-08 04:22:59,150 P7513 INFO [Metrics] logloss: 2.639761 - MRR: 0.214908 - NDCG(5): 0.207803 - HR(5): 0.311755 - NDCG(10): 0.252992 - HR(10): 0.452483 - NDCG(20): 0.301161 - HR(20): 0.643543 - NDCG(50): 0.353754 - HR(50): 0.907616
+2026-05-08 04:22:59,151 P7513 INFO [Time] eval_time=1.9926s
+2026-05-08 04:22:59,151 P7513 INFO ********* Train Turn 90 *********
+2026-05-08 04:23:01,356 P7513 INFO Clients average loss: 0.42990031838417053
+2026-05-08 04:23:01,361 P7513 INFO [Time] turn=90 local_train_time=1.8348s avg_client_train_time=0.003038s aggregation_time=0.0647s round_time=2.2106s
+2026-05-08 04:23:01,361 P7513 INFO ********* Train Turn 91 *********
+2026-05-08 04:23:03,814 P7513 INFO Clients average loss: 0.41690564155578613
+2026-05-08 04:23:03,819 P7513 INFO [Time] turn=91 local_train_time=1.9507s avg_client_train_time=0.003230s aggregation_time=0.0645s round_time=2.4575s
+2026-05-08 04:23:03,819 P7513 INFO ********* Train Turn 92 *********
+2026-05-08 04:23:06,130 P7513 INFO Clients average loss: 0.42012083530426025
+2026-05-08 04:23:06,134 P7513 INFO [Time] turn=92 local_train_time=1.9461s avg_client_train_time=0.003222s aggregation_time=0.0648s round_time=2.3154s
+2026-05-08 04:23:06,135 P7513 INFO ********* Train Turn 93 *********
+2026-05-08 04:23:08,219 P7513 INFO Clients average loss: 0.41490381956100464
+2026-05-08 04:23:08,224 P7513 INFO [Time] turn=93 local_train_time=1.7254s avg_client_train_time=0.002857s aggregation_time=0.0649s round_time=2.0895s
+2026-05-08 04:23:08,224 P7513 INFO ********* Train Turn 94 *********
+2026-05-08 04:23:10,301 P7513 INFO Clients average loss: 0.4133909046649933
+2026-05-08 04:23:10,306 P7513 INFO [Time] turn=94 local_train_time=1.7192s avg_client_train_time=0.002846s aggregation_time=0.0644s round_time=2.0813s
+2026-05-08 04:23:10,306 P7513 INFO ********* Train Turn 95 *********
+2026-05-08 04:23:12,357 P7513 INFO Clients average loss: 0.4082980155944824
+2026-05-08 04:23:12,362 P7513 INFO [Time] turn=95 local_train_time=1.6968s avg_client_train_time=0.002809s aggregation_time=0.0645s round_time=2.0561s
+2026-05-08 04:23:12,362 P7513 INFO ********* Train Turn 96 *********
+2026-05-08 04:23:14,416 P7513 INFO Clients average loss: 0.4020695388317108
+2026-05-08 04:23:14,421 P7513 INFO [Time] turn=96 local_train_time=1.6993s avg_client_train_time=0.002813s aggregation_time=0.0645s round_time=2.0591s
+2026-05-08 04:23:14,421 P7513 INFO ********* Train Turn 97 *********
+2026-05-08 04:23:16,471 P7513 INFO Clients average loss: 0.40039849281311035
+2026-05-08 04:23:16,476 P7513 INFO [Time] turn=97 local_train_time=1.6957s avg_client_train_time=0.002808s aggregation_time=0.0645s round_time=2.0545s
+2026-05-08 04:23:16,476 P7513 INFO ********* Train Turn 98 *********
+2026-05-08 04:23:18,542 P7513 INFO Clients average loss: 0.40164127945899963
+2026-05-08 04:23:18,546 P7513 INFO [Time] turn=98 local_train_time=1.7078s avg_client_train_time=0.002827s aggregation_time=0.0652s round_time=2.0703s
+2026-05-08 04:23:18,546 P7513 INFO ********* Train Turn 99 *********
+2026-05-08 04:23:20,605 P7513 INFO Clients average loss: 0.3971055746078491
+2026-05-08 04:23:20,609 P7513 INFO [Time] turn=99 local_train_time=1.7023s avg_client_train_time=0.002818s aggregation_time=0.0642s round_time=2.0630s
+2026-05-08 04:23:20,610 P7513 INFO ********* Eval @ Turn 99 *********
+2026-05-08 04:23:22,608 P7513 INFO [Metrics] logloss: 2.817280 - MRR: 0.224476 - NDCG(5): 0.217511 - HR(5): 0.326325 - NDCG(10): 0.263765 - HR(10): 0.470530 - NDCG(20): 0.319635 - HR(20): 0.692715 - NDCG(50): 0.365901 - HR(50): 0.921854
+2026-05-08 04:23:22,608 P7513 INFO [Time] eval_time=1.9987s
+2026-05-08 04:23:22,608 P7513 INFO ********* Train Turn 100 *********
+2026-05-08 04:23:24,692 P7513 INFO Clients average loss: 0.3903702199459076
+2026-05-08 04:23:24,696 P7513 INFO [Time] turn=100 local_train_time=1.7159s avg_client_train_time=0.002841s aggregation_time=0.0648s round_time=2.0880s
+2026-05-08 04:23:24,697 P7513 INFO ********* Train Turn 101 *********
+2026-05-08 04:23:26,771 P7513 INFO Clients average loss: 0.37707245349884033
+2026-05-08 04:23:26,776 P7513 INFO [Time] turn=101 local_train_time=1.7152s avg_client_train_time=0.002840s aggregation_time=0.0652s round_time=2.0791s
+2026-05-08 04:23:26,776 P7513 INFO ********* Train Turn 102 *********
+2026-05-08 04:23:28,857 P7513 INFO Clients average loss: 0.38290169835090637
+2026-05-08 04:23:28,862 P7513 INFO [Time] turn=102 local_train_time=1.7214s avg_client_train_time=0.002850s aggregation_time=0.0654s round_time=2.0861s
+2026-05-08 04:23:28,862 P7513 INFO ********* Train Turn 103 *********
+2026-05-08 04:23:30,932 P7513 INFO Clients average loss: 0.38019466400146484
+2026-05-08 04:23:30,937 P7513 INFO [Time] turn=103 local_train_time=1.7110s avg_client_train_time=0.002833s aggregation_time=0.0651s round_time=2.0746s
+2026-05-08 04:23:30,937 P7513 INFO ********* Train Turn 104 *********
+2026-05-08 04:23:33,021 P7513 INFO Clients average loss: 0.3760817050933838
+2026-05-08 04:23:33,026 P7513 INFO [Time] turn=104 local_train_time=1.7239s avg_client_train_time=0.002854s aggregation_time=0.0659s round_time=2.0889s
+2026-05-08 04:23:33,026 P7513 INFO ********* Train Turn 105 *********
+2026-05-08 04:23:35,097 P7513 INFO Clients average loss: 0.3778231143951416
+2026-05-08 04:23:35,101 P7513 INFO [Time] turn=105 local_train_time=1.7107s avg_client_train_time=0.002832s aggregation_time=0.0643s round_time=2.0755s
+2026-05-08 04:23:35,102 P7513 INFO ********* Train Turn 106 *********
+2026-05-08 04:23:37,173 P7513 INFO Clients average loss: 0.375445693731308
+2026-05-08 04:23:37,178 P7513 INFO [Time] turn=106 local_train_time=1.7129s avg_client_train_time=0.002836s aggregation_time=0.0651s round_time=2.0765s
+2026-05-08 04:23:37,178 P7513 INFO ********* Train Turn 107 *********
+2026-05-08 04:23:39,255 P7513 INFO Clients average loss: 0.37722253799438477
+2026-05-08 04:23:39,260 P7513 INFO [Time] turn=107 local_train_time=1.7165s avg_client_train_time=0.002842s aggregation_time=0.0646s round_time=2.0816s
+2026-05-08 04:23:39,260 P7513 INFO ********* Train Turn 108 *********
+2026-05-08 04:23:41,333 P7513 INFO Clients average loss: 0.365990549325943
+2026-05-08 04:23:41,337 P7513 INFO [Time] turn=108 local_train_time=1.7138s avg_client_train_time=0.002837s aggregation_time=0.0645s round_time=2.0773s
+2026-05-08 04:23:41,337 P7513 INFO ********* Train Turn 109 *********
+2026-05-08 04:23:43,417 P7513 INFO Clients average loss: 0.36725544929504395
+2026-05-08 04:23:43,422 P7513 INFO [Time] turn=109 local_train_time=1.7155s avg_client_train_time=0.002840s aggregation_time=0.0647s round_time=2.0842s
+2026-05-08 04:23:43,422 P7513 INFO ********* Eval @ Turn 109 *********
+2026-05-08 04:23:45,530 P7513 INFO [Metrics] logloss: 2.795628 - MRR: 0.229454 - NDCG(5): 0.223726 - HR(5): 0.338576 - NDCG(10): 0.268728 - HR(10): 0.479470 - NDCG(20): 0.335235 - HR(20): 0.742715 - NDCG(50): 0.372586 - HR(50): 0.928642
+2026-05-08 04:23:45,530 P7513 INFO [Time] eval_time=2.1082s
+2026-05-08 04:23:45,530 P7513 INFO ********* Train Turn 110 *********
+2026-05-08 04:23:47,606 P7513 INFO Clients average loss: 0.36434313654899597
+2026-05-08 04:23:47,611 P7513 INFO [Time] turn=110 local_train_time=1.7094s avg_client_train_time=0.002830s aggregation_time=0.0644s round_time=2.0805s
+2026-05-08 04:23:47,611 P7513 INFO ********* Train Turn 111 *********
+2026-05-08 04:23:49,668 P7513 INFO Clients average loss: 0.3561760187149048
+2026-05-08 04:23:49,673 P7513 INFO [Time] turn=111 local_train_time=1.6972s avg_client_train_time=0.002810s aggregation_time=0.0641s round_time=2.0618s
+2026-05-08 04:23:49,673 P7513 INFO ********* Train Turn 112 *********
+2026-05-08 04:23:51,735 P7513 INFO Clients average loss: 0.3632785379886627
+2026-05-08 04:23:51,739 P7513 INFO [Time] turn=112 local_train_time=1.7034s avg_client_train_time=0.002820s aggregation_time=0.0646s round_time=2.0664s
+2026-05-08 04:23:51,739 P7513 INFO ********* Train Turn 113 *********
+2026-05-08 04:23:53,811 P7513 INFO Clients average loss: 0.3461516499519348
+2026-05-08 04:23:53,816 P7513 INFO [Time] turn=113 local_train_time=1.7122s avg_client_train_time=0.002835s aggregation_time=0.0650s round_time=2.0765s
+2026-05-08 04:23:53,816 P7513 INFO ********* Train Turn 114 *********
+2026-05-08 04:23:55,880 P7513 INFO Clients average loss: 0.36097562313079834
+2026-05-08 04:23:55,884 P7513 INFO [Time] turn=114 local_train_time=1.7049s avg_client_train_time=0.002823s aggregation_time=0.0651s round_time=2.0683s
+2026-05-08 04:23:55,884 P7513 INFO ********* Train Turn 115 *********
+2026-05-08 04:23:57,954 P7513 INFO Clients average loss: 0.3560590445995331
+2026-05-08 04:23:57,959 P7513 INFO [Time] turn=115 local_train_time=1.7109s avg_client_train_time=0.002833s aggregation_time=0.0640s round_time=2.0744s
+2026-05-08 04:23:57,959 P7513 INFO ********* Train Turn 116 *********
+2026-05-08 04:24:00,032 P7513 INFO Clients average loss: 0.35462430119514465
+2026-05-08 04:24:00,037 P7513 INFO [Time] turn=116 local_train_time=1.7093s avg_client_train_time=0.002830s aggregation_time=0.0641s round_time=2.0778s
+2026-05-08 04:24:00,037 P7513 INFO ********* Train Turn 117 *********
+2026-05-08 04:24:02,111 P7513 INFO Clients average loss: 0.3482342064380646
+2026-05-08 04:24:02,116 P7513 INFO [Time] turn=117 local_train_time=1.7139s avg_client_train_time=0.002838s aggregation_time=0.0642s round_time=2.0787s
+2026-05-08 04:24:02,116 P7513 INFO ********* Train Turn 118 *********
+2026-05-08 04:24:04,190 P7513 INFO Clients average loss: 0.35598281025886536
+2026-05-08 04:24:04,195 P7513 INFO [Time] turn=118 local_train_time=1.7146s avg_client_train_time=0.002839s aggregation_time=0.0648s round_time=2.0788s
+2026-05-08 04:24:04,195 P7513 INFO ********* Train Turn 119 *********
+2026-05-08 04:24:06,268 P7513 INFO Clients average loss: 0.3552181124687195
+2026-05-08 04:24:06,273 P7513 INFO [Time] turn=119 local_train_time=1.7137s avg_client_train_time=0.002837s aggregation_time=0.0641s round_time=2.0782s
+2026-05-08 04:24:06,273 P7513 INFO ********* Eval @ Turn 119 *********
+2026-05-08 04:24:08,213 P7513 INFO [Metrics] logloss: 2.697736 - MRR: 0.235425 - NDCG(5): 0.230198 - HR(5): 0.348013 - NDCG(10): 0.276467 - HR(10): 0.493543 - NDCG(20): 0.344772 - HR(20): 0.762252 - NDCG(50): 0.378612 - HR(50): 0.930795
+2026-05-08 04:24:08,213 P7513 INFO [Time] eval_time=1.9398s
+2026-05-08 04:24:08,213 P7513 INFO ********* Train Turn 120 *********
+2026-05-08 04:24:10,289 P7513 INFO Clients average loss: 0.3521876037120819
+2026-05-08 04:24:10,294 P7513 INFO [Time] turn=120 local_train_time=1.7096s avg_client_train_time=0.002831s aggregation_time=0.0639s round_time=2.0805s
+2026-05-08 04:24:10,294 P7513 INFO ********* Train Turn 121 *********
+2026-05-08 04:24:12,355 P7513 INFO Clients average loss: 0.3460439145565033
+2026-05-08 04:24:12,360 P7513 INFO [Time] turn=121 local_train_time=1.7004s avg_client_train_time=0.002815s aggregation_time=0.0642s round_time=2.0662s
+2026-05-08 04:24:12,360 P7513 INFO ********* Train Turn 122 *********
+2026-05-08 04:24:14,420 P7513 INFO Clients average loss: 0.3507069945335388
+2026-05-08 04:24:14,424 P7513 INFO [Time] turn=122 local_train_time=1.7025s avg_client_train_time=0.002819s aggregation_time=0.0643s round_time=2.0641s
+2026-05-08 04:24:14,424 P7513 INFO ********* Train Turn 123 *********
+2026-05-08 04:24:16,494 P7513 INFO Clients average loss: 0.3448321223258972
+2026-05-08 04:24:16,499 P7513 INFO [Time] turn=123 local_train_time=1.7121s avg_client_train_time=0.002835s aggregation_time=0.0648s round_time=2.0743s
+2026-05-08 04:24:16,499 P7513 INFO ********* Train Turn 124 *********
+2026-05-08 04:24:18,571 P7513 INFO Clients average loss: 0.34101206064224243
+2026-05-08 04:24:18,575 P7513 INFO [Time] turn=124 local_train_time=1.7127s avg_client_train_time=0.002836s aggregation_time=0.0648s round_time=2.0765s
+2026-05-08 04:24:18,576 P7513 INFO ********* Train Turn 125 *********
+2026-05-08 04:24:20,640 P7513 INFO Clients average loss: 0.34426349401474
+2026-05-08 04:24:20,645 P7513 INFO [Time] turn=125 local_train_time=1.7043s avg_client_train_time=0.002822s aggregation_time=0.0651s round_time=2.0691s
+2026-05-08 04:24:20,645 P7513 INFO ********* Train Turn 126 *********
+2026-05-08 04:24:22,706 P7513 INFO Clients average loss: 0.34346842765808105
+2026-05-08 04:24:22,710 P7513 INFO [Time] turn=126 local_train_time=1.7029s avg_client_train_time=0.002819s aggregation_time=0.0640s round_time=2.0655s
+2026-05-08 04:24:22,711 P7513 INFO ********* Train Turn 127 *********
+2026-05-08 04:24:24,773 P7513 INFO Clients average loss: 0.33450257778167725
+2026-05-08 04:24:24,778 P7513 INFO [Time] turn=127 local_train_time=1.7033s avg_client_train_time=0.002820s aggregation_time=0.0644s round_time=2.0673s
+2026-05-08 04:24:24,778 P7513 INFO ********* Train Turn 128 *********
+2026-05-08 04:24:26,847 P7513 INFO Clients average loss: 0.34218519926071167
+2026-05-08 04:24:26,852 P7513 INFO [Time] turn=128 local_train_time=1.7096s avg_client_train_time=0.002830s aggregation_time=0.0648s round_time=2.0736s
+2026-05-08 04:24:26,852 P7513 INFO ********* Train Turn 129 *********
+2026-05-08 04:24:28,931 P7513 INFO Clients average loss: 0.32791465520858765
+2026-05-08 04:24:28,935 P7513 INFO [Time] turn=129 local_train_time=1.7171s avg_client_train_time=0.002843s aggregation_time=0.0647s round_time=2.0837s
+2026-05-08 04:24:28,936 P7513 INFO ********* Eval @ Turn 129 *********
+2026-05-08 04:24:30,884 P7513 INFO [Metrics] logloss: 2.576692 - MRR: 0.242472 - NDCG(5): 0.237136 - HR(5): 0.355464 - NDCG(10): 0.285790 - HR(10): 0.508775 - NDCG(20): 0.352296 - HR(20): 0.770033 - NDCG(50): 0.385040 - HR(50): 0.932285
+2026-05-08 04:24:30,884 P7513 INFO [Time] eval_time=1.9488s
+2026-05-08 04:24:30,885 P7513 INFO ********* Train Turn 130 *********
+2026-05-08 04:24:33,173 P7513 INFO Clients average loss: 0.33123379945755005
+2026-05-08 04:24:33,178 P7513 INFO [Time] turn=130 local_train_time=1.9161s avg_client_train_time=0.003172s aggregation_time=0.0654s round_time=2.2932s
+2026-05-08 04:24:33,178 P7513 INFO ********* Train Turn 131 *********
+2026-05-08 04:24:35,302 P7513 INFO Clients average loss: 0.33147409558296204
+2026-05-08 04:24:35,307 P7513 INFO [Time] turn=131 local_train_time=1.7605s avg_client_train_time=0.002915s aggregation_time=0.0645s round_time=2.1288s
+2026-05-08 04:24:35,307 P7513 INFO ********* Train Turn 132 *********
+2026-05-08 04:24:37,505 P7513 INFO Clients average loss: 0.3280102610588074
+2026-05-08 04:24:37,509 P7513 INFO [Time] turn=132 local_train_time=1.7067s avg_client_train_time=0.002826s aggregation_time=0.0652s round_time=2.2024s
+2026-05-08 04:24:37,509 P7513 INFO ********* Train Turn 133 *********
+2026-05-08 04:24:39,571 P7513 INFO Clients average loss: 0.327597975730896
+2026-05-08 04:24:39,575 P7513 INFO [Time] turn=133 local_train_time=1.7030s avg_client_train_time=0.002819s aggregation_time=0.0644s round_time=2.0660s
+2026-05-08 04:24:39,576 P7513 INFO ********* Train Turn 134 *********
+2026-05-08 04:24:41,632 P7513 INFO Clients average loss: 0.3314388394355774
+2026-05-08 04:24:41,637 P7513 INFO [Time] turn=134 local_train_time=1.6987s avg_client_train_time=0.002812s aggregation_time=0.0648s round_time=2.0613s
+2026-05-08 04:24:41,637 P7513 INFO ********* Train Turn 135 *********
+2026-05-08 04:24:43,695 P7513 INFO Clients average loss: 0.3369881808757782
+2026-05-08 04:24:43,700 P7513 INFO [Time] turn=135 local_train_time=1.7001s avg_client_train_time=0.002815s aggregation_time=0.0644s round_time=2.0625s
+2026-05-08 04:24:43,700 P7513 INFO ********* Train Turn 136 *********
+2026-05-08 04:24:45,755 P7513 INFO Clients average loss: 0.33007583022117615
+2026-05-08 04:24:45,760 P7513 INFO [Time] turn=136 local_train_time=1.6980s avg_client_train_time=0.002811s aggregation_time=0.0649s round_time=2.0601s
+2026-05-08 04:24:45,760 P7513 INFO ********* Train Turn 137 *********
+2026-05-08 04:24:47,813 P7513 INFO Clients average loss: 0.32135331630706787
+2026-05-08 04:24:47,818 P7513 INFO [Time] turn=137 local_train_time=1.6959s avg_client_train_time=0.002808s aggregation_time=0.0643s round_time=2.0579s
+2026-05-08 04:24:47,818 P7513 INFO ********* Train Turn 138 *********
+2026-05-08 04:24:49,882 P7513 INFO Clients average loss: 0.3235616087913513
+2026-05-08 04:24:49,886 P7513 INFO [Time] turn=138 local_train_time=1.7049s avg_client_train_time=0.002823s aggregation_time=0.0643s round_time=2.0681s
+2026-05-08 04:24:49,886 P7513 INFO ********* Train Turn 139 *********
+2026-05-08 04:24:51,940 P7513 INFO Clients average loss: 0.3224073052406311
+2026-05-08 04:24:51,944 P7513 INFO [Time] turn=139 local_train_time=1.6966s avg_client_train_time=0.002809s aggregation_time=0.0639s round_time=2.0577s
+2026-05-08 04:24:51,944 P7513 INFO ********* Eval @ Turn 139 *********
+2026-05-08 04:24:53,902 P7513 INFO [Metrics] logloss: 2.426528 - MRR: 0.252407 - NDCG(5): 0.246380 - HR(5): 0.363411 - NDCG(10): 0.296927 - HR(10): 0.522682 - NDCG(20): 0.361919 - HR(20): 0.777318 - NDCG(50): 0.393913 - HR(50): 0.935596
+2026-05-08 04:24:53,902 P7513 INFO [Time] eval_time=1.9581s
+2026-05-08 04:24:53,902 P7513 INFO ********* Train Turn 140 *********
+2026-05-08 04:24:55,970 P7513 INFO Clients average loss: 0.32332882285118103
+2026-05-08 04:24:55,975 P7513 INFO [Time] turn=140 local_train_time=1.7028s avg_client_train_time=0.002819s aggregation_time=0.0643s round_time=2.0725s
+2026-05-08 04:24:55,975 P7513 INFO ********* Train Turn 141 *********
+2026-05-08 04:24:58,031 P7513 INFO Clients average loss: 0.3143988251686096
+2026-05-08 04:24:58,036 P7513 INFO [Time] turn=141 local_train_time=1.6992s avg_client_train_time=0.002813s aggregation_time=0.0643s round_time=2.0607s
+2026-05-08 04:24:58,036 P7513 INFO ********* Train Turn 142 *********
+2026-05-08 04:25:00,204 P7513 INFO Clients average loss: 0.3205731511116028
+2026-05-08 04:25:00,208 P7513 INFO [Time] turn=142 local_train_time=1.8071s avg_client_train_time=0.002992s aggregation_time=0.0658s round_time=2.1724s
+2026-05-08 04:25:00,208 P7513 INFO ********* Train Turn 143 *********
+2026-05-08 04:25:02,411 P7513 INFO Clients average loss: 0.32639920711517334
+2026-05-08 04:25:02,415 P7513 INFO [Time] turn=143 local_train_time=1.8359s avg_client_train_time=0.003040s aggregation_time=0.0641s round_time=2.2070s
+2026-05-08 04:25:02,416 P7513 INFO ********* Train Turn 144 *********
+2026-05-08 04:25:04,713 P7513 INFO Clients average loss: 0.31926828622817993
+2026-05-08 04:25:04,718 P7513 INFO [Time] turn=144 local_train_time=1.9338s avg_client_train_time=0.003202s aggregation_time=0.0637s round_time=2.3025s
+2026-05-08 04:25:04,718 P7513 INFO ********* Train Turn 145 *********
+2026-05-08 04:25:07,015 P7513 INFO Clients average loss: 0.32215410470962524
+2026-05-08 04:25:07,019 P7513 INFO [Time] turn=145 local_train_time=1.9317s avg_client_train_time=0.003198s aggregation_time=0.0640s round_time=2.3013s
+2026-05-08 04:25:07,020 P7513 INFO ********* Train Turn 146 *********
+2026-05-08 04:25:09,135 P7513 INFO Clients average loss: 0.32307374477386475
+2026-05-08 04:25:09,140 P7513 INFO [Time] turn=146 local_train_time=1.7581s avg_client_train_time=0.002911s aggregation_time=0.0641s round_time=2.1199s
+2026-05-08 04:25:09,140 P7513 INFO ********* Train Turn 147 *********
+2026-05-08 04:25:11,357 P7513 INFO Clients average loss: 0.3142640292644501
+2026-05-08 04:25:11,362 P7513 INFO [Time] turn=147 local_train_time=1.8521s avg_client_train_time=0.003066s aggregation_time=0.0648s round_time=2.2222s
+2026-05-08 04:25:11,362 P7513 INFO ********* Train Turn 148 *********
+2026-05-08 04:25:13,660 P7513 INFO Clients average loss: 0.31992223858833313
+2026-05-08 04:25:13,665 P7513 INFO [Time] turn=148 local_train_time=1.9348s avg_client_train_time=0.003203s aggregation_time=0.0643s round_time=2.3029s
+2026-05-08 04:25:13,665 P7513 INFO ********* Train Turn 149 *********
+2026-05-08 04:25:15,899 P7513 INFO Clients average loss: 0.31810232996940613
+2026-05-08 04:25:15,903 P7513 INFO [Time] turn=149 local_train_time=1.8717s avg_client_train_time=0.003099s aggregation_time=0.0643s round_time=2.2381s
+2026-05-08 04:25:15,903 P7513 INFO ********* Eval @ Turn 149 *********
+2026-05-08 04:25:18,007 P7513 INFO [Metrics] logloss: 2.255317 - MRR: 0.258234 - NDCG(5): 0.252406 - HR(5): 0.370530 - NDCG(10): 0.305803 - HR(10): 0.539073 - NDCG(20): 0.367568 - HR(20): 0.781291 - NDCG(50): 0.399083 - HR(50): 0.937086
+2026-05-08 04:25:18,008 P7513 INFO [Time] eval_time=2.1041s
+2026-05-08 04:25:18,008 P7513 INFO ********* Train Turn 150 *********
+2026-05-08 04:25:20,322 P7513 INFO Clients average loss: 0.3123660981655121
+2026-05-08 04:25:20,326 P7513 INFO [Time] turn=150 local_train_time=1.9399s avg_client_train_time=0.003212s aggregation_time=0.0643s round_time=2.3187s
+2026-05-08 04:25:20,327 P7513 INFO ********* Train Turn 151 *********
+2026-05-08 04:25:22,625 P7513 INFO Clients average loss: 0.3092670738697052
+2026-05-08 04:25:22,629 P7513 INFO [Time] turn=151 local_train_time=1.9302s avg_client_train_time=0.003196s aggregation_time=0.0641s round_time=2.3026s
+2026-05-08 04:25:22,629 P7513 INFO ********* Train Turn 152 *********
+2026-05-08 04:25:24,926 P7513 INFO Clients average loss: 0.3083289563655853
+2026-05-08 04:25:24,931 P7513 INFO [Time] turn=152 local_train_time=1.9318s avg_client_train_time=0.003198s aggregation_time=0.0647s round_time=2.3015s
+2026-05-08 04:25:24,931 P7513 INFO ********* Train Turn 153 *********
+2026-05-08 04:25:27,233 P7513 INFO Clients average loss: 0.31705233454704285
+2026-05-08 04:25:27,238 P7513 INFO [Time] turn=153 local_train_time=1.9356s avg_client_train_time=0.003205s aggregation_time=0.0636s round_time=2.3068s
+2026-05-08 04:25:27,238 P7513 INFO ********* Train Turn 154 *********
+2026-05-08 04:25:29,537 P7513 INFO Clients average loss: 0.31288978457450867
+2026-05-08 04:25:29,541 P7513 INFO [Time] turn=154 local_train_time=1.9324s avg_client_train_time=0.003199s aggregation_time=0.0641s round_time=2.3031s
+2026-05-08 04:25:29,541 P7513 INFO ********* Train Turn 155 *********
+2026-05-08 04:25:31,840 P7513 INFO Clients average loss: 0.312766432762146
+2026-05-08 04:25:31,844 P7513 INFO [Time] turn=155 local_train_time=1.9318s avg_client_train_time=0.003198s aggregation_time=0.0640s round_time=2.3031s
+2026-05-08 04:25:31,845 P7513 INFO ********* Train Turn 156 *********
+2026-05-08 04:25:34,145 P7513 INFO Clients average loss: 0.3113410770893097
+2026-05-08 04:25:34,149 P7513 INFO [Time] turn=156 local_train_time=1.9355s avg_client_train_time=0.003204s aggregation_time=0.0639s round_time=2.3045s
+2026-05-08 04:25:34,149 P7513 INFO ********* Train Turn 157 *********
+2026-05-08 04:25:36,446 P7513 INFO Clients average loss: 0.31462547183036804
+2026-05-08 04:25:36,451 P7513 INFO [Time] turn=157 local_train_time=1.9283s avg_client_train_time=0.003193s aggregation_time=0.0638s round_time=2.3016s
+2026-05-08 04:25:36,451 P7513 INFO ********* Train Turn 158 *********
+2026-05-08 04:25:38,685 P7513 INFO Clients average loss: 0.3034627437591553
+2026-05-08 04:25:38,689 P7513 INFO [Time] turn=158 local_train_time=1.8706s avg_client_train_time=0.003097s aggregation_time=0.0646s round_time=2.2383s
+2026-05-08 04:25:38,689 P7513 INFO ********* Train Turn 159 *********
+2026-05-08 04:25:40,743 P7513 INFO Clients average loss: 0.3061542212963104
+2026-05-08 04:25:40,748 P7513 INFO [Time] turn=159 local_train_time=1.6968s avg_client_train_time=0.002809s aggregation_time=0.0644s round_time=2.0585s
+2026-05-08 04:25:40,748 P7513 INFO ********* Eval @ Turn 159 *********
+2026-05-08 04:25:42,710 P7513 INFO [Metrics] logloss: 2.099331 - MRR: 0.262478 - NDCG(5): 0.256758 - HR(5): 0.375662 - NDCG(10): 0.312218 - HR(10): 0.550166 - NDCG(20): 0.371587 - HR(20): 0.783609 - NDCG(50): 0.402886 - HR(50): 0.938411
+2026-05-08 04:25:42,710 P7513 INFO [Time] eval_time=1.9616s
+2026-05-08 04:25:42,710 P7513 INFO ********* Train Turn 160 *********
+2026-05-08 04:25:44,815 P7513 INFO Clients average loss: 0.3057285249233246
+2026-05-08 04:25:44,819 P7513 INFO [Time] turn=160 local_train_time=1.7369s avg_client_train_time=0.002876s aggregation_time=0.0647s round_time=2.1092s
+2026-05-08 04:25:44,819 P7513 INFO ********* Train Turn 161 *********
+2026-05-08 04:25:46,883 P7513 INFO Clients average loss: 0.3105964660644531
+2026-05-08 04:25:46,887 P7513 INFO [Time] turn=161 local_train_time=1.7045s avg_client_train_time=0.002822s aggregation_time=0.0647s round_time=2.0678s
+2026-05-08 04:25:46,887 P7513 INFO ********* Train Turn 162 *********
+2026-05-08 04:25:48,957 P7513 INFO Clients average loss: 0.3051764667034149
+2026-05-08 04:25:48,962 P7513 INFO [Time] turn=162 local_train_time=1.7121s avg_client_train_time=0.002835s aggregation_time=0.0641s round_time=2.0746s
+2026-05-08 04:25:48,962 P7513 INFO ********* Train Turn 163 *********
+2026-05-08 04:25:51,026 P7513 INFO Clients average loss: 0.3026644289493561
+2026-05-08 04:25:51,030 P7513 INFO [Time] turn=163 local_train_time=1.7064s avg_client_train_time=0.002825s aggregation_time=0.0647s round_time=2.0683s
+2026-05-08 04:25:51,030 P7513 INFO ********* Train Turn 164 *********
+2026-05-08 04:25:53,097 P7513 INFO Clients average loss: 0.2882010042667389
+2026-05-08 04:25:53,101 P7513 INFO [Time] turn=164 local_train_time=1.7086s avg_client_train_time=0.002829s aggregation_time=0.0640s round_time=2.0706s
+2026-05-08 04:25:53,101 P7513 INFO ********* Train Turn 165 *********
+2026-05-08 04:25:55,178 P7513 INFO Clients average loss: 0.2962299883365631
+2026-05-08 04:25:55,182 P7513 INFO [Time] turn=165 local_train_time=1.7167s avg_client_train_time=0.002842s aggregation_time=0.0647s round_time=2.0812s
+2026-05-08 04:25:55,183 P7513 INFO ********* Train Turn 166 *********
+2026-05-08 04:25:57,249 P7513 INFO Clients average loss: 0.29907160997390747
+2026-05-08 04:25:57,254 P7513 INFO [Time] turn=166 local_train_time=1.7033s avg_client_train_time=0.002820s aggregation_time=0.0639s round_time=2.0710s
+2026-05-08 04:25:57,254 P7513 INFO ********* Train Turn 167 *********
+2026-05-08 04:25:59,321 P7513 INFO Clients average loss: 0.30387479066848755
+2026-05-08 04:25:59,326 P7513 INFO [Time] turn=167 local_train_time=1.7091s avg_client_train_time=0.002830s aggregation_time=0.0641s round_time=2.0719s
+2026-05-08 04:25:59,326 P7513 INFO ********* Train Turn 168 *********
+2026-05-08 04:26:01,391 P7513 INFO Clients average loss: 0.30247873067855835
+2026-05-08 04:26:01,395 P7513 INFO [Time] turn=168 local_train_time=1.7078s avg_client_train_time=0.002827s aggregation_time=0.0642s round_time=2.0694s
+2026-05-08 04:26:01,395 P7513 INFO ********* Train Turn 169 *********
+2026-05-08 04:26:03,462 P7513 INFO Clients average loss: 0.2971482574939728
+2026-05-08 04:26:03,467 P7513 INFO [Time] turn=169 local_train_time=1.7073s avg_client_train_time=0.002827s aggregation_time=0.0651s round_time=2.0714s
+2026-05-08 04:26:03,467 P7513 INFO ********* Eval @ Turn 169 *********
+2026-05-08 04:26:05,587 P7513 INFO [Metrics] logloss: 1.968261 - MRR: 0.271422 - NDCG(5): 0.265957 - HR(5): 0.384437 - NDCG(10): 0.321027 - HR(10): 0.556788 - NDCG(20): 0.378507 - HR(20): 0.782781 - NDCG(50): 0.410054 - HR(50): 0.938576
+2026-05-08 04:26:05,587 P7513 INFO [Time] eval_time=2.1205s
+2026-05-08 04:26:05,588 P7513 INFO ********* Train Turn 170 *********
+2026-05-08 04:26:07,663 P7513 INFO Clients average loss: 0.30251172184944153
+2026-05-08 04:26:07,667 P7513 INFO [Time] turn=170 local_train_time=1.7092s avg_client_train_time=0.002830s aggregation_time=0.0645s round_time=2.0798s
+2026-05-08 04:26:07,667 P7513 INFO ********* Train Turn 171 *********
+2026-05-08 04:26:09,733 P7513 INFO Clients average loss: 0.30174487829208374
+2026-05-08 04:26:09,738 P7513 INFO [Time] turn=171 local_train_time=1.7069s avg_client_train_time=0.002826s aggregation_time=0.0647s round_time=2.0700s
+2026-05-08 04:26:09,738 P7513 INFO ********* Train Turn 172 *********
+2026-05-08 04:26:11,797 P7513 INFO Clients average loss: 0.3043135702610016
+2026-05-08 04:26:11,802 P7513 INFO [Time] turn=172 local_train_time=1.7028s avg_client_train_time=0.002819s aggregation_time=0.0646s round_time=2.0643s
+2026-05-08 04:26:11,802 P7513 INFO ********* Train Turn 173 *********
+2026-05-08 04:26:13,865 P7513 INFO Clients average loss: 0.3023926615715027
+2026-05-08 04:26:13,869 P7513 INFO [Time] turn=173 local_train_time=1.7047s avg_client_train_time=0.002822s aggregation_time=0.0652s round_time=2.0669s
+2026-05-08 04:26:13,869 P7513 INFO ********* Train Turn 174 *********
+2026-05-08 04:26:15,931 P7513 INFO Clients average loss: 0.3085935115814209
+2026-05-08 04:26:15,935 P7513 INFO [Time] turn=174 local_train_time=1.7045s avg_client_train_time=0.002822s aggregation_time=0.0638s round_time=2.0658s
+2026-05-08 04:26:15,935 P7513 INFO ********* Train Turn 175 *********
+2026-05-08 04:26:18,005 P7513 INFO Clients average loss: 0.3023097813129425
+2026-05-08 04:26:18,010 P7513 INFO [Time] turn=175 local_train_time=1.7131s avg_client_train_time=0.002836s aggregation_time=0.0638s round_time=2.0743s
+2026-05-08 04:26:18,010 P7513 INFO ********* Train Turn 176 *********
+2026-05-08 04:26:20,072 P7513 INFO Clients average loss: 0.3058392107486725
+2026-05-08 04:26:20,076 P7513 INFO [Time] turn=176 local_train_time=1.7043s avg_client_train_time=0.002822s aggregation_time=0.0641s round_time=2.0664s
+2026-05-08 04:26:20,076 P7513 INFO ********* Train Turn 177 *********
+2026-05-08 04:26:22,135 P7513 INFO Clients average loss: 0.2974455654621124
+2026-05-08 04:26:22,140 P7513 INFO [Time] turn=177 local_train_time=1.7012s avg_client_train_time=0.002817s aggregation_time=0.0645s round_time=2.0634s
+2026-05-08 04:26:22,140 P7513 INFO ********* Train Turn 178 *********
+2026-05-08 04:26:24,201 P7513 INFO Clients average loss: 0.2955035865306854
+2026-05-08 04:26:24,205 P7513 INFO [Time] turn=178 local_train_time=1.7038s avg_client_train_time=0.002821s aggregation_time=0.0642s round_time=2.0651s
+2026-05-08 04:26:24,205 P7513 INFO ********* Train Turn 179 *********
+2026-05-08 04:26:26,264 P7513 INFO Clients average loss: 0.2986830472946167
+2026-05-08 04:26:26,269 P7513 INFO [Time] turn=179 local_train_time=1.7019s avg_client_train_time=0.002818s aggregation_time=0.0645s round_time=2.0638s
+2026-05-08 04:26:26,269 P7513 INFO ********* Eval @ Turn 179 *********
+2026-05-08 04:26:28,249 P7513 INFO [Metrics] logloss: 1.815887 - MRR: 0.277757 - NDCG(5): 0.273685 - HR(5): 0.394371 - NDCG(10): 0.328159 - HR(10): 0.564735 - NDCG(20): 0.383689 - HR(20): 0.782947 - NDCG(50): 0.415232 - HR(50): 0.938576
+2026-05-08 04:26:28,249 P7513 INFO [Time] eval_time=1.9798s
+2026-05-08 04:26:28,249 P7513 INFO ********* Train Turn 180 *********
+2026-05-08 04:26:30,313 P7513 INFO Clients average loss: 0.2992726266384125
+2026-05-08 04:26:30,317 P7513 INFO [Time] turn=180 local_train_time=1.7005s avg_client_train_time=0.002815s aggregation_time=0.0642s round_time=2.0681s
+2026-05-08 04:26:30,317 P7513 INFO ********* Train Turn 181 *********
+2026-05-08 04:26:32,368 P7513 INFO Clients average loss: 0.29788440465927124
+2026-05-08 04:26:32,373 P7513 INFO [Time] turn=181 local_train_time=1.6922s avg_client_train_time=0.002802s aggregation_time=0.0643s round_time=2.0555s
+2026-05-08 04:26:32,373 P7513 INFO ********* Train Turn 182 *********
+2026-05-08 04:26:34,428 P7513 INFO Clients average loss: 0.29670947790145874
+2026-05-08 04:26:34,432 P7513 INFO [Time] turn=182 local_train_time=1.6988s avg_client_train_time=0.002813s aggregation_time=0.0643s round_time=2.0593s
+2026-05-08 04:26:34,433 P7513 INFO ********* Train Turn 183 *********
+2026-05-08 04:26:36,481 P7513 INFO Clients average loss: 0.3018600344657898
+2026-05-08 04:26:36,486 P7513 INFO [Time] turn=183 local_train_time=1.6943s avg_client_train_time=0.002805s aggregation_time=0.0644s round_time=2.0534s
+2026-05-08 04:26:36,486 P7513 INFO ********* Train Turn 184 *********
+2026-05-08 04:26:38,541 P7513 INFO Clients average loss: 0.29432570934295654
+2026-05-08 04:26:38,545 P7513 INFO [Time] turn=184 local_train_time=1.6975s avg_client_train_time=0.002810s aggregation_time=0.0656s round_time=2.0590s
+2026-05-08 04:26:38,545 P7513 INFO ********* Train Turn 185 *********
+2026-05-08 04:26:40,622 P7513 INFO Clients average loss: 0.2945369780063629
+2026-05-08 04:26:40,627 P7513 INFO [Time] turn=185 local_train_time=1.7188s avg_client_train_time=0.002846s aggregation_time=0.0641s round_time=2.0814s
+2026-05-08 04:26:40,627 P7513 INFO ********* Train Turn 186 *********
+2026-05-08 04:26:42,691 P7513 INFO Clients average loss: 0.30355051159858704
+2026-05-08 04:26:42,695 P7513 INFO [Time] turn=186 local_train_time=1.7069s avg_client_train_time=0.002826s aggregation_time=0.0639s round_time=2.0683s
+2026-05-08 04:26:42,695 P7513 INFO ********* Train Turn 187 *********
+2026-05-08 04:26:44,760 P7513 INFO Clients average loss: 0.29663482308387756
+2026-05-08 04:26:44,764 P7513 INFO [Time] turn=187 local_train_time=1.7069s avg_client_train_time=0.002826s aggregation_time=0.0643s round_time=2.0690s
+2026-05-08 04:26:44,765 P7513 INFO ********* Train Turn 188 *********
+2026-05-08 04:26:46,825 P7513 INFO Clients average loss: 0.2936956584453583
+2026-05-08 04:26:46,830 P7513 INFO [Time] turn=188 local_train_time=1.7035s avg_client_train_time=0.002820s aggregation_time=0.0644s round_time=2.0650s
+2026-05-08 04:26:46,830 P7513 INFO ********* Train Turn 189 *********
+2026-05-08 04:26:48,882 P7513 INFO Clients average loss: 0.30410587787628174
+2026-05-08 04:26:48,887 P7513 INFO [Time] turn=189 local_train_time=1.6965s avg_client_train_time=0.002809s aggregation_time=0.0645s round_time=2.0571s
+2026-05-08 04:26:48,887 P7513 INFO ********* Eval @ Turn 189 *********
+2026-05-08 04:26:50,873 P7513 INFO [Metrics] logloss: 1.708902 - MRR: 0.283378 - NDCG(5): 0.281385 - HR(5): 0.405298 - NDCG(10): 0.334192 - HR(10): 0.570364 - NDCG(20): 0.388607 - HR(20): 0.784272 - NDCG(50): 0.419800 - HR(50): 0.938245
+2026-05-08 04:26:50,874 P7513 INFO [Time] eval_time=1.9865s
+2026-05-08 04:26:50,874 P7513 INFO ********* Train Turn 190 *********
+2026-05-08 04:26:52,953 P7513 INFO Clients average loss: 0.2956077754497528
+2026-05-08 04:26:52,957 P7513 INFO [Time] turn=190 local_train_time=1.7116s avg_client_train_time=0.002834s aggregation_time=0.0647s round_time=2.0836s
+2026-05-08 04:26:52,957 P7513 INFO ********* Train Turn 191 *********
+2026-05-08 04:26:55,022 P7513 INFO Clients average loss: 0.2933064103126526
+2026-05-08 04:26:55,027 P7513 INFO [Time] turn=191 local_train_time=1.7073s avg_client_train_time=0.002827s aggregation_time=0.0649s round_time=2.0698s
+2026-05-08 04:26:55,027 P7513 INFO ********* Train Turn 192 *********
+2026-05-08 04:26:57,227 P7513 INFO Clients average loss: 0.2937561571598053
+2026-05-08 04:26:57,231 P7513 INFO [Time] turn=192 local_train_time=1.7110s avg_client_train_time=0.002833s aggregation_time=0.0640s round_time=2.2039s
+2026-05-08 04:26:57,231 P7513 INFO ********* Train Turn 193 *********
+2026-05-08 04:26:59,296 P7513 INFO Clients average loss: 0.296949565410614
+2026-05-08 04:26:59,301 P7513 INFO [Time] turn=193 local_train_time=1.7080s avg_client_train_time=0.002828s aggregation_time=0.0646s round_time=2.0692s
+2026-05-08 04:26:59,301 P7513 INFO ********* Train Turn 194 *********
+2026-05-08 04:27:01,365 P7513 INFO Clients average loss: 0.292029470205307
+2026-05-08 04:27:01,369 P7513 INFO [Time] turn=194 local_train_time=1.7071s avg_client_train_time=0.002826s aggregation_time=0.0647s round_time=2.0684s
+2026-05-08 04:27:01,369 P7513 INFO ********* Train Turn 195 *********
+2026-05-08 04:27:03,434 P7513 INFO Clients average loss: 0.2945970296859741
+2026-05-08 04:27:03,439 P7513 INFO [Time] turn=195 local_train_time=1.7066s avg_client_train_time=0.002826s aggregation_time=0.0643s round_time=2.0691s
+2026-05-08 04:27:03,439 P7513 INFO ********* Train Turn 196 *********
+2026-05-08 04:27:05,499 P7513 INFO Clients average loss: 0.2891652584075928
+2026-05-08 04:27:05,504 P7513 INFO [Time] turn=196 local_train_time=1.7045s avg_client_train_time=0.002822s aggregation_time=0.0647s round_time=2.0652s
+2026-05-08 04:27:05,504 P7513 INFO ********* Train Turn 197 *********
+2026-05-08 04:27:07,564 P7513 INFO Clients average loss: 0.29629358649253845
+2026-05-08 04:27:07,569 P7513 INFO [Time] turn=197 local_train_time=1.7053s avg_client_train_time=0.002823s aggregation_time=0.0637s round_time=2.0648s
+2026-05-08 04:27:07,569 P7513 INFO ********* Train Turn 198 *********
+2026-05-08 04:27:09,634 P7513 INFO Clients average loss: 0.28772634267807007
+2026-05-08 04:27:09,639 P7513 INFO [Time] turn=198 local_train_time=1.7089s avg_client_train_time=0.002829s aggregation_time=0.0644s round_time=2.0696s
+2026-05-08 04:27:09,639 P7513 INFO ********* Train Turn 199 *********
+2026-05-08 04:27:11,705 P7513 INFO Clients average loss: 0.2919204533100128
+2026-05-08 04:27:11,710 P7513 INFO [Time] turn=199 local_train_time=1.7086s avg_client_train_time=0.002829s aggregation_time=0.0644s round_time=2.0707s
+2026-05-08 04:27:11,710 P7513 INFO ********* Eval @ Turn 199 *********
+2026-05-08 04:27:13,719 P7513 INFO [Metrics] logloss: 1.635703 - MRR: 0.289788 - NDCG(5): 0.288844 - HR(5): 0.413576 - NDCG(10): 0.340112 - HR(10): 0.573675 - NDCG(20): 0.393572 - HR(20): 0.783609 - NDCG(50): 0.424814 - HR(50): 0.937583
+2026-05-08 04:27:13,720 P7513 INFO [Time] eval_time=2.0097s
+2026-05-08 04:27:13,720 P7513 INFO ********* Train Turn 200 *********
+2026-05-08 04:27:15,785 P7513 INFO Clients average loss: 0.29351454973220825
+2026-05-08 04:27:15,790 P7513 INFO [Time] turn=200 local_train_time=1.6968s avg_client_train_time=0.002809s aggregation_time=0.0642s round_time=2.0702s
+2026-05-08 04:27:15,790 P7513 INFO ********* Train Turn 201 *********
+2026-05-08 04:27:17,844 P7513 INFO Clients average loss: 0.29309147596359253
+2026-05-08 04:27:17,849 P7513 INFO [Time] turn=201 local_train_time=1.6976s avg_client_train_time=0.002811s aggregation_time=0.0649s round_time=2.0586s
+2026-05-08 04:27:17,849 P7513 INFO ********* Train Turn 202 *********
+2026-05-08 04:27:19,902 P7513 INFO Clients average loss: 0.2850037217140198
+2026-05-08 04:27:19,906 P7513 INFO [Time] turn=202 local_train_time=1.6973s avg_client_train_time=0.002810s aggregation_time=0.0638s round_time=2.0576s
+2026-05-08 04:27:19,907 P7513 INFO ********* Train Turn 203 *********
+2026-05-08 04:27:21,959 P7513 INFO Clients average loss: 0.2912621796131134
+2026-05-08 04:27:21,964 P7513 INFO [Time] turn=203 local_train_time=1.6935s avg_client_train_time=0.002804s aggregation_time=0.0639s round_time=2.0571s
+2026-05-08 04:27:21,964 P7513 INFO ********* Train Turn 204 *********
+2026-05-08 04:27:24,034 P7513 INFO Clients average loss: 0.29565128684043884
+2026-05-08 04:27:24,038 P7513 INFO [Time] turn=204 local_train_time=1.7117s avg_client_train_time=0.002834s aggregation_time=0.0640s round_time=2.0744s
+2026-05-08 04:27:24,038 P7513 INFO ********* Train Turn 205 *********
+2026-05-08 04:27:26,092 P7513 INFO Clients average loss: 0.2875874638557434
+2026-05-08 04:27:26,096 P7513 INFO [Time] turn=205 local_train_time=1.6979s avg_client_train_time=0.002811s aggregation_time=0.0641s round_time=2.0580s
+2026-05-08 04:27:26,097 P7513 INFO ********* Train Turn 206 *********
+2026-05-08 04:27:28,148 P7513 INFO Clients average loss: 0.2865268290042877
+2026-05-08 04:27:28,153 P7513 INFO [Time] turn=206 local_train_time=1.6963s avg_client_train_time=0.002808s aggregation_time=0.0640s round_time=2.0562s
+2026-05-08 04:27:28,153 P7513 INFO ********* Train Turn 207 *********
+2026-05-08 04:27:30,206 P7513 INFO Clients average loss: 0.29038846492767334
+2026-05-08 04:27:30,211 P7513 INFO [Time] turn=207 local_train_time=1.6962s avg_client_train_time=0.002808s aggregation_time=0.0640s round_time=2.0581s
+2026-05-08 04:27:30,211 P7513 INFO ********* Train Turn 208 *********
+2026-05-08 04:27:32,264 P7513 INFO Clients average loss: 0.28906896710395813
+2026-05-08 04:27:32,268 P7513 INFO [Time] turn=208 local_train_time=1.6960s avg_client_train_time=0.002808s aggregation_time=0.0644s round_time=2.0569s
+2026-05-08 04:27:32,268 P7513 INFO ********* Train Turn 209 *********
+2026-05-08 04:27:34,335 P7513 INFO Clients average loss: 0.29313504695892334
+2026-05-08 04:27:34,339 P7513 INFO [Time] turn=209 local_train_time=1.7088s avg_client_train_time=0.002829s aggregation_time=0.0650s round_time=2.0711s
+2026-05-08 04:27:34,340 P7513 INFO ********* Eval @ Turn 209 *********
+2026-05-08 04:27:36,397 P7513 INFO [Metrics] logloss: 1.579978 - MRR: 0.296365 - NDCG(5): 0.295248 - HR(5): 0.418543 - NDCG(10): 0.347060 - HR(10): 0.580464 - NDCG(20): 0.399117 - HR(20): 0.785099 - NDCG(50): 0.429906 - HR(50): 0.936921
+2026-05-08 04:27:36,397 P7513 INFO [Time] eval_time=2.0578s
+2026-05-08 04:27:36,397 P7513 INFO ********* Train Turn 210 *********
+2026-05-08 04:27:38,466 P7513 INFO Clients average loss: 0.28773003816604614
+2026-05-08 04:27:38,470 P7513 INFO [Time] turn=210 local_train_time=1.7031s avg_client_train_time=0.002820s aggregation_time=0.0642s round_time=2.0730s
+2026-05-08 04:27:38,471 P7513 INFO ********* Train Turn 211 *********
+2026-05-08 04:27:40,522 P7513 INFO Clients average loss: 0.28768157958984375
+2026-05-08 04:27:40,527 P7513 INFO [Time] turn=211 local_train_time=1.6918s avg_client_train_time=0.002801s aggregation_time=0.0648s round_time=2.0560s
+2026-05-08 04:27:40,527 P7513 INFO ********* Train Turn 212 *********
+2026-05-08 04:27:42,581 P7513 INFO Clients average loss: 0.29462331533432007
+2026-05-08 04:27:42,586 P7513 INFO [Time] turn=212 local_train_time=1.6984s avg_client_train_time=0.002812s aggregation_time=0.0641s round_time=2.0593s
+2026-05-08 04:27:42,586 P7513 INFO ********* Train Turn 213 *********
+2026-05-08 04:27:44,643 P7513 INFO Clients average loss: 0.28534597158432007
+2026-05-08 04:27:44,647 P7513 INFO [Time] turn=213 local_train_time=1.7004s avg_client_train_time=0.002815s aggregation_time=0.0645s round_time=2.0611s
+2026-05-08 04:27:44,647 P7513 INFO ********* Train Turn 214 *********
+2026-05-08 04:27:46,716 P7513 INFO Clients average loss: 0.28505954146385193
+2026-05-08 04:27:46,720 P7513 INFO [Time] turn=214 local_train_time=1.7058s avg_client_train_time=0.002824s aggregation_time=0.0645s round_time=2.0729s
+2026-05-08 04:27:46,720 P7513 INFO ********* Train Turn 215 *********
+2026-05-08 04:27:48,790 P7513 INFO Clients average loss: 0.2867407500743866
+2026-05-08 04:27:48,795 P7513 INFO [Time] turn=215 local_train_time=1.7108s avg_client_train_time=0.002832s aggregation_time=0.0643s round_time=2.0742s
+2026-05-08 04:27:48,795 P7513 INFO ********* Train Turn 216 *********
+2026-05-08 04:27:50,861 P7513 INFO Clients average loss: 0.2873745560646057
+2026-05-08 04:27:50,865 P7513 INFO [Time] turn=216 local_train_time=1.7035s avg_client_train_time=0.002820s aggregation_time=0.0645s round_time=2.0706s
+2026-05-08 04:27:50,866 P7513 INFO ********* Train Turn 217 *********
+2026-05-08 04:27:52,933 P7513 INFO Clients average loss: 0.28696733713150024
+2026-05-08 04:27:52,938 P7513 INFO [Time] turn=217 local_train_time=1.7089s avg_client_train_time=0.002829s aggregation_time=0.0646s round_time=2.0719s
+2026-05-08 04:27:52,938 P7513 INFO ********* Train Turn 218 *********
+2026-05-08 04:27:55,004 P7513 INFO Clients average loss: 0.281306654214859
+2026-05-08 04:27:55,009 P7513 INFO [Time] turn=218 local_train_time=1.7081s avg_client_train_time=0.002828s aggregation_time=0.0646s round_time=2.0714s
+2026-05-08 04:27:55,009 P7513 INFO ********* Train Turn 219 *********
+2026-05-08 04:27:57,086 P7513 INFO Clients average loss: 0.2905727028846741
+2026-05-08 04:27:57,091 P7513 INFO [Time] turn=219 local_train_time=1.7181s avg_client_train_time=0.002845s aggregation_time=0.0643s round_time=2.0816s
+2026-05-08 04:27:57,091 P7513 INFO ********* Eval @ Turn 219 *********
+2026-05-08 04:27:59,079 P7513 INFO [Metrics] logloss: 1.530668 - MRR: 0.300554 - NDCG(5): 0.299067 - HR(5): 0.420530 - NDCG(10): 0.350598 - HR(10): 0.581457 - NDCG(20): 0.402563 - HR(20): 0.785762 - NDCG(50): 0.433117 - HR(50): 0.936921
+2026-05-08 04:27:59,079 P7513 INFO [Time] eval_time=1.9879s
+2026-05-08 04:27:59,079 P7513 INFO ********* Train Turn 220 *********
+2026-05-08 04:28:01,260 P7513 INFO Clients average loss: 0.2811886668205261
+2026-05-08 04:28:01,264 P7513 INFO [Time] turn=220 local_train_time=1.8106s avg_client_train_time=0.002998s aggregation_time=0.0650s round_time=2.1853s
+2026-05-08 04:28:01,264 P7513 INFO ********* Train Turn 221 *********
+2026-05-08 04:28:03,335 P7513 INFO Clients average loss: 0.28543365001678467
+2026-05-08 04:28:03,340 P7513 INFO [Time] turn=221 local_train_time=1.7067s avg_client_train_time=0.002826s aggregation_time=0.0644s round_time=2.0752s
+2026-05-08 04:28:03,340 P7513 INFO ********* Train Turn 222 *********
+2026-05-08 04:28:05,409 P7513 INFO Clients average loss: 0.2852095365524292
+2026-05-08 04:28:05,413 P7513 INFO [Time] turn=222 local_train_time=1.7099s avg_client_train_time=0.002831s aggregation_time=0.0639s round_time=2.0733s
+2026-05-08 04:28:05,413 P7513 INFO ********* Train Turn 223 *********
+2026-05-08 04:28:07,489 P7513 INFO Clients average loss: 0.2838168740272522
+2026-05-08 04:28:07,494 P7513 INFO [Time] turn=223 local_train_time=1.7159s avg_client_train_time=0.002841s aggregation_time=0.0653s round_time=2.0805s
+2026-05-08 04:28:07,494 P7513 INFO ********* Train Turn 224 *********
+2026-05-08 04:28:09,561 P7513 INFO Clients average loss: 0.2873665392398834
+2026-05-08 04:28:09,566 P7513 INFO [Time] turn=224 local_train_time=1.7070s avg_client_train_time=0.002826s aggregation_time=0.0642s round_time=2.0718s
+2026-05-08 04:28:09,566 P7513 INFO ********* Train Turn 225 *********
+2026-05-08 04:28:11,633 P7513 INFO Clients average loss: 0.2865203320980072
+2026-05-08 04:28:11,638 P7513 INFO [Time] turn=225 local_train_time=1.7037s avg_client_train_time=0.002821s aggregation_time=0.0642s round_time=2.0716s
+2026-05-08 04:28:11,638 P7513 INFO ********* Train Turn 226 *********
+2026-05-08 04:28:13,704 P7513 INFO Clients average loss: 0.2870698571205139
+2026-05-08 04:28:13,709 P7513 INFO [Time] turn=226 local_train_time=1.7065s avg_client_train_time=0.002825s aggregation_time=0.0641s round_time=2.0710s
+2026-05-08 04:28:13,709 P7513 INFO ********* Train Turn 227 *********
+2026-05-08 04:28:15,778 P7513 INFO Clients average loss: 0.2778925597667694
+2026-05-08 04:28:15,783 P7513 INFO [Time] turn=227 local_train_time=1.7086s avg_client_train_time=0.002829s aggregation_time=0.0645s round_time=2.0738s
+2026-05-08 04:28:15,783 P7513 INFO ********* Train Turn 228 *********
+2026-05-08 04:28:17,859 P7513 INFO Clients average loss: 0.28474387526512146
+2026-05-08 04:28:17,864 P7513 INFO [Time] turn=228 local_train_time=1.7147s avg_client_train_time=0.002839s aggregation_time=0.0649s round_time=2.0805s
+2026-05-08 04:28:17,864 P7513 INFO ********* Train Turn 229 *********
+2026-05-08 04:28:19,936 P7513 INFO Clients average loss: 0.2826361358165741
+2026-05-08 04:28:19,941 P7513 INFO [Time] turn=229 local_train_time=1.7113s avg_client_train_time=0.002833s aggregation_time=0.0643s round_time=2.0767s
+2026-05-08 04:28:19,941 P7513 INFO ********* Eval @ Turn 229 *********
+2026-05-08 04:28:22,063 P7513 INFO [Metrics] logloss: 1.506111 - MRR: 0.309616 - NDCG(5): 0.306616 - HR(5): 0.422848 - NDCG(10): 0.358072 - HR(10): 0.583609 - NDCG(20): 0.409553 - HR(20): 0.785927 - NDCG(50): 0.440117 - HR(50): 0.937086
+2026-05-08 04:28:22,063 P7513 INFO [Time] eval_time=2.1225s
+2026-05-08 04:28:22,063 P7513 INFO ********* Train Turn 230 *********
+2026-05-08 04:28:24,143 P7513 INFO Clients average loss: 0.2834266424179077
+2026-05-08 04:28:24,148 P7513 INFO [Time] turn=230 local_train_time=1.7095s avg_client_train_time=0.002830s aggregation_time=0.0645s round_time=2.0847s
+2026-05-08 04:28:24,148 P7513 INFO ********* Train Turn 231 *********
+2026-05-08 04:28:26,212 P7513 INFO Clients average loss: 0.28611430525779724
+2026-05-08 04:28:26,217 P7513 INFO [Time] turn=231 local_train_time=1.7021s avg_client_train_time=0.002818s aggregation_time=0.0641s round_time=2.0687s
+2026-05-08 04:28:26,217 P7513 INFO ********* Train Turn 232 *********
+2026-05-08 04:28:28,270 P7513 INFO Clients average loss: 0.28240644931793213
+2026-05-08 04:28:28,274 P7513 INFO [Time] turn=232 local_train_time=1.6958s avg_client_train_time=0.002808s aggregation_time=0.0640s round_time=2.0573s
+2026-05-08 04:28:28,274 P7513 INFO ********* Train Turn 233 *********
+2026-05-08 04:28:30,346 P7513 INFO Clients average loss: 0.2827138602733612
+2026-05-08 04:28:30,351 P7513 INFO [Time] turn=233 local_train_time=1.7094s avg_client_train_time=0.002830s aggregation_time=0.0644s round_time=2.0764s
+2026-05-08 04:28:30,351 P7513 INFO ********* Train Turn 234 *********
+2026-05-08 04:28:32,416 P7513 INFO Clients average loss: 0.28780797123908997
+2026-05-08 04:28:32,421 P7513 INFO [Time] turn=234 local_train_time=1.7072s avg_client_train_time=0.002827s aggregation_time=0.0637s round_time=2.0699s
+2026-05-08 04:28:32,421 P7513 INFO ********* Train Turn 235 *********
+2026-05-08 04:28:34,484 P7513 INFO Clients average loss: 0.28057554364204407
+2026-05-08 04:28:34,488 P7513 INFO [Time] turn=235 local_train_time=1.7001s avg_client_train_time=0.002815s aggregation_time=0.0640s round_time=2.0672s
+2026-05-08 04:28:34,488 P7513 INFO ********* Train Turn 236 *********
+2026-05-08 04:28:36,550 P7513 INFO Clients average loss: 0.2858789265155792
+2026-05-08 04:28:36,555 P7513 INFO [Time] turn=236 local_train_time=1.7029s avg_client_train_time=0.002819s aggregation_time=0.0638s round_time=2.0662s
+2026-05-08 04:28:36,555 P7513 INFO ********* Train Turn 237 *********
+2026-05-08 04:28:38,620 P7513 INFO Clients average loss: 0.28419286012649536
+2026-05-08 04:28:38,625 P7513 INFO [Time] turn=237 local_train_time=1.7046s avg_client_train_time=0.002822s aggregation_time=0.0642s round_time=2.0697s
+2026-05-08 04:28:38,625 P7513 INFO ********* Train Turn 238 *********
+2026-05-08 04:28:40,701 P7513 INFO Clients average loss: 0.2757793068885803
+2026-05-08 04:28:40,705 P7513 INFO [Time] turn=238 local_train_time=1.7156s avg_client_train_time=0.002840s aggregation_time=0.0646s round_time=2.0806s
+2026-05-08 04:28:40,705 P7513 INFO ********* Train Turn 239 *********
+2026-05-08 04:28:42,765 P7513 INFO Clients average loss: 0.2900139093399048
+2026-05-08 04:28:42,770 P7513 INFO [Time] turn=239 local_train_time=1.7028s avg_client_train_time=0.002819s aggregation_time=0.0645s round_time=2.0645s
+2026-05-08 04:28:42,770 P7513 INFO ********* Eval @ Turn 239 *********
+2026-05-08 04:28:44,752 P7513 INFO [Metrics] logloss: 1.464677 - MRR: 0.315833 - NDCG(5): 0.312361 - HR(5): 0.426325 - NDCG(10): 0.363642 - HR(10): 0.586424 - NDCG(20): 0.413983 - HR(20): 0.783940 - NDCG(50): 0.445211 - HR(50): 0.938411
+2026-05-08 04:28:44,752 P7513 INFO [Time] eval_time=1.9820s
+2026-05-08 04:28:44,752 P7513 INFO ********* Train Turn 240 *********
+2026-05-08 04:28:46,819 P7513 INFO Clients average loss: 0.2943766117095947
+2026-05-08 04:28:46,824 P7513 INFO [Time] turn=240 local_train_time=1.7012s avg_client_train_time=0.002817s aggregation_time=0.0648s round_time=2.0714s
+2026-05-08 04:28:46,824 P7513 INFO ********* Train Turn 241 *********
+2026-05-08 04:28:48,881 P7513 INFO Clients average loss: 0.2849156856536865
+2026-05-08 04:28:48,886 P7513 INFO [Time] turn=241 local_train_time=1.7004s avg_client_train_time=0.002815s aggregation_time=0.0644s round_time=2.0618s
+2026-05-08 04:28:48,886 P7513 INFO ********* Train Turn 242 *********
+2026-05-08 04:28:50,950 P7513 INFO Clients average loss: 0.27763405442237854
+2026-05-08 04:28:50,955 P7513 INFO [Time] turn=242 local_train_time=1.7054s avg_client_train_time=0.002823s aggregation_time=0.0649s round_time=2.0688s
+2026-05-08 04:28:50,955 P7513 INFO ********* Train Turn 243 *********
+2026-05-08 04:28:53,015 P7513 INFO Clients average loss: 0.2879168391227722
+2026-05-08 04:28:53,020 P7513 INFO [Time] turn=243 local_train_time=1.7017s avg_client_train_time=0.002817s aggregation_time=0.0645s round_time=2.0652s
+2026-05-08 04:28:53,020 P7513 INFO ********* Train Turn 244 *********
+2026-05-08 04:28:55,075 P7513 INFO Clients average loss: 0.2870234251022339
+2026-05-08 04:28:55,079 P7513 INFO [Time] turn=244 local_train_time=1.6979s avg_client_train_time=0.002811s aggregation_time=0.0647s round_time=2.0590s
+2026-05-08 04:28:55,079 P7513 INFO ********* Train Turn 245 *********
+2026-05-08 04:28:57,129 P7513 INFO Clients average loss: 0.28276970982551575
+2026-05-08 04:28:57,133 P7513 INFO [Time] turn=245 local_train_time=1.6933s avg_client_train_time=0.002804s aggregation_time=0.0632s round_time=2.0540s
+2026-05-08 04:28:57,133 P7513 INFO ********* Train Turn 246 *********
+2026-05-08 04:28:59,184 P7513 INFO Clients average loss: 0.28415730595588684
+2026-05-08 04:28:59,189 P7513 INFO [Time] turn=246 local_train_time=1.6944s avg_client_train_time=0.002805s aggregation_time=0.0640s round_time=2.0554s
+2026-05-08 04:28:59,189 P7513 INFO ********* Train Turn 247 *********
+2026-05-08 04:29:01,243 P7513 INFO Clients average loss: 0.27838054299354553
+2026-05-08 04:29:01,248 P7513 INFO [Time] turn=247 local_train_time=1.6966s avg_client_train_time=0.002809s aggregation_time=0.0641s round_time=2.0590s
+2026-05-08 04:29:01,248 P7513 INFO ********* Train Turn 248 *********
+2026-05-08 04:29:03,321 P7513 INFO Clients average loss: 0.280120849609375
+2026-05-08 04:29:03,325 P7513 INFO [Time] turn=248 local_train_time=1.7115s avg_client_train_time=0.002834s aggregation_time=0.0646s round_time=2.0769s
+2026-05-08 04:29:03,325 P7513 INFO ********* Train Turn 249 *********
+2026-05-08 04:29:05,380 P7513 INFO Clients average loss: 0.28087690472602844
+2026-05-08 04:29:05,385 P7513 INFO [Time] turn=249 local_train_time=1.6963s avg_client_train_time=0.002809s aggregation_time=0.0639s round_time=2.0593s
+2026-05-08 04:29:05,385 P7513 INFO ********* Eval @ Turn 249 *********
+2026-05-08 04:29:07,358 P7513 INFO [Metrics] logloss: 1.440229 - MRR: 0.321322 - NDCG(5): 0.317873 - HR(5): 0.430795 - NDCG(10): 0.369669 - HR(10): 0.593046 - NDCG(20): 0.418131 - HR(20): 0.782947 - NDCG(50): 0.449597 - HR(50): 0.938907
+2026-05-08 04:29:07,358 P7513 INFO [Time] eval_time=1.9732s
+2026-05-08 04:29:07,358 P7513 INFO ********* Train Turn 250 *********
+2026-05-08 04:29:09,426 P7513 INFO Clients average loss: 0.2889930307865143
+2026-05-08 04:29:09,431 P7513 INFO [Time] turn=250 local_train_time=1.7013s avg_client_train_time=0.002817s aggregation_time=0.0644s round_time=2.0726s
+2026-05-08 04:29:09,431 P7513 INFO ********* Train Turn 251 *********
+2026-05-08 04:29:11,483 P7513 INFO Clients average loss: 0.2881771922111511
+2026-05-08 04:29:11,488 P7513 INFO [Time] turn=251 local_train_time=1.6966s avg_client_train_time=0.002809s aggregation_time=0.0644s round_time=2.0567s
+2026-05-08 04:29:11,488 P7513 INFO ********* Train Turn 252 *********
+2026-05-08 04:29:13,557 P7513 INFO Clients average loss: 0.28484630584716797
+2026-05-08 04:29:13,561 P7513 INFO [Time] turn=252 local_train_time=1.7113s avg_client_train_time=0.002833s aggregation_time=0.0648s round_time=2.0736s
+2026-05-08 04:29:13,562 P7513 INFO ********* Train Turn 253 *********
+2026-05-08 04:29:15,765 P7513 INFO Clients average loss: 0.2810251712799072
+2026-05-08 04:29:15,769 P7513 INFO [Time] turn=253 local_train_time=1.7106s avg_client_train_time=0.002832s aggregation_time=0.0642s round_time=2.2076s
+2026-05-08 04:29:15,769 P7513 INFO ********* Train Turn 254 *********
+2026-05-08 04:29:17,835 P7513 INFO Clients average loss: 0.27668386697769165
+2026-05-08 04:29:17,840 P7513 INFO [Time] turn=254 local_train_time=1.7062s avg_client_train_time=0.002825s aggregation_time=0.0643s round_time=2.0704s
+2026-05-08 04:29:17,840 P7513 INFO ********* Train Turn 255 *********
+2026-05-08 04:29:19,906 P7513 INFO Clients average loss: 0.2822694778442383
+2026-05-08 04:29:19,910 P7513 INFO [Time] turn=255 local_train_time=1.7070s avg_client_train_time=0.002826s aggregation_time=0.0647s round_time=2.0703s
+2026-05-08 04:29:19,910 P7513 INFO ********* Train Turn 256 *********
+2026-05-08 04:29:21,961 P7513 INFO Clients average loss: 0.2833337187767029
+2026-05-08 04:29:21,966 P7513 INFO [Time] turn=256 local_train_time=1.6937s avg_client_train_time=0.002804s aggregation_time=0.0638s round_time=2.0551s
+2026-05-08 04:29:21,966 P7513 INFO ********* Train Turn 257 *********
+2026-05-08 04:29:24,034 P7513 INFO Clients average loss: 0.27943065762519836
+2026-05-08 04:29:24,038 P7513 INFO [Time] turn=257 local_train_time=1.7080s avg_client_train_time=0.002828s aggregation_time=0.0650s round_time=2.0726s
+2026-05-08 04:29:24,039 P7513 INFO ********* Train Turn 258 *********
+2026-05-08 04:29:26,094 P7513 INFO Clients average loss: 0.2779664695262909
+2026-05-08 04:29:26,099 P7513 INFO [Time] turn=258 local_train_time=1.6901s avg_client_train_time=0.002798s aggregation_time=0.0640s round_time=2.0600s
+2026-05-08 04:29:26,099 P7513 INFO ********* Train Turn 259 *********
+2026-05-08 04:29:28,152 P7513 INFO Clients average loss: 0.2815679609775543
+2026-05-08 04:29:28,157 P7513 INFO [Time] turn=259 local_train_time=1.6955s avg_client_train_time=0.002807s aggregation_time=0.0643s round_time=2.0584s
+2026-05-08 04:29:28,157 P7513 INFO ********* Eval @ Turn 259 *********
+2026-05-08 04:29:30,125 P7513 INFO [Metrics] logloss: 1.422749 - MRR: 0.326114 - NDCG(5): 0.321367 - HR(5): 0.430795 - NDCG(10): 0.373888 - HR(10): 0.595364 - NDCG(20): 0.421918 - HR(20): 0.783278 - NDCG(50): 0.453152 - HR(50): 0.938245
+2026-05-08 04:29:30,125 P7513 INFO [Time] eval_time=1.9682s
+2026-05-08 04:29:30,125 P7513 INFO ********* Train Turn 260 *********
+2026-05-08 04:29:32,195 P7513 INFO Clients average loss: 0.27945947647094727
+2026-05-08 04:29:32,199 P7513 INFO [Time] turn=260 local_train_time=1.7037s avg_client_train_time=0.002821s aggregation_time=0.0645s round_time=2.0740s
+2026-05-08 04:29:32,200 P7513 INFO ********* Train Turn 261 *********
+2026-05-08 04:29:34,270 P7513 INFO Clients average loss: 0.2800862789154053
+2026-05-08 04:29:34,275 P7513 INFO [Time] turn=261 local_train_time=1.7124s avg_client_train_time=0.002835s aggregation_time=0.0652s round_time=2.0754s
+2026-05-08 04:29:34,275 P7513 INFO ********* Train Turn 262 *********
+2026-05-08 04:29:36,348 P7513 INFO Clients average loss: 0.2740165591239929
+2026-05-08 04:29:36,353 P7513 INFO [Time] turn=262 local_train_time=1.7116s avg_client_train_time=0.002834s aggregation_time=0.0637s round_time=2.0775s
+2026-05-08 04:29:36,353 P7513 INFO ********* Train Turn 263 *********
+2026-05-08 04:29:38,422 P7513 INFO Clients average loss: 0.2770947217941284
+2026-05-08 04:29:38,426 P7513 INFO [Time] turn=263 local_train_time=1.7094s avg_client_train_time=0.002830s aggregation_time=0.0642s round_time=2.0733s
+2026-05-08 04:29:38,426 P7513 INFO ********* Train Turn 264 *********
+2026-05-08 04:29:40,495 P7513 INFO Clients average loss: 0.2770109474658966
+2026-05-08 04:29:40,500 P7513 INFO [Time] turn=264 local_train_time=1.7093s avg_client_train_time=0.002830s aggregation_time=0.0645s round_time=2.0734s
+2026-05-08 04:29:40,500 P7513 INFO ********* Train Turn 265 *********
+2026-05-08 04:29:42,567 P7513 INFO Clients average loss: 0.27413010597229004
+2026-05-08 04:29:42,572 P7513 INFO [Time] turn=265 local_train_time=1.7088s avg_client_train_time=0.002829s aggregation_time=0.0641s round_time=2.0720s
+2026-05-08 04:29:42,572 P7513 INFO ********* Train Turn 266 *********
+2026-05-08 04:29:44,641 P7513 INFO Clients average loss: 0.27576744556427
+2026-05-08 04:29:44,646 P7513 INFO [Time] turn=266 local_train_time=1.7100s avg_client_train_time=0.002831s aggregation_time=0.0647s round_time=2.0735s
+2026-05-08 04:29:44,646 P7513 INFO ********* Train Turn 267 *********
+2026-05-08 04:29:46,724 P7513 INFO Clients average loss: 0.2842967212200165
+2026-05-08 04:29:46,729 P7513 INFO [Time] turn=267 local_train_time=1.7186s avg_client_train_time=0.002845s aggregation_time=0.0645s round_time=2.0828s
+2026-05-08 04:29:46,729 P7513 INFO ********* Train Turn 268 *********
+2026-05-08 04:29:48,793 P7513 INFO Clients average loss: 0.2756408154964447
+2026-05-08 04:29:48,797 P7513 INFO [Time] turn=268 local_train_time=1.7061s avg_client_train_time=0.002825s aggregation_time=0.0645s round_time=2.0683s
+2026-05-08 04:29:48,797 P7513 INFO ********* Train Turn 269 *********
+2026-05-08 04:29:50,861 P7513 INFO Clients average loss: 0.2773028314113617
+2026-05-08 04:29:50,866 P7513 INFO [Time] turn=269 local_train_time=1.7057s avg_client_train_time=0.002824s aggregation_time=0.0645s round_time=2.0683s
+2026-05-08 04:29:50,866 P7513 INFO ********* Eval @ Turn 269 *********
+2026-05-08 04:29:52,991 P7513 INFO [Metrics] logloss: 1.412560 - MRR: 0.329656 - NDCG(5): 0.324101 - HR(5): 0.431457 - NDCG(10): 0.377066 - HR(10): 0.597351 - NDCG(20): 0.424631 - HR(20): 0.783444 - NDCG(50): 0.455972 - HR(50): 0.938907
+2026-05-08 04:29:52,991 P7513 INFO [Time] eval_time=2.1252s
+2026-05-08 04:29:52,991 P7513 INFO ********* Train Turn 270 *********
+2026-05-08 04:29:55,076 P7513 INFO Clients average loss: 0.2747955918312073
+2026-05-08 04:29:55,081 P7513 INFO [Time] turn=270 local_train_time=1.7165s avg_client_train_time=0.002842s aggregation_time=0.0647s round_time=2.0893s
+2026-05-08 04:29:55,081 P7513 INFO ********* Train Turn 271 *********
+2026-05-08 04:29:57,164 P7513 INFO Clients average loss: 0.2714248597621918
+2026-05-08 04:29:57,168 P7513 INFO [Time] turn=271 local_train_time=1.7221s avg_client_train_time=0.002851s aggregation_time=0.0656s round_time=2.0877s
+2026-05-08 04:29:57,168 P7513 INFO ********* Train Turn 272 *********
+2026-05-08 04:29:59,239 P7513 INFO Clients average loss: 0.28281956911087036
+2026-05-08 04:29:59,244 P7513 INFO [Time] turn=272 local_train_time=1.7090s avg_client_train_time=0.002829s aggregation_time=0.0648s round_time=2.0751s
+2026-05-08 04:29:59,244 P7513 INFO ********* Train Turn 273 *********
+2026-05-08 04:30:01,315 P7513 INFO Clients average loss: 0.2807612121105194
+2026-05-08 04:30:01,319 P7513 INFO [Time] turn=273 local_train_time=1.7110s avg_client_train_time=0.002833s aggregation_time=0.0643s round_time=2.0756s
+2026-05-08 04:30:01,320 P7513 INFO ********* Train Turn 274 *********
+2026-05-08 04:30:03,390 P7513 INFO Clients average loss: 0.273868203163147
+2026-05-08 04:30:03,394 P7513 INFO [Time] turn=274 local_train_time=1.7105s avg_client_train_time=0.002832s aggregation_time=0.0640s round_time=2.0749s
+2026-05-08 04:30:03,395 P7513 INFO ********* Train Turn 275 *********
+2026-05-08 04:30:05,466 P7513 INFO Clients average loss: 0.2776201367378235
+2026-05-08 04:30:05,470 P7513 INFO [Time] turn=275 local_train_time=1.7065s avg_client_train_time=0.002825s aggregation_time=0.0645s round_time=2.0758s
+2026-05-08 04:30:05,471 P7513 INFO ********* Train Turn 276 *********
+2026-05-08 04:30:07,546 P7513 INFO Clients average loss: 0.27764225006103516
+2026-05-08 04:30:07,551 P7513 INFO [Time] turn=276 local_train_time=1.7154s avg_client_train_time=0.002840s aggregation_time=0.0647s round_time=2.0798s
+2026-05-08 04:30:07,551 P7513 INFO ********* Train Turn 277 *********
+2026-05-08 04:30:09,619 P7513 INFO Clients average loss: 0.2729259133338928
+2026-05-08 04:30:09,624 P7513 INFO [Time] turn=277 local_train_time=1.7095s avg_client_train_time=0.002830s aggregation_time=0.0645s round_time=2.0732s
+2026-05-08 04:30:09,624 P7513 INFO ********* Train Turn 278 *********
+2026-05-08 04:30:11,693 P7513 INFO Clients average loss: 0.2762989103794098
+2026-05-08 04:30:11,698 P7513 INFO [Time] turn=278 local_train_time=1.7101s avg_client_train_time=0.002831s aggregation_time=0.0647s round_time=2.0740s
+2026-05-08 04:30:11,698 P7513 INFO ********* Train Turn 279 *********
+2026-05-08 04:30:13,768 P7513 INFO Clients average loss: 0.27757418155670166
+2026-05-08 04:30:13,773 P7513 INFO [Time] turn=279 local_train_time=1.7091s avg_client_train_time=0.002830s aggregation_time=0.0644s round_time=2.0743s
+2026-05-08 04:30:13,773 P7513 INFO ********* Eval @ Turn 279 *********
+2026-05-08 04:30:15,766 P7513 INFO [Metrics] logloss: 1.398779 - MRR: 0.330243 - NDCG(5): 0.325684 - HR(5): 0.435596 - NDCG(10): 0.378800 - HR(10): 0.601987 - NDCG(20): 0.425320 - HR(20): 0.783940 - NDCG(50): 0.456521 - HR(50): 0.938576
+2026-05-08 04:30:15,766 P7513 INFO [Time] eval_time=1.9935s
+2026-05-08 04:30:15,766 P7513 INFO ********* Train Turn 280 *********
+2026-05-08 04:30:17,850 P7513 INFO Clients average loss: 0.28111839294433594
+2026-05-08 04:30:17,855 P7513 INFO [Time] turn=280 local_train_time=1.7121s avg_client_train_time=0.002835s aggregation_time=0.0646s round_time=2.0884s
+2026-05-08 04:30:17,855 P7513 INFO ********* Train Turn 281 *********
+2026-05-08 04:30:19,932 P7513 INFO Clients average loss: 0.2762898802757263
+2026-05-08 04:30:19,937 P7513 INFO [Time] turn=281 local_train_time=1.7198s avg_client_train_time=0.002847s aggregation_time=0.0644s round_time=2.0822s
+2026-05-08 04:30:19,937 P7513 INFO ********* Train Turn 282 *********
+2026-05-08 04:30:22,011 P7513 INFO Clients average loss: 0.27775993943214417
+2026-05-08 04:30:22,016 P7513 INFO [Time] turn=282 local_train_time=1.7104s avg_client_train_time=0.002832s aggregation_time=0.0656s round_time=2.0784s
+2026-05-08 04:30:22,016 P7513 INFO ********* Train Turn 283 *********
+2026-05-08 04:30:24,081 P7513 INFO Clients average loss: 0.27479830384254456
+2026-05-08 04:30:24,086 P7513 INFO [Time] turn=283 local_train_time=1.7073s avg_client_train_time=0.002827s aggregation_time=0.0641s round_time=2.0700s
+2026-05-08 04:30:24,086 P7513 INFO ********* Train Turn 284 *********
+2026-05-08 04:30:26,154 P7513 INFO Clients average loss: 0.2833830714225769
+2026-05-08 04:30:26,159 P7513 INFO [Time] turn=284 local_train_time=1.7102s avg_client_train_time=0.002831s aggregation_time=0.0643s round_time=2.0725s
+2026-05-08 04:30:26,159 P7513 INFO ********* Train Turn 285 *********
+2026-05-08 04:30:28,229 P7513 INFO Clients average loss: 0.27676117420196533
+2026-05-08 04:30:28,234 P7513 INFO [Time] turn=285 local_train_time=1.7105s avg_client_train_time=0.002832s aggregation_time=0.0641s round_time=2.0749s
+2026-05-08 04:30:28,234 P7513 INFO ********* Train Turn 286 *********
+2026-05-08 04:30:30,312 P7513 INFO Clients average loss: 0.2832399606704712
+2026-05-08 04:30:30,317 P7513 INFO [Time] turn=286 local_train_time=1.7189s avg_client_train_time=0.002846s aggregation_time=0.0643s round_time=2.0829s
+2026-05-08 04:30:30,317 P7513 INFO ********* Train Turn 287 *********
+2026-05-08 04:30:32,383 P7513 INFO Clients average loss: 0.27983614802360535
+2026-05-08 04:30:32,387 P7513 INFO [Time] turn=287 local_train_time=1.7070s avg_client_train_time=0.002826s aggregation_time=0.0642s round_time=2.0704s
+2026-05-08 04:30:32,387 P7513 INFO ********* Train Turn 288 *********
+2026-05-08 04:30:34,453 P7513 INFO Clients average loss: 0.2737841308116913
+2026-05-08 04:30:34,458 P7513 INFO [Time] turn=288 local_train_time=1.7070s avg_client_train_time=0.002826s aggregation_time=0.0644s round_time=2.0707s
+2026-05-08 04:30:34,458 P7513 INFO ********* Train Turn 289 *********
+2026-05-08 04:30:36,524 P7513 INFO Clients average loss: 0.27483078837394714
+2026-05-08 04:30:36,528 P7513 INFO [Time] turn=289 local_train_time=1.7062s avg_client_train_time=0.002825s aggregation_time=0.0644s round_time=2.0701s
+2026-05-08 04:30:36,528 P7513 INFO ********* Eval @ Turn 289 *********
+2026-05-08 04:30:38,645 P7513 INFO [Metrics] logloss: 1.383738 - MRR: 0.333879 - NDCG(5): 0.329316 - HR(5): 0.438411 - NDCG(10): 0.382260 - HR(10): 0.604139 - NDCG(20): 0.427879 - HR(20): 0.782616 - NDCG(50): 0.459398 - HR(50): 0.938907
+2026-05-08 04:30:38,645 P7513 INFO [Time] eval_time=2.1166s
+2026-05-08 04:30:38,645 P7513 INFO ********* Train Turn 290 *********
+2026-05-08 04:30:40,722 P7513 INFO Clients average loss: 0.27861106395721436
+2026-05-08 04:30:40,726 P7513 INFO [Time] turn=290 local_train_time=1.7094s avg_client_train_time=0.002830s aggregation_time=0.0651s round_time=2.0812s
+2026-05-08 04:30:40,727 P7513 INFO ********* Train Turn 291 *********
+2026-05-08 04:30:42,786 P7513 INFO Clients average loss: 0.2779921591281891
+2026-05-08 04:30:42,790 P7513 INFO [Time] turn=291 local_train_time=1.7018s avg_client_train_time=0.002818s aggregation_time=0.0642s round_time=2.0637s
+2026-05-08 04:30:42,790 P7513 INFO ********* Train Turn 292 *********
+2026-05-08 04:30:44,845 P7513 INFO Clients average loss: 0.2722953259944916
+2026-05-08 04:30:44,849 P7513 INFO [Time] turn=292 local_train_time=1.6987s avg_client_train_time=0.002812s aggregation_time=0.0646s round_time=2.0587s
+2026-05-08 04:30:44,849 P7513 INFO ********* Train Turn 293 *********
+2026-05-08 04:30:46,904 P7513 INFO Clients average loss: 0.26798656582832336
+2026-05-08 04:30:46,909 P7513 INFO [Time] turn=293 local_train_time=1.6986s avg_client_train_time=0.002812s aggregation_time=0.0639s round_time=2.0596s
+2026-05-08 04:30:46,909 P7513 INFO ********* Train Turn 294 *********
+2026-05-08 04:30:48,962 P7513 INFO Clients average loss: 0.27805981040000916
+2026-05-08 04:30:48,967 P7513 INFO [Time] turn=294 local_train_time=1.6980s avg_client_train_time=0.002811s aggregation_time=0.0639s round_time=2.0578s
+2026-05-08 04:30:48,967 P7513 INFO ********* Train Turn 295 *********
+2026-05-08 04:30:51,023 P7513 INFO Clients average loss: 0.2813979983329773
+2026-05-08 04:30:51,028 P7513 INFO [Time] turn=295 local_train_time=1.6998s avg_client_train_time=0.002814s aggregation_time=0.0641s round_time=2.0606s
+2026-05-08 04:30:51,028 P7513 INFO ********* Train Turn 296 *********
+2026-05-08 04:30:53,094 P7513 INFO Clients average loss: 0.2740805149078369
+2026-05-08 04:30:53,099 P7513 INFO [Time] turn=296 local_train_time=1.7082s avg_client_train_time=0.002828s aggregation_time=0.0641s round_time=2.0711s
+2026-05-08 04:30:53,099 P7513 INFO ********* Train Turn 297 *********
+2026-05-08 04:30:55,151 P7513 INFO Clients average loss: 0.275516152381897
+2026-05-08 04:30:55,156 P7513 INFO [Time] turn=297 local_train_time=1.6950s avg_client_train_time=0.002806s aggregation_time=0.0642s round_time=2.0569s
+2026-05-08 04:30:55,156 P7513 INFO ********* Train Turn 298 *********
+2026-05-08 04:30:57,207 P7513 INFO Clients average loss: 0.27904510498046875
+2026-05-08 04:30:57,212 P7513 INFO [Time] turn=298 local_train_time=1.6949s avg_client_train_time=0.002806s aggregation_time=0.0639s round_time=2.0558s
+2026-05-08 04:30:57,212 P7513 INFO ********* Train Turn 299 *********
+2026-05-08 04:30:59,262 P7513 INFO Clients average loss: 0.27596116065979004
+2026-05-08 04:30:59,267 P7513 INFO [Time] turn=299 local_train_time=1.6941s avg_client_train_time=0.002805s aggregation_time=0.0643s round_time=2.0547s
+2026-05-08 04:30:59,267 P7513 INFO ********* Eval @ Turn 299 *********
+2026-05-08 04:31:01,242 P7513 INFO [Metrics] logloss: 1.376014 - MRR: 0.336330 - NDCG(5): 0.330872 - HR(5): 0.437748 - NDCG(10): 0.383881 - HR(10): 0.603477 - NDCG(20): 0.430117 - HR(20): 0.784437 - NDCG(50): 0.461524 - HR(50): 0.940397
+2026-05-08 04:31:01,243 P7513 INFO [Time] eval_time=1.9758s
+2026-05-08 04:31:01,243 P7513 INFO ********* Train Turn 300 *********
+2026-05-08 04:31:03,327 P7513 INFO Clients average loss: 0.27665770053863525
+2026-05-08 04:31:03,331 P7513 INFO [Time] turn=300 local_train_time=1.7176s avg_client_train_time=0.002844s aggregation_time=0.0639s round_time=2.0885s
+2026-05-08 04:31:03,331 P7513 INFO ********* Train Turn 301 *********
+2026-05-08 04:31:05,391 P7513 INFO Clients average loss: 0.276551753282547
+2026-05-08 04:31:05,395 P7513 INFO [Time] turn=301 local_train_time=1.6991s avg_client_train_time=0.002813s aggregation_time=0.0640s round_time=2.0637s
+2026-05-08 04:31:05,395 P7513 INFO ********* Train Turn 302 *********
+2026-05-08 04:31:07,450 P7513 INFO Clients average loss: 0.27478253841400146
+2026-05-08 04:31:07,454 P7513 INFO [Time] turn=302 local_train_time=1.6993s avg_client_train_time=0.002813s aggregation_time=0.0640s round_time=2.0589s
+2026-05-08 04:31:07,454 P7513 INFO ********* Train Turn 303 *********
+2026-05-08 04:31:09,512 P7513 INFO Clients average loss: 0.2647237181663513
+2026-05-08 04:31:09,517 P7513 INFO [Time] turn=303 local_train_time=1.7013s avg_client_train_time=0.002817s aggregation_time=0.0649s round_time=2.0621s
+2026-05-08 04:31:09,517 P7513 INFO ********* Train Turn 304 *********
+2026-05-08 04:31:11,577 P7513 INFO Clients average loss: 0.27437496185302734
+2026-05-08 04:31:11,582 P7513 INFO [Time] turn=304 local_train_time=1.7027s avg_client_train_time=0.002819s aggregation_time=0.0642s round_time=2.0649s
+2026-05-08 04:31:11,582 P7513 INFO ********* Train Turn 305 *********
+2026-05-08 04:31:13,645 P7513 INFO Clients average loss: 0.2741766571998596
+2026-05-08 04:31:13,650 P7513 INFO [Time] turn=305 local_train_time=1.7025s avg_client_train_time=0.002819s aggregation_time=0.0639s round_time=2.0677s
+2026-05-08 04:31:13,650 P7513 INFO ********* Train Turn 306 *********
+2026-05-08 04:31:15,713 P7513 INFO Clients average loss: 0.27271518111228943
+2026-05-08 04:31:15,718 P7513 INFO [Time] turn=306 local_train_time=1.7054s avg_client_train_time=0.002823s aggregation_time=0.0642s round_time=2.0683s
+2026-05-08 04:31:15,718 P7513 INFO ********* Train Turn 307 *********
+2026-05-08 04:31:17,770 P7513 INFO Clients average loss: 0.2702030539512634
+2026-05-08 04:31:17,775 P7513 INFO [Time] turn=307 local_train_time=1.6957s avg_client_train_time=0.002807s aggregation_time=0.0642s round_time=2.0565s
+2026-05-08 04:31:17,775 P7513 INFO ********* Train Turn 308 *********
+2026-05-08 04:31:19,827 P7513 INFO Clients average loss: 0.2734273076057434
+2026-05-08 04:31:19,831 P7513 INFO [Time] turn=308 local_train_time=1.6955s avg_client_train_time=0.002807s aggregation_time=0.0643s round_time=2.0565s
+2026-05-08 04:31:19,832 P7513 INFO ********* Train Turn 309 *********
+2026-05-08 04:31:21,883 P7513 INFO Clients average loss: 0.27393513917922974
+2026-05-08 04:31:21,887 P7513 INFO [Time] turn=309 local_train_time=1.6938s avg_client_train_time=0.002804s aggregation_time=0.0645s round_time=2.0557s
+2026-05-08 04:31:21,887 P7513 INFO ********* Eval @ Turn 309 *********
+2026-05-08 04:31:23,996 P7513 INFO [Metrics] logloss: 1.376534 - MRR: 0.337548 - NDCG(5): 0.331839 - HR(5): 0.437914 - NDCG(10): 0.385040 - HR(10): 0.604305 - NDCG(20): 0.430559 - HR(20): 0.782616 - NDCG(50): 0.462328 - HR(50): 0.940066
+2026-05-08 04:31:23,996 P7513 INFO [Time] eval_time=2.1090s
+2026-05-08 04:31:23,996 P7513 INFO ********* Train Turn 310 *********
+2026-05-08 04:31:26,075 P7513 INFO Clients average loss: 0.27315813302993774
+2026-05-08 04:31:26,080 P7513 INFO [Time] turn=310 local_train_time=1.7105s avg_client_train_time=0.002832s aggregation_time=0.0644s round_time=2.0833s
+2026-05-08 04:31:26,080 P7513 INFO ********* Train Turn 311 *********
+2026-05-08 04:31:28,138 P7513 INFO Clients average loss: 0.27406761050224304
+2026-05-08 04:31:28,143 P7513 INFO [Time] turn=311 local_train_time=1.7019s avg_client_train_time=0.002818s aggregation_time=0.0646s round_time=2.0626s
+2026-05-08 04:31:28,143 P7513 INFO ********* Train Turn 312 *********
+2026-05-08 04:31:30,198 P7513 INFO Clients average loss: 0.26503846049308777
+2026-05-08 04:31:30,203 P7513 INFO [Time] turn=312 local_train_time=1.6993s avg_client_train_time=0.002813s aggregation_time=0.0646s round_time=2.0602s
+2026-05-08 04:31:30,203 P7513 INFO ********* Train Turn 313 *********
+2026-05-08 04:31:32,258 P7513 INFO Clients average loss: 0.27541717886924744
+2026-05-08 04:31:32,263 P7513 INFO [Time] turn=313 local_train_time=1.6989s avg_client_train_time=0.002813s aggregation_time=0.0644s round_time=2.0594s
+2026-05-08 04:31:32,263 P7513 INFO ********* Train Turn 314 *********
+2026-05-08 04:31:34,316 P7513 INFO Clients average loss: 0.2756226658821106
+2026-05-08 04:31:34,321 P7513 INFO [Time] turn=314 local_train_time=1.6965s avg_client_train_time=0.002809s aggregation_time=0.0652s round_time=2.0580s
+2026-05-08 04:31:34,321 P7513 INFO ********* Train Turn 315 *********
+2026-05-08 04:31:36,385 P7513 INFO Clients average loss: 0.2645326852798462
+2026-05-08 04:31:36,389 P7513 INFO [Time] turn=315 local_train_time=1.7078s avg_client_train_time=0.002828s aggregation_time=0.0638s round_time=2.0681s
+2026-05-08 04:31:36,389 P7513 INFO ********* Train Turn 316 *********
+2026-05-08 04:31:38,441 P7513 INFO Clients average loss: 0.27320387959480286
+2026-05-08 04:31:38,446 P7513 INFO [Time] turn=316 local_train_time=1.6944s avg_client_train_time=0.002805s aggregation_time=0.0639s round_time=2.0564s
+2026-05-08 04:31:38,446 P7513 INFO ********* Train Turn 317 *********
+2026-05-08 04:31:40,494 P7513 INFO Clients average loss: 0.27213045954704285
+2026-05-08 04:31:40,498 P7513 INFO [Time] turn=317 local_train_time=1.6927s avg_client_train_time=0.002802s aggregation_time=0.0639s round_time=2.0523s
+2026-05-08 04:31:40,498 P7513 INFO ********* Train Turn 318 *********
+2026-05-08 04:31:42,548 P7513 INFO Clients average loss: 0.27796515822410583
+2026-05-08 04:31:42,553 P7513 INFO [Time] turn=318 local_train_time=1.6952s avg_client_train_time=0.002807s aggregation_time=0.0636s round_time=2.0549s
+2026-05-08 04:31:42,553 P7513 INFO ********* Train Turn 319 *********
+2026-05-08 04:31:44,602 P7513 INFO Clients average loss: 0.2717410624027252
+2026-05-08 04:31:44,607 P7513 INFO [Time] turn=319 local_train_time=1.6930s avg_client_train_time=0.002803s aggregation_time=0.0643s round_time=2.0538s
+2026-05-08 04:31:44,607 P7513 INFO ********* Eval @ Turn 319 *********
+2026-05-08 04:31:46,590 P7513 INFO [Metrics] logloss: 1.378769 - MRR: 0.336843 - NDCG(5): 0.331369 - HR(5): 0.438079 - NDCG(10): 0.384015 - HR(10): 0.602649 - NDCG(20): 0.430299 - HR(20): 0.783940 - NDCG(50): 0.461671 - HR(50): 0.939404
+2026-05-08 04:31:46,590 P7513 INFO [Time] eval_time=1.9829s
+2026-05-08 04:31:46,590 P7513 INFO ********* Train Turn 320 *********
+2026-05-08 04:31:48,663 P7513 INFO Clients average loss: 0.2703951895236969
+2026-05-08 04:31:48,668 P7513 INFO [Time] turn=320 local_train_time=1.7076s avg_client_train_time=0.002827s aggregation_time=0.0644s round_time=2.0775s
+2026-05-08 04:31:48,668 P7513 INFO ********* Train Turn 321 *********
+2026-05-08 04:31:50,723 P7513 INFO Clients average loss: 0.2660665810108185
+2026-05-08 04:31:50,727 P7513 INFO [Time] turn=321 local_train_time=1.6980s avg_client_train_time=0.002811s aggregation_time=0.0646s round_time=2.0592s
+2026-05-08 04:31:50,727 P7513 INFO ********* Train Turn 322 *********
+2026-05-08 04:31:52,781 P7513 INFO Clients average loss: 0.270861953496933
+2026-05-08 04:31:52,786 P7513 INFO [Time] turn=322 local_train_time=1.6977s avg_client_train_time=0.002811s aggregation_time=0.0643s round_time=2.0586s
+2026-05-08 04:31:52,786 P7513 INFO ********* Train Turn 323 *********
+2026-05-08 04:31:54,843 P7513 INFO Clients average loss: 0.2772991955280304
+2026-05-08 04:31:54,847 P7513 INFO [Time] turn=323 local_train_time=1.6990s avg_client_train_time=0.002813s aggregation_time=0.0645s round_time=2.0613s
+2026-05-08 04:31:54,848 P7513 INFO ********* Train Turn 324 *********
+2026-05-08 04:31:56,899 P7513 INFO Clients average loss: 0.27965471148490906
+2026-05-08 04:31:56,904 P7513 INFO [Time] turn=324 local_train_time=1.6961s avg_client_train_time=0.002808s aggregation_time=0.0643s round_time=2.0563s
+2026-05-08 04:31:56,904 P7513 INFO ********* Train Turn 325 *********
+2026-05-08 04:31:58,980 P7513 INFO Clients average loss: 0.26238036155700684
+2026-05-08 04:31:58,985 P7513 INFO [Time] turn=325 local_train_time=1.7167s avg_client_train_time=0.002842s aggregation_time=0.0651s round_time=2.0808s
+2026-05-08 04:31:58,985 P7513 INFO ********* Train Turn 326 *********
+2026-05-08 04:32:01,057 P7513 INFO Clients average loss: 0.2588978409767151
+2026-05-08 04:32:01,061 P7513 INFO [Time] turn=326 local_train_time=1.7112s avg_client_train_time=0.002833s aggregation_time=0.0642s round_time=2.0760s
+2026-05-08 04:32:01,061 P7513 INFO ********* Train Turn 327 *********
+2026-05-08 04:32:03,129 P7513 INFO Clients average loss: 0.2733171284198761
+2026-05-08 04:32:03,133 P7513 INFO [Time] turn=327 local_train_time=1.7092s avg_client_train_time=0.002830s aggregation_time=0.0636s round_time=2.0721s
+2026-05-08 04:32:03,134 P7513 INFO ********* Train Turn 328 *********
+2026-05-08 04:32:05,198 P7513 INFO Clients average loss: 0.26790186762809753
+2026-05-08 04:32:05,202 P7513 INFO [Time] turn=328 local_train_time=1.7068s avg_client_train_time=0.002826s aggregation_time=0.0643s round_time=2.0688s
+2026-05-08 04:32:05,202 P7513 INFO ********* Train Turn 329 *********
+2026-05-08 04:32:07,266 P7513 INFO Clients average loss: 0.2680909037590027
+2026-05-08 04:32:07,270 P7513 INFO [Time] turn=329 local_train_time=1.7059s avg_client_train_time=0.002824s aggregation_time=0.0640s round_time=2.0678s
+2026-05-08 04:32:07,270 P7513 INFO ********* Eval @ Turn 329 *********
+2026-05-08 04:32:09,252 P7513 INFO [Metrics] logloss: 1.384414 - MRR: 0.337274 - NDCG(5): 0.331008 - HR(5): 0.437086 - NDCG(10): 0.385451 - HR(10): 0.606954 - NDCG(20): 0.430881 - HR(20): 0.784603 - NDCG(50): 0.462145 - HR(50): 0.939570
+2026-05-08 04:32:09,252 P7513 INFO [Time] eval_time=1.9819s
+2026-05-08 04:32:09,252 P7513 INFO ********* Train Turn 330 *********
+2026-05-08 04:32:11,321 P7513 INFO Clients average loss: 0.2619805335998535
+2026-05-08 04:32:11,326 P7513 INFO [Time] turn=330 local_train_time=1.7028s avg_client_train_time=0.002819s aggregation_time=0.0645s round_time=2.0735s
+2026-05-08 04:32:11,326 P7513 INFO ********* Train Turn 331 *********
+2026-05-08 04:32:13,380 P7513 INFO Clients average loss: 0.2689504027366638
+2026-05-08 04:32:13,384 P7513 INFO [Time] turn=331 local_train_time=1.6970s avg_client_train_time=0.002810s aggregation_time=0.0643s round_time=2.0583s
+2026-05-08 04:32:13,385 P7513 INFO ********* Train Turn 332 *********
+2026-05-08 04:32:15,576 P7513 INFO Clients average loss: 0.2681833803653717
+2026-05-08 04:32:15,580 P7513 INFO [Time] turn=332 local_train_time=1.7012s avg_client_train_time=0.002817s aggregation_time=0.0641s round_time=2.1956s
+2026-05-08 04:32:15,580 P7513 INFO ********* Train Turn 333 *********
+2026-05-08 04:32:17,633 P7513 INFO Clients average loss: 0.26868122816085815
+2026-05-08 04:32:17,637 P7513 INFO [Time] turn=333 local_train_time=1.6964s avg_client_train_time=0.002809s aggregation_time=0.0643s round_time=2.0571s
+2026-05-08 04:32:17,638 P7513 INFO ********* Train Turn 334 *********
+2026-05-08 04:32:19,700 P7513 INFO Clients average loss: 0.2696594297885895
+2026-05-08 04:32:19,704 P7513 INFO [Time] turn=334 local_train_time=1.7049s avg_client_train_time=0.002823s aggregation_time=0.0647s round_time=2.0666s
+2026-05-08 04:32:19,704 P7513 INFO ********* Train Turn 335 *********
+2026-05-08 04:32:21,768 P7513 INFO Clients average loss: 0.27522388100624084
+2026-05-08 04:32:21,772 P7513 INFO [Time] turn=335 local_train_time=1.7051s avg_client_train_time=0.002823s aggregation_time=0.0642s round_time=2.0678s
+2026-05-08 04:32:21,772 P7513 INFO ********* Train Turn 336 *********
+2026-05-08 04:32:23,833 P7513 INFO Clients average loss: 0.2724916338920593
+2026-05-08 04:32:23,838 P7513 INFO [Time] turn=336 local_train_time=1.7021s avg_client_train_time=0.002818s aggregation_time=0.0649s round_time=2.0653s
+2026-05-08 04:32:23,838 P7513 INFO ********* Train Turn 337 *********
+2026-05-08 04:32:25,897 P7513 INFO Clients average loss: 0.2759050726890564
+2026-05-08 04:32:25,902 P7513 INFO [Time] turn=337 local_train_time=1.7024s avg_client_train_time=0.002819s aggregation_time=0.0642s round_time=2.0639s
+2026-05-08 04:32:25,902 P7513 INFO ********* Train Turn 338 *********
+2026-05-08 04:32:27,960 P7513 INFO Clients average loss: 0.2746770679950714
+2026-05-08 04:32:27,964 P7513 INFO [Time] turn=338 local_train_time=1.7002s avg_client_train_time=0.002815s aggregation_time=0.0641s round_time=2.0621s
+2026-05-08 04:32:27,964 P7513 INFO ********* Train Turn 339 *********
+2026-05-08 04:32:30,028 P7513 INFO Clients average loss: 0.2710065543651581
+2026-05-08 04:32:30,032 P7513 INFO [Time] turn=339 local_train_time=1.7061s avg_client_train_time=0.002825s aggregation_time=0.0634s round_time=2.0679s
+2026-05-08 04:32:30,032 P7513 INFO ********* Eval @ Turn 339 *********
+2026-05-08 04:32:32,041 P7513 INFO [Metrics] logloss: 1.379030 - MRR: 0.339033 - NDCG(5): 0.332090 - HR(5): 0.436921 - NDCG(10): 0.387861 - HR(10): 0.611093 - NDCG(20): 0.432385 - HR(20): 0.785099 - NDCG(50): 0.463689 - HR(50): 0.940232
+2026-05-08 04:32:32,041 P7513 INFO [Time] eval_time=2.0086s
+2026-05-08 04:32:32,041 P7513 INFO ********* Train Turn 340 *********
+2026-05-08 04:32:34,114 P7513 INFO Clients average loss: 0.27413639426231384
+2026-05-08 04:32:34,118 P7513 INFO [Time] turn=340 local_train_time=1.7068s avg_client_train_time=0.002826s aggregation_time=0.0646s round_time=2.0770s
+2026-05-08 04:32:34,118 P7513 INFO ********* Train Turn 341 *********
+2026-05-08 04:32:36,179 P7513 INFO Clients average loss: 0.27066347002983093
+2026-05-08 04:32:36,183 P7513 INFO [Time] turn=341 local_train_time=1.7049s avg_client_train_time=0.002823s aggregation_time=0.0643s round_time=2.0651s
+2026-05-08 04:32:36,183 P7513 INFO ********* Train Turn 342 *********
+2026-05-08 04:32:38,246 P7513 INFO Clients average loss: 0.2623029947280884
+2026-05-08 04:32:38,251 P7513 INFO [Time] turn=342 local_train_time=1.7064s avg_client_train_time=0.002825s aggregation_time=0.0642s round_time=2.0671s
+2026-05-08 04:32:38,251 P7513 INFO ********* Train Turn 343 *********
+2026-05-08 04:32:40,312 P7513 INFO Clients average loss: 0.2609967887401581
+2026-05-08 04:32:40,317 P7513 INFO [Time] turn=343 local_train_time=1.7046s avg_client_train_time=0.002822s aggregation_time=0.0637s round_time=2.0658s
+2026-05-08 04:32:40,317 P7513 INFO ********* Train Turn 344 *********
+2026-05-08 04:32:42,391 P7513 INFO Clients average loss: 0.2692849934101105
+2026-05-08 04:32:42,395 P7513 INFO [Time] turn=344 local_train_time=1.7162s avg_client_train_time=0.002841s aggregation_time=0.0638s round_time=2.0785s
+2026-05-08 04:32:42,395 P7513 INFO ********* Train Turn 345 *********
+2026-05-08 04:32:44,447 P7513 INFO Clients average loss: 0.27237406373023987
+2026-05-08 04:32:44,452 P7513 INFO [Time] turn=345 local_train_time=1.6949s avg_client_train_time=0.002806s aggregation_time=0.0637s round_time=2.0565s
+2026-05-08 04:32:44,452 P7513 INFO ********* Train Turn 346 *********
+2026-05-08 04:32:46,504 P7513 INFO Clients average loss: 0.26575642824172974
+2026-05-08 04:32:46,508 P7513 INFO [Time] turn=346 local_train_time=1.6950s avg_client_train_time=0.002806s aggregation_time=0.0639s round_time=2.0561s
+2026-05-08 04:32:46,508 P7513 INFO ********* Train Turn 347 *********
+2026-05-08 04:32:48,562 P7513 INFO Clients average loss: 0.2656155228614807
+2026-05-08 04:32:48,567 P7513 INFO [Time] turn=347 local_train_time=1.6974s avg_client_train_time=0.002810s aggregation_time=0.0644s round_time=2.0586s
+2026-05-08 04:32:48,567 P7513 INFO ********* Train Turn 348 *********
+2026-05-08 04:32:50,620 P7513 INFO Clients average loss: 0.26529908180236816
+2026-05-08 04:32:50,625 P7513 INFO [Time] turn=348 local_train_time=1.6963s avg_client_train_time=0.002808s aggregation_time=0.0641s round_time=2.0575s
+2026-05-08 04:32:50,625 P7513 INFO ********* Train Turn 349 *********
+2026-05-08 04:32:52,689 P7513 INFO Clients average loss: 0.27259814739227295
+2026-05-08 04:32:52,693 P7513 INFO [Time] turn=349 local_train_time=1.7069s avg_client_train_time=0.002826s aggregation_time=0.0644s round_time=2.0685s
+2026-05-08 04:32:52,693 P7513 INFO ********* Eval @ Turn 349 *********
+2026-05-08 04:32:54,813 P7513 INFO [Metrics] logloss: 1.380333 - MRR: 0.341885 - NDCG(5): 0.333938 - HR(5): 0.436258 - NDCG(10): 0.390499 - HR(10): 0.613079 - NDCG(20): 0.434696 - HR(20): 0.785762 - NDCG(50): 0.465889 - HR(50): 0.940397
+2026-05-08 04:32:54,813 P7513 INFO [Time] eval_time=2.1198s
+2026-05-08 04:32:54,813 P7513 INFO ********* Train Turn 350 *********
+2026-05-08 04:32:56,883 P7513 INFO Clients average loss: 0.2685282230377197
+2026-05-08 04:32:56,888 P7513 INFO [Time] turn=350 local_train_time=1.7065s avg_client_train_time=0.002825s aggregation_time=0.0642s round_time=2.0744s
+2026-05-08 04:32:56,888 P7513 INFO ********* Train Turn 351 *********
+2026-05-08 04:32:58,945 P7513 INFO Clients average loss: 0.2713017463684082
+2026-05-08 04:32:58,950 P7513 INFO [Time] turn=351 local_train_time=1.6994s avg_client_train_time=0.002814s aggregation_time=0.0637s round_time=2.0621s
+2026-05-08 04:32:58,950 P7513 INFO ********* Train Turn 352 *********
+2026-05-08 04:33:01,012 P7513 INFO Clients average loss: 0.2700498104095459
+2026-05-08 04:33:01,017 P7513 INFO [Time] turn=352 local_train_time=1.7042s avg_client_train_time=0.002822s aggregation_time=0.0659s round_time=2.0664s
+2026-05-08 04:33:01,017 P7513 INFO ********* Train Turn 353 *********
+2026-05-08 04:33:03,079 P7513 INFO Clients average loss: 0.2646420896053314
+2026-05-08 04:33:03,084 P7513 INFO [Time] turn=353 local_train_time=1.7046s avg_client_train_time=0.002822s aggregation_time=0.0643s round_time=2.0672s
+2026-05-08 04:33:03,084 P7513 INFO ********* Train Turn 354 *********
+2026-05-08 04:33:05,158 P7513 INFO Clients average loss: 0.26477664709091187
+2026-05-08 04:33:05,163 P7513 INFO [Time] turn=354 local_train_time=1.7154s avg_client_train_time=0.002840s aggregation_time=0.0640s round_time=2.0785s
+2026-05-08 04:33:05,163 P7513 INFO ********* Train Turn 355 *********
+2026-05-08 04:33:07,224 P7513 INFO Clients average loss: 0.2679447531700134
+2026-05-08 04:33:07,229 P7513 INFO [Time] turn=355 local_train_time=1.7042s avg_client_train_time=0.002822s aggregation_time=0.0639s round_time=2.0660s
+2026-05-08 04:33:07,229 P7513 INFO ********* Train Turn 356 *********
+2026-05-08 04:33:09,288 P7513 INFO Clients average loss: 0.2673473358154297
+2026-05-08 04:33:09,293 P7513 INFO [Time] turn=356 local_train_time=1.7025s avg_client_train_time=0.002819s aggregation_time=0.0638s round_time=2.0636s
+2026-05-08 04:33:09,293 P7513 INFO ********* Train Turn 357 *********
+2026-05-08 04:33:11,359 P7513 INFO Clients average loss: 0.2708413004875183
+2026-05-08 04:33:11,363 P7513 INFO [Time] turn=357 local_train_time=1.7083s avg_client_train_time=0.002828s aggregation_time=0.0647s round_time=2.0707s
+2026-05-08 04:33:11,364 P7513 INFO ********* Train Turn 358 *********
+2026-05-08 04:33:13,430 P7513 INFO Clients average loss: 0.2680530548095703
+2026-05-08 04:33:13,435 P7513 INFO [Time] turn=358 local_train_time=1.7087s avg_client_train_time=0.002829s aggregation_time=0.0645s round_time=2.0713s
+2026-05-08 04:33:13,435 P7513 INFO ********* Train Turn 359 *********
+2026-05-08 04:33:15,507 P7513 INFO Clients average loss: 0.2701707184314728
+2026-05-08 04:33:15,512 P7513 INFO [Time] turn=359 local_train_time=1.7145s avg_client_train_time=0.002839s aggregation_time=0.0641s round_time=2.0765s
+2026-05-08 04:33:15,512 P7513 INFO ********* Eval @ Turn 359 *********
+2026-05-08 04:33:17,493 P7513 INFO [Metrics] logloss: 1.382260 - MRR: 0.343358 - NDCG(5): 0.334811 - HR(5): 0.435430 - NDCG(10): 0.390926 - HR(10): 0.610927 - NDCG(20): 0.436146 - HR(20): 0.787748 - NDCG(50): 0.466881 - HR(50): 0.940066
+2026-05-08 04:33:17,493 P7513 INFO [Time] eval_time=1.9811s
+2026-05-08 04:33:17,493 P7513 INFO ********* Train Turn 360 *********
+2026-05-08 04:33:19,566 P7513 INFO Clients average loss: 0.26719897985458374
+2026-05-08 04:33:19,570 P7513 INFO [Time] turn=360 local_train_time=1.7071s avg_client_train_time=0.002826s aggregation_time=0.0641s round_time=2.0775s
+2026-05-08 04:33:19,571 P7513 INFO ********* Train Turn 361 *********
+2026-05-08 04:33:21,635 P7513 INFO Clients average loss: 0.27757903933525085
+2026-05-08 04:33:21,639 P7513 INFO [Time] turn=361 local_train_time=1.7065s avg_client_train_time=0.002825s aggregation_time=0.0644s round_time=2.0685s
+2026-05-08 04:33:21,639 P7513 INFO ********* Train Turn 362 *********
+2026-05-08 04:33:23,698 P7513 INFO Clients average loss: 0.26635226607322693
+2026-05-08 04:33:23,703 P7513 INFO [Time] turn=362 local_train_time=1.7017s avg_client_train_time=0.002817s aggregation_time=0.0644s round_time=2.0637s
+2026-05-08 04:33:23,703 P7513 INFO ********* Train Turn 363 *********
+2026-05-08 04:33:25,774 P7513 INFO Clients average loss: 0.26709994673728943
+2026-05-08 04:33:25,779 P7513 INFO [Time] turn=363 local_train_time=1.7109s avg_client_train_time=0.002833s aggregation_time=0.0658s round_time=2.0756s
+2026-05-08 04:33:25,779 P7513 INFO ********* Train Turn 364 *********
+2026-05-08 04:33:27,849 P7513 INFO Clients average loss: 0.2720552980899811
+2026-05-08 04:33:27,854 P7513 INFO [Time] turn=364 local_train_time=1.7100s avg_client_train_time=0.002831s aggregation_time=0.0637s round_time=2.0746s
+2026-05-08 04:33:27,854 P7513 INFO ********* Train Turn 365 *********
+2026-05-08 04:33:29,915 P7513 INFO Clients average loss: 0.2709651291370392
+2026-05-08 04:33:29,920 P7513 INFO [Time] turn=365 local_train_time=1.7024s avg_client_train_time=0.002819s aggregation_time=0.0640s round_time=2.0659s
+2026-05-08 04:33:29,920 P7513 INFO ********* Train Turn 366 *********
+2026-05-08 04:33:31,983 P7513 INFO Clients average loss: 0.2705075442790985
+2026-05-08 04:33:31,988 P7513 INFO [Time] turn=366 local_train_time=1.7047s avg_client_train_time=0.002822s aggregation_time=0.0642s round_time=2.0679s
+2026-05-08 04:33:31,988 P7513 INFO ********* Train Turn 367 *********
+2026-05-08 04:33:34,052 P7513 INFO Clients average loss: 0.261330246925354
+2026-05-08 04:33:34,057 P7513 INFO [Time] turn=367 local_train_time=1.7055s avg_client_train_time=0.002824s aggregation_time=0.0645s round_time=2.0689s
+2026-05-08 04:33:34,057 P7513 INFO ********* Train Turn 368 *********
+2026-05-08 04:33:36,122 P7513 INFO Clients average loss: 0.26546400785446167
+2026-05-08 04:33:36,127 P7513 INFO [Time] turn=368 local_train_time=1.7060s avg_client_train_time=0.002825s aggregation_time=0.0643s round_time=2.0696s
+2026-05-08 04:33:36,127 P7513 INFO ********* Train Turn 369 *********
+2026-05-08 04:33:38,208 P7513 INFO Clients average loss: 0.259895384311676
+2026-05-08 04:33:38,212 P7513 INFO [Time] turn=369 local_train_time=1.7155s avg_client_train_time=0.002840s aggregation_time=0.0641s round_time=2.0854s
+2026-05-08 04:33:38,212 P7513 INFO ********* Eval @ Turn 369 *********
+2026-05-08 04:33:40,306 P7513 INFO [Metrics] logloss: 1.395669 - MRR: 0.344175 - NDCG(5): 0.335487 - HR(5): 0.435265 - NDCG(10): 0.390801 - HR(10): 0.608278 - NDCG(20): 0.437097 - HR(20): 0.789570 - NDCG(50): 0.467484 - HR(50): 0.940397
+2026-05-08 04:33:40,307 P7513 INFO [Time] eval_time=2.0944s
+2026-05-08 04:33:40,307 P7513 INFO ********* Train Turn 370 *********
+2026-05-08 04:33:42,468 P7513 INFO Clients average loss: 0.26434218883514404
+2026-05-08 04:33:42,473 P7513 INFO [Time] turn=370 local_train_time=1.7933s avg_client_train_time=0.002969s aggregation_time=0.0644s round_time=2.1661s
+2026-05-08 04:33:42,473 P7513 INFO ********* Train Turn 371 *********
+2026-05-08 04:33:44,540 P7513 INFO Clients average loss: 0.2645324170589447
+2026-05-08 04:33:44,545 P7513 INFO [Time] turn=371 local_train_time=1.7083s avg_client_train_time=0.002828s aggregation_time=0.0647s round_time=2.0717s
+2026-05-08 04:33:44,545 P7513 INFO ********* Train Turn 372 *********
+2026-05-08 04:33:46,607 P7513 INFO Clients average loss: 0.2649533152580261
+2026-05-08 04:33:46,612 P7513 INFO [Time] turn=372 local_train_time=1.7054s avg_client_train_time=0.002824s aggregation_time=0.0641s round_time=2.0669s
+2026-05-08 04:33:46,612 P7513 INFO ********* Train Turn 373 *********
+2026-05-08 04:33:48,691 P7513 INFO Clients average loss: 0.27192896604537964
+2026-05-08 04:33:48,696 P7513 INFO [Time] turn=373 local_train_time=1.7213s avg_client_train_time=0.002850s aggregation_time=0.0650s round_time=2.0840s
+2026-05-08 04:33:48,696 P7513 INFO ********* Train Turn 374 *********
+2026-05-08 04:33:50,758 P7513 INFO Clients average loss: 0.27075883746147156
+2026-05-08 04:33:50,763 P7513 INFO [Time] turn=374 local_train_time=1.7013s avg_client_train_time=0.002817s aggregation_time=0.0644s round_time=2.0666s
+2026-05-08 04:33:50,763 P7513 INFO ********* Train Turn 375 *********
+2026-05-08 04:33:52,824 P7513 INFO Clients average loss: 0.2699304223060608
+2026-05-08 04:33:52,829 P7513 INFO [Time] turn=375 local_train_time=1.7045s avg_client_train_time=0.002822s aggregation_time=0.0638s round_time=2.0657s
+2026-05-08 04:33:52,829 P7513 INFO ********* Train Turn 376 *********
+2026-05-08 04:33:54,892 P7513 INFO Clients average loss: 0.26862832903862
+2026-05-08 04:33:54,897 P7513 INFO [Time] turn=376 local_train_time=1.7053s avg_client_train_time=0.002823s aggregation_time=0.0641s round_time=2.0677s
+2026-05-08 04:33:54,897 P7513 INFO ********* Train Turn 377 *********
+2026-05-08 04:33:56,957 P7513 INFO Clients average loss: 0.27147552371025085
+2026-05-08 04:33:56,961 P7513 INFO [Time] turn=377 local_train_time=1.7023s avg_client_train_time=0.002818s aggregation_time=0.0646s round_time=2.0647s
+2026-05-08 04:33:56,961 P7513 INFO ********* Train Turn 378 *********
+2026-05-08 04:33:59,035 P7513 INFO Clients average loss: 0.27426350116729736
+2026-05-08 04:33:59,040 P7513 INFO [Time] turn=378 local_train_time=1.7144s avg_client_train_time=0.002838s aggregation_time=0.0648s round_time=2.0781s
+2026-05-08 04:33:59,040 P7513 INFO ********* Train Turn 379 *********
+2026-05-08 04:34:01,107 P7513 INFO Clients average loss: 0.26791033148765564
+2026-05-08 04:34:01,111 P7513 INFO [Time] turn=379 local_train_time=1.7090s avg_client_train_time=0.002829s aggregation_time=0.0642s round_time=2.0717s
+2026-05-08 04:34:01,112 P7513 INFO ********* Eval @ Turn 379 *********
+2026-05-08 04:34:03,097 P7513 INFO [Metrics] logloss: 1.386923 - MRR: 0.345894 - NDCG(5): 0.336457 - HR(5): 0.434272 - NDCG(10): 0.391765 - HR(10): 0.607119 - NDCG(20): 0.438373 - HR(20): 0.789570 - NDCG(50): 0.468829 - HR(50): 0.940894
+2026-05-08 04:34:03,097 P7513 INFO [Time] eval_time=1.9856s
+2026-05-08 04:34:03,097 P7513 INFO ********* Train Turn 380 *********
+2026-05-08 04:34:05,179 P7513 INFO Clients average loss: 0.26337730884552
+2026-05-08 04:34:05,183 P7513 INFO [Time] turn=380 local_train_time=1.7114s avg_client_train_time=0.002833s aggregation_time=0.0647s round_time=2.0860s
+2026-05-08 04:34:05,183 P7513 INFO ********* Train Turn 381 *********
+2026-05-08 04:34:07,257 P7513 INFO Clients average loss: 0.26845183968544006
+2026-05-08 04:34:07,261 P7513 INFO [Time] turn=381 local_train_time=1.7143s avg_client_train_time=0.002838s aggregation_time=0.0644s round_time=2.0776s
+2026-05-08 04:34:07,261 P7513 INFO ********* Train Turn 382 *********
+2026-05-08 04:34:09,337 P7513 INFO Clients average loss: 0.2706575095653534
+2026-05-08 04:34:09,341 P7513 INFO [Time] turn=382 local_train_time=1.7170s avg_client_train_time=0.002843s aggregation_time=0.0646s round_time=2.0802s
+2026-05-08 04:34:09,342 P7513 INFO ********* Train Turn 383 *********
+2026-05-08 04:34:11,408 P7513 INFO Clients average loss: 0.26500287652015686
+2026-05-08 04:34:11,413 P7513 INFO [Time] turn=383 local_train_time=1.7060s avg_client_train_time=0.002824s aggregation_time=0.0642s round_time=2.0712s
+2026-05-08 04:34:11,413 P7513 INFO ********* Train Turn 384 *********
+2026-05-08 04:34:13,466 P7513 INFO Clients average loss: 0.26632192730903625
+2026-05-08 04:34:13,471 P7513 INFO [Time] turn=384 local_train_time=1.6967s avg_client_train_time=0.002809s aggregation_time=0.0648s round_time=2.0578s
+2026-05-08 04:34:13,471 P7513 INFO ********* Train Turn 385 *********
+2026-05-08 04:34:15,526 P7513 INFO Clients average loss: 0.26107802987098694
+2026-05-08 04:34:15,531 P7513 INFO [Time] turn=385 local_train_time=1.6981s avg_client_train_time=0.002811s aggregation_time=0.0640s round_time=2.0597s
+2026-05-08 04:34:15,531 P7513 INFO ********* Train Turn 386 *********
+2026-05-08 04:34:17,589 P7513 INFO Clients average loss: 0.27043917775154114
+2026-05-08 04:34:17,594 P7513 INFO [Time] turn=386 local_train_time=1.7014s avg_client_train_time=0.002817s aggregation_time=0.0641s round_time=2.0631s
+2026-05-08 04:34:17,594 P7513 INFO ********* Train Turn 387 *********
+2026-05-08 04:34:19,663 P7513 INFO Clients average loss: 0.26531118154525757
+2026-05-08 04:34:19,667 P7513 INFO [Time] turn=387 local_train_time=1.7097s avg_client_train_time=0.002831s aggregation_time=0.0644s round_time=2.0732s
+2026-05-08 04:34:19,667 P7513 INFO ********* Train Turn 388 *********
+2026-05-08 04:34:21,737 P7513 INFO Clients average loss: 0.2596881687641144
+2026-05-08 04:34:21,741 P7513 INFO [Time] turn=388 local_train_time=1.7116s avg_client_train_time=0.002834s aggregation_time=0.0645s round_time=2.0736s
+2026-05-08 04:34:21,741 P7513 INFO ********* Train Turn 389 *********
+2026-05-08 04:34:23,791 P7513 INFO Clients average loss: 0.2676318883895874
+2026-05-08 04:34:23,796 P7513 INFO [Time] turn=389 local_train_time=1.6904s avg_client_train_time=0.002799s aggregation_time=0.0642s round_time=2.0543s
+2026-05-08 04:34:23,796 P7513 INFO ********* Eval @ Turn 389 *********
+2026-05-08 04:34:25,751 P7513 INFO [Metrics] logloss: 1.396247 - MRR: 0.347887 - NDCG(5): 0.338718 - HR(5): 0.436755 - NDCG(10): 0.394519 - HR(10): 0.611258 - NDCG(20): 0.439828 - HR(20): 0.788907 - NDCG(50): 0.470520 - HR(50): 0.941556
+2026-05-08 04:34:25,751 P7513 INFO [Time] eval_time=1.9553s
+2026-05-08 04:34:25,751 P7513 INFO ********* Train Turn 390 *********
+2026-05-08 04:34:27,822 P7513 INFO Clients average loss: 0.2660815417766571
+2026-05-08 04:34:27,827 P7513 INFO [Time] turn=390 local_train_time=1.7040s avg_client_train_time=0.002821s aggregation_time=0.0644s round_time=2.0753s
+2026-05-08 04:34:27,827 P7513 INFO ********* Train Turn 391 *********
+2026-05-08 04:34:29,889 P7513 INFO Clients average loss: 0.2667645215988159
+2026-05-08 04:34:29,893 P7513 INFO [Time] turn=391 local_train_time=1.7049s avg_client_train_time=0.002823s aggregation_time=0.0643s round_time=2.0665s
+2026-05-08 04:34:29,893 P7513 INFO ********* Train Turn 392 *********
+2026-05-08 04:34:31,965 P7513 INFO Clients average loss: 0.2703590989112854
+2026-05-08 04:34:31,970 P7513 INFO [Time] turn=392 local_train_time=1.7113s avg_client_train_time=0.002833s aggregation_time=0.0648s round_time=2.0766s
+2026-05-08 04:34:31,970 P7513 INFO ********* Train Turn 393 *********
+2026-05-08 04:34:34,173 P7513 INFO Clients average loss: 0.27309808135032654
+2026-05-08 04:34:34,178 P7513 INFO [Time] turn=393 local_train_time=1.7113s avg_client_train_time=0.002833s aggregation_time=0.0645s round_time=2.2076s
+2026-05-08 04:34:34,178 P7513 INFO ********* Train Turn 394 *********
+2026-05-08 04:34:36,245 P7513 INFO Clients average loss: 0.2717859745025635
+2026-05-08 04:34:36,250 P7513 INFO [Time] turn=394 local_train_time=1.7082s avg_client_train_time=0.002828s aggregation_time=0.0640s round_time=2.0717s
+2026-05-08 04:34:36,250 P7513 INFO ********* Train Turn 395 *********
+2026-05-08 04:34:38,316 P7513 INFO Clients average loss: 0.27273130416870117
+2026-05-08 04:34:38,321 P7513 INFO [Time] turn=395 local_train_time=1.7078s avg_client_train_time=0.002827s aggregation_time=0.0650s round_time=2.0710s
+2026-05-08 04:34:38,321 P7513 INFO ********* Train Turn 396 *********
+2026-05-08 04:34:40,389 P7513 INFO Clients average loss: 0.26477858424186707
+2026-05-08 04:34:40,394 P7513 INFO [Time] turn=396 local_train_time=1.7074s avg_client_train_time=0.002827s aggregation_time=0.0636s round_time=2.0724s
+2026-05-08 04:34:40,394 P7513 INFO ********* Train Turn 397 *********
+2026-05-08 04:34:42,467 P7513 INFO Clients average loss: 0.2616705596446991
+2026-05-08 04:34:42,472 P7513 INFO [Time] turn=397 local_train_time=1.7085s avg_client_train_time=0.002829s aggregation_time=0.0644s round_time=2.0783s
+2026-05-08 04:34:42,472 P7513 INFO ********* Train Turn 398 *********
+2026-05-08 04:34:44,554 P7513 INFO Clients average loss: 0.2650020718574524
+2026-05-08 04:34:44,559 P7513 INFO [Time] turn=398 local_train_time=1.7190s avg_client_train_time=0.002846s aggregation_time=0.0643s round_time=2.0868s
+2026-05-08 04:34:44,559 P7513 INFO ********* Train Turn 399 *********
+2026-05-08 04:34:46,639 P7513 INFO Clients average loss: 0.26519912481307983
+2026-05-08 04:34:46,644 P7513 INFO [Time] turn=399 local_train_time=1.7176s avg_client_train_time=0.002844s aggregation_time=0.0647s round_time=2.0844s
+2026-05-08 04:34:46,644 P7513 INFO ********* Eval @ Turn 399 *********
+2026-05-08 04:34:48,655 P7513 INFO [Metrics] logloss: 1.406840 - MRR: 0.349406 - NDCG(5): 0.339991 - HR(5): 0.437252 - NDCG(10): 0.395867 - HR(10): 0.611755 - NDCG(20): 0.440452 - HR(20): 0.786424 - NDCG(50): 0.471569 - HR(50): 0.940894
+2026-05-08 04:34:48,655 P7513 INFO [Time] eval_time=2.0112s
+2026-05-08 04:34:48,655 P7513 INFO ********* Train Turn 400 *********
+2026-05-08 04:34:50,859 P7513 INFO Clients average loss: 0.27046674489974976
+2026-05-08 04:34:50,863 P7513 INFO [Time] turn=400 local_train_time=1.8286s avg_client_train_time=0.003028s aggregation_time=0.0657s round_time=2.2082s
+2026-05-08 04:34:50,863 P7513 INFO ********* Train Turn 401 *********
+2026-05-08 04:34:52,960 P7513 INFO Clients average loss: 0.2712859511375427
+2026-05-08 04:34:52,964 P7513 INFO [Time] turn=401 local_train_time=1.7318s avg_client_train_time=0.002867s aggregation_time=0.0659s round_time=2.1009s
+2026-05-08 04:34:52,965 P7513 INFO ********* Train Turn 402 *********
+2026-05-08 04:34:55,057 P7513 INFO Clients average loss: 0.2703903019428253
+2026-05-08 04:34:55,062 P7513 INFO [Time] turn=402 local_train_time=1.7316s avg_client_train_time=0.002867s aggregation_time=0.0641s round_time=2.0972s
+2026-05-08 04:34:55,062 P7513 INFO ********* Train Turn 403 *********
+2026-05-08 04:34:57,134 P7513 INFO Clients average loss: 0.26061904430389404
+2026-05-08 04:34:57,138 P7513 INFO [Time] turn=403 local_train_time=1.7131s avg_client_train_time=0.002836s aggregation_time=0.0638s round_time=2.0764s
+2026-05-08 04:34:57,139 P7513 INFO ********* Train Turn 404 *********
+2026-05-08 04:34:59,214 P7513 INFO Clients average loss: 0.2685196101665497
+2026-05-08 04:34:59,218 P7513 INFO [Time] turn=404 local_train_time=1.7124s avg_client_train_time=0.002835s aggregation_time=0.0640s round_time=2.0796s
+2026-05-08 04:34:59,218 P7513 INFO ********* Train Turn 405 *********
+2026-05-08 04:35:01,296 P7513 INFO Clients average loss: 0.261539489030838
+2026-05-08 04:35:01,301 P7513 INFO [Time] turn=405 local_train_time=1.7126s avg_client_train_time=0.002835s aggregation_time=0.0646s round_time=2.0826s
+2026-05-08 04:35:01,301 P7513 INFO ********* Train Turn 406 *********
+2026-05-08 04:35:03,376 P7513 INFO Clients average loss: 0.266562819480896
+2026-05-08 04:35:03,380 P7513 INFO [Time] turn=406 local_train_time=1.7170s avg_client_train_time=0.002843s aggregation_time=0.0643s round_time=2.0792s
+2026-05-08 04:35:03,380 P7513 INFO ********* Train Turn 407 *********
+2026-05-08 04:35:05,467 P7513 INFO Clients average loss: 0.2673547565937042
+2026-05-08 04:35:05,472 P7513 INFO [Time] turn=407 local_train_time=1.7259s avg_client_train_time=0.002857s aggregation_time=0.0641s round_time=2.0911s
+2026-05-08 04:35:05,472 P7513 INFO ********* Train Turn 408 *********
+2026-05-08 04:35:07,542 P7513 INFO Clients average loss: 0.2601013779640198
+2026-05-08 04:35:07,547 P7513 INFO [Time] turn=408 local_train_time=1.7111s avg_client_train_time=0.002833s aggregation_time=0.0648s round_time=2.0751s
+2026-05-08 04:35:07,547 P7513 INFO ********* Train Turn 409 *********
+2026-05-08 04:35:09,624 P7513 INFO Clients average loss: 0.2658466100692749
+2026-05-08 04:35:09,628 P7513 INFO [Time] turn=409 local_train_time=1.7170s avg_client_train_time=0.002843s aggregation_time=0.0642s round_time=2.0815s
+2026-05-08 04:35:09,629 P7513 INFO ********* Eval @ Turn 409 *********
+2026-05-08 04:35:11,772 P7513 INFO [Metrics] logloss: 1.408170 - MRR: 0.350130 - NDCG(5): 0.341664 - HR(5): 0.440728 - NDCG(10): 0.397249 - HR(10): 0.614404 - NDCG(20): 0.440898 - HR(20): 0.785596 - NDCG(50): 0.472335 - HR(50): 0.941556
+2026-05-08 04:35:11,773 P7513 INFO [Time] eval_time=2.1440s
+2026-05-08 04:35:11,773 P7513 INFO ********* Train Turn 410 *********
+2026-05-08 04:35:13,862 P7513 INFO Clients average loss: 0.2635279893875122
+2026-05-08 04:35:13,866 P7513 INFO [Time] turn=410 local_train_time=1.7212s avg_client_train_time=0.002850s aggregation_time=0.0647s round_time=2.0938s
+2026-05-08 04:35:13,867 P7513 INFO ********* Train Turn 411 *********
+2026-05-08 04:35:15,957 P7513 INFO Clients average loss: 0.2740897238254547
+2026-05-08 04:35:15,962 P7513 INFO [Time] turn=411 local_train_time=1.7248s avg_client_train_time=0.002856s aggregation_time=0.0658s round_time=2.0950s
+2026-05-08 04:35:15,962 P7513 INFO ********* Train Turn 412 *********
+2026-05-08 04:35:18,039 P7513 INFO Clients average loss: 0.25956398248672485
+2026-05-08 04:35:18,043 P7513 INFO [Time] turn=412 local_train_time=1.7169s avg_client_train_time=0.002843s aggregation_time=0.0639s round_time=2.0815s
+2026-05-08 04:35:18,043 P7513 INFO ********* Train Turn 413 *********
+2026-05-08 04:35:20,121 P7513 INFO Clients average loss: 0.2619410753250122
+2026-05-08 04:35:20,126 P7513 INFO [Time] turn=413 local_train_time=1.7181s avg_client_train_time=0.002845s aggregation_time=0.0641s round_time=2.0825s
+2026-05-08 04:35:20,126 P7513 INFO ********* Train Turn 414 *********
+2026-05-08 04:35:22,210 P7513 INFO Clients average loss: 0.26937365531921387
+2026-05-08 04:35:22,214 P7513 INFO [Time] turn=414 local_train_time=1.7238s avg_client_train_time=0.002854s aggregation_time=0.0648s round_time=2.0882s
+2026-05-08 04:35:22,214 P7513 INFO ********* Train Turn 415 *********
+2026-05-08 04:35:24,307 P7513 INFO Clients average loss: 0.2642541825771332
+2026-05-08 04:35:24,312 P7513 INFO [Time] turn=415 local_train_time=1.7322s avg_client_train_time=0.002868s aggregation_time=0.0645s round_time=2.0975s
+2026-05-08 04:35:24,312 P7513 INFO ********* Train Turn 416 *********
+2026-05-08 04:35:26,408 P7513 INFO Clients average loss: 0.2620686888694763
+2026-05-08 04:35:26,413 P7513 INFO [Time] turn=416 local_train_time=1.7335s avg_client_train_time=0.002870s aggregation_time=0.0651s round_time=2.1007s
+2026-05-08 04:35:26,413 P7513 INFO ********* Train Turn 417 *********
+2026-05-08 04:35:28,513 P7513 INFO Clients average loss: 0.26579898595809937
+2026-05-08 04:35:28,518 P7513 INFO [Time] turn=417 local_train_time=1.7361s avg_client_train_time=0.002874s aggregation_time=0.0653s round_time=2.1047s
+2026-05-08 04:35:28,518 P7513 INFO ********* Train Turn 418 *********
+2026-05-08 04:35:30,610 P7513 INFO Clients average loss: 0.26785677671432495
+2026-05-08 04:35:30,614 P7513 INFO [Time] turn=418 local_train_time=1.7289s avg_client_train_time=0.002862s aggregation_time=0.0647s round_time=2.0965s
+2026-05-08 04:35:30,615 P7513 INFO ********* Train Turn 419 *********
+2026-05-08 04:35:32,705 P7513 INFO Clients average loss: 0.2545635402202606
+2026-05-08 04:35:32,710 P7513 INFO [Time] turn=419 local_train_time=1.7286s avg_client_train_time=0.002862s aggregation_time=0.0651s round_time=2.0953s
+2026-05-08 04:35:32,710 P7513 INFO ********* Eval @ Turn 419 *********
+2026-05-08 04:35:34,717 P7513 INFO [Metrics] logloss: 1.421631 - MRR: 0.351412 - NDCG(5): 0.343183 - HR(5): 0.442550 - NDCG(10): 0.398097 - HR(10): 0.614073 - NDCG(20): 0.442148 - HR(20): 0.786755 - NDCG(50): 0.473251 - HR(50): 0.941060
+2026-05-08 04:35:34,717 P7513 INFO [Time] eval_time=2.0070s
+2026-05-08 04:35:34,717 P7513 INFO ********* Train Turn 420 *********
+2026-05-08 04:35:36,813 P7513 INFO Clients average loss: 0.2689400613307953
+2026-05-08 04:35:36,818 P7513 INFO [Time] turn=420 local_train_time=1.7264s avg_client_train_time=0.002858s aggregation_time=0.0653s round_time=2.1006s
+2026-05-08 04:35:36,818 P7513 INFO ********* Train Turn 421 *********
+2026-05-08 04:35:38,916 P7513 INFO Clients average loss: 0.26253074407577515
+2026-05-08 04:35:38,921 P7513 INFO [Time] turn=421 local_train_time=1.7374s avg_client_train_time=0.002876s aggregation_time=0.0651s round_time=2.1031s
+2026-05-08 04:35:38,921 P7513 INFO ********* Train Turn 422 *********
+2026-05-08 04:35:41,009 P7513 INFO Clients average loss: 0.2660525143146515
+2026-05-08 04:35:41,014 P7513 INFO [Time] turn=422 local_train_time=1.7279s avg_client_train_time=0.002861s aggregation_time=0.0647s round_time=2.0924s
+2026-05-08 04:35:41,014 P7513 INFO ********* Train Turn 423 *********
+2026-05-08 04:35:43,101 P7513 INFO Clients average loss: 0.2625931203365326
+2026-05-08 04:35:43,106 P7513 INFO [Time] turn=423 local_train_time=1.7273s avg_client_train_time=0.002860s aggregation_time=0.0657s round_time=2.0919s
+2026-05-08 04:35:43,106 P7513 INFO ********* Train Turn 424 *********
+2026-05-08 04:35:45,192 P7513 INFO Clients average loss: 0.25895217061042786
+2026-05-08 04:35:45,197 P7513 INFO [Time] turn=424 local_train_time=1.7231s avg_client_train_time=0.002853s aggregation_time=0.0645s round_time=2.0909s
+2026-05-08 04:35:45,197 P7513 INFO ********* Train Turn 425 *********
+2026-05-08 04:35:47,283 P7513 INFO Clients average loss: 0.2676529884338379
+2026-05-08 04:35:47,288 P7513 INFO [Time] turn=425 local_train_time=1.7267s avg_client_train_time=0.002859s aggregation_time=0.0648s round_time=2.0908s
+2026-05-08 04:35:47,288 P7513 INFO ********* Train Turn 426 *********
+2026-05-08 04:35:49,385 P7513 INFO Clients average loss: 0.26351484656333923
+2026-05-08 04:35:49,389 P7513 INFO [Time] turn=426 local_train_time=1.7361s avg_client_train_time=0.002874s aggregation_time=0.0647s round_time=2.1013s
+2026-05-08 04:35:49,390 P7513 INFO ********* Train Turn 427 *********
+2026-05-08 04:35:51,478 P7513 INFO Clients average loss: 0.2613012194633484
+2026-05-08 04:35:51,483 P7513 INFO [Time] turn=427 local_train_time=1.7283s avg_client_train_time=0.002861s aggregation_time=0.0649s round_time=2.0931s
+2026-05-08 04:35:51,483 P7513 INFO ********* Train Turn 428 *********
+2026-05-08 04:35:53,572 P7513 INFO Clients average loss: 0.26707449555397034
+2026-05-08 04:35:53,577 P7513 INFO [Time] turn=428 local_train_time=1.7300s avg_client_train_time=0.002864s aggregation_time=0.0650s round_time=2.0942s
+2026-05-08 04:35:53,577 P7513 INFO ********* Train Turn 429 *********
+2026-05-08 04:35:55,668 P7513 INFO Clients average loss: 0.26559412479400635
+2026-05-08 04:35:55,672 P7513 INFO [Time] turn=429 local_train_time=1.7308s avg_client_train_time=0.002866s aggregation_time=0.0647s round_time=2.0950s
+2026-05-08 04:35:55,672 P7513 INFO ********* Eval @ Turn 429 *********
+2026-05-08 04:35:57,832 P7513 INFO [Metrics] logloss: 1.428582 - MRR: 0.351312 - NDCG(5): 0.343318 - HR(5): 0.443212 - NDCG(10): 0.397660 - HR(10): 0.612914 - NDCG(20): 0.442549 - HR(20): 0.788907 - NDCG(50): 0.473099 - HR(50): 0.940563
+2026-05-08 04:35:57,832 P7513 INFO [Time] eval_time=2.1595s
+2026-05-08 04:35:57,832 P7513 INFO ********* Train Turn 430 *********
+2026-05-08 04:35:59,946 P7513 INFO Clients average loss: 0.26070329546928406
+2026-05-08 04:35:59,950 P7513 INFO [Time] turn=430 local_train_time=1.7438s avg_client_train_time=0.002887s aggregation_time=0.0648s round_time=2.1182s
+2026-05-08 04:35:59,950 P7513 INFO ********* Train Turn 431 *********
+2026-05-08 04:36:02,043 P7513 INFO Clients average loss: 0.2608482539653778
+2026-05-08 04:36:02,048 P7513 INFO [Time] turn=431 local_train_time=1.7319s avg_client_train_time=0.002867s aggregation_time=0.0650s round_time=2.0975s
+2026-05-08 04:36:02,048 P7513 INFO ********* Train Turn 432 *********
+2026-05-08 04:36:04,139 P7513 INFO Clients average loss: 0.2660486102104187
+2026-05-08 04:36:04,144 P7513 INFO [Time] turn=432 local_train_time=1.7302s avg_client_train_time=0.002865s aggregation_time=0.0651s round_time=2.0957s
+2026-05-08 04:36:04,144 P7513 INFO ********* Train Turn 433 *********
+2026-05-08 04:36:06,237 P7513 INFO Clients average loss: 0.2632433772087097
+2026-05-08 04:36:06,242 P7513 INFO [Time] turn=433 local_train_time=1.7308s avg_client_train_time=0.002866s aggregation_time=0.0660s round_time=2.0979s
+2026-05-08 04:36:06,242 P7513 INFO ********* Train Turn 434 *********
+2026-05-08 04:36:08,342 P7513 INFO Clients average loss: 0.25844621658325195
+2026-05-08 04:36:08,347 P7513 INFO [Time] turn=434 local_train_time=1.7376s avg_client_train_time=0.002877s aggregation_time=0.0649s round_time=2.1045s
+2026-05-08 04:36:08,347 P7513 INFO ********* Train Turn 435 *********
+2026-05-08 04:36:10,443 P7513 INFO Clients average loss: 0.2650042772293091
+2026-05-08 04:36:10,448 P7513 INFO [Time] turn=435 local_train_time=1.7348s avg_client_train_time=0.002872s aggregation_time=0.0656s round_time=2.1013s
+2026-05-08 04:36:10,448 P7513 INFO ********* Train Turn 436 *********
+2026-05-08 04:36:12,530 P7513 INFO Clients average loss: 0.26369649171829224
+2026-05-08 04:36:12,535 P7513 INFO [Time] turn=436 local_train_time=1.7217s avg_client_train_time=0.002850s aggregation_time=0.0645s round_time=2.0864s
+2026-05-08 04:36:12,535 P7513 INFO ********* Train Turn 437 *********
+2026-05-08 04:36:14,615 P7513 INFO Clients average loss: 0.25841599702835083
+2026-05-08 04:36:14,620 P7513 INFO [Time] turn=437 local_train_time=1.7215s avg_client_train_time=0.002850s aggregation_time=0.0644s round_time=2.0850s
+2026-05-08 04:36:14,620 P7513 INFO ********* Train Turn 438 *********
+2026-05-08 04:36:16,706 P7513 INFO Clients average loss: 0.2610321044921875
+2026-05-08 04:36:16,711 P7513 INFO [Time] turn=438 local_train_time=1.7254s avg_client_train_time=0.002857s aggregation_time=0.0649s round_time=2.0909s
+2026-05-08 04:36:16,711 P7513 INFO ********* Train Turn 439 *********
+2026-05-08 04:36:18,799 P7513 INFO Clients average loss: 0.26051002740859985
+2026-05-08 04:36:18,804 P7513 INFO [Time] turn=439 local_train_time=1.7264s avg_client_train_time=0.002858s aggregation_time=0.0651s round_time=2.0928s
+2026-05-08 04:36:18,804 P7513 INFO ********* Eval @ Turn 439 *********
+2026-05-08 04:36:20,829 P7513 INFO [Metrics] logloss: 1.446360 - MRR: 0.352706 - NDCG(5): 0.344737 - HR(5): 0.444536 - NDCG(10): 0.399049 - HR(10): 0.614073 - NDCG(20): 0.444222 - HR(20): 0.791391 - NDCG(50): 0.474270 - HR(50): 0.940728
+2026-05-08 04:36:20,830 P7513 INFO [Time] eval_time=2.0255s
+2026-05-08 04:36:20,830 P7513 INFO ********* Train Turn 440 *********
+2026-05-08 04:36:22,934 P7513 INFO Clients average loss: 0.2596815228462219
+2026-05-08 04:36:22,939 P7513 INFO [Time] turn=440 local_train_time=1.7344s avg_client_train_time=0.002872s aggregation_time=0.0656s round_time=2.1088s
+2026-05-08 04:36:22,939 P7513 INFO ********* Train Turn 441 *********
+2026-05-08 04:36:25,024 P7513 INFO Clients average loss: 0.25884029269218445
+2026-05-08 04:36:25,029 P7513 INFO [Time] turn=441 local_train_time=1.7259s avg_client_train_time=0.002857s aggregation_time=0.0642s round_time=2.0898s
+2026-05-08 04:36:25,029 P7513 INFO ********* Train Turn 442 *********
+2026-05-08 04:36:27,105 P7513 INFO Clients average loss: 0.26322102546691895
+2026-05-08 04:36:27,109 P7513 INFO [Time] turn=442 local_train_time=1.7148s avg_client_train_time=0.002839s aggregation_time=0.0643s round_time=2.0806s
+2026-05-08 04:36:27,110 P7513 INFO ********* Train Turn 443 *********
+2026-05-08 04:36:29,190 P7513 INFO Clients average loss: 0.2618584930896759
+2026-05-08 04:36:29,195 P7513 INFO [Time] turn=443 local_train_time=1.7178s avg_client_train_time=0.002844s aggregation_time=0.0645s round_time=2.0850s
+2026-05-08 04:36:29,195 P7513 INFO ********* Train Turn 444 *********
+2026-05-08 04:36:31,268 P7513 INFO Clients average loss: 0.26127612590789795
+2026-05-08 04:36:31,273 P7513 INFO [Time] turn=444 local_train_time=1.7168s avg_client_train_time=0.002842s aggregation_time=0.0639s round_time=2.0779s
+2026-05-08 04:36:31,273 P7513 INFO ********* Train Turn 445 *********
+2026-05-08 04:36:33,361 P7513 INFO Clients average loss: 0.2611776292324066
+2026-05-08 04:36:33,365 P7513 INFO [Time] turn=445 local_train_time=1.7272s avg_client_train_time=0.002860s aggregation_time=0.0650s round_time=2.0922s
+2026-05-08 04:36:33,365 P7513 INFO ********* Train Turn 446 *********
+2026-05-08 04:36:35,435 P7513 INFO Clients average loss: 0.26788443326950073
+2026-05-08 04:36:35,440 P7513 INFO [Time] turn=446 local_train_time=1.7108s avg_client_train_time=0.002832s aggregation_time=0.0645s round_time=2.0746s
+2026-05-08 04:36:35,440 P7513 INFO ********* Train Turn 447 *********
+2026-05-08 04:36:37,508 P7513 INFO Clients average loss: 0.26160407066345215
+2026-05-08 04:36:37,512 P7513 INFO [Time] turn=447 local_train_time=1.7094s avg_client_train_time=0.002830s aggregation_time=0.0638s round_time=2.0720s
+2026-05-08 04:36:37,512 P7513 INFO ********* Train Turn 448 *********
+2026-05-08 04:36:39,585 P7513 INFO Clients average loss: 0.26234742999076843
+2026-05-08 04:36:39,590 P7513 INFO [Time] turn=448 local_train_time=1.7130s avg_client_train_time=0.002836s aggregation_time=0.0643s round_time=2.0773s
+2026-05-08 04:36:39,590 P7513 INFO ********* Train Turn 449 *********
+2026-05-08 04:36:41,667 P7513 INFO Clients average loss: 0.2611600458621979
+2026-05-08 04:36:41,671 P7513 INFO [Time] turn=449 local_train_time=1.7185s avg_client_train_time=0.002845s aggregation_time=0.0639s round_time=2.0814s
+2026-05-08 04:36:41,671 P7513 INFO ********* Eval @ Turn 449 *********
+2026-05-08 04:36:43,661 P7513 INFO [Metrics] logloss: 1.442414 - MRR: 0.353752 - NDCG(5): 0.345223 - HR(5): 0.443543 - NDCG(10): 0.399727 - HR(10): 0.613742 - NDCG(20): 0.444814 - HR(20): 0.790563 - NDCG(50): 0.475154 - HR(50): 0.941225
+2026-05-08 04:36:43,661 P7513 INFO [Time] eval_time=1.9899s
+2026-05-08 04:36:43,661 P7513 INFO ********* Train Turn 450 *********
+2026-05-08 04:36:45,740 P7513 INFO Clients average loss: 0.25945186614990234
+2026-05-08 04:36:45,744 P7513 INFO [Time] turn=450 local_train_time=1.7117s avg_client_train_time=0.002834s aggregation_time=0.0648s round_time=2.0829s
+2026-05-08 04:36:45,744 P7513 INFO ********* Train Turn 451 *********
+2026-05-08 04:36:47,809 P7513 INFO Clients average loss: 0.26929306983947754
+2026-05-08 04:36:47,814 P7513 INFO [Time] turn=451 local_train_time=1.7073s avg_client_train_time=0.002827s aggregation_time=0.0643s round_time=2.0690s
+2026-05-08 04:36:47,814 P7513 INFO ********* Train Turn 452 *********
+2026-05-08 04:36:50,017 P7513 INFO Clients average loss: 0.2642168402671814
+2026-05-08 04:36:50,022 P7513 INFO [Time] turn=452 local_train_time=1.7113s avg_client_train_time=0.002833s aggregation_time=0.0648s round_time=2.2079s
+2026-05-08 04:36:50,022 P7513 INFO ********* Train Turn 453 *********
+2026-05-08 04:36:52,088 P7513 INFO Clients average loss: 0.26400765776634216
+2026-05-08 04:36:52,093 P7513 INFO [Time] turn=453 local_train_time=1.7089s avg_client_train_time=0.002829s aggregation_time=0.0642s round_time=2.0711s
+2026-05-08 04:36:52,093 P7513 INFO ********* Train Turn 454 *********
+2026-05-08 04:36:54,163 P7513 INFO Clients average loss: 0.2661539912223816
+2026-05-08 04:36:54,168 P7513 INFO [Time] turn=454 local_train_time=1.7114s avg_client_train_time=0.002833s aggregation_time=0.0648s round_time=2.0745s
+2026-05-08 04:36:54,168 P7513 INFO ********* Train Turn 455 *********
+2026-05-08 04:36:56,238 P7513 INFO Clients average loss: 0.2616591155529022
+2026-05-08 04:36:56,242 P7513 INFO [Time] turn=455 local_train_time=1.7106s avg_client_train_time=0.002832s aggregation_time=0.0645s round_time=2.0744s
+2026-05-08 04:36:56,242 P7513 INFO ********* Train Turn 456 *********
+2026-05-08 04:36:58,309 P7513 INFO Clients average loss: 0.2656135857105255
+2026-05-08 04:36:58,314 P7513 INFO [Time] turn=456 local_train_time=1.7089s avg_client_train_time=0.002829s aggregation_time=0.0645s round_time=2.0712s
+2026-05-08 04:36:58,314 P7513 INFO ********* Train Turn 457 *********
+2026-05-08 04:37:00,376 P7513 INFO Clients average loss: 0.2595791220664978
+2026-05-08 04:37:00,381 P7513 INFO [Time] turn=457 local_train_time=1.7045s avg_client_train_time=0.002822s aggregation_time=0.0650s round_time=2.0670s
+2026-05-08 04:37:00,381 P7513 INFO ********* Train Turn 458 *********
+2026-05-08 04:37:02,440 P7513 INFO Clients average loss: 0.2687138319015503
+2026-05-08 04:37:02,445 P7513 INFO [Time] turn=458 local_train_time=1.7022s avg_client_train_time=0.002818s aggregation_time=0.0640s round_time=2.0636s
+2026-05-08 04:37:02,445 P7513 INFO ********* Train Turn 459 *********
+2026-05-08 04:37:04,505 P7513 INFO Clients average loss: 0.2690450847148895
+2026-05-08 04:37:04,510 P7513 INFO [Time] turn=459 local_train_time=1.7041s avg_client_train_time=0.002821s aggregation_time=0.0640s round_time=2.0651s
+2026-05-08 04:37:04,510 P7513 INFO ********* Eval @ Turn 459 *********
+2026-05-08 04:37:06,490 P7513 INFO [Metrics] logloss: 1.448162 - MRR: 0.354669 - NDCG(5): 0.346260 - HR(5): 0.444536 - NDCG(10): 0.400491 - HR(10): 0.613907 - NDCG(20): 0.445384 - HR(20): 0.789901 - NDCG(50): 0.475797 - HR(50): 0.940894
+2026-05-08 04:37:06,490 P7513 INFO [Time] eval_time=1.9802s
+2026-05-08 04:37:06,490 P7513 INFO ********* Train Turn 460 *********
+2026-05-08 04:37:08,570 P7513 INFO Clients average loss: 0.2634553611278534
+2026-05-08 04:37:08,575 P7513 INFO [Time] turn=460 local_train_time=1.7144s avg_client_train_time=0.002838s aggregation_time=0.0643s round_time=2.0844s
+2026-05-08 04:37:08,575 P7513 INFO ********* Train Turn 461 *********
+2026-05-08 04:37:10,635 P7513 INFO Clients average loss: 0.25880640745162964
+2026-05-08 04:37:10,640 P7513 INFO [Time] turn=461 local_train_time=1.7005s avg_client_train_time=0.002815s aggregation_time=0.0644s round_time=2.0649s
+2026-05-08 04:37:10,640 P7513 INFO ********* Train Turn 462 *********
+2026-05-08 04:37:12,701 P7513 INFO Clients average loss: 0.2605498135089874
+2026-05-08 04:37:12,705 P7513 INFO [Time] turn=462 local_train_time=1.7044s avg_client_train_time=0.002822s aggregation_time=0.0645s round_time=2.0650s
+2026-05-08 04:37:12,705 P7513 INFO ********* Train Turn 463 *********
+2026-05-08 04:37:14,770 P7513 INFO Clients average loss: 0.26915594935417175
+2026-05-08 04:37:14,774 P7513 INFO [Time] turn=463 local_train_time=1.7070s avg_client_train_time=0.002826s aggregation_time=0.0651s round_time=2.0689s
+2026-05-08 04:37:14,774 P7513 INFO ********* Train Turn 464 *********
+2026-05-08 04:37:16,845 P7513 INFO Clients average loss: 0.2618122696876526
+2026-05-08 04:37:16,850 P7513 INFO [Time] turn=464 local_train_time=1.7127s avg_client_train_time=0.002836s aggregation_time=0.0639s round_time=2.0753s
+2026-05-08 04:37:16,850 P7513 INFO ********* Train Turn 465 *********
+2026-05-08 04:37:18,973 P7513 INFO Clients average loss: 0.26380813121795654
+2026-05-08 04:37:18,977 P7513 INFO [Time] turn=465 local_train_time=1.7619s avg_client_train_time=0.002917s aggregation_time=0.0649s round_time=2.1276s
+2026-05-08 04:37:18,978 P7513 INFO ********* Train Turn 466 *********
+2026-05-08 04:37:21,055 P7513 INFO Clients average loss: 0.2648346722126007
+2026-05-08 04:37:21,060 P7513 INFO [Time] turn=466 local_train_time=1.7166s avg_client_train_time=0.002842s aggregation_time=0.0650s round_time=2.0823s
+2026-05-08 04:37:21,060 P7513 INFO ********* Train Turn 467 *********
+2026-05-08 04:37:23,134 P7513 INFO Clients average loss: 0.2621508538722992
+2026-05-08 04:37:23,138 P7513 INFO [Time] turn=467 local_train_time=1.7146s avg_client_train_time=0.002839s aggregation_time=0.0647s round_time=2.0781s
+2026-05-08 04:37:23,138 P7513 INFO ********* Train Turn 468 *********
+2026-05-08 04:37:25,214 P7513 INFO Clients average loss: 0.2614426016807556
+2026-05-08 04:37:25,219 P7513 INFO [Time] turn=468 local_train_time=1.7158s avg_client_train_time=0.002841s aggregation_time=0.0649s round_time=2.0804s
+2026-05-08 04:37:25,219 P7513 INFO ********* Train Turn 469 *********
+2026-05-08 04:37:27,298 P7513 INFO Clients average loss: 0.25887274742126465
+2026-05-08 04:37:27,303 P7513 INFO [Time] turn=469 local_train_time=1.7194s avg_client_train_time=0.002847s aggregation_time=0.0659s round_time=2.0839s
+2026-05-08 04:37:27,303 P7513 INFO ********* Eval @ Turn 469 *********
+2026-05-08 04:37:29,415 P7513 INFO [Metrics] logloss: 1.456565 - MRR: 0.355716 - NDCG(5): 0.346525 - HR(5): 0.442881 - NDCG(10): 0.401620 - HR(10): 0.615066 - NDCG(20): 0.446055 - HR(20): 0.789404 - NDCG(50): 0.476508 - HR(50): 0.940728
+2026-05-08 04:37:29,415 P7513 INFO [Time] eval_time=2.1123s
+2026-05-08 04:37:29,415 P7513 INFO ********* Train Turn 470 *********
+2026-05-08 04:37:31,496 P7513 INFO Clients average loss: 0.2671937644481659
+2026-05-08 04:37:31,500 P7513 INFO [Time] turn=470 local_train_time=1.7099s avg_client_train_time=0.002831s aggregation_time=0.0649s round_time=2.0850s
+2026-05-08 04:37:31,501 P7513 INFO ********* Train Turn 471 *********
+2026-05-08 04:37:33,569 P7513 INFO Clients average loss: 0.2567631006240845
+2026-05-08 04:37:33,573 P7513 INFO [Time] turn=471 local_train_time=1.7109s avg_client_train_time=0.002833s aggregation_time=0.0647s round_time=2.0727s
+2026-05-08 04:37:33,573 P7513 INFO ********* Train Turn 472 *********
+2026-05-08 04:37:35,643 P7513 INFO Clients average loss: 0.26297426223754883
+2026-05-08 04:37:35,648 P7513 INFO [Time] turn=472 local_train_time=1.7124s avg_client_train_time=0.002835s aggregation_time=0.0645s round_time=2.0745s
+2026-05-08 04:37:35,648 P7513 INFO ********* Train Turn 473 *********
+2026-05-08 04:37:37,721 P7513 INFO Clients average loss: 0.26199397444725037
+2026-05-08 04:37:37,726 P7513 INFO [Time] turn=473 local_train_time=1.7154s avg_client_train_time=0.002840s aggregation_time=0.0657s round_time=2.0778s
+2026-05-08 04:37:37,726 P7513 INFO ********* Train Turn 474 *********
+2026-05-08 04:37:39,797 P7513 INFO Clients average loss: 0.25495073199272156
+2026-05-08 04:37:39,802 P7513 INFO [Time] turn=474 local_train_time=1.7107s avg_client_train_time=0.002832s aggregation_time=0.0641s round_time=2.0755s
+2026-05-08 04:37:39,802 P7513 INFO ********* Train Turn 475 *********
+2026-05-08 04:37:41,867 P7513 INFO Clients average loss: 0.2651742994785309
+2026-05-08 04:37:41,871 P7513 INFO [Time] turn=475 local_train_time=1.7062s avg_client_train_time=0.002825s aggregation_time=0.0641s round_time=2.0693s
+2026-05-08 04:37:41,871 P7513 INFO ********* Train Turn 476 *********
+2026-05-08 04:37:43,931 P7513 INFO Clients average loss: 0.2617858350276947
+2026-05-08 04:37:43,936 P7513 INFO [Time] turn=476 local_train_time=1.7043s avg_client_train_time=0.002822s aggregation_time=0.0641s round_time=2.0643s
+2026-05-08 04:37:43,936 P7513 INFO ********* Train Turn 477 *********
+2026-05-08 04:37:45,997 P7513 INFO Clients average loss: 0.26238375902175903
+2026-05-08 04:37:46,002 P7513 INFO [Time] turn=477 local_train_time=1.7043s avg_client_train_time=0.002822s aggregation_time=0.0644s round_time=2.0662s
+2026-05-08 04:37:46,002 P7513 INFO ********* Train Turn 478 *********
+2026-05-08 04:37:48,065 P7513 INFO Clients average loss: 0.2652144432067871
+2026-05-08 04:37:48,070 P7513 INFO [Time] turn=478 local_train_time=1.7044s avg_client_train_time=0.002822s aggregation_time=0.0646s round_time=2.0675s
+2026-05-08 04:37:48,070 P7513 INFO ********* Train Turn 479 *********
+2026-05-08 04:37:50,147 P7513 INFO Clients average loss: 0.2629895508289337
+2026-05-08 04:37:50,152 P7513 INFO [Time] turn=479 local_train_time=1.7174s avg_client_train_time=0.002843s aggregation_time=0.0647s round_time=2.0817s
+2026-05-08 04:37:50,152 P7513 INFO ********* Eval @ Turn 479 *********
+2026-05-08 04:37:52,166 P7513 INFO [Metrics] logloss: 1.465170 - MRR: 0.356212 - NDCG(5): 0.346684 - HR(5): 0.442219 - NDCG(10): 0.402424 - HR(10): 0.616556 - NDCG(20): 0.446279 - HR(20): 0.788742 - NDCG(50): 0.476897 - HR(50): 0.940894
+2026-05-08 04:37:52,166 P7513 INFO [Time] eval_time=2.0143s
+2026-05-08 04:37:52,166 P7513 INFO ********* Train Turn 480 *********
+2026-05-08 04:37:54,240 P7513 INFO Clients average loss: 0.26536422967910767
+2026-05-08 04:37:54,244 P7513 INFO [Time] turn=480 local_train_time=1.7029s avg_client_train_time=0.002819s aggregation_time=0.0649s round_time=2.0780s
+2026-05-08 04:37:54,244 P7513 INFO ********* Train Turn 481 *********
+2026-05-08 04:37:56,310 P7513 INFO Clients average loss: 0.2621046304702759
+2026-05-08 04:37:56,314 P7513 INFO [Time] turn=481 local_train_time=1.7081s avg_client_train_time=0.002828s aggregation_time=0.0645s round_time=2.0700s
+2026-05-08 04:37:56,315 P7513 INFO ********* Train Turn 482 *********
+2026-05-08 04:37:58,381 P7513 INFO Clients average loss: 0.2608342170715332
+2026-05-08 04:37:58,385 P7513 INFO [Time] turn=482 local_train_time=1.7079s avg_client_train_time=0.002828s aggregation_time=0.0650s round_time=2.0708s
+2026-05-08 04:37:58,385 P7513 INFO ********* Train Turn 483 *********
+2026-05-08 04:38:00,462 P7513 INFO Clients average loss: 0.2614453136920929
+2026-05-08 04:38:00,466 P7513 INFO [Time] turn=483 local_train_time=1.7178s avg_client_train_time=0.002844s aggregation_time=0.0653s round_time=2.0809s
+2026-05-08 04:38:00,467 P7513 INFO ********* Train Turn 484 *********
+2026-05-08 04:38:02,528 P7513 INFO Clients average loss: 0.25849980115890503
+2026-05-08 04:38:02,532 P7513 INFO [Time] turn=484 local_train_time=1.7029s avg_client_train_time=0.002819s aggregation_time=0.0645s round_time=2.0655s
+2026-05-08 04:38:02,532 P7513 INFO ********* Train Turn 485 *********
+2026-05-08 04:38:04,594 P7513 INFO Clients average loss: 0.26175299286842346
+2026-05-08 04:38:04,599 P7513 INFO [Time] turn=485 local_train_time=1.7018s avg_client_train_time=0.002818s aggregation_time=0.0639s round_time=2.0666s
+2026-05-08 04:38:04,599 P7513 INFO ********* Train Turn 486 *********
+2026-05-08 04:38:06,659 P7513 INFO Clients average loss: 0.2616969347000122
+2026-05-08 04:38:06,663 P7513 INFO [Time] turn=486 local_train_time=1.7029s avg_client_train_time=0.002819s aggregation_time=0.0641s round_time=2.0641s
+2026-05-08 04:38:06,663 P7513 INFO ********* Train Turn 487 *********
+2026-05-08 04:38:08,722 P7513 INFO Clients average loss: 0.26302453875541687
+2026-05-08 04:38:08,727 P7513 INFO [Time] turn=487 local_train_time=1.7019s avg_client_train_time=0.002818s aggregation_time=0.0640s round_time=2.0632s
+2026-05-08 04:38:08,727 P7513 INFO ********* Train Turn 488 *********
+2026-05-08 04:38:10,797 P7513 INFO Clients average loss: 0.2657911479473114
+2026-05-08 04:38:10,802 P7513 INFO [Time] turn=488 local_train_time=1.7119s avg_client_train_time=0.002834s aggregation_time=0.0655s round_time=2.0748s
+2026-05-08 04:38:10,802 P7513 INFO ********* Train Turn 489 *********
+2026-05-08 04:38:12,870 P7513 INFO Clients average loss: 0.25715187191963196
+2026-05-08 04:38:12,875 P7513 INFO [Time] turn=489 local_train_time=1.7101s avg_client_train_time=0.002831s aggregation_time=0.0645s round_time=2.0731s
+2026-05-08 04:38:12,875 P7513 INFO ********* Eval @ Turn 489 *********
+2026-05-08 04:38:14,836 P7513 INFO [Metrics] logloss: 1.472638 - MRR: 0.355317 - NDCG(5): 0.346067 - HR(5): 0.442219 - NDCG(10): 0.401190 - HR(10): 0.614570 - NDCG(20): 0.444974 - HR(20): 0.786258 - NDCG(50): 0.476061 - HR(50): 0.940232
+2026-05-08 04:38:14,836 P7513 INFO [Time] eval_time=1.9611s
+2026-05-08 04:38:14,836 P7513 INFO ********* Train Turn 490 *********
+2026-05-08 04:38:16,917 P7513 INFO Clients average loss: 0.25872212648391724
+2026-05-08 04:38:16,922 P7513 INFO [Time] turn=490 local_train_time=1.7148s avg_client_train_time=0.002839s aggregation_time=0.0647s round_time=2.0859s
+2026-05-08 04:38:16,922 P7513 INFO ********* Train Turn 491 *********
+2026-05-08 04:38:18,989 P7513 INFO Clients average loss: 0.2504734396934509
+2026-05-08 04:38:18,993 P7513 INFO [Time] turn=491 local_train_time=1.7096s avg_client_train_time=0.002831s aggregation_time=0.0642s round_time=2.0709s
+2026-05-08 04:38:18,993 P7513 INFO ********* Train Turn 492 *********
+2026-05-08 04:38:21,197 P7513 INFO Clients average loss: 0.25458982586860657
+2026-05-08 04:38:21,201 P7513 INFO [Time] turn=492 local_train_time=1.7143s avg_client_train_time=0.002838s aggregation_time=0.0646s round_time=2.2079s
+2026-05-08 04:38:21,201 P7513 INFO ********* Train Turn 493 *********
+2026-05-08 04:38:23,280 P7513 INFO Clients average loss: 0.25970184803009033
+2026-05-08 04:38:23,284 P7513 INFO [Time] turn=493 local_train_time=1.7213s avg_client_train_time=0.002850s aggregation_time=0.0649s round_time=2.0831s
+2026-05-08 04:38:23,285 P7513 INFO ********* Train Turn 494 *********
+2026-05-08 04:38:25,351 P7513 INFO Clients average loss: 0.26133328676223755
+2026-05-08 04:38:25,356 P7513 INFO [Time] turn=494 local_train_time=1.7093s avg_client_train_time=0.002830s aggregation_time=0.0646s round_time=2.0715s
+2026-05-08 04:38:25,356 P7513 INFO ********* Train Turn 495 *********
+2026-05-08 04:38:27,422 P7513 INFO Clients average loss: 0.2598375380039215
+2026-05-08 04:38:27,427 P7513 INFO [Time] turn=495 local_train_time=1.7100s avg_client_train_time=0.002831s aggregation_time=0.0652s round_time=2.0705s
+2026-05-08 04:38:27,427 P7513 INFO ********* Train Turn 496 *********
+2026-05-08 04:38:29,493 P7513 INFO Clients average loss: 0.26592856645584106
+2026-05-08 04:38:29,498 P7513 INFO [Time] turn=496 local_train_time=1.7040s avg_client_train_time=0.002821s aggregation_time=0.0653s round_time=2.0708s
+2026-05-08 04:38:29,498 P7513 INFO ********* Train Turn 497 *********
+2026-05-08 04:38:31,571 P7513 INFO Clients average loss: 0.2634541988372803
+2026-05-08 04:38:31,576 P7513 INFO [Time] turn=497 local_train_time=1.7141s avg_client_train_time=0.002838s aggregation_time=0.0649s round_time=2.0775s
+2026-05-08 04:38:31,576 P7513 INFO ********* Train Turn 498 *********
+2026-05-08 04:38:33,657 P7513 INFO Clients average loss: 0.2533053755760193
+2026-05-08 04:38:33,662 P7513 INFO [Time] turn=498 local_train_time=1.7220s avg_client_train_time=0.002851s aggregation_time=0.0651s round_time=2.0859s
+2026-05-08 04:38:33,662 P7513 INFO ********* Train Turn 499 *********
+2026-05-08 04:38:35,735 P7513 INFO Clients average loss: 0.2591448128223419
+2026-05-08 04:38:35,739 P7513 INFO [Time] turn=499 local_train_time=1.7150s avg_client_train_time=0.002839s aggregation_time=0.0650s round_time=2.0776s
+2026-05-08 04:38:35,739 P7513 INFO ********* Eval @ Turn 499 *********
+2026-05-08 04:38:37,729 P7513 INFO [Metrics] logloss: 1.491571 - MRR: 0.353941 - NDCG(5): 0.344821 - HR(5): 0.441722 - NDCG(10): 0.400120 - HR(10): 0.614404 - NDCG(20): 0.443802 - HR(20): 0.785927 - NDCG(50): 0.475126 - HR(50): 0.940894
+2026-05-08 04:38:37,729 P7513 INFO [Time] eval_time=1.9899s
+2026-05-08 04:38:37,729 P7513 INFO ********* Final Test*********
+2026-05-08 04:38:39,726 P7513 INFO [Metrics] logloss: 1.491571 - MRR: 0.353941 - NDCG(5): 0.344821 - HR(5): 0.441722 - NDCG(10): 0.400120 - HR(10): 0.614404 - NDCG(20): 0.443802 - HR(20): 0.785927 - NDCG(50): 0.475126 - HR(50): 0.940894
+2026-05-08 04:38:39,726 P7513 INFO [Time] final_eval_time=1.9965s
+2026-05-08 04:38:39,726 P7513 INFO [Time] total_fit_time=1150.6787s
+/content/drive/MyDrive

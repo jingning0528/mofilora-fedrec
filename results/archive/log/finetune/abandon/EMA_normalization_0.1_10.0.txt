@@ -1,0 +1,1123 @@
+/content/drive/MyDrive/FedNCF-LoRA
+2026-05-12 16:24:32,640 P5726 INFO Params: {
+    "beta": "0.1",
+    "clients_num_per_turn": "604",
+    "data_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "dataloader": "MLDataLoaderFL",
+    "dataset_id": "ML1M_t5",
+    "device": "0",
+    "dropout": "0.5",
+    "embedding_dim": "32",
+    "embedding_regularizer": "1e-08",
+    "eta_s": "10.0",
+    "g_hidden_activations": "ReLU",
+    "g_hidden_units": "[512, 256, 128]",
+    "hidden_activations": "ReLU",
+    "hidden_units": "[64, 128, 64]",
+    "item_num": "3952",
+    "latent_dim": "4",
+    "learning_rate": "0.001",
+    "local_epoch": "2",
+    "loss_fn": "bpr_loss",
+    "metrics": "['logloss', 'MRR', 'NDCG(5)', 'HR(5)', 'NDCG(10)', 'HR(10)', 'NDCG(20)', 'HR(20)', 'NDCG(50)', 'HR(50)']",
+    "model": "FedNCF_Lora_MomentumA_FixedB",
+    "model_dir": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/model/t5/",
+    "model_id": "FedNCF_ml1m_triple_101_momentumA_fixedB",
+    "net_regularizer": "1e-08",
+    "only_inter": "False",
+    "optimizer": "adam",
+    "output_dim": "1",
+    "path": "/content/drive/MyDrive/FedNCF-LoRA/data/ml-1m/processed/t5/",
+    "pre_epoch": "3000",
+    "seed": "2024",
+    "sen_embedding_dim": "768",
+    "task": "triple",
+    "train_turn": "500",
+    "user_num": "6040"
+}
+2026-05-12 16:24:35,436 P5726 INFO Model embedding_item.emb.weight size: 0.06030273MB
+2026-05-12 16:24:35,437 P5726 INFO Model embedding_item.linear.weight size: 0.00048828MB
+2026-05-12 16:24:35,437 P5726 INFO Model embedding_p.weight size: 0.48242188MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.0.weight size: 0.01562500MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.0.bias size: 0.00024414MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.3.weight size: 0.03125000MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.3.bias size: 0.00048828MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.6.weight size: 0.03125000MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.6.bias size: 0.00024414MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.9.weight size: 0.00024414MB
+2026-05-12 16:24:35,437 P5726 INFO Model mlp.mlp.9.bias size: 0.00000381MB
+2026-05-12 16:24:35,438 P5726 INFO Model all size: 0.62256241MB
+2026-05-12 16:24:40,971 P5726 INFO [Time] pretrain_time=5.5334s
+2026-05-12 16:24:40,971 P5726 INFO ********* Train Turn 0 *********
+/content/drive/MyDrive/FedNCF-LoRA/zoo/fedncf_lora_momentumA_fixedB.py:413: UserWarning: Converting a tensor with requires_grad=True to a scalar may lead to unexpected behavior.
+Consider using tensor.detach() first. (Triggered internally at /pytorch/torch/csrc/autograd/generated/python_variable_methods.cpp:836.)
+  logging.info("Clients average loss: {}".format(torch.mean(torch.tensor(loss_list))))
+2026-05-12 16:24:42,971 P5726 INFO Clients average loss: 0.6949779391288757
+2026-05-12 16:24:42,976 P5726 INFO [Time] turn=0 local_train_time=1.6483s avg_client_train_time=0.002729s aggregation_time=0.0678s round_time=2.0046s
+2026-05-12 16:24:42,976 P5726 INFO ********* Train Turn 1 *********
+2026-05-12 16:24:44,888 P5726 INFO Clients average loss: 0.6949658989906311
+2026-05-12 16:24:44,893 P5726 INFO [Time] turn=1 local_train_time=1.5499s avg_client_train_time=0.002566s aggregation_time=0.0657s round_time=1.9173s
+2026-05-12 16:24:44,894 P5726 INFO ********* Train Turn 2 *********
+2026-05-12 16:24:46,795 P5726 INFO Clients average loss: 0.6953572034835815
+2026-05-12 16:24:46,800 P5726 INFO [Time] turn=2 local_train_time=1.5400s avg_client_train_time=0.002550s aggregation_time=0.0651s round_time=1.9063s
+2026-05-12 16:24:46,800 P5726 INFO ********* Train Turn 3 *********
+2026-05-12 16:24:48,705 P5726 INFO Clients average loss: 0.695402204990387
+2026-05-12 16:24:48,710 P5726 INFO [Time] turn=3 local_train_time=1.5434s avg_client_train_time=0.002555s aggregation_time=0.0659s round_time=1.9097s
+2026-05-12 16:24:48,710 P5726 INFO ********* Train Turn 4 *********
+2026-05-12 16:24:50,614 P5726 INFO Clients average loss: 0.6947665214538574
+2026-05-12 16:24:50,619 P5726 INFO [Time] turn=4 local_train_time=1.5425s avg_client_train_time=0.002554s aggregation_time=0.0656s round_time=1.9087s
+2026-05-12 16:24:50,619 P5726 INFO ********* Train Turn 5 *********
+2026-05-12 16:24:52,522 P5726 INFO Clients average loss: 0.6944484114646912
+2026-05-12 16:24:52,527 P5726 INFO [Time] turn=5 local_train_time=1.5401s avg_client_train_time=0.002550s aggregation_time=0.0666s round_time=1.9082s
+2026-05-12 16:24:52,527 P5726 INFO ********* Train Turn 6 *********
+2026-05-12 16:24:54,435 P5726 INFO Clients average loss: 0.6946617364883423
+2026-05-12 16:24:54,440 P5726 INFO [Time] turn=6 local_train_time=1.5442s avg_client_train_time=0.002557s aggregation_time=0.0664s round_time=1.9132s
+2026-05-12 16:24:54,441 P5726 INFO ********* Train Turn 7 *********
+2026-05-12 16:24:56,354 P5726 INFO Clients average loss: 0.6944233775138855
+2026-05-12 16:24:56,359 P5726 INFO [Time] turn=7 local_train_time=1.5492s avg_client_train_time=0.002565s aggregation_time=0.0656s round_time=1.9181s
+2026-05-12 16:24:56,359 P5726 INFO ********* Train Turn 8 *********
+2026-05-12 16:24:58,261 P5726 INFO Clients average loss: 0.6946154236793518
+2026-05-12 16:24:58,266 P5726 INFO [Time] turn=8 local_train_time=1.5424s avg_client_train_time=0.002554s aggregation_time=0.0657s round_time=1.9074s
+2026-05-12 16:24:58,266 P5726 INFO ********* Train Turn 9 *********
+2026-05-12 16:25:00,167 P5726 INFO Clients average loss: 0.6948086619377136
+2026-05-12 16:25:00,172 P5726 INFO [Time] turn=9 local_train_time=1.5405s avg_client_train_time=0.002551s aggregation_time=0.0657s round_time=1.9057s
+2026-05-12 16:25:00,172 P5726 INFO ********* Eval @ Turn 9 *********
+2026-05-12 16:25:02,294 P5726 INFO [Metrics] logloss: 0.093032 - MRR: 0.045388 - NDCG(5): 0.022199 - HR(5): 0.033940 - NDCG(10): 0.033342 - HR(10): 0.069536 - NDCG(20): 0.055815 - HR(20): 0.159768 - NDCG(50): 0.118164 - HR(50): 0.481457
+2026-05-12 16:25:02,294 P5726 INFO [Time] eval_time=2.1220s
+2026-05-12 16:25:02,294 P5726 INFO ********* Train Turn 10 *********
+2026-05-12 16:25:04,216 P5726 INFO Clients average loss: 0.6946991086006165
+2026-05-12 16:25:04,221 P5726 INFO [Time] turn=10 local_train_time=1.5484s avg_client_train_time=0.002564s aggregation_time=0.0655s round_time=1.9260s
+2026-05-12 16:25:04,221 P5726 INFO ********* Train Turn 11 *********
+2026-05-12 16:25:06,135 P5726 INFO Clients average loss: 0.6947765350341797
+2026-05-12 16:25:06,140 P5726 INFO [Time] turn=11 local_train_time=1.5477s avg_client_train_time=0.002562s aggregation_time=0.0665s round_time=1.9194s
+2026-05-12 16:25:06,140 P5726 INFO ********* Train Turn 12 *********
+2026-05-12 16:25:08,051 P5726 INFO Clients average loss: 0.6939542889595032
+2026-05-12 16:25:08,056 P5726 INFO [Time] turn=12 local_train_time=1.5471s avg_client_train_time=0.002561s aggregation_time=0.0656s round_time=1.9159s
+2026-05-12 16:25:08,056 P5726 INFO ********* Train Turn 13 *********
+2026-05-12 16:25:09,961 P5726 INFO Clients average loss: 0.6941685676574707
+2026-05-12 16:25:09,966 P5726 INFO [Time] turn=13 local_train_time=1.5416s avg_client_train_time=0.002552s aggregation_time=0.0660s round_time=1.9096s
+2026-05-12 16:25:09,966 P5726 INFO ********* Train Turn 14 *********
+2026-05-12 16:25:11,870 P5726 INFO Clients average loss: 0.6942382454872131
+2026-05-12 16:25:11,875 P5726 INFO [Time] turn=14 local_train_time=1.5414s avg_client_train_time=0.002552s aggregation_time=0.0661s round_time=1.9085s
+2026-05-12 16:25:11,875 P5726 INFO ********* Train Turn 15 *********
+2026-05-12 16:25:13,774 P5726 INFO Clients average loss: 0.6935076117515564
+2026-05-12 16:25:13,779 P5726 INFO [Time] turn=15 local_train_time=1.5386s avg_client_train_time=0.002547s aggregation_time=0.0653s round_time=1.9042s
+2026-05-12 16:25:13,779 P5726 INFO ********* Train Turn 16 *********
+2026-05-12 16:25:15,682 P5726 INFO Clients average loss: 0.6935052871704102
+2026-05-12 16:25:15,687 P5726 INFO [Time] turn=16 local_train_time=1.5409s avg_client_train_time=0.002551s aggregation_time=0.0658s round_time=1.9077s
+2026-05-12 16:25:15,687 P5726 INFO ********* Train Turn 17 *********
+2026-05-12 16:25:17,602 P5726 INFO Clients average loss: 0.6939256191253662
+2026-05-12 16:25:17,606 P5726 INFO [Time] turn=17 local_train_time=1.5525s avg_client_train_time=0.002570s aggregation_time=0.0660s round_time=1.9193s
+2026-05-12 16:25:17,607 P5726 INFO ********* Train Turn 18 *********
+2026-05-12 16:25:19,512 P5726 INFO Clients average loss: 0.6935752034187317
+2026-05-12 16:25:19,517 P5726 INFO [Time] turn=18 local_train_time=1.5427s avg_client_train_time=0.002554s aggregation_time=0.0660s round_time=1.9101s
+2026-05-12 16:25:19,517 P5726 INFO ********* Train Turn 19 *********
+2026-05-12 16:25:21,417 P5726 INFO Clients average loss: 0.6935207843780518
+2026-05-12 16:25:21,422 P5726 INFO [Time] turn=19 local_train_time=1.5414s avg_client_train_time=0.002552s aggregation_time=0.0661s round_time=1.9049s
+2026-05-12 16:25:21,422 P5726 INFO ********* Eval @ Turn 19 *********
+2026-05-12 16:25:23,404 P5726 INFO [Metrics] logloss: 0.090218 - MRR: 0.053960 - NDCG(5): 0.029304 - HR(5): 0.041556 - NDCG(10): 0.041832 - HR(10): 0.080960 - NDCG(20): 0.066376 - HR(20): 0.179801 - NDCG(50): 0.134913 - HR(50): 0.531788
+2026-05-12 16:25:23,404 P5726 INFO [Time] eval_time=1.9824s
+2026-05-12 16:25:23,404 P5726 INFO ********* Train Turn 20 *********
+2026-05-12 16:25:25,727 P5726 INFO Clients average loss: 0.6940286755561829
+2026-05-12 16:25:25,732 P5726 INFO [Time] turn=20 local_train_time=1.9431s avg_client_train_time=0.003217s aggregation_time=0.0666s round_time=2.3274s
+2026-05-12 16:25:25,732 P5726 INFO ********* Train Turn 21 *********
+2026-05-12 16:25:27,990 P5726 INFO Clients average loss: 0.69376540184021
+2026-05-12 16:25:27,995 P5726 INFO [Time] turn=21 local_train_time=1.8783s avg_client_train_time=0.003110s aggregation_time=0.0669s round_time=2.2624s
+2026-05-12 16:25:27,995 P5726 INFO ********* Train Turn 22 *********
+2026-05-12 16:25:30,112 P5726 INFO Clients average loss: 0.693358302116394
+2026-05-12 16:25:30,117 P5726 INFO [Time] turn=22 local_train_time=1.7453s avg_client_train_time=0.002890s aggregation_time=0.0660s round_time=2.1225s
+2026-05-12 16:25:30,117 P5726 INFO ********* Train Turn 23 *********
+2026-05-12 16:25:32,219 P5726 INFO Clients average loss: 0.6936715245246887
+2026-05-12 16:25:32,224 P5726 INFO [Time] turn=23 local_train_time=1.7302s avg_client_train_time=0.002865s aggregation_time=0.0658s round_time=2.1060s
+2026-05-12 16:25:32,224 P5726 INFO ********* Train Turn 24 *********
+2026-05-12 16:25:34,327 P5726 INFO Clients average loss: 0.6935961842536926
+2026-05-12 16:25:34,332 P5726 INFO [Time] turn=24 local_train_time=1.7361s avg_client_train_time=0.002874s aggregation_time=0.0660s round_time=2.1082s
+2026-05-12 16:25:34,332 P5726 INFO ********* Train Turn 25 *********
+2026-05-12 16:25:36,436 P5726 INFO Clients average loss: 0.6932051777839661
+2026-05-12 16:25:36,441 P5726 INFO [Time] turn=25 local_train_time=1.7373s avg_client_train_time=0.002876s aggregation_time=0.0660s round_time=2.1092s
+2026-05-12 16:25:36,441 P5726 INFO ********* Train Turn 26 *********
+2026-05-12 16:25:38,545 P5726 INFO Clients average loss: 0.6930015683174133
+2026-05-12 16:25:38,550 P5726 INFO [Time] turn=26 local_train_time=1.7337s avg_client_train_time=0.002870s aggregation_time=0.0666s round_time=2.1089s
+2026-05-12 16:25:38,550 P5726 INFO ********* Train Turn 27 *********
+2026-05-12 16:25:40,666 P5726 INFO Clients average loss: 0.6923725605010986
+2026-05-12 16:25:40,670 P5726 INFO [Time] turn=27 local_train_time=1.7469s avg_client_train_time=0.002892s aggregation_time=0.0660s round_time=2.1199s
+2026-05-12 16:25:40,671 P5726 INFO ********* Train Turn 28 *********
+2026-05-12 16:25:42,779 P5726 INFO Clients average loss: 0.6923757195472717
+2026-05-12 16:25:42,784 P5726 INFO [Time] turn=28 local_train_time=1.7396s avg_client_train_time=0.002880s aggregation_time=0.0665s round_time=2.1136s
+2026-05-12 16:25:42,784 P5726 INFO ********* Train Turn 29 *********
+2026-05-12 16:25:44,888 P5726 INFO Clients average loss: 0.692610502243042
+2026-05-12 16:25:44,893 P5726 INFO [Time] turn=29 local_train_time=1.7358s avg_client_train_time=0.002874s aggregation_time=0.0661s round_time=2.1088s
+2026-05-12 16:25:44,893 P5726 INFO ********* Eval @ Turn 29 *********
+2026-05-12 16:25:46,873 P5726 INFO [Metrics] logloss: 0.084157 - MRR: 0.063450 - NDCG(5): 0.036241 - HR(5): 0.050497 - NDCG(10): 0.051751 - HR(10): 0.099503 - NDCG(20): 0.084440 - HR(20): 0.230795 - NDCG(50): 0.157425 - HR(50): 0.603974
+2026-05-12 16:25:46,873 P5726 INFO [Time] eval_time=1.9801s
+2026-05-12 16:25:46,873 P5726 INFO ********* Train Turn 30 *********
+2026-05-12 16:25:48,995 P5726 INFO Clients average loss: 0.6916261911392212
+2026-05-12 16:25:49,000 P5726 INFO [Time] turn=30 local_train_time=1.7457s avg_client_train_time=0.002890s aggregation_time=0.0664s round_time=2.1261s
+2026-05-12 16:25:49,000 P5726 INFO ********* Train Turn 31 *********
+2026-05-12 16:25:51,113 P5726 INFO Clients average loss: 0.6916754245758057
+2026-05-12 16:25:51,117 P5726 INFO [Time] turn=31 local_train_time=1.7457s avg_client_train_time=0.002890s aggregation_time=0.0652s round_time=2.1174s
+2026-05-12 16:25:51,117 P5726 INFO ********* Train Turn 32 *********
+2026-05-12 16:25:53,224 P5726 INFO Clients average loss: 0.6912733912467957
+2026-05-12 16:25:53,229 P5726 INFO [Time] turn=32 local_train_time=1.7404s avg_client_train_time=0.002881s aggregation_time=0.0653s round_time=2.1116s
+2026-05-12 16:25:53,229 P5726 INFO ********* Train Turn 33 *********
+2026-05-12 16:25:55,477 P5726 INFO Clients average loss: 0.6910503506660461
+2026-05-12 16:25:55,482 P5726 INFO [Time] turn=33 local_train_time=1.7500s avg_client_train_time=0.002897s aggregation_time=0.0662s round_time=2.2527s
+2026-05-12 16:25:55,482 P5726 INFO ********* Train Turn 34 *********
+2026-05-12 16:25:57,602 P5726 INFO Clients average loss: 0.6909795999526978
+2026-05-12 16:25:57,607 P5726 INFO [Time] turn=34 local_train_time=1.7481s avg_client_train_time=0.002894s aggregation_time=0.0656s round_time=2.1248s
+2026-05-12 16:25:57,607 P5726 INFO ********* Train Turn 35 *********
+2026-05-12 16:25:59,723 P5726 INFO Clients average loss: 0.6903835535049438
+2026-05-12 16:25:59,728 P5726 INFO [Time] turn=35 local_train_time=1.7469s avg_client_train_time=0.002892s aggregation_time=0.0658s round_time=2.1204s
+2026-05-12 16:25:59,728 P5726 INFO ********* Train Turn 36 *********
+2026-05-12 16:26:01,845 P5726 INFO Clients average loss: 0.6895809173583984
+2026-05-12 16:26:01,849 P5726 INFO [Time] turn=36 local_train_time=1.7483s avg_client_train_time=0.002895s aggregation_time=0.0655s round_time=2.1216s
+2026-05-12 16:26:01,849 P5726 INFO ********* Train Turn 37 *********
+2026-05-12 16:26:03,957 P5726 INFO Clients average loss: 0.6893148422241211
+2026-05-12 16:26:03,962 P5726 INFO [Time] turn=37 local_train_time=1.7397s avg_client_train_time=0.002880s aggregation_time=0.0658s round_time=2.1124s
+2026-05-12 16:26:03,962 P5726 INFO ********* Train Turn 38 *********
+2026-05-12 16:26:06,068 P5726 INFO Clients average loss: 0.6888067126274109
+2026-05-12 16:26:06,073 P5726 INFO [Time] turn=38 local_train_time=1.7394s avg_client_train_time=0.002880s aggregation_time=0.0657s round_time=2.1109s
+2026-05-12 16:26:06,073 P5726 INFO ********* Train Turn 39 *********
+2026-05-12 16:26:08,176 P5726 INFO Clients average loss: 0.6880730390548706
+2026-05-12 16:26:08,181 P5726 INFO [Time] turn=39 local_train_time=1.7368s avg_client_train_time=0.002876s aggregation_time=0.0653s round_time=2.1077s
+2026-05-12 16:26:08,181 P5726 INFO ********* Eval @ Turn 39 *********
+2026-05-12 16:26:10,199 P5726 INFO [Metrics] logloss: 0.082200 - MRR: 0.079322 - NDCG(5): 0.047287 - HR(5): 0.067384 - NDCG(10): 0.074355 - HR(10): 0.152649 - NDCG(20): 0.118640 - HR(20): 0.328808 - NDCG(50): 0.188660 - HR(50): 0.683940
+2026-05-12 16:26:10,199 P5726 INFO [Time] eval_time=2.0181s
+2026-05-12 16:26:10,199 P5726 INFO ********* Train Turn 40 *********
+2026-05-12 16:26:12,331 P5726 INFO Clients average loss: 0.6868124604225159
+2026-05-12 16:26:12,335 P5726 INFO [Time] turn=40 local_train_time=1.7537s avg_client_train_time=0.002904s aggregation_time=0.0662s round_time=2.1361s
+2026-05-12 16:26:12,336 P5726 INFO ********* Train Turn 41 *********
+2026-05-12 16:26:14,448 P5726 INFO Clients average loss: 0.6859495043754578
+2026-05-12 16:26:14,453 P5726 INFO [Time] turn=41 local_train_time=1.7435s avg_client_train_time=0.002887s aggregation_time=0.0659s round_time=2.1168s
+2026-05-12 16:26:14,453 P5726 INFO ********* Train Turn 42 *********
+2026-05-12 16:26:16,556 P5726 INFO Clients average loss: 0.6852230429649353
+2026-05-12 16:26:16,561 P5726 INFO [Time] turn=42 local_train_time=1.7359s avg_client_train_time=0.002874s aggregation_time=0.0653s round_time=2.1078s
+2026-05-12 16:26:16,561 P5726 INFO ********* Train Turn 43 *********
+2026-05-12 16:26:18,662 P5726 INFO Clients average loss: 0.6834542751312256
+2026-05-12 16:26:18,666 P5726 INFO [Time] turn=43 local_train_time=1.7333s avg_client_train_time=0.002870s aggregation_time=0.0655s round_time=2.1058s
+2026-05-12 16:26:18,667 P5726 INFO ********* Train Turn 44 *********
+2026-05-12 16:26:20,772 P5726 INFO Clients average loss: 0.6825278997421265
+2026-05-12 16:26:20,777 P5726 INFO [Time] turn=44 local_train_time=1.7374s avg_client_train_time=0.002876s aggregation_time=0.0651s round_time=2.1106s
+2026-05-12 16:26:20,777 P5726 INFO ********* Train Turn 45 *********
+2026-05-12 16:26:22,889 P5726 INFO Clients average loss: 0.6810172200202942
+2026-05-12 16:26:22,894 P5726 INFO [Time] turn=45 local_train_time=1.7435s avg_client_train_time=0.002887s aggregation_time=0.0662s round_time=2.1164s
+2026-05-12 16:26:22,894 P5726 INFO ********* Train Turn 46 *********
+2026-05-12 16:26:24,995 P5726 INFO Clients average loss: 0.6791754961013794
+2026-05-12 16:26:25,000 P5726 INFO [Time] turn=46 local_train_time=1.7326s avg_client_train_time=0.002869s aggregation_time=0.0659s round_time=2.1060s
+2026-05-12 16:26:25,000 P5726 INFO ********* Train Turn 47 *********
+2026-05-12 16:26:27,100 P5726 INFO Clients average loss: 0.6767618060112
+2026-05-12 16:26:27,104 P5726 INFO [Time] turn=47 local_train_time=1.7303s avg_client_train_time=0.002865s aggregation_time=0.0657s round_time=2.1040s
+2026-05-12 16:26:27,104 P5726 INFO ********* Train Turn 48 *********
+2026-05-12 16:26:29,208 P5726 INFO Clients average loss: 0.674255907535553
+2026-05-12 16:26:29,213 P5726 INFO [Time] turn=48 local_train_time=1.7349s avg_client_train_time=0.002872s aggregation_time=0.0658s round_time=2.1083s
+2026-05-12 16:26:29,213 P5726 INFO ********* Train Turn 49 *********
+2026-05-12 16:26:31,316 P5726 INFO Clients average loss: 0.6696763038635254
+2026-05-12 16:26:31,321 P5726 INFO [Time] turn=49 local_train_time=1.7349s avg_client_train_time=0.002872s aggregation_time=0.0659s round_time=2.1079s
+2026-05-12 16:26:31,321 P5726 INFO ********* Eval @ Turn 49 *********
+2026-05-12 16:26:33,494 P5726 INFO [Metrics] logloss: 0.103428 - MRR: 0.113429 - NDCG(5): 0.089160 - HR(5): 0.150993 - NDCG(10): 0.139824 - HR(10): 0.308113 - NDCG(20): 0.177636 - HR(20): 0.457947 - NDCG(50): 0.231506 - HR(50): 0.726987
+2026-05-12 16:26:33,494 P5726 INFO [Time] eval_time=2.1728s
+2026-05-12 16:26:33,494 P5726 INFO ********* Train Turn 50 *********
+2026-05-12 16:26:35,615 P5726 INFO Clients average loss: 0.6668042540550232
+2026-05-12 16:26:35,620 P5726 INFO [Time] turn=50 local_train_time=1.7444s avg_client_train_time=0.002888s aggregation_time=0.0654s round_time=2.1260s
+2026-05-12 16:26:35,620 P5726 INFO ********* Train Turn 51 *********
+2026-05-12 16:26:37,727 P5726 INFO Clients average loss: 0.6613237857818604
+2026-05-12 16:26:37,732 P5726 INFO [Time] turn=51 local_train_time=1.7386s avg_client_train_time=0.002879s aggregation_time=0.0662s round_time=2.1115s
+2026-05-12 16:26:37,732 P5726 INFO ********* Train Turn 52 *********
+2026-05-12 16:26:39,837 P5726 INFO Clients average loss: 0.6576915383338928
+2026-05-12 16:26:39,842 P5726 INFO [Time] turn=52 local_train_time=1.7366s avg_client_train_time=0.002875s aggregation_time=0.0657s round_time=2.1098s
+2026-05-12 16:26:39,842 P5726 INFO ********* Train Turn 53 *********
+2026-05-12 16:26:41,948 P5726 INFO Clients average loss: 0.6526861786842346
+2026-05-12 16:26:41,953 P5726 INFO [Time] turn=53 local_train_time=1.7371s avg_client_train_time=0.002876s aggregation_time=0.0659s round_time=2.1108s
+2026-05-12 16:26:41,953 P5726 INFO ********* Train Turn 54 *********
+2026-05-12 16:26:44,062 P5726 INFO Clients average loss: 0.6467622518539429
+2026-05-12 16:26:44,067 P5726 INFO [Time] turn=54 local_train_time=1.7402s avg_client_train_time=0.002881s aggregation_time=0.0665s round_time=2.1144s
+2026-05-12 16:26:44,067 P5726 INFO ********* Train Turn 55 *********
+2026-05-12 16:26:46,178 P5726 INFO Clients average loss: 0.6409274339675903
+2026-05-12 16:26:46,183 P5726 INFO [Time] turn=55 local_train_time=1.7421s avg_client_train_time=0.002884s aggregation_time=0.0661s round_time=2.1156s
+2026-05-12 16:26:46,183 P5726 INFO ********* Train Turn 56 *********
+2026-05-12 16:26:48,286 P5726 INFO Clients average loss: 0.634109616279602
+2026-05-12 16:26:48,290 P5726 INFO [Time] turn=56 local_train_time=1.7339s avg_client_train_time=0.002871s aggregation_time=0.0663s round_time=2.1073s
+2026-05-12 16:26:48,290 P5726 INFO ********* Train Turn 57 *********
+2026-05-12 16:26:50,390 P5726 INFO Clients average loss: 0.6229930520057678
+2026-05-12 16:26:50,395 P5726 INFO [Time] turn=57 local_train_time=1.7328s avg_client_train_time=0.002869s aggregation_time=0.0658s round_time=2.1042s
+2026-05-12 16:26:50,395 P5726 INFO ********* Train Turn 58 *********
+2026-05-12 16:26:52,496 P5726 INFO Clients average loss: 0.6139305830001831
+2026-05-12 16:26:52,500 P5726 INFO [Time] turn=58 local_train_time=1.7341s avg_client_train_time=0.002871s aggregation_time=0.0659s round_time=2.1056s
+2026-05-12 16:26:52,501 P5726 INFO ********* Train Turn 59 *********
+2026-05-12 16:26:54,586 P5726 INFO Clients average loss: 0.6057472229003906
+2026-05-12 16:26:54,591 P5726 INFO [Time] turn=59 local_train_time=1.7196s avg_client_train_time=0.002847s aggregation_time=0.0660s round_time=2.0903s
+2026-05-12 16:26:54,591 P5726 INFO ********* Eval @ Turn 59 *********
+2026-05-12 16:26:56,603 P5726 INFO [Metrics] logloss: 0.233190 - MRR: 0.168063 - NDCG(5): 0.165369 - HR(5): 0.269371 - NDCG(10): 0.199960 - HR(10): 0.376656 - NDCG(20): 0.243319 - HR(20): 0.549834 - NDCG(50): 0.290237 - HR(50): 0.785762
+2026-05-12 16:26:56,603 P5726 INFO [Time] eval_time=2.0121s
+2026-05-12 16:26:56,603 P5726 INFO ********* Train Turn 60 *********
+2026-05-12 16:26:58,721 P5726 INFO Clients average loss: 0.5934109687805176
+2026-05-12 16:26:58,726 P5726 INFO [Time] turn=60 local_train_time=1.7408s avg_client_train_time=0.002882s aggregation_time=0.0667s round_time=2.1225s
+2026-05-12 16:26:58,726 P5726 INFO ********* Train Turn 61 *********
+2026-05-12 16:27:00,834 P5726 INFO Clients average loss: 0.581899881362915
+2026-05-12 16:27:00,839 P5726 INFO [Time] turn=61 local_train_time=1.7403s avg_client_train_time=0.002881s aggregation_time=0.0653s round_time=2.1126s
+2026-05-12 16:27:00,839 P5726 INFO ********* Train Turn 62 *********
+2026-05-12 16:27:02,949 P5726 INFO Clients average loss: 0.5699486136436462
+2026-05-12 16:27:02,954 P5726 INFO [Time] turn=62 local_train_time=1.7409s avg_client_train_time=0.002882s aggregation_time=0.0660s round_time=2.1152s
+2026-05-12 16:27:02,954 P5726 INFO ********* Train Turn 63 *********
+2026-05-12 16:27:05,060 P5726 INFO Clients average loss: 0.5603625774383545
+2026-05-12 16:27:05,065 P5726 INFO [Time] turn=63 local_train_time=1.7374s avg_client_train_time=0.002876s aggregation_time=0.0659s round_time=2.1107s
+2026-05-12 16:27:05,065 P5726 INFO ********* Train Turn 64 *********
+2026-05-12 16:27:07,181 P5726 INFO Clients average loss: 0.5482186675071716
+2026-05-12 16:27:07,186 P5726 INFO [Time] turn=64 local_train_time=1.7480s avg_client_train_time=0.002894s aggregation_time=0.0657s round_time=2.1207s
+2026-05-12 16:27:07,186 P5726 INFO ********* Train Turn 65 *********
+2026-05-12 16:27:09,295 P5726 INFO Clients average loss: 0.5376415848731995
+2026-05-12 16:27:09,300 P5726 INFO [Time] turn=65 local_train_time=1.7415s avg_client_train_time=0.002883s aggregation_time=0.0652s round_time=2.1140s
+2026-05-12 16:27:09,300 P5726 INFO ********* Train Turn 66 *********
+2026-05-12 16:27:11,407 P5726 INFO Clients average loss: 0.5262163877487183
+2026-05-12 16:27:11,411 P5726 INFO [Time] turn=66 local_train_time=1.7386s avg_client_train_time=0.002878s aggregation_time=0.0657s round_time=2.1113s
+2026-05-12 16:27:11,411 P5726 INFO ********* Train Turn 67 *********
+2026-05-12 16:27:13,514 P5726 INFO Clients average loss: 0.5126181244850159
+2026-05-12 16:27:13,519 P5726 INFO [Time] turn=67 local_train_time=1.7349s avg_client_train_time=0.002872s aggregation_time=0.0660s round_time=2.1075s
+2026-05-12 16:27:13,519 P5726 INFO ********* Train Turn 68 *********
+2026-05-12 16:27:15,636 P5726 INFO Clients average loss: 0.5017146468162537
+2026-05-12 16:27:15,640 P5726 INFO [Time] turn=68 local_train_time=1.7477s avg_client_train_time=0.002894s aggregation_time=0.0652s round_time=2.1213s
+2026-05-12 16:27:15,641 P5726 INFO ********* Train Turn 69 *********
+2026-05-12 16:27:17,765 P5726 INFO Clients average loss: 0.49780768156051636
+2026-05-12 16:27:17,770 P5726 INFO [Time] turn=69 local_train_time=1.7542s avg_client_train_time=0.002904s aggregation_time=0.0664s round_time=2.1294s
+2026-05-12 16:27:17,770 P5726 INFO ********* Eval @ Turn 69 *********
+2026-05-12 16:27:19,737 P5726 INFO [Metrics] logloss: 1.603767 - MRR: 0.200250 - NDCG(5): 0.193921 - HR(5): 0.295364 - NDCG(10): 0.235923 - HR(10): 0.426490 - NDCG(20): 0.283163 - HR(20): 0.613576 - NDCG(50): 0.335639 - HR(50): 0.882119
+2026-05-12 16:27:19,737 P5726 INFO [Time] eval_time=1.9666s
+2026-05-12 16:27:19,737 P5726 INFO ********* Train Turn 70 *********
+2026-05-12 16:27:21,954 P5726 INFO Clients average loss: 0.4804297387599945
+2026-05-12 16:27:21,959 P5726 INFO [Time] turn=70 local_train_time=1.8365s avg_client_train_time=0.003041s aggregation_time=0.0672s round_time=2.2224s
+2026-05-12 16:27:21,959 P5726 INFO ********* Train Turn 71 *********
+2026-05-12 16:27:24,223 P5726 INFO Clients average loss: 0.47451141476631165
+2026-05-12 16:27:24,228 P5726 INFO [Time] turn=71 local_train_time=1.7598s avg_client_train_time=0.002913s aggregation_time=0.0668s round_time=2.2681s
+2026-05-12 16:27:24,228 P5726 INFO ********* Train Turn 72 *********
+2026-05-12 16:27:26,348 P5726 INFO Clients average loss: 0.46423855423927307
+2026-05-12 16:27:26,353 P5726 INFO [Time] turn=72 local_train_time=1.7515s avg_client_train_time=0.002900s aggregation_time=0.0660s round_time=2.1251s
+2026-05-12 16:27:26,353 P5726 INFO ********* Train Turn 73 *********
+2026-05-12 16:27:28,478 P5726 INFO Clients average loss: 0.4585857391357422
+2026-05-12 16:27:28,483 P5726 INFO [Time] turn=73 local_train_time=1.7562s avg_client_train_time=0.002908s aggregation_time=0.0662s round_time=2.1300s
+2026-05-12 16:27:28,483 P5726 INFO ********* Train Turn 74 *********
+2026-05-12 16:27:30,604 P5726 INFO Clients average loss: 0.4538397490978241
+2026-05-12 16:27:30,609 P5726 INFO [Time] turn=74 local_train_time=1.7511s avg_client_train_time=0.002899s aggregation_time=0.0663s round_time=2.1257s
+2026-05-12 16:27:30,609 P5726 INFO ********* Train Turn 75 *********
+2026-05-12 16:27:32,728 P5726 INFO Clients average loss: 0.4420890510082245
+2026-05-12 16:27:32,732 P5726 INFO [Time] turn=75 local_train_time=1.7465s avg_client_train_time=0.002892s aggregation_time=0.0667s round_time=2.1233s
+2026-05-12 16:27:32,733 P5726 INFO ********* Train Turn 76 *********
+2026-05-12 16:27:34,850 P5726 INFO Clients average loss: 0.44312629103660583
+2026-05-12 16:27:34,855 P5726 INFO [Time] turn=76 local_train_time=1.7491s avg_client_train_time=0.002896s aggregation_time=0.0665s round_time=2.1227s
+2026-05-12 16:27:34,855 P5726 INFO ********* Train Turn 77 *********
+2026-05-12 16:27:36,972 P5726 INFO Clients average loss: 0.4382750689983368
+2026-05-12 16:27:36,977 P5726 INFO [Time] turn=77 local_train_time=1.7486s avg_client_train_time=0.002895s aggregation_time=0.0660s round_time=2.1211s
+2026-05-12 16:27:36,977 P5726 INFO ********* Train Turn 78 *********
+2026-05-12 16:27:39,099 P5726 INFO Clients average loss: 0.43336138129234314
+2026-05-12 16:27:39,104 P5726 INFO [Time] turn=78 local_train_time=1.7513s avg_client_train_time=0.002899s aggregation_time=0.0668s round_time=2.1268s
+2026-05-12 16:27:39,104 P5726 INFO ********* Train Turn 79 *********
+2026-05-12 16:27:41,224 P5726 INFO Clients average loss: 0.4217876195907593
+2026-05-12 16:27:41,229 P5726 INFO [Time] turn=79 local_train_time=1.7492s avg_client_train_time=0.002896s aggregation_time=0.0664s round_time=2.1252s
+2026-05-12 16:27:41,229 P5726 INFO ********* Eval @ Turn 79 *********
+2026-05-12 16:27:43,218 P5726 INFO [Metrics] logloss: 2.667932 - MRR: 0.217837 - NDCG(5): 0.211290 - HR(5): 0.318377 - NDCG(10): 0.257283 - HR(10): 0.461424 - NDCG(20): 0.306097 - HR(20): 0.654967 - NDCG(50): 0.358222 - HR(50): 0.915232
+2026-05-12 16:27:43,219 P5726 INFO [Time] eval_time=1.9894s
+2026-05-12 16:27:43,219 P5726 INFO ********* Train Turn 80 *********
+2026-05-12 16:27:45,350 P5726 INFO Clients average loss: 0.41542699933052063
+2026-05-12 16:27:45,355 P5726 INFO [Time] turn=80 local_train_time=1.7517s avg_client_train_time=0.002900s aggregation_time=0.0656s round_time=2.1360s
+2026-05-12 16:27:45,355 P5726 INFO ********* Train Turn 81 *********
+2026-05-12 16:27:47,479 P5726 INFO Clients average loss: 0.4128704071044922
+2026-05-12 16:27:47,484 P5726 INFO [Time] turn=81 local_train_time=1.7501s avg_client_train_time=0.002897s aggregation_time=0.0660s round_time=2.1288s
+2026-05-12 16:27:47,484 P5726 INFO ********* Train Turn 82 *********
+2026-05-12 16:27:49,605 P5726 INFO Clients average loss: 0.40896889567375183
+2026-05-12 16:27:49,610 P5726 INFO [Time] turn=82 local_train_time=1.7516s avg_client_train_time=0.002900s aggregation_time=0.0662s round_time=2.1266s
+2026-05-12 16:27:49,610 P5726 INFO ********* Train Turn 83 *********
+2026-05-12 16:27:51,736 P5726 INFO Clients average loss: 0.41669899225234985
+2026-05-12 16:27:51,741 P5726 INFO [Time] turn=83 local_train_time=1.7554s avg_client_train_time=0.002906s aggregation_time=0.0657s round_time=2.1300s
+2026-05-12 16:27:51,741 P5726 INFO ********* Train Turn 84 *********
+2026-05-12 16:27:53,847 P5726 INFO Clients average loss: 0.4104149043560028
+2026-05-12 16:27:53,852 P5726 INFO [Time] turn=84 local_train_time=1.7381s avg_client_train_time=0.002878s aggregation_time=0.0659s round_time=2.1110s
+2026-05-12 16:27:53,852 P5726 INFO ********* Train Turn 85 *********
+2026-05-12 16:27:55,972 P5726 INFO Clients average loss: 0.40502601861953735
+2026-05-12 16:27:55,977 P5726 INFO [Time] turn=85 local_train_time=1.7507s avg_client_train_time=0.002898s aggregation_time=0.0665s round_time=2.1247s
+2026-05-12 16:27:55,977 P5726 INFO ********* Train Turn 86 *********
+2026-05-12 16:27:58,095 P5726 INFO Clients average loss: 0.4097055494785309
+2026-05-12 16:27:58,100 P5726 INFO [Time] turn=86 local_train_time=1.7485s avg_client_train_time=0.002895s aggregation_time=0.0666s round_time=2.1228s
+2026-05-12 16:27:58,100 P5726 INFO ********* Train Turn 87 *********
+2026-05-12 16:28:00,206 P5726 INFO Clients average loss: 0.39053335785865784
+2026-05-12 16:28:00,211 P5726 INFO [Time] turn=87 local_train_time=1.7388s avg_client_train_time=0.002879s aggregation_time=0.0659s round_time=2.1108s
+2026-05-12 16:28:00,211 P5726 INFO ********* Train Turn 88 *********
+2026-05-12 16:28:02,325 P5726 INFO Clients average loss: 0.39679333567619324
+2026-05-12 16:28:02,330 P5726 INFO [Time] turn=88 local_train_time=1.7473s avg_client_train_time=0.002893s aggregation_time=0.0667s round_time=2.1190s
+2026-05-12 16:28:02,330 P5726 INFO ********* Train Turn 89 *********
+2026-05-12 16:28:04,439 P5726 INFO Clients average loss: 0.38975754380226135
+2026-05-12 16:28:04,444 P5726 INFO [Time] turn=89 local_train_time=1.7402s avg_client_train_time=0.002881s aggregation_time=0.0668s round_time=2.1144s
+2026-05-12 16:28:04,444 P5726 INFO ********* Eval @ Turn 89 *********
+2026-05-12 16:28:06,593 P5726 INFO [Metrics] logloss: 2.858958 - MRR: 0.228611 - NDCG(5): 0.223006 - HR(5): 0.335430 - NDCG(10): 0.268634 - HR(10): 0.477649 - NDCG(20): 0.326018 - HR(20): 0.705629 - NDCG(50): 0.370552 - HR(50): 0.926159
+2026-05-12 16:28:06,593 P5726 INFO [Time] eval_time=2.1488s
+2026-05-12 16:28:06,593 P5726 INFO ********* Train Turn 90 *********
+2026-05-12 16:28:08,719 P5726 INFO Clients average loss: 0.38873907923698425
+2026-05-12 16:28:08,724 P5726 INFO [Time] turn=90 local_train_time=1.7463s avg_client_train_time=0.002891s aggregation_time=0.0677s round_time=2.1309s
+2026-05-12 16:28:08,724 P5726 INFO ********* Train Turn 91 *********
+2026-05-12 16:28:10,830 P5726 INFO Clients average loss: 0.37795326113700867
+2026-05-12 16:28:10,835 P5726 INFO [Time] turn=91 local_train_time=1.7377s avg_client_train_time=0.002877s aggregation_time=0.0663s round_time=2.1108s
+2026-05-12 16:28:10,835 P5726 INFO ********* Train Turn 92 *********
+2026-05-12 16:28:12,951 P5726 INFO Clients average loss: 0.3828704357147217
+2026-05-12 16:28:12,956 P5726 INFO [Time] turn=92 local_train_time=1.7473s avg_client_train_time=0.002893s aggregation_time=0.0664s round_time=2.1206s
+2026-05-12 16:28:12,956 P5726 INFO ********* Train Turn 93 *********
+2026-05-12 16:28:15,059 P5726 INFO Clients average loss: 0.37810492515563965
+2026-05-12 16:28:15,064 P5726 INFO [Time] turn=93 local_train_time=1.7350s avg_client_train_time=0.002872s aggregation_time=0.0666s round_time=2.1082s
+2026-05-12 16:28:15,064 P5726 INFO ********* Train Turn 94 *********
+2026-05-12 16:28:17,169 P5726 INFO Clients average loss: 0.37816986441612244
+2026-05-12 16:28:17,174 P5726 INFO [Time] turn=94 local_train_time=1.7352s avg_client_train_time=0.002873s aggregation_time=0.0667s round_time=2.1092s
+2026-05-12 16:28:17,174 P5726 INFO ********* Train Turn 95 *********
+2026-05-12 16:28:19,280 P5726 INFO Clients average loss: 0.37394458055496216
+2026-05-12 16:28:19,285 P5726 INFO [Time] turn=95 local_train_time=1.7371s avg_client_train_time=0.002876s aggregation_time=0.0662s round_time=2.1110s
+2026-05-12 16:28:19,285 P5726 INFO ********* Train Turn 96 *********
+2026-05-12 16:28:21,390 P5726 INFO Clients average loss: 0.3684391379356384
+2026-05-12 16:28:21,395 P5726 INFO [Time] turn=96 local_train_time=1.7364s avg_client_train_time=0.002875s aggregation_time=0.0668s round_time=2.1103s
+2026-05-12 16:28:21,395 P5726 INFO ********* Train Turn 97 *********
+2026-05-12 16:28:23,505 P5726 INFO Clients average loss: 0.36813998222351074
+2026-05-12 16:28:23,510 P5726 INFO [Time] turn=97 local_train_time=1.7422s avg_client_train_time=0.002884s aggregation_time=0.0664s round_time=2.1141s
+2026-05-12 16:28:23,510 P5726 INFO ********* Train Turn 98 *********
+2026-05-12 16:28:25,618 P5726 INFO Clients average loss: 0.3711777627468109
+2026-05-12 16:28:25,622 P5726 INFO [Time] turn=98 local_train_time=1.7388s avg_client_train_time=0.002879s aggregation_time=0.0654s round_time=2.1126s
+2026-05-12 16:28:25,623 P5726 INFO ********* Train Turn 99 *********
+2026-05-12 16:28:27,727 P5726 INFO Clients average loss: 0.3660423755645752
+2026-05-12 16:28:27,732 P5726 INFO [Time] turn=99 local_train_time=1.7366s avg_client_train_time=0.002875s aggregation_time=0.0657s round_time=2.1090s
+2026-05-12 16:28:27,732 P5726 INFO ********* Eval @ Turn 99 *********
+Process ForkPoolWorker-239:
+Process ForkPoolWorker-240:
+Process ForkPoolWorker-233:
+Process ForkPoolWorker-236:
+Process ForkPoolWorker-238:
+Process ForkPoolWorker-237:
+Process ForkPoolWorker-232:
+Process ForkPoolWorker-231:
+Process ForkPoolWorker-229:
+Process ForkPoolWorker-230:
+Process ForkPoolWorker-234:
+Process ForkPoolWorker-221:
+Process ForkPoolWorker-225:
+Process ForkPoolWorker-224:
+Process ForkPoolWorker-223:
+Process ForkPoolWorker-227:
+Process ForkPoolWorker-228:
+Process ForkPoolWorker-217:
+Process ForkPoolWorker-222:
+Process ForkPoolWorker-226:
+Process ForkPoolWorker-219:
+Process ForkPoolWorker-220:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Process ForkPoolWorker-218:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 387, in get
+    res = self._reader.recv_bytes()
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 216, in recv_bytes
+    buf = self._recv_bytes(maxlength)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 430, in _recv_bytes
+    buf = self._recv(4)
+          ^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/connection.py", line 395, in _recv
+    chunk = read(handle, remaining)
+            ^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/content/drive/MyDrive/FedNCF-LoRA/main.py", line 41, in <module>
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 389, in get
+    return _ForkingPickler.loads(res)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "internals.pyx", line 629, in pandas._libs.internals._unpickle_block
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/internals/blocks.py", line 2645, in maybe_coerce_values
+    def maybe_coerce_values(values: ArrayLike) -> ArrayLike:
+    
+KeyboardInterrupt
+    test_results = model.fit()
+                   ^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/zoo/fedncf_lora_momentumA_fixedB.py", line 638, in fit
+    self.server.evaluate(self.dataload, range(self.user_num))
+  File "/content/drive/MyDrive/FedNCF-LoRA/zoo/fedncf_lora_momentumA_fixedB.py", line 441, in evaluate
+    val_logs = self.model.evaluate_metrics(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/modules/models.py", line 72, in evaluate_metrics
+    return evaluate_metrics(y_true, y_pred, metrics, group_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 45, in evaluate_metrics
+    pool.join()
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 665, in join
+    self._worker_handler.join()
+  File "/usr/lib/python3.12/threading.py", line 1149, in join
+    self._wait_for_tstate_lock()
+  File "/usr/lib/python3.12/threading.py", line 1169, in _wait_for_tstate_lock
+    if lock.acquire(block, timeout):
+       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 55, in evaluate_block
+    v = fn(df.y_true.values, df.y_pred.values)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 108, in __call__
+    idcg = self.dcg_score(y_true, y_true)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 105, in dcg_score
+    return np.sum(gains / discounts)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/numpy/_core/fromnumeric.py", line 2389, in sum
+    return _wrapreduction(
+           ^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/numpy/_core/fromnumeric.py", line 86, in _wrapreduction
+    return ufunc.reduce(obj, axis, dtype, out, **passkwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 55, in evaluate_block
+    v = fn(df.y_true.values, df.y_pred.values)
+                             ^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 55, in evaluate_block
+    v = fn(df.y_true.values, df.y_pred.values)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/generic.py", line 6298, in __getattr__
+    return self[name]
+           ~~~~^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/generic.py", line 6298, in __getattr__
+    return self[name]
+           ~~~~^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/frame.py", line 4078, in __getitem__
+    return self._get_item_cache(key)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/frame.py", line 4062, in __getitem__
+    def __getitem__(self, key):
+    
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/frame.py", line 4626, in _get_item_cache
+    def _get_item_cache(self, item: Hashable) -> Series:
+    
+KeyboardInterrupt
+KeyboardInterrupt
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 125, in worker
+    result = (True, func(*args, **kwds))
+                    ^^^^^^^^^^^^^^^^^^^
+  File "/content/drive/MyDrive/FedNCF-LoRA/framework/metrics.py", line 55, in evaluate_block
+    v = fn(df.y_true.values, df.y_pred.values)
+           ^^^^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/generic.py", line 6298, in __getattr__
+    return self[name]
+           ~~~~^^^^^^
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/frame.py", line 4063, in __getitem__
+    check_dict_or_set_indexers(key)
+  File "/usr/local/lib/python3.12/dist-packages/pandas/core/indexing.py", line 2765, in check_dict_or_set_indexers
+    def check_dict_or_set_indexers(key) -> None:
+    
+KeyboardInterrupt
+Process ForkPoolWorker-254:
+Process ForkPoolWorker-259:
+Process ForkPoolWorker-249:
+Process ForkPoolWorker-252:
+Process ForkPoolWorker-258:
+Process ForkPoolWorker-250:
+Process ForkPoolWorker-256:
+Process ForkPoolWorker-243:
+Process ForkPoolWorker-247:
+Process ForkPoolWorker-257:
+Process ForkPoolWorker-253:
+Process ForkPoolWorker-255:
+Process ForkPoolWorker-245:
+Process ForkPoolWorker-251:
+Process ForkPoolWorker-244:
+Process ForkPoolWorker-235:
+Process ForkPoolWorker-248:
+Process ForkPoolWorker-241:
+Process ForkPoolWorker-246:
+Process ForkPoolWorker-242:
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 314, in _bootstrap
+    self.run()
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+KeyboardInterrupt
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/process.py", line 108, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/pool.py", line 114, in worker
+    task = get()
+           ^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/queues.py", line 386, in get
+    with self._rlock:
+         ^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/multiprocessing/synchronize.py", line 95, in __enter__
+    return self._semlock.__enter__()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+KeyboardInterrupt
+^C
+/content/drive/MyDrive

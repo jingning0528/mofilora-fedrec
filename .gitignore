@@ -1,4 +1,7 @@
 /log
 /figures
-figure.py
 /csv
+
+__pycache__/
+*.py[cod]
+.DS_Store

@@ -2,29 +2,33 @@
 
 MoFiLoRA is a research implementation of communication-efficient federated recommendation using low-rank adaptation (LoRA) and momentum-based aggregation.
 
-The project evaluates full-embedding, LoRA, fixed-factor, and momentum-enhanced variants across recommendation datasets while keeping the experiment pipeline configurable and reproducible.
+Train with `main.py`; find analysis and plotting tools in `analysis/`.
+Run commands from the project root.
 
-## Highlights
+```text
+main.py              Training entry point
+config/              Dataset paths and experiment settings
+zoo/                 Current model implementations, including Analyze_* tracking
+framework/           Shared training and model components
+dataloaders/         Dataset loading
+data_pre_process/    Data preparation
+analysis/            A/B analysis, plots, result tables, timing summaries
+scripts/             Reusable project maintenance tools
+results/             Organized paper results and historical result archive
+data/                Dataset inputs
+checkpoints/         Training logs/checkpoints
+log/, csv/, figures/ Original inputs/outputs used by the analysis tools
+archive/             Older model implementations and scripts
+```
 
-- Low-rank item-embedding updates for federated neural collaborative filtering
-- Momentum aggregation for LoRA factors
-- Fixed-`A`, fixed-`B`, and combined momentum/fixed-factor ablations
-- Configurable CPU and CUDA execution
-- Evaluation with MRR, NDCG, and Hit Rate at multiple cutoffs
-- Analysis and visualization scripts for convergence, communication, and ablation studies
+Start here:
 
-## Models
-
-The `zoo/` directory contains the primary implementations:
-
-- `Full` and `Full_Mom` — full item-embedding baselines
-- `LoRA` — low-rank federated recommendation baseline
-- `LoRA_FixedA` and `LoRA_FixedB` — fixed-factor ablations
-- `LoRA_MomA`, `LoRA_MomB`, and `LoRA_MomAB` — momentum variants
-- `LoRA_MomA_FixedB` and `LoRA_MomB_FixedA` — combined variants used by MoFiLoRA experiments
-- `DoRA` — decomposition-based comparison model
-
-Earlier experimental implementations are retained in `zoo_v1/` and `zoo_v2/`.
+- Train Instrument with A/B tracking: `python main.py --expid Instrument --model Analyze_LoRA --gpu 0`
+- Extract A/B metrics: `python analysis/extract_ab_update_metrics.py`
+- Draw A/B figures: `python analysis/plot_a_vs_b_updates.py`
+- Final paper runs: `results/<dataset>/multi_seed/logs/`
+- ML1M A/B results: `results/ML1M/AB/{LoRA,FixedB,MoFiLoRA}/`
+- Refresh organized results: `python scripts/organize_results.py --apply`
 
 ## Datasets
 
@@ -126,7 +130,7 @@ training runs, and require the prepared Instrument data and model inputs.
 Extract measurements and generate figures for all three methods:
 
 ```bash
-python analyze_AB.py --logs instrument_AB/LoRA.txt instrument_AB/LoRA-FixedB.txt instrument_AB/MoFiLoRA.txt --output-name instrument_AB
+python analysis/extract_ab_update_metrics.py --logs instrument_AB/LoRA.txt instrument_AB/LoRA-FixedB.txt instrument_AB/MoFiLoRA.txt --output-name instrument_AB
 ```
 
 This writes CSVs under `csv/instrument_AB/` and figures under
@@ -136,7 +140,7 @@ and `figures/ML1M_AB/`; the original `ab_convergence/` folders are also retained
 For the compact A-versus-B PDF figures from the LoRA run:
 
 ```bash
-python AB_comparison.py --input-csv csv/instrument_AB/instrument_AB__LoRA/ab_convergence_metrics.csv --out-dir figures/instrument_AB/comparison
+python analysis/plot_a_vs_b_updates.py --input-csv csv/instrument_AB/instrument_AB__LoRA/ab_convergence_metrics.csv --out-dir figures/instrument_AB/comparison
 ```
 
 For each matrix X (A or B), normalized magnitude is
@@ -149,10 +153,18 @@ The default workflow for the two A/B figures is now:
 
 ```bash
 # After training Analyze_LoRA into log/instrument_AB/LoRA.txt:
-python analyze_AB.py
-python AB_comparison.py
+python analysis/extract_ab_update_metrics.py
+python analysis/plot_a_vs_b_updates.py
 ```
 
 Both scripts default to `instrument_AB`, so these commands leave the saved
-ML1M results untouched. `A_comparison.py` continues to use the archived
+ML1M results untouched. `plot_a_updates_across_methods.py` continues to use the archived
 ML1M method-comparison table in `csv/ML1M_AB/`.
+
+
+## Organized results
+
+See [results/README.md](results/README.md) for dataset folders, paper tables,
+the historical archive, and a checksum-based provenance index. Original result
+paths remain available for existing scripts. The pre-organization paper snapshot
+is tagged `MoFiLoRA_V1_Paper` on GitHub.
